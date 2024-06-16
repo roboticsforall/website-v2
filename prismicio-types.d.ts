@@ -22,7 +22,7 @@ export type GlobalNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomePageDocumentDataSlicesSlice = HeroSlice;
+type HomePageDocumentDataSlicesSlice = MikiasSliceSlice | HeroSlice;
 
 /**
  * Content for Home Page documents
@@ -141,6 +141,91 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *MikiasSlice → Default → Primary*
+ */
+export interface MikiasSliceSliceDefaultPrimary {
+  /**
+   * Image field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Link field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * buttonText field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for MikiasSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MikiasSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MikiasSliceSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *MikiasSlice*
+ */
+type MikiasSliceSliceVariation = MikiasSliceSliceDefault;
+
+/**
+ * MikiasSlice Shared Slice
+ *
+ * - **API ID**: `mikias_slice`
+ * - **Description**: MikiasSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MikiasSliceSlice = prismic.SharedSlice<
+  "mikias_slice",
+  MikiasSliceSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -161,6 +246,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      MikiasSliceSlice,
+      MikiasSliceSliceDefaultPrimary,
+      MikiasSliceSliceVariation,
+      MikiasSliceSliceDefault,
     };
   }
 }
