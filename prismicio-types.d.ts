@@ -22,7 +22,11 @@ export type GlobalNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomePageDocumentDataSlicesSlice = HannaSlice | MikiasSliceSlice | HeroSlice;
+type HomePageDocumentDataSlicesSlice =
+  | SarthakSlice
+  | HannaSlice
+  | MikiasSliceSlice
+  | HeroSlice;
 
 /**
  * Content for Home Page documents
@@ -288,11 +292,77 @@ export type MikiasSliceSlice = prismic.SharedSlice<
   MikiasSliceSliceVariation
 >;
 
+/**
+ * Primary content in *Sarthak → Default → Primary*
+ */
+export interface SarthakSliceDefaultPrimary {
+  /**
+   * exampleBool field in *Sarthak → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: sarthak.default.primary.examplebool
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  examplebool: prismic.BooleanField;
+
+  /**
+   * EzampleDate field in *Sarthak → Default → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sarthak.default.primary.ezampledate
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  ezampledate: prismic.DateField;
+
+  /**
+   * color field in *Sarthak → Default → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sarthak.default.primary.color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  color: prismic.ColorField;
+}
+
+/**
+ * Default variation for Sarthak Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SarthakSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SarthakSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Sarthak*
+ */
+type SarthakSliceVariation = SarthakSliceDefault;
+
+/**
+ * Sarthak Shared Slice
+ *
+ * - **API ID**: `sarthak`
+ * - **Description**: Sarthak
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SarthakSlice = prismic.SharedSlice<
+  "sarthak",
+  SarthakSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig,
+      options?: prismic.ClientConfig
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -316,6 +386,10 @@ declare module "@prismicio/client" {
       MikiasSliceSliceDefaultPrimary,
       MikiasSliceSliceVariation,
       MikiasSliceSliceDefault,
+      SarthakSlice,
+      SarthakSliceDefaultPrimary,
+      SarthakSliceVariation,
+      SarthakSliceDefault,
     };
   }
 }
