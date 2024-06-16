@@ -22,7 +22,11 @@ export type GlobalNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomePageDocumentDataSlicesSlice = SarthakSlice | HeroSlice;
+type HomePageDocumentDataSlicesSlice =
+  | SarthakSlice
+  | HannaSlice
+  | MikiasSliceSlice
+  | HeroSlice;
 
 /**
  * Content for Home Page documents
@@ -87,75 +91,69 @@ export type HomePageDocument<Lang extends string = string> =
     Lang
   >;
 
-type SarthakDocumentDataSlicesSlice = SarthakSlice;
+export type AllDocumentTypes = GlobalNavDocument | HomePageDocument;
 
 /**
- * Content for Sarthak documents
+ * Primary content in *HannaSlice → Default → Primary*
  */
-interface SarthakDocumentData {
+export interface HannaSliceDefaultPrimary {
   /**
-   * Slice Zone field in *Sarthak*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<SarthakDocumentDataSlicesSlice> /**
-   * Meta Description field in *Sarthak*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: sarthak.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Sarthak*
+   * image field in *HannaSlice → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.meta_image
-   * - **Tab**: SEO & Metadata
+   * - **API ID Path**: hanna.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  meta_image: prismic.ImageField<never>;
+  image: prismic.ImageField<never>;
 
   /**
-   * Meta Title field in *Sarthak*
+   * link field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * title field in *HannaSlice → Default → Primary*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: sarthak.meta_title
-   * - **Tab**: SEO & Metadata
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  meta_title: prismic.KeyTextField;
+  title: prismic.KeyTextField;
 }
 
 /**
- * Sarthak document from Prismic
+ * Default variation for HannaSlice Slice
  *
- * - **API ID**: `sarthak`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
  */
-export type SarthakDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<SarthakDocumentData>,
-    "sarthak",
-    Lang
-  >;
+export type HannaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HannaSliceDefaultPrimary>,
+  never
+>;
 
-export type AllDocumentTypes =
-  | GlobalNavDocument
-  | HomePageDocument
-  | SarthakDocument;
+/**
+ * Slice variation for *HannaSlice*
+ */
+type HannaSliceVariation = HannaSliceDefault;
+
+/**
+ * HannaSlice Shared Slice
+ *
+ * - **API ID**: `hanna`
+ * - **Description**: Hanna
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HannaSlice = prismic.SharedSlice<"hanna", HannaSliceVariation>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -208,6 +206,91 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *MikiasSlice → Default → Primary*
+ */
+export interface MikiasSliceSliceDefaultPrimary {
+  /**
+   * Image field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Link field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * buttonText field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for MikiasSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MikiasSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MikiasSliceSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *MikiasSlice*
+ */
+type MikiasSliceSliceVariation = MikiasSliceSliceDefault;
+
+/**
+ * MikiasSlice Shared Slice
+ *
+ * - **API ID**: `mikias_slice`
+ * - **Description**: MikiasSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MikiasSliceSlice = prismic.SharedSlice<
+  "mikias_slice",
+  MikiasSliceSliceVariation
+>;
 
 /**
  * Primary content in *Sarthak → Default → Primary*
@@ -279,7 +362,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig,
+      options?: prismic.ClientConfig
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -290,14 +373,19 @@ declare module "@prismicio/client" {
       HomePageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
-      SarthakDocument,
-      SarthakDocumentData,
-      SarthakDocumentDataSlicesSlice,
       AllDocumentTypes,
+      HannaSlice,
+      HannaSliceDefaultPrimary,
+      HannaSliceVariation,
+      HannaSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      MikiasSliceSlice,
+      MikiasSliceSliceDefaultPrimary,
+      MikiasSliceSliceVariation,
+      MikiasSliceSliceDefault,
       SarthakSlice,
       SarthakSliceDefaultPrimary,
       SarthakSliceVariation,
