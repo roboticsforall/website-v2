@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/rfa-cms/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "**",
+      },
     ],
   },
 };

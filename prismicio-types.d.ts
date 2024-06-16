@@ -90,21 +90,21 @@ export type HomePageDocument<Lang extends string = string> =
 export type AllDocumentTypes = GlobalNavDocument | HomePageDocument;
 
 /**
- * Primary content in *Hanna → Default → Primary*
+ * Primary content in *HannaSlice → Default → Primary*
  */
 export interface HannaSliceDefaultPrimary {
   /**
-   * hannaImg field in *Hanna → Default → Primary*
+   * image field in *HannaSlice → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: hanna.default.primary.hannaimg
+   * - **API ID Path**: hanna.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  hannaimg: prismic.ImageField<never>;
+  image: prismic.ImageField<never>;
 
   /**
-   * link field in *Hanna → Default → Primary*
+   * link field in *HannaSlice → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -112,10 +112,20 @@ export interface HannaSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * title field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
 }
 
 /**
- * Default variation for Hanna Slice
+ * Default variation for HannaSlice Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -128,12 +138,12 @@ export type HannaSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Hanna*
+ * Slice variation for *HannaSlice*
  */
 type HannaSliceVariation = HannaSliceDefault;
 
 /**
- * Hanna Shared Slice
+ * HannaSlice Shared Slice
  *
  * - **API ID**: `hanna`
  * - **Description**: Hanna
