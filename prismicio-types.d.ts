@@ -22,7 +22,7 @@ export type GlobalNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomePageDocumentDataSlicesSlice = MikiasSliceSlice | HeroSlice;
+type HomePageDocumentDataSlicesSlice = HannaSlice | MikiasSliceSlice | HeroSlice;
 
 /**
  * Content for Home Page documents
@@ -88,6 +88,68 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = GlobalNavDocument | HomePageDocument;
+
+/**
+ * Primary content in *HannaSlice → Default → Primary*
+ */
+export interface HannaSliceDefaultPrimary {
+  /**
+   * image field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * link field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * title field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for HannaSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HannaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HannaSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *HannaSlice*
+ */
+type HannaSliceVariation = HannaSliceDefault;
+
+/**
+ * HannaSlice Shared Slice
+ *
+ * - **API ID**: `hanna`
+ * - **Description**: Hanna
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HannaSlice = prismic.SharedSlice<"hanna", HannaSliceVariation>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -242,6 +304,10 @@ declare module "@prismicio/client" {
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      HannaSlice,
+      HannaSliceDefaultPrimary,
+      HannaSliceVariation,
+      HannaSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
