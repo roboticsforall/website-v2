@@ -22,7 +22,7 @@ export type GlobalNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomePageDocumentDataSlicesSlice = HeroSlice;
+type HomePageDocumentDataSlicesSlice = HannaSlice | HeroSlice;
 
 /**
  * Content for Home Page documents
@@ -88,6 +88,58 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = GlobalNavDocument | HomePageDocument;
+
+/**
+ * Primary content in *Hanna → Default → Primary*
+ */
+export interface HannaSliceDefaultPrimary {
+  /**
+   * hannaImg field in *Hanna → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.hannaimg
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hannaimg: prismic.ImageField<never>;
+
+  /**
+   * link field in *Hanna → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Hanna Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HannaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HannaSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Hanna*
+ */
+type HannaSliceVariation = HannaSliceDefault;
+
+/**
+ * Hanna Shared Slice
+ *
+ * - **API ID**: `hanna`
+ * - **Description**: Hanna
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HannaSlice = prismic.SharedSlice<"hanna", HannaSliceVariation>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -157,6 +209,10 @@ declare module "@prismicio/client" {
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      HannaSlice,
+      HannaSliceDefaultPrimary,
+      HannaSliceVariation,
+      HannaSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,

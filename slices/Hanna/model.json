@@ -1,0 +1,36 @@
+{
+  "id": "hanna",
+  "type": "SharedSlice",
+  "name": "Hanna",
+  "description": "Hanna",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hannaimg": {
+          "type": "Image",
+          "config": {
+            "label": "hannaImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
