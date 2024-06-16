@@ -21,6 +21,9 @@
             "hanna": {
               "type": "SharedSlice"
             },
+            "mikias_slice": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             }
