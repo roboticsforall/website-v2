@@ -1,27 +1,17 @@
 {
   "format": "page",
-  "id": "home_page",
-  "label": "Home Page",
+  "id": "sarthak",
+  "label": "Sarthak",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "UID",
-          "placeholder": ""
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
             "sarthak": {
-              "type": "SharedSlice"
-            },
-            "hero": {
               "type": "SharedSlice"
             }
           }

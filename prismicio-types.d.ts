@@ -22,7 +22,7 @@ export type GlobalNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomePageDocumentDataSlicesSlice = HeroSlice;
+type HomePageDocumentDataSlicesSlice = SarthakSlice | HeroSlice;
 
 /**
  * Content for Home Page documents
@@ -87,7 +87,75 @@ export type HomePageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = GlobalNavDocument | HomePageDocument;
+type SarthakDocumentDataSlicesSlice = SarthakSlice;
+
+/**
+ * Content for Sarthak documents
+ */
+interface SarthakDocumentData {
+  /**
+   * Slice Zone field in *Sarthak*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sarthak.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<SarthakDocumentDataSlicesSlice> /**
+   * Meta Description field in *Sarthak*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: sarthak.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Sarthak*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sarthak.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Sarthak*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: sarthak.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Sarthak document from Prismic
+ *
+ * - **API ID**: `sarthak`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SarthakDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<SarthakDocumentData>,
+    "sarthak",
+    Lang
+  >;
+
+export type AllDocumentTypes =
+  | GlobalNavDocument
+  | HomePageDocument
+  | SarthakDocument;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -141,6 +209,72 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *Sarthak → Default → Primary*
+ */
+export interface SarthakSliceDefaultPrimary {
+  /**
+   * exampleBool field in *Sarthak → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: sarthak.default.primary.examplebool
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  examplebool: prismic.BooleanField;
+
+  /**
+   * EzampleDate field in *Sarthak → Default → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sarthak.default.primary.ezampledate
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  ezampledate: prismic.DateField;
+
+  /**
+   * color field in *Sarthak → Default → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sarthak.default.primary.color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  color: prismic.ColorField;
+}
+
+/**
+ * Default variation for Sarthak Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SarthakSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SarthakSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Sarthak*
+ */
+type SarthakSliceVariation = SarthakSliceDefault;
+
+/**
+ * Sarthak Shared Slice
+ *
+ * - **API ID**: `sarthak`
+ * - **Description**: Sarthak
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SarthakSlice = prismic.SharedSlice<
+  "sarthak",
+  SarthakSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -156,11 +290,18 @@ declare module "@prismicio/client" {
       HomePageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
+      SarthakDocument,
+      SarthakDocumentData,
+      SarthakDocumentDataSlicesSlice,
       AllDocumentTypes,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      SarthakSlice,
+      SarthakSliceDefaultPrimary,
+      SarthakSliceVariation,
+      SarthakSliceDefault,
     };
   }
 }
