@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 export const components = {
   hanna: dynamic(() => import("./HannaSlice")),
   hero: dynamic(() => import("./Hero")),
-  sarthak: dynamic(() => import("./Sarthak")),
   mikias_slice: dynamic(() => import("./MikiasSlice")),
+  sarthak: dynamic(() => import("./Sarthak")),
+  theming: dynamic(() => import("./Theming")),
 };
