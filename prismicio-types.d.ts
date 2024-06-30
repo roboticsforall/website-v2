@@ -431,35 +431,35 @@ export type SplitFeatureBlockSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *TeamCardsSection → Default → Primary → Cards*
+ * Item in *TeamCardsSection → Default → Primary → Grid*
  */
-export interface TeamCardsSectionSliceDefaultPrimaryCardsItem {
+export interface TeamCardsSectionSliceDefaultPrimaryGridItem {
   /**
-   * Image field in *TeamCardsSection → Default → Primary → Cards*
+   * Image field in *TeamCardsSection → Default → Primary → Grid*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: team_cards_section.default.primary.cards[].image
+   * - **API ID Path**: team_cards_section.default.primary.grid[].image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * Name field in *TeamCardsSection → Default → Primary → Cards*
+   * Name field in *TeamCardsSection → Default → Primary → Grid*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team_cards_section.default.primary.cards[].name
+   * - **API ID Path**: team_cards_section.default.primary.grid[].name
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   name: prismic.KeyTextField;
 
   /**
-   * Title field in *TeamCardsSection → Default → Primary → Cards*
+   * Title field in *TeamCardsSection → Default → Primary → Grid*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team_cards_section.default.primary.cards[].title
+   * - **API ID Path**: team_cards_section.default.primary.grid[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
@@ -480,15 +480,15 @@ export interface TeamCardsSectionSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * Cards field in *TeamCardsSection → Default → Primary*
+   * Grid field in *TeamCardsSection → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: team_cards_section.default.primary.cards[]
+   * - **API ID Path**: team_cards_section.default.primary.grid[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  cards: prismic.GroupField<
-    Simplify<TeamCardsSectionSliceDefaultPrimaryCardsItem>
+  grid: prismic.GroupField<
+    Simplify<TeamCardsSectionSliceDefaultPrimaryGridItem>
   >;
 }
 
@@ -523,28 +523,28 @@ export type TeamCardsSectionSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *ThreeColumnExplainer → Default → Primary → Three Column Explainer*
+ * Item in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
  */
-export interface ThreeColumnExplainerSliceDefaultPrimaryThreeColumnExplainerItem {
+export interface ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem {
   /**
-   * Title field in *ThreeColumnExplainer → Default → Primary → Three Column Explainer*
+   * Title field in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: three_column_explainer.default.primary.three_column_explainer[].title
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
 
   /**
-   * Description field in *ThreeColumnExplainer → Default → Primary → Three Column Explainer*
+   * Description field in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: three_column_explainer.default.primary.three_column_explainer[].description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.KeyTextField;
+  description: prismic.RichTextField;
 }
 
 /**
@@ -552,15 +552,35 @@ export interface ThreeColumnExplainerSliceDefaultPrimaryThreeColumnExplainerItem
  */
 export interface ThreeColumnExplainerSliceDefaultPrimary {
   /**
-   * Three Column Explainer field in *ThreeColumnExplainer → Default → Primary*
+   * Title field in *ThreeColumnExplainer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *ThreeColumnExplainer → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Multi Column Explainer field in *ThreeColumnExplainer → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: three_column_explainer.default.primary.three_column_explainer[]
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  three_column_explainer: prismic.GroupField<
-    Simplify<ThreeColumnExplainerSliceDefaultPrimaryThreeColumnExplainerItem>
+  multi_column_explainer: prismic.GroupField<
+    Simplify<ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem>
   >;
 }
 
@@ -632,12 +652,12 @@ declare module "@prismicio/client" {
       SplitFeatureBlockSliceVariation,
       SplitFeatureBlockSliceDefault,
       TeamCardsSectionSlice,
-      TeamCardsSectionSliceDefaultPrimaryCardsItem,
+      TeamCardsSectionSliceDefaultPrimaryGridItem,
       TeamCardsSectionSliceDefaultPrimary,
       TeamCardsSectionSliceVariation,
       TeamCardsSectionSliceDefault,
       ThreeColumnExplainerSlice,
-      ThreeColumnExplainerSliceDefaultPrimaryThreeColumnExplainerItem,
+      ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem,
       ThreeColumnExplainerSliceDefaultPrimary,
       ThreeColumnExplainerSliceVariation,
       ThreeColumnExplainerSliceDefault,

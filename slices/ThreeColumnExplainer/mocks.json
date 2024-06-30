@@ -3,7 +3,23 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"three_column_explainer": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "negative",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur quis aliquip magna elit consequat est amet cupidatat est. Magna nulla qui et voluptate dolor est anim nisi fugiat exercitation laboris sint irure. Elit commodo nostrud dolore sit id sint."
+						}
+					}
+				]
+			},
+			"multi_column_explainer": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
@@ -13,16 +29,22 @@
 								"title",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "bean",
+									"value": "alphabet",
 									"type": "Text"
 								}
 							],
 							[
 								"description",
 								{
-									"__TYPE__": "FieldContent",
-									"value": "hello",
-									"type": "Text"
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Laboris ullamco qui ipsum veniam ea labore est."
+											}
+										}
+									]
 								}
 							]
 						]

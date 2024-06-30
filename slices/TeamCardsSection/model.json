@@ -19,10 +19,10 @@
             "placeholder": ""
           }
         },
-        "cards": {
+        "grid": {
           "type": "Group",
           "config": {
-            "label": "Cards",
+            "label": "Grid",
             "repeat": true,
             "fields": {
               "image": {

@@ -8,7 +8,7 @@
 				"value": "fruit",
 				"type": "Text"
 			},
-			"cards": {
+			"grid": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
@@ -17,15 +17,16 @@
 							[
 								"image",
 								{
+									"__TYPE__": "ImageContent",
 									"origin": {
 										"id": "main",
-										"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-										"width": 3168,
-										"height": 4752
+										"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+										"width": 5243,
+										"height": 3495
 									},
-									"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-									"width": 3168,
-									"height": 4752,
+									"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+									"width": 5243,
+									"height": 3495,
 									"edit": {
 										"zoom": 1,
 										"crop": {
@@ -34,9 +35,6 @@
 										},
 										"background": "transparent"
 									},
-									"credits": null,
-									"alt": null,
-									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							],
@@ -44,7 +42,7 @@
 								"name",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "dream",
+									"value": "drop",
 									"type": "Text"
 								}
 							],
@@ -52,7 +50,7 @@
 								"title",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "fun",
+									"value": "cause",
 									"type": "Text"
 								}
 							]
