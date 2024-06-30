@@ -18,9 +18,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "three_column_cards": {
-              "type": "SharedSlice"
-            },
             "sarthak": {
               "type": "SharedSlice"
             },

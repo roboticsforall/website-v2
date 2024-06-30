@@ -7,5 +7,4 @@ export const components = {
   hero: dynamic(() => import("./Hero")),
   mikias_slice: dynamic(() => import("./MikiasSlice")),
   sarthak: dynamic(() => import("./Sarthak")),
-  three_column_cards: dynamic(() => import("./MultiColumnCards")),
 };
