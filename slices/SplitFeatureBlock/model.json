@@ -1,0 +1,42 @@
+{
+  "id": "split_feature_block",
+  "type": "SharedSlice",
+  "name": "SplitFeatureBlock",
+  "description": "SplitFeatureBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "split_feature_block": {
+          "type": "Group",
+          "config": {
+            "label": "Split Feature Block",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

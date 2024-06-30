@@ -1,0 +1,42 @@
+{
+  "id": "three_column_explainer",
+  "type": "SharedSlice",
+  "name": "ThreeColumnExplainer",
+  "description": "ThreeColumnExplainer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "three_column_explainer": {
+          "type": "Group",
+          "config": {
+            "label": "Three Column Explainer",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
