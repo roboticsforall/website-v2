@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
-
-const inter = Inter({ subsets: ["latin"] });
+import { fonts } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={fonts.beVietnamPro.className}>
         <Providers>{children}</Providers>
         <PrismicPreview repositoryName={repositoryName} />
       </body>
