@@ -120,14 +120,14 @@ const Theming = ({ slice }: ThemingProps): JSX.Element => {
             Three Columns
           </Heading>
           <Flex gap={6} wrap="wrap" justifyContent={"center"}>
-            {[1, 2, 3, 4, 5].map(() => (
+            {[1, 2].map(() => (
               <Box
                 width={{
                   sm: "calc(50% - 1.5rem * 2/3)",
                   lg: "calc(33.33333% - 1.5rem * 2/3)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
                 }}
               >
-                <Card>
+                <Card h="100%">
                   <CardHeader>
                     <Image
                       src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
@@ -159,6 +159,40 @@ const Theming = ({ slice }: ThemingProps): JSX.Element => {
                 </Card>
               </Box>
             ))}
+            <Box
+              width={{
+                sm: "calc(50% - 1.5rem * 2/3)",
+                lg: "calc(33.33333% - 1.5rem * 2/3)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
+              }}
+            >
+              <Card h="100%">
+                <CardHeader>
+                  <Image
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    width="1770"
+                    height="1180"
+                    style={{ objectFit: "cover" }}
+                    alt="Green double couch with wooden legs"
+                  />
+                </CardHeader>
+                <CardBody>
+                  <Heading as="h4" size="md" mb={5}>
+                    Letter from the President
+                  </Heading>
+                  <Text>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  </Text>
+                </CardBody>
+                <CardFooter>
+                  <ButtonGroup spacing="2">
+                    <Button>Buy now</Button>
+                    <Button variant="link" colorScheme="blue">
+                      Add to cart
+                    </Button>
+                  </ButtonGroup>
+                </CardFooter>
+              </Card>
+            </Box>
           </Flex>
           <Center mt={"2.5rem"}>
             <Button>Contact Us</Button>
