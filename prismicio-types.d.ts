@@ -23,6 +23,7 @@ export type GlobalNavDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | ThemingSlice
   | SarthakSlice
   | HannaSlice
   | MikiasSliceSlice
