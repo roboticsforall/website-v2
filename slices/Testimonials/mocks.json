@@ -10,14 +10,6 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"description",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "create",
-									"type": "Text"
-								}
-							],
-							[
 								"name",
 								{
 									"__TYPE__": "FieldContent",
@@ -31,6 +23,20 @@
 									"__TYPE__": "FieldContent",
 									"value": "studied",
 									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Laborum consequat excepteur voluptate."
+											}
+										}
+									]
 								}
 							]
 						]

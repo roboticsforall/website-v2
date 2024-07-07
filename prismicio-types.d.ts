@@ -121,12 +121,12 @@ export interface ExplainerSliceDefaultPrimary {
   /**
    * Description field in *Explainer → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: explainer.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.KeyTextField;
+  description: prismic.RichTextField;
 }
 
 /**
@@ -429,16 +429,6 @@ export type SarthakSlice = prismic.SharedSlice<
  */
 export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
   /**
-   * Description field in *Testimonials → Default → Primary → testimonials*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonials[].description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description: prismic.KeyTextField;
-
-  /**
    * Name field in *Testimonials → Default → Primary → testimonials*
    *
    * - **Field Type**: Text
@@ -457,6 +447,16 @@ export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   user: prismic.KeyTextField;
+
+  /**
+   * Description field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
 }
 
 /**

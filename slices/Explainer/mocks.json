@@ -14,9 +14,15 @@
 				"type": "Text"
 			},
 			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "mission",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Mollit ipsum dolor sit excepteur. Consequat est eiusmod et aliqua ad commodo incididunt dolor fugiat adipisicing aliqua velit exercitation eiusmod elit."
+						}
+					}
+				]
 			}
 		},
 		"items": []

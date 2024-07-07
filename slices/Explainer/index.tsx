@@ -16,7 +16,7 @@ import {
   GridItem,
   Center,
 } from "@chakra-ui/react";import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `Explainer`.
@@ -48,13 +48,11 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
           </Heading>
         </Box>
         <Box flex="2">
-          <Flex direction="column" py="8" m>
+          <Flex direction="column" py="8">
             <Heading as="h3" size="xl">
               {slice.primary.subtitle}
             </Heading>
-            <Text>
-            {slice.primary.description}
-            </Text>
+            <PrismicRichText field={slice.primary.description} />
           </Flex>
           
         </Box>

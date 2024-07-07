@@ -25,13 +25,6 @@
             "label": "testimonials",
             "repeat": true,
             "fields": {
-              "description": {
-                "type": "Text",
-                "config": {
-                  "label": "Description",
-                  "placeholder": ""
-                }
-              },
               "name": {
                 "type": "Text",
                 "config": {
@@ -44,6 +37,15 @@
                 "config": {
                   "label": "User",
                   "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               }
             }

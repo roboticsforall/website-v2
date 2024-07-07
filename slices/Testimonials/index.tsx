@@ -17,7 +17,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `Testimonials`.
@@ -43,16 +43,17 @@ const Testimonials = ({ slice }: TestimonialsProps): JSX.Element => {
       <Box >
         <Container py={12} size={[null, "sm", "md", "lg", "xl", "2xl"]}>
         <Flex flexWrap="wrap" justifyContent="space-between" px="4" w="full" alignItems="center">
-          {slice.primary.testimonials.map((item, i) => (
-            <Center>
-               <Box key={i}>
-              <Text>{item.description}</Text>
-              <Text>{item.name}</Text>
-              <Text>{item.user}</Text>
+          {slice.primary.testimonials.map((item) => (
+            <Box>
+              <PrismicRichText field={item.description} />
+            <Text>{item.name}</Text>
+            <Text>{item.user}</Text>
             </Box>
-            </Center>
-           
-          ))}  
+            
+          ))}
+        {/* {slice.primary.testimonials.map((item) => {
+    // Render the item
+  })} */}
           </Flex>
         </Container>
       </Box>
