@@ -17,7 +17,7 @@ export type HannaProps = SliceComponentProps<Content.HannaSlice>;
 const Hanna = ({ slice }: HannaProps): JSX.Element => {
   return (
     <Flex
-    direction={["column"]} 
+    direction={["column", "column"]} 
       align="center" 
       p={8} 
       bg="gray.50" 
