@@ -5,8 +5,8 @@
 		"primary": {
 			"title": {
 				"__TYPE__": "FieldContent",
-				"value": "negative",
-				"type": "Text"
+				"type": "Text",
+				"value": "Your contributions make a difference"
 			},
 			"description": {
 				"__TYPE__": "StructuredTextContent",
@@ -14,8 +14,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Excepteur quis aliquip magna elit consequat est amet cupidatat est. Magna nulla qui et voluptate dolor est anim nisi fugiat exercitation laboris sint irure. Elit commodo nostrud dolore sit id sint."
-						}
+							"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum. Tortor mauris libero non tellus consectetur tristique phasellus sit. Eget elit fringilla sit viverra amet mus mattis et enim.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -29,8 +31,8 @@
 								"title",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "alphabet",
-									"type": "Text"
+									"type": "Text",
+									"value": "2,500 students"
 								}
 							],
 							[
@@ -41,8 +43,39 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Laboris ullamco qui ipsum veniam ea labore est."
-											}
+												"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum.",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "2,500 students"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum.",
+												"spans": []
+											},
+											"direction": "ltr"
 										}
 									]
 								}
