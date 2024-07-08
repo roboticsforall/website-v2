@@ -43,17 +43,15 @@ const Testimonials = ({ slice }: TestimonialsProps): JSX.Element => {
       <Box >
         <Container py={12} size={[null, "sm", "md", "lg", "xl", "2xl"]}>
         <Flex flexWrap="wrap" justifyContent="space-between" px="4" w="full" alignItems="center">
-          {slice.primary.testimonials.map((item) => (
-            <Box>
+          {slice.primary.testimonials.map((item, i) => (
+            <Box key={i}>
               <PrismicRichText field={item.description} />
-            <Text>{item.name}</Text>
-            <Text>{item.user}</Text>
+              <Text>{item.name}</Text>
+              <Text>{item.user}</Text>
             </Box>
             
           ))}
-        {/* {slice.primary.testimonials.map((item) => {
-    // Render the item
-  })} */}
+       
           </Flex>
         </Container>
       </Box>

@@ -429,6 +429,16 @@ export type SarthakSlice = prismic.SharedSlice<
  */
 export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
   /**
+   * Description field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
    * Name field in *Testimonials → Default → Primary → testimonials*
    *
    * - **Field Type**: Text
@@ -447,16 +457,6 @@ export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   user: prismic.KeyTextField;
-
-  /**
-   * Description field in *Testimonials → Default → Primary → testimonials*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonials[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
 }
 
 /**
