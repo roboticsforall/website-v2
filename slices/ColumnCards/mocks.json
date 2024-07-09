@@ -12,11 +12,11 @@
 							[
 								"image",
 								{
-									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyOTMyNTZ8MA&ixlib=rb-4.0.3&q=85",
 									"alt": "sliced orange fruit on white surface",
 									"origin": {
 										"id": "92HwFhCp-MQ",
-										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyOTMyNTZ8MA&ixlib=rb-4.0.3&q=85",
 										"width": 3699,
 										"height": 2959
 									},
@@ -58,20 +58,6 @@
 								}
 							],
 							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"id": "mock_Media_link",
-										"kind": "image/jpeg",
-										"name": "mock_name",
-										"url": "https://source.unsplash.com/daily",
-										"size": "0",
-										"__TYPE__": "FileLink"
-									}
-								}
-							],
-							[
 								"hasbutton",
 								{
 									"__TYPE__": "BooleanContent",
@@ -84,6 +70,33 @@
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
 							]
 						]
 					},
@@ -93,11 +106,11 @@
 							[
 								"image",
 								{
-									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyOTMyNTZ8MA&ixlib=rb-4.0.3&q=85",
 									"alt": "sliced orange fruit on white surface",
 									"origin": {
 										"id": "92HwFhCp-MQ",
-										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyOTMyNTZ8MA&ixlib=rb-4.0.3&q=85",
 										"width": 3699,
 										"height": 2959
 									},
@@ -153,6 +166,33 @@
 										}
 									]
 								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
 							]
 						]
 					},
@@ -162,11 +202,11 @@
 							[
 								"image",
 								{
-									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyOTMyNTZ8MA&ixlib=rb-4.0.3&q=85",
 									"alt": "sliced orange fruit on white surface",
 									"origin": {
 										"id": "92HwFhCp-MQ",
-										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyOTMyNTZ8MA&ixlib=rb-4.0.3&q=85",
 										"width": 3699,
 										"height": 2959
 									},
@@ -222,6 +262,33 @@
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
 							]
 						]
 					}
@@ -229,20 +296,18 @@
 			},
 			"button_variation": {
 				"__TYPE__": "FieldContent",
-				"value": "outline",
-				"type": "Select"
+				"type": "Select",
+				"value": "Outlined"
 			},
 			"heading": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",
 				"value": "My Heading"
 			},
-			"button": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "gradient"
 			}
 		},
 		"items": []
@@ -311,20 +376,6 @@
 								}
 							],
 							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"id": "mock_Media_link",
-										"kind": "image/jpeg",
-										"name": "mock_name",
-										"url": "https://source.unsplash.com/daily",
-										"size": "0",
-										"__TYPE__": "FileLink"
-									}
-								}
-							],
-							[
 								"hasbutton",
 								{
 									"__TYPE__": "BooleanContent",
@@ -337,10 +388,42 @@
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
 							]
 						]
 					}
 				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "1",
+				"type": "Select"
 			}
 		},
 		"items": [
@@ -354,11 +437,6 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "twoColumn",
 		"primary": {
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "horse",
-				"type": "Text"
-			},
 			"cards": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -368,35 +446,27 @@
 							[
 								"image",
 								{
+									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+									"alt": "sliced orange fruit on white surface",
 									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-										"width": 8640,
-										"height": 8640
+										"id": "92HwFhCp-MQ",
+										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+										"width": 3699,
+										"height": 2959
 									},
-									"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-									"width": 8640,
-									"height": 8640,
+									"width": 3699,
+									"height": 2959,
 									"edit": {
+										"background": "transparent",
 										"zoom": 1,
 										"crop": {
 											"x": 0,
 											"y": 0
-										},
-										"background": "transparent"
+										}
 									},
 									"credits": null,
-									"alt": null,
 									"__TYPE__": "ImageContent",
 									"thumbnails": {}
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "earth",
-									"type": "Text"
 								}
 							],
 							[
@@ -414,24 +484,114 @@
 								}
 							],
 							[
+								"hasbutton",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"hasimage",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Card 1"
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
 								"button",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
-										"id": "mock_Media_link",
-										"kind": "image/jpeg",
-										"name": "mock_name",
-										"url": "https://source.unsplash.com/daily",
-										"size": "0",
-										"__TYPE__": "FileLink"
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
 									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+									"alt": "sliced orange fruit on white surface",
+									"origin": {
+										"id": "92HwFhCp-MQ",
+										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
+										"width": 3699,
+										"height": 2959
+									},
+									"width": 3699,
+									"height": 2959,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										}
+									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Card 2"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem ipsum",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
 								}
 							],
 							[
 								"hasbutton",
 								{
 									"__TYPE__": "BooleanContent",
-									"value": false
+									"value": true
 								}
 							],
 							[
@@ -440,25 +600,58 @@
 									"__TYPE__": "BooleanContent",
 									"value": false
 								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
 							]
 						]
 					}
 				]
 			},
+			"button_variation": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "solid"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Two Columns"
+			},
 			"button": {
 				"__TYPE__": "LinkContent",
 				"value": {
-					"id": "mock_Media_link",
-					"kind": "image/jpeg",
-					"name": "mock_name",
-					"url": "https://source.unsplash.com/daily",
-					"size": "0",
-					"__TYPE__": "FileLink"
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
 				}
 			},
-			"button_variation": {
+			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"value": "solid",
+				"value": "1",
 				"type": "Select"
 			}
 		},
@@ -533,24 +726,10 @@
 								}
 							],
 							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"id": "mock_Media_link",
-										"kind": "image/jpeg",
-										"name": "mock_name",
-										"url": "https://source.unsplash.com/daily",
-										"size": "0",
-										"__TYPE__": "FileLink"
-									}
-								}
-							],
-							[
 								"hasbutton",
 								{
 									"__TYPE__": "BooleanContent",
-									"value": true
+									"value": false
 								}
 							],
 							[
@@ -559,10 +738,42 @@
 									"__TYPE__": "BooleanContent",
 									"value": false
 								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
 							]
 						]
 					}
 				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "1",
+				"type": "Select"
 			}
 		},
 		"items": [
@@ -636,51 +847,65 @@
 								}
 							],
 							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"id": "mock_Media_link",
-										"kind": "image/jpeg",
-										"name": "mock_name",
-										"url": "https://source.unsplash.com/daily",
-										"size": "0",
-										"__TYPE__": "FileLink"
-									}
-								}
-							],
-							[
 								"hasbutton",
 								{
 									"__TYPE__": "BooleanContent",
-									"value": false
+									"value": true
 								}
 							],
 							[
 								"hasimage",
 								{
 									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
 									"value": false
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
 								}
 							]
 						]
 					}
 				]
 			},
-			"button": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"id": "mock_Media_link",
-					"kind": "image/jpeg",
-					"name": "mock_name",
-					"url": "https://source.unsplash.com/daily",
-					"size": "0",
-					"__TYPE__": "FileLink"
-				}
-			},
 			"button_variation": {
 				"__TYPE__": "FieldContent",
 				"value": "solid",
+				"type": "Select"
+			},
+			"button": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "2",
 				"type": "Select"
 			}
 		},
@@ -755,24 +980,10 @@
 								}
 							],
 							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"id": "mock_Media_link",
-										"kind": "image/jpeg",
-										"name": "mock_name",
-										"url": "https://source.unsplash.com/daily",
-										"size": "0",
-										"__TYPE__": "FileLink"
-									}
-								}
-							],
-							[
 								"hasbutton",
 								{
 									"__TYPE__": "BooleanContent",
-									"value": true
+									"value": false
 								}
 							],
 							[
@@ -781,10 +992,42 @@
 									"__TYPE__": "BooleanContent",
 									"value": false
 								}
+							],
+							[
+								"haslink",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"button",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
 							]
 						]
 					}
 				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "1",
+				"type": "Select"
 			}
 		},
 		"items": [

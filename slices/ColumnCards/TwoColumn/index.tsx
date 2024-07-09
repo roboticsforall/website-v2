@@ -30,7 +30,7 @@ const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
         <Flex gap={6} wrap="wrap" justifyContent={"center"}>
           {slice.primary.cards.map((item) => (
             <Box flexGrow={1} width={{ md: "calc(50% - 1.5rem)" }}>
-              <Card>
+              <Card h="100%">
                 {item.hasimage && (
                   <CardHeader>
                     <PrismicNextImage
@@ -48,11 +48,13 @@ const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
                     <PrismicRichText field={item.description} />
                   </Text>
                 </CardBody>
-                {(item.hasimage || item.hasbutton) && (
+                {(item.haslink || item.hasbutton) && (
                   <CardFooter>
                     <ButtonGroup spacing="2">
                       {item.hasbutton && <Button>Buy now</Button>}
-                      <Button variant="link">Add to cart</Button>
+                      {item.haslink && (
+                        <Button variant="link">Add to cart</Button>
+                      )}
                     </ButtonGroup>
                   </CardFooter>
                 )}
@@ -61,7 +63,15 @@ const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
           ))}
         </Flex>
         <Center mt={"2.5rem"}>
-          <Button>Contact Us</Button>
+          {slice.variation == "twoColumn" && (
+            <Button
+              variant={
+                slice.primary.button_variation == "solid" ? "solid" : "outline"
+              }
+            >
+              Contact Us
+            </Button>
+          )}
         </Center>
       </Container>
     </Box>
