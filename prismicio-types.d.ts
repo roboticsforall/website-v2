@@ -23,6 +23,7 @@ export type GlobalNavDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | ThemingSlice
   | SarthakSlice
   | HannaSlice
   | MikiasSliceSlice
@@ -614,10 +615,41 @@ export type ThreeColumnExplainerSlice = prismic.SharedSlice<
   ThreeColumnExplainerSliceVariation
 >;
 
+/**
+ * Default variation for Theming Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThemingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Theming*
+ */
+type ThemingSliceVariation = ThemingSliceDefault;
+
+/**
+ * Theming Shared Slice
+ *
+ * - **API ID**: `theming`
+ * - **Description**: Theming
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThemingSlice = prismic.SharedSlice<
+  "theming",
+  ThemingSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
+      options?: prismic.ClientConfig,
       options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
@@ -661,6 +693,9 @@ declare module "@prismicio/client" {
       ThreeColumnExplainerSliceDefaultPrimary,
       ThreeColumnExplainerSliceVariation,
       ThreeColumnExplainerSliceDefault,
+      ThemingSlice,
+      ThemingSliceVariation,
+      ThemingSliceDefault,
     };
   }
 }

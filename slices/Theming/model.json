@@ -1,0 +1,16 @@
+{
+  "id": "theming",
+  "type": "SharedSlice",
+  "name": "Theming",
+  "description": "Theming",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}
