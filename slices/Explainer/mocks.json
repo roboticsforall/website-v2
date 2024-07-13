@@ -1,0 +1,71 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"explainer": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum. Tortor mauris libero non tellus consectetur tristique phasellus sit. Eget elit fringilla sit viverra amet mus mattis et enim.",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Lorem ipsum dolor sit amet consectetur."
+								}
+							]
+						]
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "What we do"
+			},
+			"icon_explainer": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+					"width": 5616,
+					"height": 3744
+				},
+				"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?rect=682%2C0%2C4252%2C3744&w=385&h=339",
+				"width": 385,
+				"height": 339,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 682,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

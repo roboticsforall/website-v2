@@ -95,6 +95,193 @@ export type HomePageDocument<Lang extends string = string> =
 export type AllDocumentTypes = GlobalNavDocument | HomePageDocument;
 
 /**
+ * Primary content in *BasicTextBlock → Block Left Aligned → Primary*
+ */
+export interface BasicTextBlockSliceBlockLeftAlignedPrimary {
+  /**
+   * Title field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Description field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * ButtonText field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.buttonText
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttonText: prismic.KeyTextField;
+
+  /**
+   * Button Solid field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_solid
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_solid: prismic.LinkField;
+
+  /**
+   * Button outlined field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_outlined
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_outlined: prismic.LinkField;
+}
+
+/**
+ * Block Left Aligned variation for BasicTextBlock Slice
+ *
+ * - **API ID**: `blockLeftAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BasicTextBlockSliceBlockLeftAligned = prismic.SharedSliceVariation<
+  "blockLeftAligned",
+  Simplify<BasicTextBlockSliceBlockLeftAlignedPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *BasicTextBlock*
+ */
+type BasicTextBlockSliceVariation = BasicTextBlockSliceBlockLeftAligned;
+
+/**
+ * BasicTextBlock Shared Slice
+ *
+ * - **API ID**: `basic_text_block`
+ * - **Description**: BasicTextBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BasicTextBlockSlice = prismic.SharedSlice<
+  "basic_text_block",
+  BasicTextBlockSliceVariation
+>;
+
+/**
+ * Item in *Explainer → Default → Primary → Explainer*
+ */
+export interface ExplainerSliceDefaultPrimaryExplainerItem {
+  /**
+   * Title field in *Explainer → Default → Primary → Explainer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.explainer[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Explainer → Default → Primary → Explainer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.explainer[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Explainer → Default → Primary*
+ */
+export interface ExplainerSliceDefaultPrimary {
+  /**
+   * Title field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Icon Explainer field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.icon_explainer
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon_explainer: prismic.ImageField<never>;
+
+  /**
+   * Explainer field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.explainer[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  explainer: prismic.GroupField<
+    Simplify<ExplainerSliceDefaultPrimaryExplainerItem>
+  >;
+}
+
+/**
+ * Default variation for Explainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExplainerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ExplainerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Explainer*
+ */
+type ExplainerSliceVariation = ExplainerSliceDefault;
+
+/**
+ * Explainer Shared Slice
+ *
+ * - **API ID**: `explainer`
+ * - **Description**: Explainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExplainerSlice = prismic.SharedSlice<
+  "explainer",
+  ExplainerSliceVariation
+>;
+
+/**
  * Primary content in *HannaSlice → Default → Primary*
  */
 export interface HannaSliceDefaultPrimary {
@@ -360,6 +547,108 @@ export type SarthakSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Testimonials → Default → Primary → testimonials*
+ */
+export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
+  /**
+   * Description field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Name field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * User field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].user
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  user: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Testimonials → Default → Primary*
+ */
+export interface TestimonialsSliceDefaultPrimary {
+  /**
+   * Title field in *Testimonials → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * testimonials field in *Testimonials → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  testimonials: prismic.GroupField<
+    Simplify<TestimonialsSliceDefaultPrimaryTestimonialsItem>
+  >;
+
+  /**
+   * Background Image field in *Testimonials → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Testimonials Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimonialsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Testimonials*
+ */
+type TestimonialsSliceVariation = TestimonialsSliceDefault;
+
+/**
+ * Testimonials Shared Slice
+ *
+ * - **API ID**: `testimonials`
+ * - **Description**: Testimonials
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialsSlice = prismic.SharedSlice<
+  "testimonials",
+  TestimonialsSliceVariation
+>;
+
+/**
  * Default variation for Theming Slice
  *
  * - **API ID**: `default`
@@ -405,6 +694,15 @@ declare module "@prismicio/client" {
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      BasicTextBlockSlice,
+      BasicTextBlockSliceBlockLeftAlignedPrimary,
+      BasicTextBlockSliceVariation,
+      BasicTextBlockSliceBlockLeftAligned,
+      ExplainerSlice,
+      ExplainerSliceDefaultPrimaryExplainerItem,
+      ExplainerSliceDefaultPrimary,
+      ExplainerSliceVariation,
+      ExplainerSliceDefault,
       HannaSlice,
       HannaSliceDefaultPrimary,
       HannaSliceVariation,
@@ -421,6 +719,11 @@ declare module "@prismicio/client" {
       SarthakSliceDefaultPrimary,
       SarthakSliceVariation,
       SarthakSliceDefault,
+      TestimonialsSlice,
+      TestimonialsSliceDefaultPrimaryTestimonialsItem,
+      TestimonialsSliceDefaultPrimary,
+      TestimonialsSliceVariation,
+      TestimonialsSliceDefault,
       ThemingSlice,
       ThemingSliceVariation,
       ThemingSliceDefault,

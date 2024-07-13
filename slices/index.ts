@@ -3,9 +3,12 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  basic_text_block: dynamic(() => import("./BasicTextBlock")),
+  explainer: dynamic(() => import("./Explainer")),
   hanna: dynamic(() => import("./HannaSlice")),
   hero: dynamic(() => import("./Hero")),
   mikias_slice: dynamic(() => import("./MikiasSlice")),
   sarthak: dynamic(() => import("./Sarthak")),
+  testimonials: dynamic(() => import("./Testimonials")),
   theming: dynamic(() => import("./Theming")),
 };
