@@ -28,6 +28,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "prismic-ts-codegen": "^0.1.21",
     "slice-machine-ui": "^2.2.0",
     "typescript": "^5"
   }
