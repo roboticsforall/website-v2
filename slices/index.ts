@@ -3,9 +3,11 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  column_cards: dynamic(() => import("./ColumnCards")),
   hanna: dynamic(() => import("./HannaSlice")),
   hero: dynamic(() => import("./Hero")),
   mikias_slice: dynamic(() => import("./MikiasSlice")),
+  navigation: dynamic(() => import("./Navigation")),
   split_feature_block: dynamic(() => import("./SplitFeatureBlock")),
   team_cards_section: dynamic(() => import("./TeamCardsSection")),
   three_column_explainer: dynamic(() => import("./ThreeColumnExplainer")),

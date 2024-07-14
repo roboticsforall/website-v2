@@ -1,26 +1,31 @@
 {
   "format": "page",
-  "id": "home_page",
-  "label": "Home Page",
-  "repeatable": false,
+  "id": "page",
+  "label": "Page",
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "category": {
+        "type": "Link",
+        "config": {
+          "label": "Category",
+          "select": "document",
+          "customtypes": ["category"]
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
             "theming": {
-              "type": "SharedSlice"
-            },
-            "sarthak": {
-              "type": "SharedSlice"
-            },
-            "hanna": {
-              "type": "SharedSlice"
-            },
-            "mikias_slice": {
               "type": "SharedSlice"
             },
             "hero": {
