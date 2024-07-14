@@ -18,7 +18,16 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "theming": {
+              "type": "SharedSlice"
+            },
             "sarthak": {
+              "type": "SharedSlice"
+            },
+            "hanna": {
+              "type": "SharedSlice"
+            },
+            "mikias_slice": {
               "type": "SharedSlice"
             },
             "hero": {

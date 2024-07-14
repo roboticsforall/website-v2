@@ -22,7 +22,12 @@ export type GlobalNavDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomePageDocumentDataSlicesSlice = SarthakSlice | HeroSlice;
+type HomePageDocumentDataSlicesSlice =
+  | ThemingSlice
+  | SarthakSlice
+  | HannaSlice
+  | MikiasSliceSlice
+  | HeroSlice;
 
 /**
  * Content for Home Page documents
@@ -87,82 +92,34 @@ export type HomePageDocument<Lang extends string = string> =
     Lang
   >;
 
-type SarthakDocumentDataSlicesSlice = SarthakSlice;
+export type AllDocumentTypes = GlobalNavDocument | HomePageDocument;
 
 /**
- * Content for Sarthak documents
- */
-interface SarthakDocumentData {
-  /**
-   * Slice Zone field in *Sarthak*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<SarthakDocumentDataSlicesSlice> /**
-   * Meta Description field in *Sarthak*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: sarthak.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *Sarthak*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *Sarthak*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: sarthak.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-}
-
-/**
- * Sarthak document from Prismic
- *
- * - **API ID**: `sarthak`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type SarthakDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<SarthakDocumentData>,
-    "sarthak",
-    Lang
-  >;
-
-export type AllDocumentTypes =
-  | GlobalNavDocument
-  | HomePageDocument
-  | SarthakDocument;
-
-/**
- * Primary content in *FiftyFifty → fiftyfiftyrightside → Primary*
+ * Primary content in *FiftyFifty → Default → Primary*
  */
 export interface FiftyFiftySliceDefaultPrimary {
   /**
-   * image field in *FiftyFifty → fiftyfiftyrightside → Primary*
+   * title field in *FiftyFifty → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *FiftyFifty → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * image field in *FiftyFifty → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -172,38 +129,28 @@ export interface FiftyFiftySliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * description field in *FiftyFifty → fiftyfiftyrightside → Primary*
+   * buttonText field in *FiftyFifty → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: fifty_fifty.default.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  description: prismic.RichTextField;
+  buttontext: prismic.KeyTextField;
 
   /**
-   * button field in *FiftyFifty → fiftyfiftyrightside → Primary*
+   * buttonLink field in *FiftyFifty → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.default.primary.button
+   * - **API ID Path**: fifty_fifty.default.primary.buttonlink
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button: prismic.LinkField;
-
-  /**
-   * title field in *FiftyFifty → fiftyfiftyrightside → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
+  buttonlink: prismic.LinkField;
 }
 
 /**
- * fiftyfiftyrightside variation for FiftyFifty Slice
+ * Default variation for FiftyFifty Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -216,169 +163,9 @@ export type FiftyFiftySliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *FiftyFifty → fiftyfiftyleftside → Primary*
- */
-export interface FiftyFiftySliceFiftyfiftyleftsidePrimary {
-  /**
-   * image field in *FiftyFifty → fiftyfiftyleftside → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyfiftyleftside.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * description field in *FiftyFifty → fiftyfiftyleftside → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyfiftyleftside.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * button field in *FiftyFifty → fiftyfiftyleftside → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyfiftyleftside.primary.button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button: prismic.LinkField;
-
-  /**
-   * title field in *FiftyFifty → fiftyfiftyleftside → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyfiftyleftside.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-}
-
-/**
- * fiftyfiftyleftside variation for FiftyFifty Slice
- *
- * - **API ID**: `fiftyfiftyleftside`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FiftyFiftySliceFiftyfiftyleftside = prismic.SharedSliceVariation<
-  "fiftyfiftyleftside",
-  Simplify<FiftyFiftySliceFiftyfiftyleftsidePrimary>,
-  never
->;
-
-/**
- * Primary content in *FiftyFifty → Fifty fifty Left Side NoButton → Primary*
- */
-export interface FiftyFiftySliceFiftyFiftyLeftSideNoButtonPrimary {
-  /**
-   * image field in *FiftyFifty → Fifty fifty Left Side NoButton → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyFiftyLeftSideNoButton.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * description field in *FiftyFifty → Fifty fifty Left Side NoButton → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyFiftyLeftSideNoButton.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * title field in *FiftyFifty → Fifty fifty Left Side NoButton → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyFiftyLeftSideNoButton.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-}
-
-/**
- * Fifty fifty Left Side NoButton variation for FiftyFifty Slice
- *
- * - **API ID**: `fiftyFiftyLeftSideNoButton`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FiftyFiftySliceFiftyFiftyLeftSideNoButton =
-  prismic.SharedSliceVariation<
-    "fiftyFiftyLeftSideNoButton",
-    Simplify<FiftyFiftySliceFiftyFiftyLeftSideNoButtonPrimary>,
-    never
-  >;
-
-/**
- * Primary content in *FiftyFifty → Fifty fifty RightSide NoButton → Primary*
- */
-export interface FiftyFiftySliceFiftyFiftyRightSideNoButtonPrimary {
-  /**
-   * image field in *FiftyFifty → Fifty fifty RightSide NoButton → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyFiftyRightSideNoButton.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * description field in *FiftyFifty → Fifty fifty RightSide NoButton → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyFiftyRightSideNoButton.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * title field in *FiftyFifty → Fifty fifty RightSide NoButton → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.fiftyFiftyRightSideNoButton.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-}
-
-/**
- * Fifty fifty RightSide NoButton variation for FiftyFifty Slice
- *
- * - **API ID**: `fiftyFiftyRightSideNoButton`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FiftyFiftySliceFiftyFiftyRightSideNoButton =
-  prismic.SharedSliceVariation<
-    "fiftyFiftyRightSideNoButton",
-    Simplify<FiftyFiftySliceFiftyFiftyRightSideNoButtonPrimary>,
-    never
-  >;
-
-/**
  * Slice variation for *FiftyFifty*
  */
-type FiftyFiftySliceVariation =
-  | FiftyFiftySliceDefault
-  | FiftyFiftySliceFiftyfiftyleftside
-  | FiftyFiftySliceFiftyFiftyLeftSideNoButton
-  | FiftyFiftySliceFiftyFiftyRightSideNoButton;
+type FiftyFiftySliceVariation = FiftyFiftySliceDefault;
 
 /**
  * FiftyFifty Shared Slice
@@ -391,6 +178,68 @@ export type FiftyFiftySlice = prismic.SharedSlice<
   "fifty_fifty",
   FiftyFiftySliceVariation
 >;
+
+/**
+ * Primary content in *HannaSlice → Default → Primary*
+ */
+export interface HannaSliceDefaultPrimary {
+  /**
+   * image field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * link field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * title field in *HannaSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hanna.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for HannaSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HannaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HannaSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *HannaSlice*
+ */
+type HannaSliceVariation = HannaSliceDefault;
+
+/**
+ * HannaSlice Shared Slice
+ *
+ * - **API ID**: `hanna`
+ * - **Description**: Hanna
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HannaSlice = prismic.SharedSlice<"hanna", HannaSliceVariation>;
 
 /**
  * Primary content in *Hero → Default → Primary*
@@ -445,236 +294,343 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
- * Primary content in *HorizontalCard → Right side → Primary*
+ * Primary content in *HorizontalSlice → RightImage → Primary*
  */
-export interface HorizontalCardSliceDefaultPrimary {
+export interface HorizontalSliceSliceDefaultPrimary {
   /**
-   * image field in *HorizontalCard → Right side → Primary*
+   * title field in *HorizontalSlice → RightImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *HorizontalSlice → RightImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * buttontext field in *HorizontalSlice → RightImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.default.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
+
+  /**
+   * image field in *HorizontalSlice → RightImage → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.default.primary.image
+   * - **API ID Path**: horizontal_slice.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * title field in *HorizontalCard → Right side → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-
-  /**
-   * description field in *HorizontalCard → Right side → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * button field in *HorizontalCard → Right side → Primary*
+   * buttonlink field in *HorizontalSlice → RightImage → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.default.primary.button
+   * - **API ID Path**: horizontal_slice.default.primary.buttonlink
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button: prismic.LinkField;
+  buttonlink: prismic.LinkField;
 }
 
 /**
- * Right side variation for HorizontalCard Slice
+ * RightImage variation for HorizontalSlice Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HorizontalCardSliceDefault = prismic.SharedSliceVariation<
+export type HorizontalSliceSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<HorizontalCardSliceDefaultPrimary>,
+  Simplify<HorizontalSliceSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Primary content in *HorizontalCard → Left Side → Primary*
+ * Primary content in *HorizontalSlice → leftImage → Primary*
  */
-export interface HorizontalCardSliceLeftSidePrimary {
+export interface HorizontalSliceSliceLeftImagePrimary {
   /**
-   * title field in *HorizontalCard → Left Side → Primary*
+   * title field in *HorizontalSlice → leftImage → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.leftSide.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: horizontal_slice.leftImage.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  title: prismic.RichTextField;
+  title: prismic.KeyTextField;
 
   /**
-   * image field in *HorizontalCard → Left Side → Primary*
+   * description field in *HorizontalSlice → leftImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.leftImage.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * buttontext field in *HorizontalSlice → leftImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.leftImage.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
+
+  /**
+   * image field in *HorizontalSlice → leftImage → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.leftSide.primary.image
+   * - **API ID Path**: horizontal_slice.leftImage.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * description field in *HorizontalCard → Left Side → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.leftSide.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * button field in *HorizontalCard → Left Side → Primary*
+   * buttonlink field in *HorizontalSlice → leftImage → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.leftSide.primary.button
+   * - **API ID Path**: horizontal_slice.leftImage.primary.buttonlink
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button: prismic.LinkField;
+  buttonlink: prismic.LinkField;
 }
 
 /**
- * Left Side variation for HorizontalCard Slice
+ * leftImage variation for HorizontalSlice Slice
  *
- * - **API ID**: `leftSide`
+ * - **API ID**: `leftImage`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HorizontalCardSliceLeftSide = prismic.SharedSliceVariation<
-  "leftSide",
-  Simplify<HorizontalCardSliceLeftSidePrimary>,
+export type HorizontalSliceSliceLeftImage = prismic.SharedSliceVariation<
+  "leftImage",
+  Simplify<HorizontalSliceSliceLeftImagePrimary>,
   never
 >;
 
 /**
- * Primary content in *HorizontalCard → Right Side No Button → Primary*
+ * Primary content in *HorizontalSlice → leftImageNoButton → Primary*
  */
-export interface HorizontalCardSliceRightSideNoButtonPrimary {
+export interface HorizontalSliceSliceLeftImageNoButtonPrimary {
   /**
-   * image field in *HorizontalCard → Right Side No Button → Primary*
+   * title field in *HorizontalSlice → leftImageNoButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.leftImageNoButton.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *HorizontalSlice → leftImageNoButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.leftImageNoButton.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * image field in *HorizontalSlice → leftImageNoButton → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.rightSideNoButton.primary.image
+   * - **API ID Path**: horizontal_slice.leftImageNoButton.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * leftImageNoButton variation for HorizontalSlice Slice
+ *
+ * - **API ID**: `leftImageNoButton`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HorizontalSliceSliceLeftImageNoButton =
+  prismic.SharedSliceVariation<
+    "leftImageNoButton",
+    Simplify<HorizontalSliceSliceLeftImageNoButtonPrimary>,
+    never
+  >;
+
+/**
+ * Primary content in *HorizontalSlice → rightImageNoButton → Primary*
+ */
+export interface HorizontalSliceSliceRightImageNoButtonPrimary {
+  /**
+   * title field in *HorizontalSlice → rightImageNoButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.rightImageNoButton.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *HorizontalSlice → rightImageNoButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.rightImageNoButton.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * image field in *HorizontalSlice → rightImageNoButton → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: horizontal_slice.rightImageNoButton.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * rightImageNoButton variation for HorizontalSlice Slice
+ *
+ * - **API ID**: `rightImageNoButton`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HorizontalSliceSliceRightImageNoButton =
+  prismic.SharedSliceVariation<
+    "rightImageNoButton",
+    Simplify<HorizontalSliceSliceRightImageNoButtonPrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *HorizontalSlice*
+ */
+type HorizontalSliceSliceVariation =
+  | HorizontalSliceSliceDefault
+  | HorizontalSliceSliceLeftImage
+  | HorizontalSliceSliceLeftImageNoButton
+  | HorizontalSliceSliceRightImageNoButton;
+
+/**
+ * HorizontalSlice Shared Slice
+ *
+ * - **API ID**: `horizontal_slice`
+ * - **Description**: HorizontalSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HorizontalSliceSlice = prismic.SharedSlice<
+  "horizontal_slice",
+  HorizontalSliceSliceVariation
+>;
+
+/**
+ * Primary content in *MikiasSlice → Default → Primary*
+ */
+export interface MikiasSliceSliceDefaultPrimary {
+  /**
+   * Image field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
 
   /**
-   * title field in *HorizontalCard → Right Side No Button → Primary*
+   * Title field in *MikiasSlice → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.rightSideNoButton.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: mikias_slice.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  title: prismic.RichTextField;
+  title: prismic.KeyTextField;
 
   /**
-   * description field in *HorizontalCard → Right Side No Button → Primary*
+   * Description field in *MikiasSlice → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.rightSideNoButton.primary.description
+   * - **API ID Path**: mikias_slice.default.primary.description
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   description: prismic.RichTextField;
+
+  /**
+   * Link field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * buttonText field in *MikiasSlice → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mikias_slice.default.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
 }
 
 /**
- * Right Side No Button variation for HorizontalCard Slice
+ * Default variation for MikiasSlice Slice
  *
- * - **API ID**: `rightSideNoButton`
+ * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HorizontalCardSliceRightSideNoButton = prismic.SharedSliceVariation<
-  "rightSideNoButton",
-  Simplify<HorizontalCardSliceRightSideNoButtonPrimary>,
+export type MikiasSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MikiasSliceSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Primary content in *HorizontalCard → Left Side No Button → Primary*
+ * Slice variation for *MikiasSlice*
  */
-export interface HorizontalCardSliceLeftSideNoButtonPrimary {
-  /**
-   * image field in *HorizontalCard → Left Side No Button → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.leftSideNoButton.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * title field in *HorizontalCard → Left Side No Button → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.leftSideNoButton.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-
-  /**
-   * description field in *HorizontalCard → Left Side No Button → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: horizontal_card.leftSideNoButton.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-}
+type MikiasSliceSliceVariation = MikiasSliceSliceDefault;
 
 /**
- * Left Side No Button variation for HorizontalCard Slice
+ * MikiasSlice Shared Slice
  *
- * - **API ID**: `leftSideNoButton`
- * - **Description**: Default
+ * - **API ID**: `mikias_slice`
+ * - **Description**: MikiasSlice
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type HorizontalCardSliceLeftSideNoButton = prismic.SharedSliceVariation<
-  "leftSideNoButton",
-  Simplify<HorizontalCardSliceLeftSideNoButtonPrimary>,
-  never
->;
-
-/**
- * Slice variation for *HorizontalCard*
- */
-type HorizontalCardSliceVariation =
-  | HorizontalCardSliceDefault
-  | HorizontalCardSliceLeftSide
-  | HorizontalCardSliceRightSideNoButton
-  | HorizontalCardSliceLeftSideNoButton;
-
-/**
- * HorizontalCard Shared Slice
- *
- * - **API ID**: `horizontal_card`
- * - **Description**: HorizontalCard
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HorizontalCardSlice = prismic.SharedSlice<
-  "horizontal_card",
-  HorizontalCardSliceVariation
+export type MikiasSliceSlice = prismic.SharedSlice<
+  "mikias_slice",
+  MikiasSliceSliceVariation
 >;
 
 /**
@@ -743,6 +699,36 @@ export type SarthakSlice = prismic.SharedSlice<
   SarthakSliceVariation
 >;
 
+/**
+ * Default variation for Theming Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThemingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Theming*
+ */
+type ThemingSliceVariation = ThemingSliceDefault;
+
+/**
+ * Theming Shared Slice
+ *
+ * - **API ID**: `theming`
+ * - **Description**: Theming
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThemingSlice = prismic.SharedSlice<
+  "theming",
+  ThemingSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -758,38 +744,40 @@ declare module "@prismicio/client" {
       HomePageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
-      SarthakDocument,
-      SarthakDocumentData,
-      SarthakDocumentDataSlicesSlice,
       AllDocumentTypes,
       FiftyFiftySlice,
       FiftyFiftySliceDefaultPrimary,
-      FiftyFiftySliceFiftyfiftyleftsidePrimary,
-      FiftyFiftySliceFiftyFiftyLeftSideNoButtonPrimary,
-      FiftyFiftySliceFiftyFiftyRightSideNoButtonPrimary,
       FiftyFiftySliceVariation,
       FiftyFiftySliceDefault,
-      FiftyFiftySliceFiftyfiftyleftside,
-      FiftyFiftySliceFiftyFiftyLeftSideNoButton,
-      FiftyFiftySliceFiftyFiftyRightSideNoButton,
+      HannaSlice,
+      HannaSliceDefaultPrimary,
+      HannaSliceVariation,
+      HannaSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
-      HorizontalCardSlice,
-      HorizontalCardSliceDefaultPrimary,
-      HorizontalCardSliceLeftSidePrimary,
-      HorizontalCardSliceRightSideNoButtonPrimary,
-      HorizontalCardSliceLeftSideNoButtonPrimary,
-      HorizontalCardSliceVariation,
-      HorizontalCardSliceDefault,
-      HorizontalCardSliceLeftSide,
-      HorizontalCardSliceRightSideNoButton,
-      HorizontalCardSliceLeftSideNoButton,
+      HorizontalSliceSlice,
+      HorizontalSliceSliceDefaultPrimary,
+      HorizontalSliceSliceLeftImagePrimary,
+      HorizontalSliceSliceLeftImageNoButtonPrimary,
+      HorizontalSliceSliceRightImageNoButtonPrimary,
+      HorizontalSliceSliceVariation,
+      HorizontalSliceSliceDefault,
+      HorizontalSliceSliceLeftImage,
+      HorizontalSliceSliceLeftImageNoButton,
+      HorizontalSliceSliceRightImageNoButton,
+      MikiasSliceSlice,
+      MikiasSliceSliceDefaultPrimary,
+      MikiasSliceSliceVariation,
+      MikiasSliceSliceDefault,
       SarthakSlice,
       SarthakSliceDefaultPrimary,
       SarthakSliceVariation,
       SarthakSliceDefault,
+      ThemingSlice,
+      ThemingSliceVariation,
+      ThemingSliceDefault,
     };
   }
 }
