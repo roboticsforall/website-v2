@@ -1,4 +1,4 @@
-import {Box, Flex, Container, Heading, Text, Center, Stack, HStack} from "@chakra-ui/react";
+import {Box, Flex, Container, Heading, Text, Center, Grid, Stack, VStack} from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 
@@ -18,7 +18,7 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
     >
        <Box bg={"white"} >
       <Container py={12} size={[null, "sm", "md", "lg", "xl", "2xl"]} >
-        <Stack flexDirection={"row"} py={"70"} px={"120"}>
+        <Stack flexDirection={"row"} py={12} px={"120"}>
           <Center width={{ 
             sm: "calc(50% - 1.5rem * 2/3)",
             lg: "calc(33.33333% - 1.5rem * 2/3)"
