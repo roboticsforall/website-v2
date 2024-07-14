@@ -60,6 +60,20 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
+          }
+        },
         "title": {
           "type": "Text",
           "config": {
@@ -74,13 +88,6 @@
             "placeholder": ""
           }
         },
-        "buttontext": {
-          "type": "Text",
-          "config": {
-            "label": "buttontext",
-            "placeholder": ""
-          }
-        },
         "image": {
           "type": "Image",
           "config": {
@@ -89,12 +96,31 @@
             "thumbnails": []
           }
         },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "buttontext",
+            "placeholder": ""
+          }
+        },
         "buttonlink": {
           "type": "Link",
           "config": {
             "label": "buttonlink",
             "placeholder": "",
             "select": null
+          }
+        },
+        "button_variation": {
+          "type": "Select",
+          "config": {
+            "label": "Button Variation",
+            "placeholder": "",
+            "options": [
+              "solid",
+              "outline"
+            ],
+            "default_value": "solid"
           }
         }
       },

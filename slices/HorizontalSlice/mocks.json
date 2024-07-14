@@ -53,63 +53,6 @@
 	},
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "leftImage",
-		"primary": {
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "bark",
-				"type": "Text"
-			},
-			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "replace",
-				"type": "Text"
-			},
-			"buttontext": {
-				"__TYPE__": "FieldContent",
-				"value": "exist",
-				"type": "Text"
-			},
-			"image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-					"width": 4272,
-					"height": 2848
-				},
-				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-				"width": 4272,
-				"height": 2848,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"buttonlink": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "leftImageNoButton",
 		"primary": {
 			"title": {
@@ -189,6 +132,73 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "leftImage",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+					"width": 4272,
+					"height": 2848
+				},
+				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+				"width": 4272,
+				"height": 2848,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"buttonlink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "primary"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Our Purpose"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Lorem Ipsum"
+			},
+			"buttontext": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Button"
+			},
+			"button_variation": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "solid"
 			}
 		},
 		"items": [
