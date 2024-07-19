@@ -12,6 +12,21 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "blue swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
         "title": {
           "type": "Text",
           "config": {

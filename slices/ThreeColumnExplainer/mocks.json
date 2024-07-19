@@ -6,7 +6,7 @@
 			"title": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",
-				"value": "Your contributions make a difference"
+				"value": "Our standard curriculum provided to you."
 			},
 			"description": {
 				"__TYPE__": "StructuredTextContent",
@@ -14,7 +14,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum. Tortor mauris libero non tellus consectetur tristique phasellus sit. Eget elit fringilla sit viverra amet mus mattis et enim.",
+							"text": "Access a comprehensive, research-based STEM curriculum designed to engage and challenge students.",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -32,7 +32,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "2,500 students"
+									"value": "Expert guidance and support"
 								}
 							],
 							[
@@ -43,7 +43,7 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum.",
+												"text": "Connect with our team of STEM educators and mentors for guidance and support.",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -61,7 +61,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "2,500 students"
+									"value": "Expert guidance and support"
 								}
 							],
 							[
@@ -72,7 +72,7 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum.",
+												"text": "Connect with our team of STEM educators and mentors for guidance and support.",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -81,8 +81,42 @@
 								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Connect with our team of STEM educators and mentors for guidance and support.",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Expert guidance and support"
+								}
+							]
+						]
 					}
 				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
 			}
 		},
 		"items": []

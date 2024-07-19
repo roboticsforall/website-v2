@@ -1,4 +1,6 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { BackgroundColor } from "@/app/components/BackgroundColor";
+import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { Box, Flex, Text, Heading, Card, CardBody, Grid,} from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
@@ -15,41 +17,66 @@ const ThreeColumnExplainer = ({
   slice,
 }: ThreeColumnExplainerProps): JSX.Element => {
   return (
-    <Flex direction="row" py="8" color="black" mt="20" px="10" height="271px" align="start" gap="5">
-      <Box w="376px" p="6" py="0">
-        <Text fontSize="28px" lineHeight="36px" fontWeight="700" mb="2">
-          {slice.primary.title}
-        </Text>
-        <PrismicRichText field={slice.primary.description} />
-      </Box>
-      {slice.primary.multi_column_explainer.map((item, i) => (
-        <Box
-          key={i}
-          w="350px"
-          h="185px"
-          p="6"
-          color="white"
-          display="flex"
-          flexDirection="column"
-          justifyContent="start"
-          alignItems="flex-start"
-          bg="#3399FF"
-          borderRadius="8px"
+    <BackgroundColor
+      backgroundColor={
+        slice.variation === "default" ? slice.primary.backgroundcolor : "white"
+      }
+    >
+      <ContainerWrapper >
+        <Grid
+          templateColumns={{
+            base: "1fr",
+            lg: "1fr 2fr",
+          }}
+          gap="1.5rem"
+          py="8"
+          color="black"
         >
-          <Text
-            fontSize="24px"
-            fontWeight="700"
-            lineHeight="28px"
-            textAlign="left"
-            color="white"
-            mb="2"
+
+          {/* First Column */}
+          <Flex
+            justify="center"
+            align="center"
           >
-            {item.title}
-          </Text>
-          <PrismicRichText field={item.description} />
-        </Box>
-      ))}
-    </Flex>
+            <Box
+              width={{
+                sm: "100%",
+                lg: "calc(100% - 1.5rem * 2/3)",
+              }}
+            >
+              <Heading as="h3" size="xl">
+                {slice.primary.title}
+              </Heading>
+              <Text mt="1.25rem">
+                <PrismicRichText field={slice.primary.description} />
+              </Text>
+            </Box>
+          </Flex>
+
+          {/* Second Column */}
+          <Flex gap={6} wrap="wrap" justifyContent={"center"}>
+            {slice.primary.multi_column_explainer.map((item, i) => (
+              <Box
+                width={{
+                  md: "calc(50% - 1.5rem * 2/3)",
+                }}
+              >
+                <Card bg="#EBEBEB" color="black" height="100%" padding={5}>
+                  <CardBody>
+                    <Text as='b' fontSize='2xl' >
+                      {item.title}
+                    </Text>
+                    <Text mt="1.25rem">
+                        <PrismicRichText field={item.description} />
+                    </Text>
+                  </CardBody>
+                </Card>
+              </Box>
+            ))}
+          </Flex>
+        </Grid>
+      </ContainerWrapper>
+    </BackgroundColor>
   );
 };
 

@@ -12,6 +12,168 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "blue swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "split_feature_block": {
+          "type": "Group",
+          "config": {
+            "label": "Split Feature Block",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "twoColumn",
+      "name": "TwoColumn",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "blue swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "split_feature_block": {
+          "type": "Group",
+          "config": {
+            "label": "Split Feature Block",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "threeColumn",
+      "name": "ThreeColumn",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "blue swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "split_feature_block": {
+          "type": "Group",
+          "config": {
+            "label": "Split Feature Block",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "fourColumn",
+      "name": "FourColumn",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "blue swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
         "split_feature_block": {
           "type": "Group",
           "config": {

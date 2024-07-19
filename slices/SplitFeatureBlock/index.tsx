@@ -1,6 +1,11 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import dynamic from "next/dynamic";
+
+// Import all variation components
+const ThreeColumn = dynamic(() => import("./ThreeColumn"));
+const TwoColumn = dynamic(() => import("./TwoColumn"));
+const FourColumn = dynamic(() => import("./FourColumn"));
 
 /**
  * Props for `SplitFeatureBlock`.
@@ -13,32 +18,16 @@ export type SplitFeatureBlockProps =
  */
 const SplitFeatureBlock = ({ slice }: SplitFeatureBlockProps): JSX.Element => {
   return (
-    <Flex direction="row" py="8" color="black" mt="20" px="10" bg="#178BFF" height="271px" align="center">
-      {slice.primary.split_feature_block.map((item, i) => (
-        <Box key={i} w="383.33px" h="131px" p="6" color="white" alignItems="left">
-          <Text
-            fontSize="62px"
-            fontWeight="700"
-            lineHeight="72px"
-            textAlign="left"
-            color="white"
-            mb="2"
-          >
-            {item.title}
-          </Text>
-          <Text
-            fontSize="18px"
-            fontWeight="400"
-            lineHeight="20px"
-            textAlign="left"
-            color="white"
-            marginTop="10px"
-          >
-            {item.description}
-          </Text>
-        </Box>
-      ))}
-    </Flex>
+    <section
+      data-slice-type={slice.slice_type}
+      data-slice-variation={slice.variation}
+    >
+      {/* Render different components based on slice.variation */}
+      {slice.variation === "default" && <ThreeColumn {...slice} />}
+      {slice.variation === "twoColumn" && <TwoColumn {...slice} />}
+      {slice.variation === "threeColumn" && <ThreeColumn {...slice} />}
+      {slice.variation === "fourColumn" && <FourColumn {...slice} />}
+    </section>
   );
 };
 
