@@ -5,54 +5,6 @@
   "description": "HorizontalSlice",
   "variations": [
     {
-      "id": "default",
-      "name": "RightImage",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "description",
-            "placeholder": ""
-          }
-        },
-        "buttontext": {
-          "type": "Text",
-          "config": {
-            "label": "buttontext",
-            "placeholder": ""
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "buttonlink": {
-          "type": "Link",
-          "config": {
-            "label": "buttonlink",
-            "placeholder": "",
-            "select": null
-          }
-        }
-      },
-      "items": {}
-    },
-    {
       "id": "leftImage",
       "name": "leftImage",
       "docURL": "...",
@@ -134,6 +86,20 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
+          }
+        },
         "title": {
           "type": "Text",
           "config": {
@@ -160,6 +126,80 @@
       "items": {}
     },
     {
+      "id": "rightImage",
+      "name": "rightImage",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "buttontext",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "buttonlink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_variation": {
+          "type": "Select",
+          "config": {
+            "label": "Button Variation",
+            "placeholder": "",
+            "options": [
+              "solid",
+              "outline"
+            ],
+            "default_value": "solid"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
       "id": "rightImageNoButton",
       "name": "rightImageNoButton",
       "docURL": "...",
@@ -167,6 +207,19 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "primary",
+              "secondary",
+              "gradient",
+              "white"
+            ]
+          }
+        },
         "title": {
           "type": "Text",
           "config": {

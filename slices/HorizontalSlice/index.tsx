@@ -15,6 +15,10 @@ import {
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import LeftImage from "./leftImage";
+import LeftImageNoButton from "./leftImageNoButton";
+import RightImage from "./rightImage";
+import RightImageNoButton from "./rightImageNoButton";
 /**
  * Props for `HorizontalSlice`.
  */
@@ -30,7 +34,7 @@ const HorizontalSlice = ({ slice }: HorizontalSliceProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {slice.variation === "default" && <RightImage {...slice} />}
+      {slice.variation === "rightImage" && <RightImage {...slice} />}
       {slice.variation === "leftImage" && <LeftImage {...slice} />}
       {slice.variation === "leftImageNoButton" && (
         <LeftImageNoButton {...slice} />
@@ -44,190 +48,173 @@ const HorizontalSlice = ({ slice }: HorizontalSliceProps): JSX.Element => {
 
 export default HorizontalSlice;
 
-const LeftImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
-  return (
-    <BackgroundColor
-      backgroundColor={
-        slice.variation === "leftImage"
-          ? slice.primary.background_color
-          : "white"
-      }
-    >
-      <ContainerWrapper>
-        <SimpleGrid columns={{ lg: 2 }} spacing={"1.5rem"}>
-          <Box>
-            <PrismicNextImage field={slice.primary.image} />
-          </Box>
-          <Stack justifyContent={"center"}>
-            <Box>
-              <Heading mb={"1.25rem"} as="h2">
-                {slice.primary.title}
-              </Heading>
-              <Text>{slice.primary.description}</Text>
+// const LeftImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
+//   return (
+//     <BackgroundColor
+//       backgroundColor={
+//         slice.variation === "leftImage"
+//           ? slice.primary.background_color
+//           : "white"
+//       }
+//     >
+//       <ContainerWrapper>
+//         <SimpleGrid columns={{ lg: 2 }} spacing={"1.5rem"}>
+//           <Box>
+//             <PrismicNextImage field={slice.primary.image} />
+//           </Box>
+//           <Stack justifyContent={"center"}>
+//             <Box>
+//               <Heading mb={"1.25rem"} as="h2">
+//                 {slice.primary.title}
+//               </Heading>
+//               <Text>{slice.primary.description}</Text>
 
-              <PrismicNextLink
-                field={
-                  slice.variation === "leftImage"
-                    ? slice.primary.buttonlink
-                    : null
-                }
-              >
-                {slice.variation == "leftImage" && (
-                  <Button
-                    mt="2.5rem"
-                    variant={
-                      slice.primary.button_variation == "solid"
-                        ? "solid"
-                        : "outline"
-                    }
-                  >
-                    {slice.variation === "leftImage"
-                      ? slice.primary.buttontext
-                      : ""}
-                  </Button>
-                )}
-              </PrismicNextLink>
-            </Box>
-          </Stack>
-        </SimpleGrid>
-        {/* <Flex>
-          <Image
-            objectFit="cover"
-            w={{ base: "100%", sm: "50%" }}
-            h={{ base: "100vh", sm: "auto" }}
-            maxH="100vh"
-            src={slice.primary.image.url!}
-            alt="RFA"
-          />
+//               <PrismicNextLink
+//                 field={
+//                   slice.variation === "leftImage"
+//                     ? slice.primary.buttonlink
+//                     : null
+//                 }
+//               >
+//                 {slice.variation == "leftImage" && (
+//                   <Button
+//                     mt="2.5rem"
+//                     variant={
+//                       slice.primary.button_variation == "solid"
+//                         ? "solid"
+//                         : "outline"
+//                     }
+//                   >
+//                     {slice.variation === "leftImage"
+//                       ? slice.primary.buttontext
+//                       : ""}
+//                   </Button>
+//                 )}
+//               </PrismicNextLink>
+//             </Box>
+//           </Stack>
+//         </SimpleGrid>
 
-          <Stack
-            padding="3rem 1.5rem 3rem 1.5rem"
-            justifyContent="center"
-            spacing={1}
-            p={{ base: 4, sm: 6 }}
-            w={{ base: "100%", sm: "50%" }}
-          >
-            <Heading marginBottom={"1.25rem"} size="xl">
-              {slice.primary.title}
-            </Heading>
+//       </ContainerWrapper>
+//     </BackgroundColor>
+//   );
+// };
 
-            <Text py="2">{slice.primary.description}</Text>
+// const LeftImageNoButton = (slice: Content.HorizontalSliceSlice): JSX.Element => {
+//   return (
+//     <BackgroundColor
+//       backgroundColor={
+//         slice.variation === "leftImageNoButton"
+//           ? slice.primary.background_color
+//           : "white"
+//       }
+//     >
+//       <ContainerWrapper>
+//         <SimpleGrid columns={{ lg: 2 }} spacing={"1.5rem"}>
+//           <Box>
+//             <PrismicNextImage field={slice.primary.image} />
+//           </Box>
+//           <Stack justifyContent={"center"}>
+//             <Box>
+//               <Heading mb={"1.25rem"} as="h2">
+//                 {slice.primary.title}
+//               </Heading>
+//               <Text>{slice.primary.description}</Text>
 
-            <PrismicNextLink field={slice.primary.buttonlink}>
-              <Button marginTop="2.5rem" variant="solid" colorScheme="blue">
-                {slice.primary.buttontext}
-              </Button>
-            </PrismicNextLink>
-          </Stack>
-        </Flex> */}
-      </ContainerWrapper>
-    </BackgroundColor>
-  );
-};
+//             </Box>
+//           </Stack>
+//         </SimpleGrid>
 
-const LeftImageNoButton = (
-  slice: Content.HorizontalSliceSlice
-): JSX.Element => {
-  return (
-    <Flex>
-      <Image
-        objectFit="cover"
-        w={{ base: "100%", sm: "50%" }}
-        h={{ base: "100vh", sm: "auto" }}
-        maxH="100vh"
-        src={slice.primary.image.url!}
-        alt="RFA"
-      />
+//       </ContainerWrapper>
+//     </BackgroundColor>
+//   );
+// };
 
-      <Stack
-        padding="3rem 1.5rem 3rem 1.5rem"
-        justifyContent="center"
-        spacing={1}
-        p={{ base: 4, sm: 6 }}
-        w={{ base: "100%", sm: "50%" }}
-      >
-        <Heading marginBottom={"1.25rem"} size="xl">
-          {slice.primary.title}
-        </Heading>
 
-        <Text py="2">{slice.primary.description}</Text>
+// const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
+//   return (
+//     <BackgroundColor
+//       backgroundColor={
+//         slice.variation === "rightImage"
+//           ? slice.primary.background_color
+//           : "white"
+//       }
+//     >
+//       <ContainerWrapper>
+//         <SimpleGrid 
+//           columns={{ base: 1, lg: 2 }} 
+//           spacing={"1.5rem"} 
+//           templateAreas={{ base: `"image" "content"`, lg: `"content image"` }}
+//           direction={{ base: "column", lg: "row" }}
+//         >
+//           <Box gridArea="image">
+//             <PrismicNextImage field={slice.primary.image} />
+//           </Box>
+//           <Stack gridArea="content" justifyContent={"center"} spacing={4}>
+//             <Box>
+//               <Heading mb={"1.25rem"} as="h2">
+//                 {slice.primary.title}
+//               </Heading>
+//               <Text >{slice.primary.description}</Text>
+//               <PrismicNextLink
+//                 field={
+//                   slice.variation === "rightImage"
+//                     ? slice.primary.buttonlink
+//                     : null
+//                 }
+//               >
+//                 {slice.variation === "rightImage" && (
+//                   <Button
+//                     mt="2.5rem"
+//                     variant={
+//                       slice.primary.button_variation === "solid"
+//                         ? "solid"
+//                         : "outline"
+//                     }
+//                   >
+//                     {slice.primary.buttontext}
+//                   </Button>
+//                 )}
+//               </PrismicNextLink>
+//             </Box>
+//           </Stack>
+//         </SimpleGrid>
+//       </ContainerWrapper>
+//     </BackgroundColor>
+//   );
+// };
 
-        {/* <PrismicNextLink field={slice.primary.buttonlink}>
-              <Button marginTop='2.5rem' variant='solid' colorScheme='blue'>
-                {slice.primary.buttontext}
-              </Button>
-            </PrismicNextLink> */}
-      </Stack>
-    </Flex>
-  );
-};
+// const RightImageNoButton = (slice: Content.HorizontalSliceSlice): JSX.Element => {
+//   return (
+//     <BackgroundColor
+//       backgroundColor={
+//         slice.variation === "rightImage"
+//           ? slice.primary.background_color
+//           : "white"
+//       }
+//     >
+//       <ContainerWrapper>
+//         <SimpleGrid 
+//           columns={{ base: 1, lg: 2 }} 
+//           spacing={"1.5rem"} 
+//           templateAreas={{ base: `"image" "content"`, lg: `"content image"` }}
+//           direction={{ base: "column", lg: "row" }}
+//         >
+//           <Box gridArea="image">
+//             <PrismicNextImage field={slice.primary.image} />
+//           </Box>
+//           <Stack gridArea="content" justifyContent={"center"} spacing={4}>
+//             <Box>
+//               <Heading mb={"1.25rem"} as="h2">
+//                 {slice.primary.title}
+//               </Heading>
+//               <Text >{slice.primary.description}</Text>
+              
+//             </Box>
+//           </Stack>
+//         </SimpleGrid>
+//       </ContainerWrapper>
+//     </BackgroundColor>
+//   );
+// };
 
-const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
-  return (
-    <Flex>
-      <Stack
-        padding="3rem 1.5rem 3rem 1.5rem"
-        justifyContent="center"
-        spacing={1}
-        p={{ base: 4, sm: 6 }}
-        w={{ base: "100%", sm: "50%" }}
-      >
-        <Heading marginBottom={"1.25rem"} size="xl">
-          {slice.primary.title}
-        </Heading>
-
-        <Text py="2">{slice.primary.description}</Text>
-
-        <PrismicNextLink field={slice.primary.buttonlink}>
-          <Button marginTop="2.5rem" variant="solid" colorScheme="blue">
-            {slice.primary.buttontext}
-          </Button>
-        </PrismicNextLink>
-      </Stack>
-      <Image
-        objectFit="cover"
-        w={{ base: "100%", sm: "50%" }}
-        h={{ base: "100vh", sm: "auto" }}
-        maxH="100vh"
-        src={slice.primary.image.url!}
-        alt="RFA"
-      />
-    </Flex>
-  );
-};
-
-const RightImageNoButton = (
-  slice: Content.HorizontalSliceSlice
-): JSX.Element => {
-  return (
-    <Flex>
-      <Stack
-        padding="3rem 1.5rem 3rem 1.5rem"
-        justifyContent="center"
-        spacing={1}
-        p={{ base: 4, sm: 6 }}
-        w={{ base: "100%", sm: "50%" }}
-      >
-        <Heading marginBottom={"1.25rem"} size="xl">
-          {slice.primary.title}
-        </Heading>
-
-        <Text py="2">{slice.primary.description}</Text>
-
-        {/* <PrismicNextLink field={slice.primary.buttonlink}>
-              <Button marginTop='2.5rem' variant='solid' colorScheme='blue'>
-                {slice.primary.buttontext}
-              </Button>
-            </PrismicNextLink> */}
-      </Stack>
-      <Image
-        objectFit="cover"
-        w={{ base: "100%", sm: "50%" }}
-        h={{ base: "100vh", sm: "auto" }}
-        maxH="100vh"
-        src={slice.primary.image.url!}
-        alt="RFA"
-      />
-    </Flex>
-  );
-};

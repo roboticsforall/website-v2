@@ -14,26 +14,25 @@
 				"type": "Text"
 			},
 			"image": {
+				"__TYPE__": "ImageContent",
+				"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjE1MTU4OTN8MA&ixlib=rb-4.0.3&q=85",
+				"alt": "yellow lemon fruit beside green leaves",
 				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
-					"width": 12288,
-					"height": 16384
+					"id": "3t8rQ3LD2JI",
+					"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjE1MTU4OTN8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3024,
+					"height": 3024
 				},
-				"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
-				"width": 12288,
-				"height": 16384,
+				"width": 3024,
+				"height": 3024,
 				"edit": {
+					"background": "transparent",
 					"zoom": 1,
 					"crop": {
 						"x": 0,
 						"y": 0
-					},
-					"background": "transparent"
+					}
 				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"buttontext": {
@@ -47,6 +46,16 @@
 					"__TYPE__": "ExternalLink",
 					"url": "https://prismic.io"
 				}
+			},
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "primary",
+				"type": "Select"
+			},
+			"button_variations": {
+				"__TYPE__": "FieldContent",
+				"value": "outline",
+				"type": "Select"
 			}
 		},
 		"items": []
