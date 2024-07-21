@@ -1,20 +1,5 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { Box, Container, Flex, SimpleGrid } from "@chakra-ui/react";
-import {
-  Card,
-  Image,
-  Stack,
-  CardBody,
-  Heading,
-  Text,
-  CardFooter,
-  Button,
-  Center,
-} from "@chakra-ui/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { BackgroundColor } from "@/app/components/BackgroundColor";
-import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import LeftImage from "./leftImage";
 import LeftImageNoButton from "./leftImageNoButton";
 import RightImage from "./rightImage";

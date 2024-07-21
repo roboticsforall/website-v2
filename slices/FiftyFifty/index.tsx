@@ -3,6 +3,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import { Card, Image, Stack, CardBody, Heading, Text, CardFooter, Button, Center, SimpleGrid, Box } from "@chakra-ui/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
+import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 export type FiftyFiftyProps = SliceComponentProps<Content.FiftyFiftySlice>;
 
 const FiftyFifty = ({ slice }: FiftyFiftyProps): JSX.Element => {
@@ -13,7 +14,9 @@ const FiftyFifty = ({ slice }: FiftyFiftyProps): JSX.Element => {
           <Box>
             <PrismicNextImage field={slice.primary.image} />
           </Box>
-          <Stack paddingRight={"1.5rem"} paddingLeft={"1.5rem"} paddingTop={"3rem"} paddingBottom={"3rem"} justifyContent={"center"}>
+
+          <Stack  justifyContent={"center"}>
+            <ContainerWrapper>
             <Box>
               <Heading mb={"1.25rem"} as="h2">
                 {slice.primary.title}
@@ -35,7 +38,9 @@ const FiftyFifty = ({ slice }: FiftyFiftyProps): JSX.Element => {
                   </Button>
                 </PrismicNextLink>
             </Box>
+            </ContainerWrapper>
           </Stack>
+          
         </SimpleGrid>
       </BackgroundColor>
     </section>

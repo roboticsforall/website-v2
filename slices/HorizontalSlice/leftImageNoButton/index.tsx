@@ -2,8 +2,7 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 export type HorizontalSliceProps =
   SliceComponentProps<Content.HorizontalSliceSlice>;
-  import { Content } from "@prismicio/client";
-  import { SliceComponentProps } from "@prismicio/react";
+
   import { Box, Container, Flex, SimpleGrid } from "@chakra-ui/react";
   import {
     Card,
