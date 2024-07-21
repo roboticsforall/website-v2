@@ -22,6 +22,24 @@ interface CategoryDocumentData {
 
 /**
  * Category document from Prismic
+/**
+ * Content for Category documents
+ */
+interface CategoryDocumentData {
+  /**
+   * Name field in *Category*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: category.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+}
+
+/**
+ * Category document from Prismic
  *
  * - **API ID**: `category`
  * - **Repeatable**: `true`
@@ -2151,6 +2169,11 @@ declare module "@prismicio/client" {
       MikiasSliceSliceDefaultPrimary,
       MikiasSliceSliceVariation,
       MikiasSliceSliceDefault,
+      NavigationSlice,
+      NavigationSliceDefaultPrimaryChildNavigationItem,
+      NavigationSliceDefaultPrimary,
+      NavigationSliceVariation,
+      NavigationSliceDefault,
       NavigationSlice,
       NavigationSliceDefaultPrimaryChildNavigationItem,
       NavigationSliceDefaultPrimary,
