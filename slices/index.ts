@@ -8,9 +8,9 @@ export const components = {
   hero: dynamic(() => import("./Hero")),
   mikias_slice: dynamic(() => import("./MikiasSlice")),
   navigation: dynamic(() => import("./Navigation")),
+  sarthak: dynamic(() => import("./Sarthak")),
+  theming: dynamic(() => import("./Theming")),
   split_feature_block: dynamic(() => import("./SplitFeatureBlock")),
   team_cards_section: dynamic(() => import("./TeamCardsSection")),
   three_column_explainer: dynamic(() => import("./ThreeColumnExplainer")),
-  sarthak: dynamic(() => import("./Sarthak")),
-  theming: dynamic(() => import("./Theming")),
 };

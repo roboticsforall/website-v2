@@ -1504,6 +1504,36 @@ export type SarthakSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for Theming Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThemingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Theming*
+ */
+type ThemingSliceVariation = ThemingSliceDefault;
+
+/**
+ * Theming Shared Slice
+ *
+ * - **API ID**: `theming`
+ * - **Description**: Theming
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThemingSlice = prismic.SharedSlice<
+  "theming",
+  ThemingSliceVariation
+>;
+
+/**
  * Item in *SplitFeatureBlock → Default → Primary → Split Feature Block*
  */
 export interface SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem {
@@ -1962,6 +1992,31 @@ export interface ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem
 }
 
 /**
+ * Item in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
+ */
+export interface ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem {
+  /**
+   * Title field in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
  * Primary content in *ThreeColumnExplainer → Default → Primary*
  */
 export interface ThreeColumnExplainerSliceDefaultPrimary {
@@ -2105,6 +2160,9 @@ declare module "@prismicio/client" {
       SarthakSliceDefaultPrimary,
       SarthakSliceVariation,
       SarthakSliceDefault,
+      ThemingSlice,
+      ThemingSliceVariation,
+      ThemingSliceDefault,
       SplitFeatureBlockSlice,
       SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem,
       SplitFeatureBlockSliceDefaultPrimary,
@@ -2124,9 +2182,6 @@ declare module "@prismicio/client" {
       TeamCardsSectionSliceDefaultPrimary,
       TeamCardsSectionSliceVariation,
       TeamCardsSectionSliceDefault,
-      ThemingSlice,
-      ThemingSliceVariation,
-      ThemingSliceDefault,
       ThreeColumnExplainerSlice,
       ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem,
       ThreeColumnExplainerSliceDefaultPrimary,
