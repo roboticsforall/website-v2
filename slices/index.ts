@@ -3,12 +3,9 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-<<<<<<< HEAD
   basic_text_block: dynamic(() => import("./BasicTextBlock")),
   explainer: dynamic(() => import("./Explainer")),
-=======
   column_cards: dynamic(() => import("./ColumnCards")),
->>>>>>> 2f2a52cbdd7dcf4aae92f735f30d084a50456cf9
   hanna: dynamic(() => import("./HannaSlice")),
   hero: dynamic(() => import("./Hero")),
   mikias_slice: dynamic(() => import("./MikiasSlice")),
