@@ -115,8 +115,8 @@
 			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"value": "white",
-				"type": "Select"
+				"type": "Select",
+				"value": "white"
 			}
 		},
 		"items": []

@@ -61,7 +61,7 @@ const ThreeColumnExplainer = ({
                   md: "calc(50% - 1.5rem * 2/3)",
                 }}
               >
-                <Card bg="#EBEBEB" color="black" height="100%" padding={5}>
+                <Card bg={"primary.500"} color="white" height="100%" padding={5}>
                   <CardBody>
                     <Text as='b' fontSize='2xl' >
                       {item.title}

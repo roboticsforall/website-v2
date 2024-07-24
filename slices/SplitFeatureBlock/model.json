@@ -21,8 +21,7 @@
               "white",
               "primary",
               "secondary",
-              "gradient",
-              "blue swoosh"
+              "gradient"
             ],
             "default_value": "white"
           }
@@ -70,8 +69,7 @@
               "white",
               "primary",
               "secondary",
-              "gradient",
-              "blue swoosh"
+              "gradient"
             ],
             "default_value": "white"
           }
@@ -119,8 +117,7 @@
               "white",
               "primary",
               "secondary",
-              "gradient",
-              "blue swoosh"
+              "gradient"
             ],
             "default_value": "white"
           }
@@ -168,8 +165,7 @@
               "white",
               "primary",
               "secondary",
-              "gradient",
-              "blue swoosh"
+              "gradient"
             ],
             "default_value": "white"
           }

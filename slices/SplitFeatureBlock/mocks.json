@@ -81,6 +81,155 @@
 	},
 	{
 		"__TYPE__": "SharedSliceContent",
+		"variation": "twoColumn",
+		"primary": {
+			"split_feature_block": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "200+"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Active volunteers"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Student taught"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "25,000+"
+								}
+							]
+						]
+					}
+				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "threeColumn",
+		"primary": {
+			"split_feature_block": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "200+"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Active volunteers"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "25,000+"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Student taught"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "11"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Levels of curriculum"
+								}
+							]
+						]
+					}
+				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "gradient",
+				"type": "Select"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
 		"variation": "fourColumn",
 		"primary": {
 			"split_feature_block": {
@@ -174,157 +323,8 @@
 			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "secondary"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "threeColumn",
-		"primary": {
-			"split_feature_block": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "200+"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Active volunteers"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "25,000+"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Student taught"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "11"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Levels of curriculum"
-								}
-							]
-						]
-					}
-				]
-			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "secondary"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "twoColumn",
-		"primary": {
-			"split_feature_block": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "200+"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Active volunteers"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"description",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Student taught"
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "25,000+"
-								}
-							]
-						]
-					}
-				]
-			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "secondary"
+				"value": "white",
+				"type": "Select"
 			}
 		},
 		"items": [

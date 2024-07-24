@@ -1,6 +1,6 @@
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { Box, Card, CardBody, CardHeader, Center, Container, Grid, Heading, Text } from "@chakra-ui/react";
+import { Box, Card, CardBody, CardHeader, Center, Grid, Heading, Text } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
@@ -15,6 +15,10 @@ export type TeamCardsSectionProps =
  * Component for "TeamCardsSection" Slices.
  */
 const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
+  // border and text color based on backgroundColor
+  const borderColor = slice.primary.backgroundcolor === "secondary" ? "white" : "#178BFF";
+  const textColor = slice.primary.backgroundcolor === "secondary" ? "white" : "black";
+
   return (
     <BackgroundColor
       backgroundColor={
@@ -22,7 +26,7 @@ const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
       }
     >
       <ContainerWrapper >
-        <Box py={8} color="black">
+        <Box py={8} color={`${textColor}`}>
           <Heading as="h3" size="xl">
             {slice.primary.title}
           </Heading>
@@ -41,7 +45,7 @@ const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
               bg="none"
               color="black"
               borderRadius="8px"
-              border="1px solid #178BFF"
+              border={`1px solid ${borderColor}`}
             >
               <CardHeader mb={0}>
                 <Center >
@@ -64,7 +68,7 @@ const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
                 </Center>
               </CardHeader>
               <CardBody>
-                <Box alignContent="center">
+                <Box alignContent="center" color={`${textColor}`}>
                   <Text fontWeight="bold" mb="4">
                     {item.name}
                   </Text>

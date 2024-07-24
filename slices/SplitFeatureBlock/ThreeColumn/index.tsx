@@ -25,9 +25,10 @@ const ThreeColumn = (slice: Content.SplitFeatureBlockSlice): JSX.Element => {
         <Flex
           gap="1.5rem"
           wrap="wrap"
-          justifyContent="left"
+          justifyContent="center"
           py="8"
           flexDirection={{ base: "column", md: "row" }}
+          color={"white"}
         >
           {slice.primary.split_feature_block.map((item, index) => (
             <Box
@@ -36,12 +37,22 @@ const ThreeColumn = (slice: Content.SplitFeatureBlockSlice): JSX.Element => {
                 sm: "calc(50% - 1.5rem * 2/3)",
                 lg: "calc(33.33333% - 1.5rem * 2/3)",
               }}
-              textAlign="left"
             >
-              <Heading as="h1" size="3xl" mb={"1.25rem"}>
-                {item.title}
-              </Heading>
-              <Text as="b" fontSize="lg">{item.description}</Text>
+              <Flex
+                direction="column"
+                justify="space-between"
+                h="100%"
+                gap={"1.25rem"}
+                p="6"
+                align={"center"}
+              >
+                <Heading as="h1" size="3xl">
+                  {item.title}
+                </Heading>
+                <Text as="b" fontSize="lg" textAlign="left">
+                  {item.description}
+                </Text>
+              </Flex>
             </Box>
           ))}
         </Flex>

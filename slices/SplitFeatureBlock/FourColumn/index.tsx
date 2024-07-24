@@ -24,20 +24,30 @@ const FourColumn = (slice: Content.SplitFeatureBlockSlice): JSX.Element => {
         <Flex
           gap="1.5rem"
           wrap="wrap"
-          justifyContent="left"
+          justifyContent="center"
           py="8"
           flexDirection={{ base: "column", md: "row" }}
+          color={"white"}
         >
           {slice.primary.split_feature_block.map((item, index) => (
             <Box
               key={index}
               width={{ base: "100%", md: "calc(25% - 1.5rem)" }}
-              textAlign="left"
             >
-              <Heading as="h1" size="3xl" whiteSpace="nowrap" mb={"1.25rem"}>
-                {item.title}
-              </Heading>
-              <Text as="b" fontSize="lg">{item.description}</Text>
+              <Flex
+                direction="column"
+                justify="justify-between"
+                h="100%"
+                gap={"1.25rem"}
+                p="6"
+                align={"center"}
+                textAlign="center"
+              >
+                <Heading as="h1" size="3xl" whiteSpace="nowrap">
+                  {item.title}
+                </Heading>
+                <Text as="b" fontSize="lg">{item.description}</Text>
+              </Flex>
             </Box>
           ))}
         </Flex>
