@@ -116,7 +116,7 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "white"
+				"value": "gradient"
 			}
 		},
 		"items": []

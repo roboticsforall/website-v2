@@ -3,9 +3,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import dynamic from "next/dynamic";
 
 // Import all variation components
-const ThreeColumn = dynamic(() => import("./ThreeColumn"));
-const TwoColumn = dynamic(() => import("./TwoColumn"));
-const FourColumn = dynamic(() => import("./FourColumn"));
+const MultiColumn = dynamic(() => import("./MultiColumn"));
 
 /**
  * Props for `SplitFeatureBlock`.
@@ -23,10 +21,7 @@ const SplitFeatureBlock = ({ slice }: SplitFeatureBlockProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       {/* Render different components based on slice.variation */}
-      {slice.variation === "default" && <ThreeColumn {...slice} />}
-      {slice.variation === "twoColumn" && <TwoColumn {...slice} />}
-      {slice.variation === "threeColumn" && <ThreeColumn {...slice} />}
-      {slice.variation === "fourColumn" && <FourColumn {...slice} />}
+      {slice.variation === "default" && <MultiColumn {...slice} />}
     </section>
   );
 };

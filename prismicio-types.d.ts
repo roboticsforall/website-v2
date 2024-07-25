@@ -1529,81 +1529,6 @@ export interface SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem {
 }
 
 /**
- * Item in *SplitFeatureBlock → TwoColumn → Primary → Split Feature Block*
- */
-export interface SplitFeatureBlockSliceTwoColumnPrimarySplitFeatureBlockItem {
-  /**
-   * Title field in *SplitFeatureBlock → TwoColumn → Primary → Split Feature Block*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.twoColumn.primary.split_feature_block[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *SplitFeatureBlock → TwoColumn → Primary → Split Feature Block*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.twoColumn.primary.split_feature_block[].description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description: prismic.KeyTextField;
-}
-
-/**
- * Item in *SplitFeatureBlock → ThreeColumn → Primary → Split Feature Block*
- */
-export interface SplitFeatureBlockSliceThreeColumnPrimarySplitFeatureBlockItem {
-  /**
-   * Title field in *SplitFeatureBlock → ThreeColumn → Primary → Split Feature Block*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.threeColumn.primary.split_feature_block[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *SplitFeatureBlock → ThreeColumn → Primary → Split Feature Block*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.threeColumn.primary.split_feature_block[].description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description: prismic.KeyTextField;
-}
-
-/**
- * Item in *SplitFeatureBlock → FourColumn → Primary → Split Feature Block*
- */
-export interface SplitFeatureBlockSliceFourColumnPrimarySplitFeatureBlockItem {
-  /**
-   * Title field in *SplitFeatureBlock → FourColumn → Primary → Split Feature Block*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.fourColumn.primary.split_feature_block[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *SplitFeatureBlock → FourColumn → Primary → Split Feature Block*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.fourColumn.primary.split_feature_block[].description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description: prismic.KeyTextField;
-}
-
-/**
  * Primary content in *SplitFeatureBlock → Default → Primary*
  */
 export interface SplitFeatureBlockSliceDefaultPrimary {
@@ -1648,145 +1573,9 @@ export type SplitFeatureBlockSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *SplitFeatureBlock → TwoColumn → Primary*
- */
-export interface SplitFeatureBlockSliceTwoColumnPrimary {
-  /**
-   * BackgroundColor field in *SplitFeatureBlock → TwoColumn → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: split_feature_block.twoColumn.primary.backgroundcolor
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
-    "filled"
-  >;
-
-  /**
-   * Split Feature Block field in *SplitFeatureBlock → TwoColumn → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.twoColumn.primary.split_feature_block[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  split_feature_block: prismic.GroupField<
-    Simplify<SplitFeatureBlockSliceTwoColumnPrimarySplitFeatureBlockItem>
-  >;
-}
-
-/**
- * TwoColumn variation for SplitFeatureBlock Slice
- *
- * - **API ID**: `twoColumn`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SplitFeatureBlockSliceTwoColumn = prismic.SharedSliceVariation<
-  "twoColumn",
-  Simplify<SplitFeatureBlockSliceTwoColumnPrimary>,
-  never
->;
-
-/**
- * Primary content in *SplitFeatureBlock → ThreeColumn → Primary*
- */
-export interface SplitFeatureBlockSliceThreeColumnPrimary {
-  /**
-   * BackgroundColor field in *SplitFeatureBlock → ThreeColumn → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: split_feature_block.threeColumn.primary.backgroundcolor
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
-    "filled"
-  >;
-
-  /**
-   * Split Feature Block field in *SplitFeatureBlock → ThreeColumn → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.threeColumn.primary.split_feature_block[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  split_feature_block: prismic.GroupField<
-    Simplify<SplitFeatureBlockSliceThreeColumnPrimarySplitFeatureBlockItem>
-  >;
-}
-
-/**
- * ThreeColumn variation for SplitFeatureBlock Slice
- *
- * - **API ID**: `threeColumn`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SplitFeatureBlockSliceThreeColumn = prismic.SharedSliceVariation<
-  "threeColumn",
-  Simplify<SplitFeatureBlockSliceThreeColumnPrimary>,
-  never
->;
-
-/**
- * Primary content in *SplitFeatureBlock → FourColumn → Primary*
- */
-export interface SplitFeatureBlockSliceFourColumnPrimary {
-  /**
-   * BackgroundColor field in *SplitFeatureBlock → FourColumn → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: split_feature_block.fourColumn.primary.backgroundcolor
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
-    "filled"
-  >;
-
-  /**
-   * Split Feature Block field in *SplitFeatureBlock → FourColumn → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: split_feature_block.fourColumn.primary.split_feature_block[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  split_feature_block: prismic.GroupField<
-    Simplify<SplitFeatureBlockSliceFourColumnPrimarySplitFeatureBlockItem>
-  >;
-}
-
-/**
- * FourColumn variation for SplitFeatureBlock Slice
- *
- * - **API ID**: `fourColumn`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SplitFeatureBlockSliceFourColumn = prismic.SharedSliceVariation<
-  "fourColumn",
-  Simplify<SplitFeatureBlockSliceFourColumnPrimary>,
-  never
->;
-
-/**
  * Slice variation for *SplitFeatureBlock*
  */
-type SplitFeatureBlockSliceVariation =
-  | SplitFeatureBlockSliceDefault
-  | SplitFeatureBlockSliceTwoColumn
-  | SplitFeatureBlockSliceThreeColumn
-  | SplitFeatureBlockSliceFourColumn;
+type SplitFeatureBlockSliceVariation = SplitFeatureBlockSliceDefault;
 
 /**
  * SplitFeatureBlock Shared Slice
@@ -2108,17 +1897,8 @@ declare module "@prismicio/client" {
       SplitFeatureBlockSlice,
       SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem,
       SplitFeatureBlockSliceDefaultPrimary,
-      SplitFeatureBlockSliceTwoColumnPrimarySplitFeatureBlockItem,
-      SplitFeatureBlockSliceTwoColumnPrimary,
-      SplitFeatureBlockSliceThreeColumnPrimarySplitFeatureBlockItem,
-      SplitFeatureBlockSliceThreeColumnPrimary,
-      SplitFeatureBlockSliceFourColumnPrimarySplitFeatureBlockItem,
-      SplitFeatureBlockSliceFourColumnPrimary,
       SplitFeatureBlockSliceVariation,
       SplitFeatureBlockSliceDefault,
-      SplitFeatureBlockSliceTwoColumn,
-      SplitFeatureBlockSliceThreeColumn,
-      SplitFeatureBlockSliceFourColumn,
       TeamCardsSectionSlice,
       TeamCardsSectionSliceDefaultPrimaryGridItem,
       TeamCardsSectionSliceDefaultPrimary,
