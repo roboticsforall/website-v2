@@ -21,7 +21,10 @@ const routes: prismic.ClientConfig["routes"] = [
   },
   {
     type: "page",
-    path: "/:uid",
+    resolvers: {
+      category: "category",
+    },
+    path: "/:category?/:uid",
   },
   // {
   //   type: "category",

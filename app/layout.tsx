@@ -4,7 +4,6 @@ import { Providers } from "./providers";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import { fonts } from "./fonts";
-import { Navbar } from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +18,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={fonts.beVietnamPro.className}>
-        {/* <Navbar /> */}
         <Providers>{children}</Providers>
         <PrismicPreview repositoryName={repositoryName} />
       </body>

@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import Image from "next/image";
 import { PrismicRichText } from "@prismicio/react";
 export type ColumnCardsProps = SliceComponentProps<Content.ColumnCardsSlice>;
@@ -44,9 +44,7 @@ const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
                   <Heading as="h4" size="md" mb={5}>
                     {item.title}
                   </Heading>
-                  <Text>
-                    <PrismicRichText field={item.description} />
-                  </Text>
+                  <PrismicRichText field={item.description} />
                 </CardBody>
                 {(item.haslink || item.hasbutton) && (
                   <CardFooter>
@@ -64,13 +62,14 @@ const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
         </Flex>
         <Center mt={"2.5rem"}>
           {slice.variation == "twoColumn" && (
-            <Button
-              variant={
-                slice.primary.button_variation == "solid" ? "solid" : "outline"
-              }
-            >
-              Contact Us
-            </Button>
+            <PrismicNextLink field={slice.primary.button} />
+            // <Button
+            //   variant={
+            //     slice.primary.button_variation == "solid" ? "solid" : "outline"
+            //   }
+            // >
+            //   Contact Us
+            // </Button>
           )}
         </Center>
       </Container>

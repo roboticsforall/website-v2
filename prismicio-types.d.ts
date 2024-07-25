@@ -36,6 +36,74 @@ export type CategoryDocument<Lang extends string = string> =
     Lang
   >;
 
+type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
+
+/**
+ * Content for Global Navigation documents
+ */
+interface GlobalNavigationDocumentData {
+  /**
+   * Name field in *Global Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Logo field in *Global Navigation*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Donate Button Variation field in *Global Navigation*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: global_navigation.donate_button_variation
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  donate_button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+
+  /**
+   * Slice Zone field in *Global Navigation*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<GlobalNavigationDocumentDataSlicesSlice>;
+}
+
+/**
+ * Global Navigation document from Prismic
+ *
+ * - **API ID**: `global_navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GlobalNavigationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<GlobalNavigationDocumentData>,
+    "global_navigation",
+    Lang
+  >;
+
 type HomePageDocumentDataSlicesSlice =
   | ThemingSlice
   | SarthakSlice
@@ -47,6 +115,18 @@ type HomePageDocumentDataSlicesSlice =
  * Content for Home Page documents
  */
 interface HomePageDocumentData {
+  /**
+   * Navbar Color field in *Home Page*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: home_page.navbar_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  navbar_color: prismic.SelectField<"white" | "primary", "filled">;
+
   /**
    * Slice Zone field in *Home Page*
    *
@@ -106,52 +186,7 @@ export type HomePageDocument<Lang extends string = string> =
     Lang
   >;
 
-type NavigationDocumentDataSlicesSlice = NavigationSlice;
-
-/**
- * Content for Navigation documents
- */
-interface NavigationDocumentData {
-  /**
-   * Name field in *Navigation*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Name for navigation list
-   * - **API ID Path**: navigation.name
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name: prismic.KeyTextField;
-
-  /**
-   * Slice Zone field in *Navigation*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<NavigationDocumentDataSlicesSlice>;
-}
-
-/**
- * Navigation document from Prismic
- *
- * - **API ID**: `navigation`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type NavigationDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<NavigationDocumentData>,
-    "navigation",
-    Lang
-  >;
-
-type PageDocumentDataSlicesSlice = ThemingSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = ColumnCardsSlice | ThemingSlice | HeroSlice;
 
 /**
  * Content for Page documents
@@ -167,6 +202,18 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   category: prismic.ContentRelationshipField<"category">;
+
+  /**
+   * Navbar Color field in *Page*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: page.navbar_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  navbar_color: prismic.SelectField<"white" | "primary", "filled">;
 
   /**
    * Slice Zone field in *Page*
@@ -225,8 +272,8 @@ export type PageDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CategoryDocument
+  | GlobalNavigationDocument
   | HomePageDocument
-  | NavigationDocument
   | PageDocument;
 
 /**
@@ -1346,11 +1393,11 @@ export type MikiasSliceSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *Navigation → Default → Primary → Child Navigation*
+ * Item in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
  */
 export interface NavigationSliceDefaultPrimaryChildNavigationItem {
   /**
-   * Name field in *Navigation → Default → Primary → Child Navigation*
+   * Name field in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1360,7 +1407,7 @@ export interface NavigationSliceDefaultPrimaryChildNavigationItem {
   name: prismic.KeyTextField;
 
   /**
-   * Link field in *Navigation → Default → Primary → Child Navigation*
+   * Link field in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -1371,11 +1418,11 @@ export interface NavigationSliceDefaultPrimaryChildNavigationItem {
 }
 
 /**
- * Primary content in *Navigation → Default → Primary*
+ * Primary content in *Navigation → NavigationWithChildLinks → Primary*
  */
 export interface NavigationSliceDefaultPrimary {
   /**
-   * Name field in *Navigation → Default → Primary*
+   * Name field in *Navigation → NavigationWithChildLinks → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1385,17 +1432,7 @@ export interface NavigationSliceDefaultPrimary {
   name: prismic.KeyTextField;
 
   /**
-   * Link field in *Navigation → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.default.primary.link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Child Navigation field in *Navigation → Default → Primary*
+   * Child Navigation field in *Navigation → NavigationWithChildLinks → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -1408,7 +1445,7 @@ export interface NavigationSliceDefaultPrimary {
 }
 
 /**
- * Default variation for Navigation Slice
+ * NavigationWithChildLinks variation for Navigation Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1421,9 +1458,49 @@ export type NavigationSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Navigation → NavigationSingleLink → Primary*
+ */
+export interface NavigationSliceNavigationSingleLinkPrimary {
+  /**
+   * Name field in *Navigation → NavigationSingleLink → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.navigationSingleLink.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Link field in *Navigation → NavigationSingleLink → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.navigationSingleLink.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * NavigationSingleLink variation for Navigation Slice
+ *
+ * - **API ID**: `navigationSingleLink`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NavigationSliceNavigationSingleLink = prismic.SharedSliceVariation<
+  "navigationSingleLink",
+  Simplify<NavigationSliceNavigationSingleLinkPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Navigation*
  */
-type NavigationSliceVariation = NavigationSliceDefault;
+type NavigationSliceVariation =
+  | NavigationSliceDefault
+  | NavigationSliceNavigationSingleLink;
 
 /**
  * Navigation Shared Slice
@@ -1545,12 +1622,12 @@ declare module "@prismicio/client" {
     export type {
       CategoryDocument,
       CategoryDocumentData,
+      GlobalNavigationDocument,
+      GlobalNavigationDocumentData,
+      GlobalNavigationDocumentDataSlicesSlice,
       HomePageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
-      NavigationDocument,
-      NavigationDocumentData,
-      NavigationDocumentDataSlicesSlice,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
@@ -1590,8 +1667,10 @@ declare module "@prismicio/client" {
       NavigationSlice,
       NavigationSliceDefaultPrimaryChildNavigationItem,
       NavigationSliceDefaultPrimary,
+      NavigationSliceNavigationSingleLinkPrimary,
       NavigationSliceVariation,
       NavigationSliceDefault,
+      NavigationSliceNavigationSingleLink,
       SarthakSlice,
       SarthakSliceDefaultPrimary,
       SarthakSliceVariation,
