@@ -1,8 +1,9 @@
 
-import {Box, Grid, Container, Heading, Text, Center} from "@chakra-ui/react";
+import {Box, Grid, Container, Text, Center} from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import styles from './background.module.css'
+import { Heading }   from '../../app/components/Heading'
 
 /**
  * Props for `Testimonials`.
