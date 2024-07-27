@@ -14,8 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { GlobalNavigationDocument } from "@/prismicio-types";
 import { TriangleDownIcon } from "@chakra-ui/icons";
-import Image from "next/image";
-import logo from "./logo.svg";
 
 export function DesktopNav(navigation: GlobalNavigationDocument<string>) {
   return (
@@ -23,11 +21,7 @@ export function DesktopNav(navigation: GlobalNavigationDocument<string>) {
       <Flex flex={1} justifyContent={"space-between"}>
         <HStack spacing={"1.5rem"}>
           <Link as={PrismicNextLink} href={"/"}>
-            <PrismicNextImage
-              width={"50"}
-              height={"50"}
-              field={navigation.data.logo}
-            />
+            <PrismicNextImage field={navigation.data.logo} />
           </Link>
           {navigation.data.slices.map((navItem, i) =>
             navItem.variation == "default" ? (
