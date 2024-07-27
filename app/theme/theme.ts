@@ -10,28 +10,6 @@ import { containerTheme } from "./ContainerTheme";
 
 export const theme = extendTheme(
   {
-    styles: {
-      global: {
-        h1: {
-          fontSize: "55px",
-        },
-        h2: {
-          fontSize: "36px",
-        },
-        h3: {
-          fontSize: "36px",
-        },
-        h4: {
-          fontSize: "22px",
-        },
-        h5: {
-          fontSize: "18px",
-        },
-        h6: {
-          fontSize: "16px",
-        },
-      },
-    },
     colors: {
       transparent: "transparent",
       black: "#000",

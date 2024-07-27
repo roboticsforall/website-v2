@@ -321,6 +321,16 @@ export interface ColumnCardsSliceDefaultPrimaryCardsItem {
   button: prismic.LinkField;
 
   /**
+   * Button Text field in *ColumnCards → ThreeColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.default.primary.cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
    * Link field in *ColumnCards → ThreeColumn → Primary → Cards*
    *
    * - **Field Type**: Link
@@ -329,6 +339,16 @@ export interface ColumnCardsSliceDefaultPrimaryCardsItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Link Text field in *ColumnCards → ThreeColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.default.primary.cards[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
 
   /**
    * HasButton field in *ColumnCards → ThreeColumn → Primary → Cards*
@@ -409,6 +429,16 @@ export interface ColumnCardsSliceThreeColumnHeaderOnlyPrimaryCardsItem {
   button: prismic.LinkField;
 
   /**
+   * Button Text field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
    * Link field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
    *
    * - **Field Type**: Link
@@ -417,6 +447,16 @@ export interface ColumnCardsSliceThreeColumnHeaderOnlyPrimaryCardsItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Link Text field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
 
   /**
    * HasButton field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
@@ -497,6 +537,16 @@ export interface ColumnCardsSliceTwoColumnPrimaryCardsItem {
   button: prismic.LinkField;
 
   /**
+   * Button Text field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
    * Link field in *ColumnCards → TwoColumn → Primary → Cards*
    *
    * - **Field Type**: Link
@@ -505,6 +555,16 @@ export interface ColumnCardsSliceTwoColumnPrimaryCardsItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Link Text field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
 
   /**
    * HasButton field in *ColumnCards → TwoColumn → Primary → Cards*
@@ -585,6 +645,16 @@ export interface ColumnCardsSliceTwoColumnHeaderOnlyPrimaryCardsItem {
   button: prismic.LinkField;
 
   /**
+   * Button Text field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
    * Link field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
    *
    * - **Field Type**: Link
@@ -593,6 +663,16 @@ export interface ColumnCardsSliceTwoColumnHeaderOnlyPrimaryCardsItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Link Text field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
 
   /**
    * HasButton field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
@@ -673,6 +753,16 @@ export interface ColumnCardsSliceFourColumnPrimaryCardsItem {
   button: prismic.LinkField;
 
   /**
+   * Button Text field in *ColumnCards → FourColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.fourColumn.primary.cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
    * Link field in *ColumnCards → FourColumn → Primary → Cards*
    *
    * - **Field Type**: Link
@@ -681,6 +771,16 @@ export interface ColumnCardsSliceFourColumnPrimaryCardsItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Link Text field in *ColumnCards → FourColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.fourColumn.primary.cards[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
 
   /**
    * HasButton field in *ColumnCards → FourColumn → Primary → Cards*
@@ -761,6 +861,16 @@ export interface ColumnCardsSliceFourColumnHeaderOnlyPrimaryCardsItem {
   button: prismic.LinkField;
 
   /**
+   * Button Text field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
    * Link field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
    *
    * - **Field Type**: Link
@@ -769,6 +879,16 @@ export interface ColumnCardsSliceFourColumnHeaderOnlyPrimaryCardsItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+
+  /**
+   * Link Text field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
 
   /**
    * HasButton field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
@@ -862,6 +982,16 @@ export interface ColumnCardsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button: prismic.LinkField;
+
+  /**
+   * Button Text field in *ColumnCards → ThreeColumn → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.default.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
 }
 
 /**
@@ -886,10 +1016,14 @@ export interface ColumnCardsSliceThreeColumnHeaderOnlyPrimary {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
+   * - **Default Value**: white
    * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.backgroundcolor
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  backgroundcolor: prismic.SelectField<"1" | "2">;
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
 
   /**
    * Heading field in *ColumnCards → ThreeColumnHeaderOnly → Primary*
@@ -933,6 +1067,20 @@ export type ColumnCardsSliceThreeColumnHeaderOnly =
  */
 export interface ColumnCardsSliceTwoColumnPrimary {
   /**
+   * BackgroundColor field in *ColumnCards → TwoColumn → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: column_cards.twoColumn.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
    * Heading field in *ColumnCards → TwoColumn → Primary*
    *
    * - **Field Type**: Text
@@ -941,16 +1089,6 @@ export interface ColumnCardsSliceTwoColumnPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
-
-  /**
-   * BackgroundColor field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.backgroundcolor
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  backgroundcolor: prismic.SelectField<"1" | "2">;
 
   /**
    * Cards field in *ColumnCards → TwoColumn → Primary*
@@ -984,6 +1122,16 @@ export interface ColumnCardsSliceTwoColumnPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button: prismic.LinkField;
+
+  /**
+   * Button Text field in *ColumnCards → TwoColumn → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
 }
 
 /**
@@ -1008,10 +1156,14 @@ export interface ColumnCardsSliceTwoColumnHeaderOnlyPrimary {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
+   * - **Default Value**: white
    * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.backgroundcolor
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  backgroundcolor: prismic.SelectField<"1" | "2">;
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
 
   /**
    * Heading field in *ColumnCards → TwoColumnHeaderOnly → Primary*
@@ -1058,10 +1210,14 @@ export interface ColumnCardsSliceFourColumnPrimary {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
+   * - **Default Value**: white
    * - **API ID Path**: column_cards.fourColumn.primary.backgroundcolor
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  backgroundcolor: prismic.SelectField<"1" | "2">;
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
 
   /**
    * Heading field in *ColumnCards → FourColumn → Primary*
@@ -1105,6 +1261,16 @@ export interface ColumnCardsSliceFourColumnPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button: prismic.LinkField;
+
+  /**
+   * Button Text field in *ColumnCards → FourColumn → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.fourColumn.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
 }
 
 /**
@@ -1129,10 +1295,14 @@ export interface ColumnCardsSliceFourColumnHeaderOnlyPrimary {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
+   * - **Default Value**: white
    * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.backgroundcolor
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  backgroundcolor: prismic.SelectField<"1" | "2">;
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
 
   /**
    * Heading field in *ColumnCards → FourColumnHeaderOnly → Primary*
