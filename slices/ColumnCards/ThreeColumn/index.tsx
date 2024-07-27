@@ -11,14 +11,15 @@ import {
   Center,
   Box,
   Text,
+  Link,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
-import Image from "next/image";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { ColumnCard } from "../components/ColumnCard";
 
 /**
  * Props for `ColumnCards`.
@@ -48,35 +49,7 @@ const ThreeColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
                 lg: "calc(33.33333% - 1.5rem * 2/3)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
               }}
             >
-              <Card h="100%">
-                {item.hasimage && (
-                  <CardHeader>
-                    <PrismicNextImage
-                      field={item.image}
-                      width={item.image.dimensions?.width}
-                      height={item.image.dimensions?.height}
-                    />
-                  </CardHeader>
-                )}
-                <CardBody>
-                  <Heading as="h4" size="md" mb={5}>
-                    {item.title}
-                  </Heading>
-                  <Text>
-                    <PrismicRichText field={item.description} />
-                  </Text>
-                </CardBody>
-                {(item.haslink || item.hasbutton) && (
-                  <CardFooter>
-                    <ButtonGroup spacing={"1.5rem"}>
-                      {item.hasbutton && <Button>Buy now</Button>}
-                      {item.haslink && (
-                        <Button variant="link">Add to cart</Button>
-                      )}
-                    </ButtonGroup>
-                  </CardFooter>
-                )}
-              </Card>
+              <ColumnCard item={item} />
             </Box>
           ))}
         </Flex>
@@ -87,7 +60,7 @@ const ThreeColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
                 slice.primary.button_variation == "solid" ? "solid" : "outline"
               }
             >
-              Contact Us
+              {slice.primary.button_text}
             </Button>
           )}
         </Center>

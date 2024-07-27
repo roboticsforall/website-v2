@@ -28,7 +28,11 @@ export const BackgroundColor = ({
     }
     case "secondary": {
       return (
-        <Box {...boxProps} bg={backgroundColorOptions.SECONDARY}>
+        <Box
+          {...boxProps}
+          textColor={"white"}
+          bg={backgroundColorOptions.SECONDARY}
+        >
           {children}
         </Box>
       );
