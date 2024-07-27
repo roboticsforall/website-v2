@@ -6,7 +6,7 @@ import {
   withDefaultColorScheme,
 } from "@chakra-ui/react";
 import _default from "@emotion/styled";
-import { containerTheme } from "./ContainerTheme";
+import { containerTheme } from "./components/Container";
 
 export const theme = extendTheme(
   {

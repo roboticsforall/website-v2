@@ -71,12 +71,26 @@
                   "select": null
                 }
               },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
               "link": {
                 "type": "Link",
                 "config": {
                   "label": "Link",
                   "placeholder": "",
                   "select": null
+                }
+              },
+              "link_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Text",
+                  "placeholder": ""
                 }
               },
               "hasbutton": {
@@ -129,6 +143,13 @@
             "allowTargetBlank": false,
             "select": null
           }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
@@ -147,9 +168,12 @@
             "label": "BackgroundColor",
             "placeholder": "",
             "options": [
-              "1",
-              "2"
-            ]
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
           }
         },
         "heading": {
@@ -197,12 +221,26 @@
                   "select": null
                 }
               },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
               "link": {
                 "type": "Link",
                 "config": {
                   "label": "Link",
                   "placeholder": "",
                   "select": null
+                }
+              },
+              "link_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Text",
+                  "placeholder": ""
                 }
               },
               "hasbutton": {
@@ -246,22 +284,25 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "heading": {
-          "type": "Text",
-          "config": {
-            "label": "Heading",
-            "placeholder": ""
-          }
-        },
         "backgroundcolor": {
           "type": "Select",
           "config": {
             "label": "BackgroundColor",
             "placeholder": "",
             "options": [
-              "1",
-              "2"
-            ]
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
           }
         },
         "cards": {
@@ -302,12 +343,26 @@
                   "select": null
                 }
               },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
               "link": {
                 "type": "Link",
                 "config": {
                   "label": "Link",
                   "placeholder": "",
                   "select": null
+                }
+              },
+              "link_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Text",
+                  "placeholder": ""
                 }
               },
               "hasbutton": {
@@ -359,6 +414,13 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
@@ -377,9 +439,12 @@
             "label": "BackgroundColor",
             "placeholder": "",
             "options": [
-              "1",
-              "2"
-            ]
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
           }
         },
         "heading": {
@@ -427,12 +492,26 @@
                   "select": null
                 }
               },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
               "link": {
                 "type": "Link",
                 "config": {
                   "label": "Link",
                   "placeholder": "",
                   "select": null
+                }
+              },
+              "link_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Text",
+                  "placeholder": ""
                 }
               },
               "hasbutton": {
@@ -482,9 +561,12 @@
             "label": "BackgroundColor",
             "placeholder": "",
             "options": [
-              "1",
-              "2"
-            ]
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
           }
         },
         "heading": {
@@ -532,12 +614,26 @@
                   "select": null
                 }
               },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
               "link": {
                 "type": "Link",
                 "config": {
                   "label": "Link",
                   "placeholder": "",
                   "select": null
+                }
+              },
+              "link_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Text",
+                  "placeholder": ""
                 }
               },
               "hasbutton": {
@@ -589,6 +685,13 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
@@ -607,9 +710,12 @@
             "label": "BackgroundColor",
             "placeholder": "",
             "options": [
-              "1",
-              "2"
-            ]
+              "white",
+              "primary",
+              "secondary",
+              "gradient"
+            ],
+            "default_value": "white"
           }
         },
         "heading": {
@@ -657,12 +763,26 @@
                   "select": null
                 }
               },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
               "link": {
                 "type": "Link",
                 "config": {
                   "label": "Link",
                   "placeholder": "",
                   "select": null
+                }
+              },
+              "link_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Link Text",
+                  "placeholder": ""
                 }
               },
               "hasbutton": {

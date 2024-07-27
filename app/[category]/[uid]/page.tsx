@@ -1,7 +1,8 @@
+import { Navbar } from "@/app/components/Navbar/Navbar";
 import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+import { SliceZone } from "@prismicio/react";
 import { notFound } from "next/navigation";
-import { GetStaticPropsContext } from "next";
-import { ContentRelationshipField } from "@prismicio/client";
 
 type PageParams = {
   uid: string;
@@ -9,23 +10,28 @@ type PageParams = {
 
 export default async function Page({ params }: { params: PageParams }) {
   const client = createClient();
-  console.log("My params " + params.uid);
 
   const page = await client
     .getByUID("page", params.uid)
     .catch(() => notFound());
+  const navigation = await client
+    .getSingle("global_navigation")
+    .catch(() => notFound());
 
-  return <h1>{params.uid}</h1>;
+  return (
+    <>
+      <Navbar navbar_color={page.data.navbar_color} navigation={navigation} />
+      <SliceZone slices={page.data.slices} components={components} />
+    </>
+  );
 }
 
 export async function generateStaticParams() {
   const client = createClient();
 
-  const pages = await client.getAllByType("page", { fetchLinks: "page.uid" });
-  console.log(pages[0].data);
+  const pages = await client.getAllByType("page");
 
   return pages.map((page) => ({
-    category: page.data.category,
     uid: page.uid,
   }));
 }
