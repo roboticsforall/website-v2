@@ -18,6 +18,7 @@ import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { ColumnCard } from "../components/ColumnCard";
+import { CustomHeading } from "@/app/components/CustomHeading";
 
 export type ColumnCardsProps = SliceComponentProps<Content.ColumnCardsSlice>;
 
@@ -34,9 +35,9 @@ const ThreeColumnHeaderOnly = (
       }
     >
       <ContainerWrapper>
-        <Heading mb={5} textAlign="center" as="h2">
+        <CustomHeading mb={5} textAlign="center" as="h2">
           Three Columns
-        </Heading>
+        </CustomHeading>
         <Flex gap={6} wrap="wrap" justifyContent={"center"}>
           {slice.primary.cards.map((item, i) => (
             <Box

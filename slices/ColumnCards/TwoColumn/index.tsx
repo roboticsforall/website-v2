@@ -20,6 +20,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { ColumnCard } from "../components/ColumnCard";
+import { CustomHeading } from "@/app/components/CustomHeading";
 
 export type ColumnCardsProps = SliceComponentProps<Content.ColumnCardsSlice>;
 
@@ -34,9 +35,9 @@ const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
       }
     >
       <ContainerWrapper>
-        <Heading mb={5} textAlign="center" as="h2">
+        <CustomHeading mb={5} textAlign="center" as="h2">
           {slice.primary.heading}
-        </Heading>
+        </CustomHeading>
         <Flex gap={6} wrap="wrap" justifyContent={"center"}>
           {slice.primary.cards.map((item) => (
             <Box width={{ md: "calc(50% - 1.5rem)" }}>

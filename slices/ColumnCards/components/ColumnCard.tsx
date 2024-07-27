@@ -12,6 +12,7 @@ import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 import { Simplify } from "@/prismicio-types";
+import { CustomHeading } from "@/app/components/CustomHeading";
 
 export const ColumnCard = ({
   item,
@@ -30,9 +31,9 @@ export const ColumnCard = ({
         </CardHeader>
       )}
       <CardBody>
-        <Heading as="h4" size="md" mb={5}>
+        <CustomHeading as="h4" mb={5}>
           {item.title}
-        </Heading>
+        </CustomHeading>
         <Text>
           <PrismicRichText field={item.description} />
         </Text>

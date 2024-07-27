@@ -20,6 +20,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { ColumnCard } from "../components/ColumnCard";
+import { CustomHeading } from "@/app/components/CustomHeading";
 
 /**
  * Props for `ColumnCards`.
@@ -37,9 +38,9 @@ const ThreeColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
       }
     >
       <ContainerWrapper>
-        <Heading mb={5} textAlign="center" as="h2">
+        <CustomHeading mb={5} textAlign="center" as="h2">
           Three Columns
-        </Heading>
+        </CustomHeading>
         <Flex gap={6} wrap="wrap" justifyContent={"center"}>
           {slice.primary.cards.map((item, i) => (
             <Box
