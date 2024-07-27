@@ -68,6 +68,7 @@ export function DesktopNav(navigation: GlobalNavigationDocument<string>) {
               </Popover>
             ) : (
               <Box
+                key={i}
                 borderWidth={3}
                 borderColor={"transparent"}
                 padding={1}

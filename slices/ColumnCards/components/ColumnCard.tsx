@@ -1,5 +1,4 @@
 import {
-  Heading,
   Card,
   CardHeader,
   CardBody,
@@ -34,9 +33,7 @@ export const ColumnCard = ({
         <CustomHeading as="h4" mb={5}>
           {item.title}
         </CustomHeading>
-        <Text>
-          <PrismicRichText field={item.description} />
-        </Text>
+        <PrismicRichText field={item.description} />
       </CardBody>
       {(item.haslink || item.hasbutton) && (
         <CardFooter>
