@@ -1,26 +1,9 @@
+import { Flex, Box } from "@chakra-ui/react";
+import { Content } from "@prismicio/client";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Center,
-  Flex,
-  Heading,
-  Link,
-  Text,
-} from "@chakra-ui/react";
-import { Content } from "@prismicio/client";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { ColumnCard } from "../components/ColumnCard";
 import { CustomHeading } from "@/app/components/CustomHeading";
-
-export type ColumnCardsProps = SliceComponentProps<Content.ColumnCardsSlice>;
 
 const ThreeColumnHeaderOnly = (
   slice: Content.ColumnCardsSlice

@@ -1,28 +1,9 @@
-import {
-  Container,
-  Heading,
-  Flex,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  ButtonGroup,
-  Button,
-  Center,
-  Box,
-  Text,
-  Link,
-} from "@chakra-ui/react";
+import { Flex, Box, Button, Center } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { PrismicRichText } from "@prismicio/react";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { ColumnCard } from "../components/ColumnCard";
 import { CustomHeading } from "@/app/components/CustomHeading";
-
-export type ColumnCardsProps = SliceComponentProps<Content.ColumnCardsSlice>;
 
 const FourColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
   // Implement FourColumn layout based on `slice` data
