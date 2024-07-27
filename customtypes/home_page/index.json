@@ -20,16 +20,22 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "theming": {
+            "team_cards_section": {
               "type": "SharedSlice"
             },
-            "sarthak": {
+            "three_column_explainer": {
               "type": "SharedSlice"
             },
-            "hanna": {
+            "column_cards": {
               "type": "SharedSlice"
             },
-            "mikias_slice": {
+            "split_feature_block": {
+              "type": "SharedSlice"
+            },
+            "horizontal_slice": {
+              "type": "SharedSlice"
+            },
+            "fifty_fifty": {
               "type": "SharedSlice"
             },
             "hero": {
