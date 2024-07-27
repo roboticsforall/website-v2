@@ -8,13 +8,6 @@
 				"value": "natural",
 				"type": "Text"
 			},
-			"link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
 			"child_navigation": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -45,5 +38,29 @@
 			}
 		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "navigationSingleLink",
+		"primary": {
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "map",
+				"type": "Text"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]
