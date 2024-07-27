@@ -36,6 +36,74 @@ export type CategoryDocument<Lang extends string = string> =
     Lang
   >;
 
+type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
+
+/**
+ * Content for Global Navigation documents
+ */
+interface GlobalNavigationDocumentData {
+  /**
+   * Name field in *Global Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Logo field in *Global Navigation*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Donate Button Variation field in *Global Navigation*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: global_navigation.donate_button_variation
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  donate_button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+
+  /**
+   * Slice Zone field in *Global Navigation*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<GlobalNavigationDocumentDataSlicesSlice>;
+}
+
+/**
+ * Global Navigation document from Prismic
+ *
+ * - **API ID**: `global_navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GlobalNavigationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<GlobalNavigationDocumentData>,
+    "global_navigation",
+    Lang
+  >;
+
 type HomePageDocumentDataSlicesSlice =
   | ThemingSlice
   | SarthakSlice
@@ -47,6 +115,18 @@ type HomePageDocumentDataSlicesSlice =
  * Content for Home Page documents
  */
 interface HomePageDocumentData {
+  /**
+   * Navbar Color field in *Home Page*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: home_page.navbar_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  navbar_color: prismic.SelectField<"white" | "primary", "filled">;
+
   /**
    * Slice Zone field in *Home Page*
    *
@@ -106,52 +186,7 @@ export type HomePageDocument<Lang extends string = string> =
     Lang
   >;
 
-type NavigationDocumentDataSlicesSlice = NavigationSlice;
-
-/**
- * Content for Navigation documents
- */
-interface NavigationDocumentData {
-  /**
-   * Name field in *Navigation*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Name for navigation list
-   * - **API ID Path**: navigation.name
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name: prismic.KeyTextField;
-
-  /**
-   * Slice Zone field in *Navigation*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<NavigationDocumentDataSlicesSlice>;
-}
-
-/**
- * Navigation document from Prismic
- *
- * - **API ID**: `navigation`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type NavigationDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<NavigationDocumentData>,
-    "navigation",
-    Lang
-  >;
-
-type PageDocumentDataSlicesSlice = ThemingSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = ColumnCardsSlice | ThemingSlice | HeroSlice;
 
 /**
  * Content for Page documents
@@ -167,6 +202,18 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   category: prismic.ContentRelationshipField<"category">;
+
+  /**
+   * Navbar Color field in *Page*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: page.navbar_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  navbar_color: prismic.SelectField<"white" | "primary", "filled">;
 
   /**
    * Slice Zone field in *Page*
@@ -225,8 +272,8 @@ export type PageDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CategoryDocument
+  | GlobalNavigationDocument
   | HomePageDocument
-  | NavigationDocument
   | PageDocument;
 
 /**
@@ -1516,11 +1563,11 @@ export type MikiasSliceSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *Navigation → Default → Primary → Child Navigation*
+ * Item in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
  */
 export interface NavigationSliceDefaultPrimaryChildNavigationItem {
   /**
-   * Name field in *Navigation → Default → Primary → Child Navigation*
+   * Name field in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1530,7 +1577,7 @@ export interface NavigationSliceDefaultPrimaryChildNavigationItem {
   name: prismic.KeyTextField;
 
   /**
-   * Link field in *Navigation → Default → Primary → Child Navigation*
+   * Link field in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -1541,11 +1588,11 @@ export interface NavigationSliceDefaultPrimaryChildNavigationItem {
 }
 
 /**
- * Primary content in *Navigation → Default → Primary*
+ * Primary content in *Navigation → NavigationWithChildLinks → Primary*
  */
 export interface NavigationSliceDefaultPrimary {
   /**
-   * Name field in *Navigation → Default → Primary*
+   * Name field in *Navigation → NavigationWithChildLinks → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1555,17 +1602,7 @@ export interface NavigationSliceDefaultPrimary {
   name: prismic.KeyTextField;
 
   /**
-   * Link field in *Navigation → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.default.primary.link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Child Navigation field in *Navigation → Default → Primary*
+   * Child Navigation field in *Navigation → NavigationWithChildLinks → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -1578,7 +1615,7 @@ export interface NavigationSliceDefaultPrimary {
 }
 
 /**
- * Default variation for Navigation Slice
+ * NavigationWithChildLinks variation for Navigation Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1591,9 +1628,49 @@ export type NavigationSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Navigation → NavigationSingleLink → Primary*
+ */
+export interface NavigationSliceNavigationSingleLinkPrimary {
+  /**
+   * Name field in *Navigation → NavigationSingleLink → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.navigationSingleLink.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Link field in *Navigation → NavigationSingleLink → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.navigationSingleLink.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * NavigationSingleLink variation for Navigation Slice
+ *
+ * - **API ID**: `navigationSingleLink`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NavigationSliceNavigationSingleLink = prismic.SharedSliceVariation<
+  "navigationSingleLink",
+  Simplify<NavigationSliceNavigationSingleLinkPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Navigation*
  */
-type NavigationSliceVariation = NavigationSliceDefault;
+type NavigationSliceVariation =
+  | NavigationSliceDefault
+  | NavigationSliceNavigationSingleLink;
 
 /**
  * Navigation Shared Slice
@@ -1674,6 +1751,198 @@ export type SarthakSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *SplitFeatureBlock → Default → Primary → Split Feature Block*
+ */
+export interface SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem {
+  /**
+   * Title field in *SplitFeatureBlock → Default → Primary → Split Feature Block*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: split_feature_block.default.primary.split_feature_block[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *SplitFeatureBlock → Default → Primary → Split Feature Block*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: split_feature_block.default.primary.split_feature_block[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *SplitFeatureBlock → Default → Primary*
+ */
+export interface SplitFeatureBlockSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *SplitFeatureBlock → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: split_feature_block.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
+   * Split Feature Block field in *SplitFeatureBlock → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: split_feature_block.default.primary.split_feature_block[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  split_feature_block: prismic.GroupField<
+    Simplify<SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem>
+  >;
+}
+
+/**
+ * Default variation for SplitFeatureBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SplitFeatureBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SplitFeatureBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SplitFeatureBlock*
+ */
+type SplitFeatureBlockSliceVariation = SplitFeatureBlockSliceDefault;
+
+/**
+ * SplitFeatureBlock Shared Slice
+ *
+ * - **API ID**: `split_feature_block`
+ * - **Description**: SplitFeatureBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SplitFeatureBlockSlice = prismic.SharedSlice<
+  "split_feature_block",
+  SplitFeatureBlockSliceVariation
+>;
+
+/**
+ * Item in *TeamCardsSection → Default → Primary → Grid*
+ */
+export interface TeamCardsSectionSliceDefaultPrimaryGridItem {
+  /**
+   * Image field in *TeamCardsSection → Default → Primary → Grid*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team_cards_section.default.primary.grid[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Name field in *TeamCardsSection → Default → Primary → Grid*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team_cards_section.default.primary.grid[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Title field in *TeamCardsSection → Default → Primary → Grid*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team_cards_section.default.primary.grid[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *TeamCardsSection → Default → Primary*
+ */
+export interface TeamCardsSectionSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *TeamCardsSection → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: team_cards_section.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
+   * Title field in *TeamCardsSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team_cards_section.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Grid field in *TeamCardsSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team_cards_section.default.primary.grid[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  grid: prismic.GroupField<
+    Simplify<TeamCardsSectionSliceDefaultPrimaryGridItem>
+  >;
+}
+
+/**
+ * Default variation for TeamCardsSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeamCardsSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TeamCardsSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TeamCardsSection*
+ */
+type TeamCardsSectionSliceVariation = TeamCardsSectionSliceDefault;
+
+/**
+ * TeamCardsSection Shared Slice
+ *
+ * - **API ID**: `team_cards_section`
+ * - **Description**: TeamCardsSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeamCardsSectionSlice = prismic.SharedSlice<
+  "team_cards_section",
+  TeamCardsSectionSliceVariation
+>;
+
+/**
  * Default variation for Theming Slice
  *
  * - **API ID**: `default`
@@ -1703,11 +1972,117 @@ export type ThemingSlice = prismic.SharedSlice<
   ThemingSliceVariation
 >;
 
+/**
+ * Item in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
+ */
+export interface ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem {
+  /**
+   * Title field in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *ThreeColumnExplainer → Default → Primary → Multi Column Explainer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *ThreeColumnExplainer → Default → Primary*
+ */
+export interface ThreeColumnExplainerSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *ThreeColumnExplainer → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: three_column_explainer.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
+   * Title field in *ThreeColumnExplainer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *ThreeColumnExplainer → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Multi Column Explainer field in *ThreeColumnExplainer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: three_column_explainer.default.primary.multi_column_explainer[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  multi_column_explainer: prismic.GroupField<
+    Simplify<ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem>
+  >;
+}
+
+/**
+ * Default variation for ThreeColumnExplainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThreeColumnExplainerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ThreeColumnExplainerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ThreeColumnExplainer*
+ */
+type ThreeColumnExplainerSliceVariation = ThreeColumnExplainerSliceDefault;
+
+/**
+ * ThreeColumnExplainer Shared Slice
+ *
+ * - **API ID**: `three_column_explainer`
+ * - **Description**: ThreeColumnExplainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ThreeColumnExplainerSlice = prismic.SharedSlice<
+  "three_column_explainer",
+  ThreeColumnExplainerSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig,
+      options?: prismic.ClientConfig
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -1715,12 +2090,12 @@ declare module "@prismicio/client" {
     export type {
       CategoryDocument,
       CategoryDocumentData,
+      GlobalNavigationDocument,
+      GlobalNavigationDocumentData,
+      GlobalNavigationDocumentDataSlicesSlice,
       HomePageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
-      NavigationDocument,
-      NavigationDocumentData,
-      NavigationDocumentDataSlicesSlice,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
@@ -1760,15 +2135,32 @@ declare module "@prismicio/client" {
       NavigationSlice,
       NavigationSliceDefaultPrimaryChildNavigationItem,
       NavigationSliceDefaultPrimary,
+      NavigationSliceNavigationSingleLinkPrimary,
       NavigationSliceVariation,
       NavigationSliceDefault,
+      NavigationSliceNavigationSingleLink,
       SarthakSlice,
       SarthakSliceDefaultPrimary,
       SarthakSliceVariation,
       SarthakSliceDefault,
+      SplitFeatureBlockSlice,
+      SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem,
+      SplitFeatureBlockSliceDefaultPrimary,
+      SplitFeatureBlockSliceVariation,
+      SplitFeatureBlockSliceDefault,
+      TeamCardsSectionSlice,
+      TeamCardsSectionSliceDefaultPrimaryGridItem,
+      TeamCardsSectionSliceDefaultPrimary,
+      TeamCardsSectionSliceVariation,
+      TeamCardsSectionSliceDefault,
       ThemingSlice,
       ThemingSliceVariation,
       ThemingSliceDefault,
+      ThreeColumnExplainerSlice,
+      ThreeColumnExplainerSliceDefaultPrimaryMultiColumnExplainerItem,
+      ThreeColumnExplainerSliceDefaultPrimary,
+      ThreeColumnExplainerSliceVariation,
+      ThreeColumnExplainerSliceDefault,
     };
   }
 }

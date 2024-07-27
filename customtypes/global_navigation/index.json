@@ -1,0 +1,53 @@
+{
+  "format": "custom",
+  "id": "global_navigation",
+  "label": "Global Navigation",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "donate_button_variation": {
+        "type": "Select",
+        "config": {
+          "label": "Donate Button Variation",
+          "placeholder": "",
+          "options": ["solid", "outline"],
+          "default_value": "solid"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "navigation": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
