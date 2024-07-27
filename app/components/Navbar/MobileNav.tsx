@@ -79,11 +79,12 @@ export function MobileNav(navigation: GlobalNavigationDocument<string>) {
                         <Link
                           onClick={onClose}
                           as={PrismicNextLink}
-                          w="100%"
                           textAlign={"left"}
                           field={childNavItem.link}
                         >
-                          {childNavItem.name}
+                          <Box>
+                            <Text>{childNavItem.name}</Text>
+                          </Box>
                         </Link>
                       </AccordionPanel>
                     ))}
