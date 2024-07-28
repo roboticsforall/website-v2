@@ -24,12 +24,12 @@ const Testimonials = ({ slice }: TestimonialsProps): JSX.Element => {
     <div>
     <Box className={styles.backgroundImage} >
      <ContainerWrapper>
-            <Heading as="h3" size="xl" mx="70">
+            <Heading as="h3" size="xl" m={{base: "1.25rem", md: "4rem"}}>
               {slice.primary.title}
             </Heading>
-              {slice.primary.testimonials.map((item, i) => (
-                <Center pt="69">
-                  <Box bg={"white"} padding={70} width={{
+              {slice.primary.testimonials.map((item, index) => (
+                <Center pt={{base: "1.25rem"}} key={index}>
+                  <Box bg={"white"} padding={{base: "1.25rem", md: "4rem"}} width={{
                       sm: "calc(30% - 1.5rem * 2/3)",
                       lg: "calc(60% - 1.5rem * 2/3)"
                     }}>
