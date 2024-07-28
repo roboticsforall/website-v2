@@ -1,9 +1,10 @@
 
-import {Box, Grid, Heading, Container, Text, Center} from "@chakra-ui/react";
+import {Box, Grid, Heading, Text, Center} from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import styles from './background.module.css'
 //import { Heading }   from '../../app/components/Heading'
+import  { ContainerWrapper }  from "../../app/components/ContainerWrapper";
 
 /**
  * Props for `Testimonials`.
@@ -22,12 +23,11 @@ const Testimonials = ({ slice }: TestimonialsProps): JSX.Element => {
     >
     <div>
     <Box className={styles.backgroundImage} >
-     <Container py={12} size={[null, "sm", "md", "lg", "xl", "2xl"]} my="70" >
-         
+     <ContainerWrapper>
             <Heading as="h3" size="xl" mx="70">
               {slice.primary.title}
             </Heading>
-              {slice.primary.testimonials.map(item => (
+              {slice.primary.testimonials.map((item, i) => (
                 <Center pt="69">
                   <Box bg={"white"} padding={70} width={{
                       sm: "calc(30% - 1.5rem * 2/3)",
@@ -44,7 +44,7 @@ const Testimonials = ({ slice }: TestimonialsProps): JSX.Element => {
               ))}
               
           
-      </Container>
+      </ContainerWrapper>
     </Box>
     </div>
     </section>

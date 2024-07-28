@@ -19,14 +19,11 @@
             "placeholder": ""
           }
         },
-        "icon_explainer": {
+        "icon": {
           "type": "Image",
           "config": {
-            "label": "Icon Explainer",
-            "constraint": {
-              "width": 385,
-              "height": 339
-            },
+            "label": "Icon",
+            "constraint": {},
             "thumbnails": []
           }
         },

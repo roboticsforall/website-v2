@@ -1,4 +1,5 @@
-import {Box, Flex, Container, Heading, Text, Center, Grid, Stack, VStack} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, Center } from "@chakra-ui/react";
+import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 
@@ -16,13 +17,13 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-       <Box bg={"white"} >
-      <Container py={12} size={[null, "sm", "md", "lg", "xl", "2xl"]} >
-        <Stack flexDirection={"row"} py={12} px={"120"}>
-          <Center width={{ 
-            sm: "calc(50% - 1.5rem * 2/3)",
-            lg: "calc(33.33333% - 1.5rem * 2/3)"
-           }}>
+      <Box my={"4rem"}>
+      <ContainerWrapper>
+      <Flex
+          gap={{ base: "4rem", md: "1.5rem" }}
+          flexDirection={{ base: "column", md: "row" }}
+        >
+          <Center>
             <Heading as="h2" size="2xl" position={"absolute"}>
               {slice.primary.title} 
             </Heading>
@@ -33,24 +34,22 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
             </Box>
           </Center>
 
-          <Center mx="62">
-            {slice.primary.explainer.map((item) => (
-              <Flex direction={"column"} >
-                <Box width={{md: "calc(55% - 1.5rem"}}>
+          <Center mx={"2rem"}>
+            {slice.primary.explainer.map((item, index) => (
+              <Flex direction={"column"} key={index}>
+                <Box width={{ md: "calc(80% - 1.5rem)" }}>
                   <Heading as="h3" size="xl">
                     {item.title}
                   </Heading>
-
-
-                  <Text alignSelf={"stretch"} mt="4">
+                  <Text alignSelf={"stretch"} mt={"1.25rem"}>
                     <PrismicRichText field={item.description} />
                   </Text>
                 </Box>
               </Flex>
           ))}
           </Center>
-        </Stack>
-      </Container>
+        </Flex>
+      </ContainerWrapper>
     </Box>
     </section>
   );
