@@ -60,6 +60,63 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "blockCenterAligned",
+      "name": "Block Center Aligned",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "ButtonText",
+            "placeholder": ""
+          }
+        },
+        "button_solid": {
+          "type": "Link",
+          "config": {
+            "label": "Button Solid",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_outlined": {
+          "type": "Link",
+          "config": {
+            "label": "Button outlined",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

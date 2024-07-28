@@ -52,5 +52,59 @@
 				"value": []
 			}
 		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "blockCenterAligned",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Heading 2 - Lorem ipsum dolor sit amet consectetur"
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Heading 3 -Lorem ipsum dolor sit amet consectetur"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem ipsum dolor sit amet consectetur. At aliquam tellus nunc magnis commodo etiam pellentesque aliquam nisi. Mi a odio nulla dolor in quis lacus integer. Nunc eget at dignissim vel. Vitae dignissim commodo dolor dui phasellus.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"buttonText": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Button"
+			},
+			"button_solid": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"button_outlined": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]

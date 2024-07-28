@@ -355,9 +355,90 @@ export type BasicTextBlockSliceBlockLeftAligned = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *BasicTextBlock → Block Center Aligned → Primary*
+ */
+export interface BasicTextBlockSliceBlockCenterAlignedPrimary {
+  /**
+   * Title field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Description field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * ButtonText field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.buttonText
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttonText: prismic.KeyTextField;
+
+  /**
+   * Button Solid field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_solid
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_solid: prismic.LinkField;
+
+  /**
+   * Button outlined field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_outlined
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_outlined: prismic.LinkField;
+}
+
+/**
+ * Block Center Aligned variation for BasicTextBlock Slice
+ *
+ * - **API ID**: `blockCenterAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BasicTextBlockSliceBlockCenterAligned =
+  prismic.SharedSliceVariation<
+    "blockCenterAligned",
+    Simplify<BasicTextBlockSliceBlockCenterAlignedPrimary>,
+    never
+  >;
+
+/**
  * Slice variation for *BasicTextBlock*
  */
-type BasicTextBlockSliceVariation = BasicTextBlockSliceBlockLeftAligned;
+type BasicTextBlockSliceVariation =
+  | BasicTextBlockSliceBlockLeftAligned
+  | BasicTextBlockSliceBlockCenterAligned;
 
 /**
  * BasicTextBlock Shared Slice
@@ -2832,8 +2913,10 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       BasicTextBlockSlice,
       BasicTextBlockSliceBlockLeftAlignedPrimary,
+      BasicTextBlockSliceBlockCenterAlignedPrimary,
       BasicTextBlockSliceVariation,
       BasicTextBlockSliceBlockLeftAligned,
+      BasicTextBlockSliceBlockCenterAligned,
       ColumnCardsSlice,
       ColumnCardsSliceDefaultPrimaryCardsItem,
       ColumnCardsSliceDefaultPrimary,
