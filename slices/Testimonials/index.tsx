@@ -5,7 +5,7 @@ import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import styles from './background.module.css'
 //import { Heading }   from '../../app/components/Heading'
 import  { ContainerWrapper }  from "../../app/components/ContainerWrapper";
-
+import  { CustomHeading }  from "../../app/components/CustomHeading";
 /**
  * Props for `Testimonials`.
  */
@@ -21,33 +21,28 @@ const Testimonials = ({ slice }: TestimonialsProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-    <div>
     <Box className={styles.backgroundImage} >
-     <ContainerWrapper>
-            <Heading as="h3" size="xl" m={{base: "1.25rem", md: "4rem"}}>
-              {slice.primary.title}
-            </Heading>
-              {slice.primary.testimonials.map((item, index) => (
-                <Center pt={{base: "1.25rem"}} key={index}>
-                  <Box bg={"white"} padding={{base: "1.25rem", md: "4rem"}} width={{
-                      sm: "calc(30% - 1.5rem * 2/3)",
-                      lg: "calc(60% - 1.5rem * 2/3)"
-                    }}>
-                    <Text>
-                      <PrismicRichText field={item.description} />
-                    </Text>
-                    <Text py={"1.25rem"}>{item.name}</Text>
-                    <Text>{item.user}</Text>
-                  </Box>
-                </Center>
-                  
-              ))}
-              
-          
+      <ContainerWrapper>
+        <CustomHeading as="h3" size="xl" m={{base: "1.25rem", md: "4rem"}}>
+          {slice.primary.title}
+        </CustomHeading>
+        {slice.primary.testimonials.map((item, index) => (
+          <Center pt={{base: "1.25rem"}} key={index}>
+            <Box bg={"white"} padding={{base: "1.25rem", md: "4rem"}} width={{
+              sm: "calc(30% - 1.5rem * 2/3)",
+              lg: "calc(60% - 1.5rem * 2/3)"
+              }}>
+              <Text>
+                <PrismicRichText field={item.description} />
+              </Text>
+              <Text py={"1.25rem"}>{item.name}</Text>
+              <Text>{item.user}</Text>
+            </Box>
+          </Center>
+        ))}
       </ContainerWrapper>
     </Box>
-    </div>
-    </section>
+  </section>
   );
 };
 
