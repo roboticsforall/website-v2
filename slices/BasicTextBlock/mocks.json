@@ -44,6 +44,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "secondary",
+				"type": "Select"
 			}
 		},
 		"items": [
@@ -98,6 +103,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
 			}
 		},
 		"items": [

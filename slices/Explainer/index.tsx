@@ -1,6 +1,7 @@
 import {Box, Flex, Heading, Text, Center } from "@chakra-ui/react";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import  { CustomHeading }  from "../../app/components/CustomHeading";
+import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 
@@ -18,6 +19,9 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
+        <BackgroundColor
+          backgroundColor={slice.primary.backgroundcolor}
+        >
       <Box my={"4rem"}>
         <ContainerWrapper>
           <Flex
@@ -51,6 +55,7 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
         </Flex>
       </ContainerWrapper>
     </Box>
+    </BackgroundColor>
     </section>
   );
 };

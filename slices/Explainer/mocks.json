@@ -64,6 +64,11 @@
 						]
 					}
 				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
 			}
 		},
 		"items": []

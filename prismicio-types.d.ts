@@ -281,6 +281,20 @@ export type AllDocumentTypes =
  */
 export interface BasicTextBlockSliceBlockLeftAlignedPrimary {
   /**
+   * BackgroundColor field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
    * Title field in *BasicTextBlock → Block Left Aligned → Primary*
    *
    * - **Field Type**: Text
@@ -358,6 +372,20 @@ export type BasicTextBlockSliceBlockLeftAligned = prismic.SharedSliceVariation<
  * Primary content in *BasicTextBlock → Block Center Aligned → Primary*
  */
 export interface BasicTextBlockSliceBlockCenterAlignedPrimary {
+  /**
+   * BackgroundColor field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
   /**
    * Title field in *BasicTextBlock → Block Center Aligned → Primary*
    *
@@ -1568,6 +1596,20 @@ export interface ExplainerSliceDefaultPrimaryExplainerItem {
  * Primary content in *Explainer → Default → Primary*
  */
 export interface ExplainerSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: explainer.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
   /**
    * Title field in *Explainer → Default → Primary*
    *
