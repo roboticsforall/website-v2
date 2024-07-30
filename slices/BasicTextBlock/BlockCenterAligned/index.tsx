@@ -31,7 +31,7 @@ const BlockCenterAligned = (
                 </Text>
                 
                     {slice.primary.buttons.map((item, index) => (
-                        <Center >
+                        <Center key={index}>
                             <Button
                                 key={index}
                                 as={PrismicNextLink}
