@@ -26,29 +26,48 @@
 					}
 				]
 			},
-			"buttonText": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Button"
-			},
-			"button_solid": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
-			},
-			"button_outlined": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
-				}
-			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"value": "secondary",
 				"type": "Select"
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_solid",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"button_outlined",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "letter",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [
@@ -85,29 +104,48 @@
 					}
 				]
 			},
-			"buttonText": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Button"
-			},
-			"button_solid": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://twitter.com"
-				}
-			},
-			"button_outlined": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
-				}
-			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"value": "white",
 				"type": "Select"
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_solid",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"button_outlined",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "social",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [

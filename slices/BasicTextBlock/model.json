@@ -49,27 +49,36 @@
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "buttonText": {
-          "type": "Text",
+        "buttons": {
+          "type": "Group",
           "config": {
-            "label": "ButtonText",
-            "placeholder": ""
-          }
-        },
-        "button_solid": {
-          "type": "Link",
-          "config": {
-            "label": "Button Solid",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "button_outlined": {
-          "type": "Link",
-          "config": {
-            "label": "Button outlined",
-            "placeholder": "",
-            "select": null
+            "label": "Buttons",
+            "repeat": true,
+            "fields": {
+              "button_solid": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Solid",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_outlined": {
+                "type": "Link",
+                "config": {
+                  "label": "Button outlined",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         }
       },
@@ -120,27 +129,36 @@
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "buttonText": {
-          "type": "Text",
+        "buttons": {
+          "type": "Group",
           "config": {
-            "label": "ButtonText",
-            "placeholder": ""
-          }
-        },
-        "button_solid": {
-          "type": "Link",
-          "config": {
-            "label": "Button Solid",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "button_outlined": {
-          "type": "Link",
-          "config": {
-            "label": "Button outlined",
-            "placeholder": "",
-            "select": null
+            "label": "Buttons",
+            "repeat": true,
+            "fields": {
+              "button_solid": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Solid",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_outlined": {
+                "type": "Link",
+                "config": {
+                  "label": "Button outlined",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         }
       },

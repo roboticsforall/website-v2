@@ -29,19 +29,33 @@ const BlockCenterAligned = (
                 <Text mb={"2.5rem"} textAlign={"center"}>
                     <PrismicRichText field={slice.primary.description} />
                 </Text>
-                <Center >
-                    <PrismicNextLink field={slice.primary.button_solid} >
-                        <Button variant="solid" mr={"6"}>
-                            {slice.primary.buttonText}
+                
+                    {slice.primary.buttons.map((item, index) => (
+                        <Center >
+                            <Button
+                                key={index}
+                                as={PrismicNextLink}
+                                field={item.button_outlined}
+                                variant='solid'
+                                
+                            >
+                                {item.button_text}
+                            </Button>
+                            <Button
+                            key={index}
+                            as={PrismicNextLink}
+                            field={item.button_outlined}
+                            variant='outline'
+                            mx={'1.25rem'}
+                        >
+                            {item.button_text}
                         </Button>
-                    </PrismicNextLink>
+                    </Center>
+                    ))}
+                    
+    
 
-                    <PrismicNextLink field={slice.primary.button_outlined}>
-                        <Button variant="outline">
-                            {slice.primary.buttonText}
-                        </Button>
-                    </PrismicNextLink>
-                </Center>
+                
             </Flex>
         </ContainerWrapper>
     </BackgroundColor>

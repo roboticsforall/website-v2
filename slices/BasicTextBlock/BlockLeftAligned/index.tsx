@@ -13,8 +13,8 @@ const BlockLeftAligned = (
     return (
 
         <BackgroundColor
-            backgroundColor={
-            slice.variation === "blockLeftAligned"
+        backgroundColor={
+          slice.variation === "blockLeftAligned"
             ? slice.primary.backgroundcolor
             : "white"
         }
@@ -31,19 +31,29 @@ const BlockLeftAligned = (
                 <Text mb={"2.5rem"}>
                     <PrismicRichText field={slice.primary.description} />
                 </Text>
-                <Box>
-                    <PrismicNextLink field={slice.primary.button_solid} >
-                        <Button variant="solid" mr={"6"}>
-                            {slice.primary.buttonText}
-                        </Button>
-                    </PrismicNextLink>
-
-                    <PrismicNextLink field={slice.primary.button_outlined}>
-                        <Button variant="outline">
-                            {slice.primary.buttonText}
-                        </Button>
-                    </PrismicNextLink>
-                </Box>
+              
+                    {slice.primary.buttons.map((item, index) => (
+                          <Box key={index}>
+                            <Button
+                                as={PrismicNextLink}
+                                field={item.button_solid}
+                                variant='solid'
+                                
+                            >
+                                {item.button_text}
+                            </Button>
+                            <Button
+                                as={PrismicNextLink}
+                                field={item.button_outlined}
+                                variant='outline'
+                                mx={'1.25rem'}
+                            >
+                                {item.button_text}
+                            </Button>
+                    </Box>
+ 
+                    ))}
+                
             </Flex>
         </ContainerWrapper>
     </BackgroundColor>
