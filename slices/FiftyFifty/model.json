@@ -6,7 +6,7 @@
   "variations": [
     {
       "id": "default",
-      "name": "Default",
+      "name": "Blue",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
@@ -61,6 +61,80 @@
               "gradient"
             ],
             "default_value": "primary"
+          }
+        },
+        "button_variations": {
+          "type": "Select",
+          "config": {
+            "label": "Button Variation",
+            "placeholder": "",
+            "options": [
+              "solid",
+              "outline"
+            ],
+            "default_value": "solid"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "buttonText",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "buttonLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "gradient",
+              "secondary",
+              "primary"
+            ],
+            "default_value": "white"
           }
         },
         "button_variations": {

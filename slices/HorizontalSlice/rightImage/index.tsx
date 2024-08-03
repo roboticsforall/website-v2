@@ -17,6 +17,7 @@ export type HorizontalSliceProps =
   import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
   import { BackgroundColor } from "@/app/components/BackgroundColor";
   import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { CustomHeading } from "@/app/components/CustomHeading";
 const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
     return (
       <BackgroundColor
@@ -38,9 +39,9 @@ const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
             </Box>
             <Stack gridArea="content" justifyContent={"center"} spacing={4}>
               <Box>
-                <Heading mb={"1.25rem"} as="h2">
+              <CustomHeading mb={"1.25rem"} as={"h2"}>
                   {slice.primary.title}
-                </Heading>
+                </CustomHeading>
                 <Text >{slice.primary.description}</Text>
                 <PrismicNextLink
                   field={

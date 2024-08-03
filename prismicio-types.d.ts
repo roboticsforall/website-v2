@@ -1364,11 +1364,11 @@ export type ColumnCardsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *FiftyFifty → Default → Primary*
+ * Primary content in *FiftyFifty → Blue → Primary*
  */
 export interface FiftyFiftySliceDefaultPrimary {
   /**
-   * title field in *FiftyFifty → Default → Primary*
+   * title field in *FiftyFifty → Blue → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1378,7 +1378,7 @@ export interface FiftyFiftySliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * description field in *FiftyFifty → Default → Primary*
+   * description field in *FiftyFifty → Blue → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1388,7 +1388,7 @@ export interface FiftyFiftySliceDefaultPrimary {
   description: prismic.KeyTextField;
 
   /**
-   * image field in *FiftyFifty → Default → Primary*
+   * image field in *FiftyFifty → Blue → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -1398,7 +1398,7 @@ export interface FiftyFiftySliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * buttonText field in *FiftyFifty → Default → Primary*
+   * buttonText field in *FiftyFifty → Blue → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1408,7 +1408,7 @@ export interface FiftyFiftySliceDefaultPrimary {
   buttontext: prismic.KeyTextField;
 
   /**
-   * buttonLink field in *FiftyFifty → Default → Primary*
+   * buttonLink field in *FiftyFifty → Blue → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -1418,7 +1418,7 @@ export interface FiftyFiftySliceDefaultPrimary {
   buttonlink: prismic.LinkField;
 
   /**
-   * Background Color field in *FiftyFifty → Default → Primary*
+   * Background Color field in *FiftyFifty → Blue → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
@@ -1432,7 +1432,7 @@ export interface FiftyFiftySliceDefaultPrimary {
   >;
 
   /**
-   * Button Variation field in *FiftyFifty → Default → Primary*
+   * Button Variation field in *FiftyFifty → Blue → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
@@ -1444,7 +1444,7 @@ export interface FiftyFiftySliceDefaultPrimary {
 }
 
 /**
- * Default variation for FiftyFifty Slice
+ * Blue variation for FiftyFifty Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1457,9 +1457,102 @@ export type FiftyFiftySliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *FiftyFifty → White → Primary*
+ */
+export interface FiftyFiftySliceWhitePrimary {
+  /**
+   * title field in *FiftyFifty → White → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.white.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *FiftyFifty → White → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.white.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * image field in *FiftyFifty → White → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.white.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * buttonText field in *FiftyFifty → White → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.white.primary.buttontext
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttontext: prismic.KeyTextField;
+
+  /**
+   * buttonLink field in *FiftyFifty → White → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.white.primary.buttonlink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  buttonlink: prismic.LinkField;
+
+  /**
+   * Background Color field in *FiftyFifty → White → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: fifty_fifty.white.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<
+    "white" | "gradient" | "secondary" | "primary",
+    "filled"
+  >;
+
+  /**
+   * Button Variation field in *FiftyFifty → White → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: fifty_fifty.white.primary.button_variations
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variations: prismic.SelectField<"solid" | "outline", "filled">;
+}
+
+/**
+ * White variation for FiftyFifty Slice
+ *
+ * - **API ID**: `white`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FiftyFiftySliceWhite = prismic.SharedSliceVariation<
+  "white",
+  Simplify<FiftyFiftySliceWhitePrimary>,
+  never
+>;
+
+/**
  * Slice variation for *FiftyFifty*
  */
-type FiftyFiftySliceVariation = FiftyFiftySliceDefault;
+type FiftyFiftySliceVariation = FiftyFiftySliceDefault | FiftyFiftySliceWhite;
 
 /**
  * FiftyFifty Shared Slice
@@ -2523,7 +2616,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -2563,8 +2656,10 @@ declare module "@prismicio/client" {
       ColumnCardsSliceFourColumnHeaderOnly,
       FiftyFiftySlice,
       FiftyFiftySliceDefaultPrimary,
+      FiftyFiftySliceWhitePrimary,
       FiftyFiftySliceVariation,
       FiftyFiftySliceDefault,
+      FiftyFiftySliceWhite,
       HannaSlice,
       HannaSliceDefaultPrimary,
       HannaSliceVariation,

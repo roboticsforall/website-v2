@@ -4,12 +4,13 @@ import { Card, Image, Stack, CardBody, Heading, Text, CardFooter, Button, Center
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { CustomHeading } from "@/app/components/CustomHeading";
 export type FiftyFiftyProps = SliceComponentProps<Content.FiftyFiftySlice>;
 
 const FiftyFifty = ({ slice }: FiftyFiftyProps): JSX.Element => {
   return (
     <section>
-      <BackgroundColor backgroundColor={slice.primary.background_color}>
+      <BackgroundColor backgroundColor={ slice.variation=="default" ? "primary" : "white"}>
       <SimpleGrid columns={{ sm:1, lg: 2}} >
           <Box>
             <PrismicNextImage field={slice.primary.image} />
@@ -18,9 +19,9 @@ const FiftyFifty = ({ slice }: FiftyFiftyProps): JSX.Element => {
           <Stack  justifyContent={"center"}>
             <ContainerWrapper>
             <Box>
-              <Heading mb={"1.25rem"} as="h2">
-                {slice.primary.title}
-              </Heading>
+              <CustomHeading mb={"1.25rem"} as="h3">
+              {slice.primary.title}
+              </CustomHeading>
               <Text>{slice.primary.description}</Text>
 
               <PrismicNextLink
@@ -29,7 +30,7 @@ const FiftyFifty = ({ slice }: FiftyFiftyProps): JSX.Element => {
                   <Button
                     mt="2.5rem"
                     variant={
-                      slice.primary.button_variations == "solid"
+                      slice.variation == "default"
                         ? "solid"
                         : "outline"
                     }
