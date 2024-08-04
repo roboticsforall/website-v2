@@ -3,16 +3,17 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  fifty_fifty: dynamic(() => import("./FiftyFifty")),
   column_cards: dynamic(() => import("./ColumnCards")),
+  fifty_fifty: dynamic(() => import("./FiftyFifty")),
   hanna: dynamic(() => import("./HannaSlice")),
   hero: dynamic(() => import("./Hero")),
   horizontal_slice: dynamic(() => import("./HorizontalSlice")),
   mikias_slice: dynamic(() => import("./MikiasSlice")),
   navigation: dynamic(() => import("./Navigation")),
+  numbered_card_section: dynamic(() => import("./NumberedCardSection")),
   sarthak: dynamic(() => import("./Sarthak")),
-  theming: dynamic(() => import("./Theming")),
   split_feature_block: dynamic(() => import("./SplitFeatureBlock")),
   team_cards_section: dynamic(() => import("./TeamCardsSection")),
+  theming: dynamic(() => import("./Theming")),
   three_column_explainer: dynamic(() => import("./ThreeColumnExplainer")),
 };
