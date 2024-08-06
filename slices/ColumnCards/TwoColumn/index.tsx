@@ -4,6 +4,7 @@ import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { ColumnCard } from "../components/ColumnCard";
 import { CustomHeading } from "@/app/components/CustomHeading";
+import { PrismicNextLink } from "@prismicio/next";
 
 const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
   // Implement TwoColumn layout based on `slice` data
@@ -32,6 +33,8 @@ const TwoColumn = (slice: Content.ColumnCardsSlice): JSX.Element => {
               variant={
                 slice.primary.button_variation == "solid" ? "solid" : "outline"
               }
+              field={slice.primary.button}
+              as={PrismicNextLink}
             >
               {slice.primary.button_text}
             </Button>

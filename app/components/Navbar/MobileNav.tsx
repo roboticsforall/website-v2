@@ -22,7 +22,11 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { GlobalNavigationDocument } from "@/prismicio-types";
-import { ArrowForwardIcon, HamburgerIcon } from "@chakra-ui/icons";
+import {
+  ArrowForwardIcon,
+  ChevronRightIcon,
+  HamburgerIcon,
+} from "@chakra-ui/icons";
 
 export function MobileNav(navigation: GlobalNavigationDocument<string>) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -99,7 +103,6 @@ export function MobileNav(navigation: GlobalNavigationDocument<string>) {
                       >
                         <Flex justify={"space-between"} alignItems={"center"}>
                           <Text>{navItem.primary.name}</Text>
-                          <ArrowForwardIcon />
                         </Flex>
                       </Link>
                     </AccordionButton>

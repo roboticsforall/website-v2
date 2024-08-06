@@ -1545,32 +1545,84 @@ type HannaSliceVariation = HannaSliceDefault;
 export type HannaSlice = prismic.SharedSlice<"hanna", HannaSliceVariation>;
 
 /**
- * Primary content in *Hero → Default → Primary*
+ * Primary content in *Hero → Hero - Full Image Left Aligned → Primary*
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Hero Image field in *Hero → Default → Primary*
+   * Background Image field in *Hero → Hero - Full Image Left Aligned → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.image
+   * - **API ID Path**: hero.default.primary.background_image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image: prismic.ImageField<never>;
+  background_image: prismic.ImageField<never>;
 
   /**
-   * Hero Text field in *Hero → Default → Primary*
+   * Hero Header field in *Hero → Hero - Full Image Left Aligned → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_text
+   * - **API ID Path**: hero.default.primary.hero_header
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  hero_text: prismic.KeyTextField;
+  hero_header: prismic.KeyTextField;
+
+  /**
+   * Has Header White Highlight field in *Hero → Hero - Full Image Left Aligned → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: hero.default.primary.has_header_white_highlight
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_header_white_highlight: prismic.BooleanField;
+
+  /**
+   * Hero Description field in *Hero → Hero - Full Image Left Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.hero_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hero_description: prismic.RichTextField;
+
+  /**
+   * Button Link field in *Hero → Hero - Full Image Left Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *Hero → Hero - Full Image Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *Hero → Hero - Full Image Left Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.default.primary.button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
 }
 
 /**
- * Default variation for Hero Slice
+ * Hero - Full Image Left Aligned variation for Hero Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1583,9 +1635,410 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → Hero - 50/50 Left Aligned → Primary*
+ */
+export interface HeroSliceHero5050LeftAlignedPrimary {
+  /**
+   * Background Color field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
+   * Hero Image field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Hero Header field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.hero_header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_header: prismic.KeyTextField;
+
+  /**
+   * Has Header White Highlight field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.has_header_white_highlight
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_header_white_highlight: prismic.BooleanField;
+
+  /**
+   * Header Description field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.hero_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hero_description: prismic.RichTextField;
+
+  /**
+   * Button Text field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button variation field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+}
+
+/**
+ * Hero - 50/50 Left Aligned variation for Hero Slice
+ *
+ * - **API ID**: `hero5050LeftAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceHero5050LeftAligned = prismic.SharedSliceVariation<
+  "hero5050LeftAligned",
+  Simplify<HeroSliceHero5050LeftAlignedPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Hero → Hero - 50/50 Right Aligned → Primary*
+ */
+export interface HeroSliceHero5050RightAlignedPrimary {
+  /**
+   * Background Color field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: hero.hero5050RightAligned.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
+   * Hero Image field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050RightAligned.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Hero Header field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050RightAligned.primary.hero_header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_header: prismic.KeyTextField;
+
+  /**
+   * Has Header White Highlight field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: hero.hero5050RightAligned.primary.has_header_white_highlight
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_header_white_highlight: prismic.BooleanField;
+
+  /**
+   * Header Description field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050RightAligned.primary.hero_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hero_description: prismic.RichTextField;
+
+  /**
+   * Button Text field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050RightAligned.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050RightAligned.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button variation field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.hero5050RightAligned.primary.button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+}
+
+/**
+ * Hero - 50/50 Right Aligned variation for Hero Slice
+ *
+ * - **API ID**: `hero5050RightAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceHero5050RightAligned = prismic.SharedSliceVariation<
+  "hero5050RightAligned",
+  Simplify<HeroSliceHero5050RightAlignedPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Hero → Page Header Block Left Aligned → Primary*
+ */
+export interface HeroSlicePageHeaderBlockLeftAlignedPrimary {
+  /**
+   * Background Color field in *Hero → Page Header Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
+   * Hero Header field in *Hero → Page Header Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.hero_header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_header: prismic.KeyTextField;
+
+  /**
+   * Has Header White Highlight field in *Hero → Page Header Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.has_header_white_highlight
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_header_white_highlight: prismic.BooleanField;
+
+  /**
+   * Header Description field in *Hero → Page Header Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.hero_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hero_description: prismic.RichTextField;
+
+  /**
+   * Button Text field in *Hero → Page Header Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Hero → Page Header Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button variation field in *Hero → Page Header Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+}
+
+/**
+ * Page Header Block Left Aligned variation for Hero Slice
+ *
+ * - **API ID**: `pageHeaderBlockLeftAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSlicePageHeaderBlockLeftAligned = prismic.SharedSliceVariation<
+  "pageHeaderBlockLeftAligned",
+  Simplify<HeroSlicePageHeaderBlockLeftAlignedPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Hero → Page Header Block Centered → Primary*
+ */
+export interface HeroSlicePageHeaderBlockCenteredPrimary {
+  /**
+   * Background Color field in *Hero → Page Header Block Centered → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient",
+    "filled"
+  >;
+
+  /**
+   * Hero Header field in *Hero → Page Header Block Centered → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.hero_header
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_header: prismic.KeyTextField;
+
+  /**
+   * Has Header White Highlight field in *Hero → Page Header Block Centered → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.has_header_white_highlight
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_header_white_highlight: prismic.BooleanField;
+
+  /**
+   * Header Description field in *Hero → Page Header Block Centered → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.hero_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  hero_description: prismic.RichTextField;
+
+  /**
+   * Button Text field in *Hero → Page Header Block Centered → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Hero → Page Header Block Centered → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button variation field in *Hero → Page Header Block Centered → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+}
+
+/**
+ * Page Header Block Centered variation for Hero Slice
+ *
+ * - **API ID**: `pageHeaderBlockCentered`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSlicePageHeaderBlockCentered = prismic.SharedSliceVariation<
+  "pageHeaderBlockCentered",
+  Simplify<HeroSlicePageHeaderBlockCenteredPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault;
+type HeroSliceVariation =
+  | HeroSliceDefault
+  | HeroSliceHero5050LeftAligned
+  | HeroSliceHero5050RightAligned
+  | HeroSlicePageHeaderBlockLeftAligned
+  | HeroSlicePageHeaderBlockCentered;
 
 /**
  * Hero Shared Slice
@@ -2580,8 +3033,16 @@ declare module "@prismicio/client" {
       HannaSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
+      HeroSliceHero5050LeftAlignedPrimary,
+      HeroSliceHero5050RightAlignedPrimary,
+      HeroSlicePageHeaderBlockLeftAlignedPrimary,
+      HeroSlicePageHeaderBlockCenteredPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      HeroSliceHero5050LeftAligned,
+      HeroSliceHero5050RightAligned,
+      HeroSlicePageHeaderBlockLeftAligned,
+      HeroSlicePageHeaderBlockCentered,
       HorizontalSliceSlice,
       HorizontalSliceSliceLeftImagePrimary,
       HorizontalSliceSliceLeftImageNoButtonPrimary,
