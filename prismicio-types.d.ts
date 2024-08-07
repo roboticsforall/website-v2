@@ -105,10 +105,12 @@ export type GlobalNavigationDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
-  | ThemingSlice
-  | SarthakSlice
-  | HannaSlice
-  | MikiasSliceSlice
+  | TeamCardsSectionSlice
+  | ThreeColumnExplainerSlice
+  | ColumnCardsSlice
+  | SplitFeatureBlockSlice
+  | HorizontalSliceSlice
+  | FiftyFiftySlice
   | HeroSlice;
 
 /**
@@ -186,7 +188,14 @@ export type HomePageDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = ColumnCardsSlice | ThemingSlice | HeroSlice;
+type PageDocumentDataSlicesSlice =
+  | FiftyFiftySlice
+  | HorizontalSliceSlice
+  | ThreeColumnExplainerSlice
+  | TeamCardsSectionSlice
+  | SplitFeatureBlockSlice
+  | ColumnCardsSlice
+  | HeroSlice;
 
 /**
  * Content for Page documents
@@ -2123,7 +2132,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
