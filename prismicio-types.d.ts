@@ -311,14 +311,14 @@ export interface ColumnCardsSliceDefaultPrimaryCardsItem {
   description: prismic.RichTextField;
 
   /**
-   * Button field in *ColumnCards → ThreeColumn → Primary → Cards*
+   * Button Link field in *ColumnCards → ThreeColumn → Primary → Cards*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.default.primary.cards[].button
+   * - **API ID Path**: column_cards.default.primary.cards[].button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button: prismic.LinkField;
+  button_link: prismic.LinkField;
 
   /**
    * Button Text field in *ColumnCards → ThreeColumn → Primary → Cards*
@@ -351,361 +351,76 @@ export interface ColumnCardsSliceDefaultPrimaryCardsItem {
   link_text: prismic.KeyTextField;
 
   /**
-   * HasButton field in *ColumnCards → ThreeColumn → Primary → Cards*
+   * Has Button field in *ColumnCards → ThreeColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.default.primary.cards[].hasbutton
+   * - **API ID Path**: column_cards.default.primary.cards[].has_button
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  hasbutton: prismic.BooleanField;
+  has_button: prismic.BooleanField;
 
   /**
-   * HasImage field in *ColumnCards → ThreeColumn → Primary → Cards*
+   * Has Image field in *ColumnCards → ThreeColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.default.primary.cards[].hasimage
+   * - **API ID Path**: column_cards.default.primary.cards[].has_image
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  hasimage: prismic.BooleanField;
+  has_image: prismic.BooleanField;
 
   /**
-   * HasLink field in *ColumnCards → ThreeColumn → Primary → Cards*
+   * Has Link field in *ColumnCards → ThreeColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.default.primary.cards[].haslink
+   * - **API ID Path**: column_cards.default.primary.cards[].has_link
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  haslink: prismic.BooleanField;
+  has_link: prismic.BooleanField;
 }
 
 /**
- * Item in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
+ * Item in *ColumnCards → ThreeColumn → Primary → Button Group*
  */
-export interface ColumnCardsSliceThreeColumnHeaderOnlyPrimaryCardsItem {
+export interface ColumnCardsSliceDefaultPrimaryButtonGroupItem {
   /**
-   * image field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
+   * Button Text field in *ColumnCards → ThreeColumn → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Button field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button: prismic.LinkField;
-
-  /**
-   * Button Text field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].button_text
+   * - **API ID Path**: column_cards.default.primary.button_group[].button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
 
   /**
-   * Link field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
+   * Button Link field in *ColumnCards → ThreeColumn → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].link
+   * - **API ID Path**: column_cards.default.primary.button_group[].button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.LinkField;
+  button_link: prismic.LinkField;
 
   /**
-   * Link Text field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
+   * Button Variation field in *ColumnCards → ThreeColumn → Primary → Button Group*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].link_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Default Value**: solid
+   * - **API ID Path**: column_cards.default.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  link_text: prismic.KeyTextField;
-
-  /**
-   * HasButton field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].hasbutton
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  hasbutton: prismic.BooleanField;
-
-  /**
-   * HasImage field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].hasimage
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  hasimage: prismic.BooleanField;
-
-  /**
-   * HasLink field in *ColumnCards → ThreeColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[].haslink
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  haslink: prismic.BooleanField;
-}
-
-/**
- * Item in *ColumnCards → TwoColumn → Primary → Cards*
- */
-export interface ColumnCardsSliceTwoColumnPrimaryCardsItem {
-  /**
-   * image field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Button field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button: prismic.LinkField;
-
-  /**
-   * Button Text field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button_text: prismic.KeyTextField;
-
-  /**
-   * Link field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Link Text field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].link_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_text: prismic.KeyTextField;
-
-  /**
-   * HasButton field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].hasbutton
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  hasbutton: prismic.BooleanField;
-
-  /**
-   * HasImage field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].hasimage
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  hasimage: prismic.BooleanField;
-
-  /**
-   * HasLink field in *ColumnCards → TwoColumn → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[].haslink
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  haslink: prismic.BooleanField;
-}
-
-/**
- * Item in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
- */
-export interface ColumnCardsSliceTwoColumnHeaderOnlyPrimaryCardsItem {
-  /**
-   * image field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Button field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button: prismic.LinkField;
-
-  /**
-   * Button Text field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button_text: prismic.KeyTextField;
-
-  /**
-   * Link field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Link Text field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].link_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_text: prismic.KeyTextField;
-
-  /**
-   * HasButton field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].hasbutton
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  hasbutton: prismic.BooleanField;
-
-  /**
-   * HasImage field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].hasimage
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  hasimage: prismic.BooleanField;
-
-  /**
-   * HasLink field in *ColumnCards → TwoColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[].haslink
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  haslink: prismic.BooleanField;
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
 }
 
 /**
@@ -713,7 +428,7 @@ export interface ColumnCardsSliceTwoColumnHeaderOnlyPrimaryCardsItem {
  */
 export interface ColumnCardsSliceFourColumnPrimaryCardsItem {
   /**
-   * image field in *ColumnCards → FourColumn → Primary → Cards*
+   * Image field in *ColumnCards → FourColumn → Primary → Cards*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -743,14 +458,14 @@ export interface ColumnCardsSliceFourColumnPrimaryCardsItem {
   description: prismic.RichTextField;
 
   /**
-   * Button field in *ColumnCards → FourColumn → Primary → Cards*
+   * Button Link field in *ColumnCards → FourColumn → Primary → Cards*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumn.primary.cards[].button
+   * - **API ID Path**: column_cards.fourColumn.primary.cards[].button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button: prismic.LinkField;
+  button_link: prismic.LinkField;
 
   /**
    * Button Text field in *ColumnCards → FourColumn → Primary → Cards*
@@ -783,145 +498,223 @@ export interface ColumnCardsSliceFourColumnPrimaryCardsItem {
   link_text: prismic.KeyTextField;
 
   /**
-   * HasButton field in *ColumnCards → FourColumn → Primary → Cards*
+   * Has Button field in *ColumnCards → FourColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.fourColumn.primary.cards[].hasbutton
+   * - **API ID Path**: column_cards.fourColumn.primary.cards[].has_button
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  hasbutton: prismic.BooleanField;
+  has_button: prismic.BooleanField;
 
   /**
-   * HasImage field in *ColumnCards → FourColumn → Primary → Cards*
+   * Has Image field in *ColumnCards → FourColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.fourColumn.primary.cards[].hasimage
+   * - **API ID Path**: column_cards.fourColumn.primary.cards[].has_image
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  hasimage: prismic.BooleanField;
+  has_image: prismic.BooleanField;
 
   /**
-   * HasLink field in *ColumnCards → FourColumn → Primary → Cards*
+   * Has Link field in *ColumnCards → FourColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.fourColumn.primary.cards[].haslink
+   * - **API ID Path**: column_cards.fourColumn.primary.cards[].has_link
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  haslink: prismic.BooleanField;
+  has_link: prismic.BooleanField;
 }
 
 /**
- * Item in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+ * Item in *ColumnCards → FourColumn → Primary → Button Group*
  */
-export interface ColumnCardsSliceFourColumnHeaderOnlyPrimaryCardsItem {
+export interface ColumnCardsSliceFourColumnPrimaryButtonGroupItem {
   /**
-   * image field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   * Button Text field in *ColumnCards → FourColumn → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Button field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button: prismic.LinkField;
-
-  /**
-   * Button Text field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].button_text
+   * - **API ID Path**: column_cards.fourColumn.primary.button_group[].button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
 
   /**
-   * Link field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   * Button Link field in *ColumnCards → FourColumn → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].link
+   * - **API ID Path**: column_cards.fourColumn.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Variation field in *ColumnCards → FourColumn → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: column_cards.fourColumn.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
+
+/**
+ * Item in *ColumnCards → TwoColumn → Primary → Cards*
+ */
+export interface ColumnCardsSliceTwoColumnPrimaryCardsItem {
+  /**
+   * Image field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Button Link field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Link field in *ColumnCards → TwoColumn → Primary → Cards*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
 
   /**
-   * Link Text field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   * Link Text field in *ColumnCards → TwoColumn → Primary → Cards*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].link_text
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].link_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   link_text: prismic.KeyTextField;
 
   /**
-   * HasButton field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   * Has Button field in *ColumnCards → TwoColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].hasbutton
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].has_button
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  hasbutton: prismic.BooleanField;
+  has_button: prismic.BooleanField;
 
   /**
-   * HasImage field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   * Has Image field in *ColumnCards → TwoColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].hasimage
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].has_image
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  hasimage: prismic.BooleanField;
+  has_image: prismic.BooleanField;
 
   /**
-   * HasLink field in *ColumnCards → FourColumnHeaderOnly → Primary → Cards*
+   * Has Link field in *ColumnCards → TwoColumn → Primary → Cards*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[].haslink
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[].has_link
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
-  haslink: prismic.BooleanField;
+  has_link: prismic.BooleanField;
+}
+
+/**
+ * Item in *ColumnCards → TwoColumn → Primary → Button Group*
+ */
+export interface ColumnCardsSliceTwoColumnPrimaryButtonGroupItem {
+  /**
+   * Button Text field in *ColumnCards → TwoColumn → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *ColumnCards → TwoColumn → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Variation field in *ColumnCards → TwoColumn → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: column_cards.twoColumn.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
 }
 
 /**
@@ -953,6 +746,16 @@ export interface ColumnCardsSliceDefaultPrimary {
   heading: prismic.KeyTextField;
 
   /**
+   * Subheading field in *ColumnCards → ThreeColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.default.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subheading: prismic.RichTextField;
+
+  /**
    * Cards field in *ColumnCards → ThreeColumn → Primary*
    *
    * - **Field Type**: Group
@@ -963,35 +766,16 @@ export interface ColumnCardsSliceDefaultPrimary {
   cards: prismic.GroupField<Simplify<ColumnCardsSliceDefaultPrimaryCardsItem>>;
 
   /**
-   * Button Variation field in *ColumnCards → ThreeColumn → Primary*
+   * Button Group field in *ColumnCards → ThreeColumn → Primary*
    *
-   * - **Field Type**: Select
-   * - **Placeholder**: Style Variation of Button (Filled or Outlined Button)
-   * - **Default Value**: solid
-   * - **API ID Path**: column_cards.default.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
-
-  /**
-   * Button field in *ColumnCards → ThreeColumn → Primary*
-   *
-   * - **Field Type**: Link
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.default.primary.button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: column_cards.default.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  button: prismic.LinkField;
-
-  /**
-   * Button Text field in *ColumnCards → ThreeColumn → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.default.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button_text: prismic.KeyTextField;
+  button_group: prismic.GroupField<
+    Simplify<ColumnCardsSliceDefaultPrimaryButtonGroupItem>
+  >;
 }
 
 /**
@@ -1004,200 +788,6 @@ export interface ColumnCardsSliceDefaultPrimary {
 export type ColumnCardsSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<ColumnCardsSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Primary content in *ColumnCards → ThreeColumnHeaderOnly → Primary*
- */
-export interface ColumnCardsSliceThreeColumnHeaderOnlyPrimary {
-  /**
-   * BackgroundColor field in *ColumnCards → ThreeColumnHeaderOnly → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.backgroundcolor
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
-    "filled"
-  >;
-
-  /**
-   * Heading field in *ColumnCards → ThreeColumnHeaderOnly → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Cards field in *ColumnCards → ThreeColumnHeaderOnly → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.threeColumnHeaderOnly.primary.cards[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  cards: prismic.GroupField<
-    Simplify<ColumnCardsSliceThreeColumnHeaderOnlyPrimaryCardsItem>
-  >;
-}
-
-/**
- * ThreeColumnHeaderOnly variation for ColumnCards Slice
- *
- * - **API ID**: `threeColumnHeaderOnly`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ColumnCardsSliceThreeColumnHeaderOnly =
-  prismic.SharedSliceVariation<
-    "threeColumnHeaderOnly",
-    Simplify<ColumnCardsSliceThreeColumnHeaderOnlyPrimary>,
-    never
-  >;
-
-/**
- * Primary content in *ColumnCards → TwoColumn → Primary*
- */
-export interface ColumnCardsSliceTwoColumnPrimary {
-  /**
-   * BackgroundColor field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: column_cards.twoColumn.primary.backgroundcolor
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
-    "filled"
-  >;
-
-  /**
-   * Heading field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Cards field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.cards[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  cards: prismic.GroupField<
-    Simplify<ColumnCardsSliceTwoColumnPrimaryCardsItem>
-  >;
-
-  /**
-   * Button Variation field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: Style Variation of Button (Filled or Outlined Button)
-   * - **Default Value**: solid
-   * - **API ID Path**: column_cards.twoColumn.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
-
-  /**
-   * Button field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button: prismic.LinkField;
-
-  /**
-   * Button Text field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button_text: prismic.KeyTextField;
-}
-
-/**
- * TwoColumn variation for ColumnCards Slice
- *
- * - **API ID**: `twoColumn`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ColumnCardsSliceTwoColumn = prismic.SharedSliceVariation<
-  "twoColumn",
-  Simplify<ColumnCardsSliceTwoColumnPrimary>,
-  never
->;
-
-/**
- * Primary content in *ColumnCards → TwoColumnHeaderOnly → Primary*
- */
-export interface ColumnCardsSliceTwoColumnHeaderOnlyPrimary {
-  /**
-   * BackgroundColor field in *ColumnCards → TwoColumnHeaderOnly → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.backgroundcolor
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
-    "filled"
-  >;
-
-  /**
-   * Heading field in *ColumnCards → TwoColumnHeaderOnly → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Cards field in *ColumnCards → TwoColumnHeaderOnly → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumnHeaderOnly.primary.cards[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  cards: prismic.GroupField<
-    Simplify<ColumnCardsSliceTwoColumnHeaderOnlyPrimaryCardsItem>
-  >;
-}
-
-/**
- * TwoColumnHeaderOnly variation for ColumnCards Slice
- *
- * - **API ID**: `twoColumnHeaderOnly`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ColumnCardsSliceTwoColumnHeaderOnly = prismic.SharedSliceVariation<
-  "twoColumnHeaderOnly",
-  Simplify<ColumnCardsSliceTwoColumnHeaderOnlyPrimary>,
   never
 >;
 
@@ -1230,6 +820,16 @@ export interface ColumnCardsSliceFourColumnPrimary {
   heading: prismic.KeyTextField;
 
   /**
+   * Subheading field in *ColumnCards → FourColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.fourColumn.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subheading: prismic.RichTextField;
+
+  /**
    * Cards field in *ColumnCards → FourColumn → Primary*
    *
    * - **Field Type**: Group
@@ -1242,35 +842,16 @@ export interface ColumnCardsSliceFourColumnPrimary {
   >;
 
   /**
-   * Button Variation field in *ColumnCards → FourColumn → Primary*
+   * Button Group field in *ColumnCards → FourColumn → Primary*
    *
-   * - **Field Type**: Select
-   * - **Placeholder**: Style Variation of Button (Filled or Outlined Button)
-   * - **Default Value**: solid
-   * - **API ID Path**: column_cards.fourColumn.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
-
-  /**
-   * Button field in *ColumnCards → FourColumn → Primary*
-   *
-   * - **Field Type**: Link
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumn.primary.button
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: column_cards.fourColumn.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  button: prismic.LinkField;
-
-  /**
-   * Button Text field in *ColumnCards → FourColumn → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumn.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button_text: prismic.KeyTextField;
+  button_group: prismic.GroupField<
+    Simplify<ColumnCardsSliceFourColumnPrimaryButtonGroupItem>
+  >;
 }
 
 /**
@@ -1287,16 +868,16 @@ export type ColumnCardsSliceFourColumn = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *ColumnCards → FourColumnHeaderOnly → Primary*
+ * Primary content in *ColumnCards → TwoColumn → Primary*
  */
-export interface ColumnCardsSliceFourColumnHeaderOnlyPrimary {
+export interface ColumnCardsSliceTwoColumnPrimary {
   /**
-   * BackgroundColor field in *ColumnCards → FourColumnHeaderOnly → Primary*
+   * BackgroundColor field in *ColumnCards → TwoColumn → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: white
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.backgroundcolor
+   * - **API ID Path**: column_cards.twoColumn.primary.backgroundcolor
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
@@ -1305,38 +886,60 @@ export interface ColumnCardsSliceFourColumnHeaderOnlyPrimary {
   >;
 
   /**
-   * Heading field in *ColumnCards → FourColumnHeaderOnly → Primary*
+   * Heading field in *ColumnCards → TwoColumn → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.heading
+   * - **API ID Path**: column_cards.twoColumn.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   heading: prismic.KeyTextField;
 
   /**
-   * Cards field in *ColumnCards → FourColumnHeaderOnly → Primary*
+   * Subheading field in *ColumnCards → TwoColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subheading: prismic.RichTextField;
+
+  /**
+   * Cards field in *ColumnCards → TwoColumn → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumnHeaderOnly.primary.cards[]
+   * - **API ID Path**: column_cards.twoColumn.primary.cards[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   cards: prismic.GroupField<
-    Simplify<ColumnCardsSliceFourColumnHeaderOnlyPrimaryCardsItem>
+    Simplify<ColumnCardsSliceTwoColumnPrimaryCardsItem>
+  >;
+
+  /**
+   * Button Group field in *ColumnCards → TwoColumn → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: column_cards.twoColumn.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  button_group: prismic.GroupField<
+    Simplify<ColumnCardsSliceTwoColumnPrimaryButtonGroupItem>
   >;
 }
 
 /**
- * FourColumnHeaderOnly variation for ColumnCards Slice
+ * TwoColumn variation for ColumnCards Slice
  *
- * - **API ID**: `fourColumnHeaderOnly`
+ * - **API ID**: `twoColumn`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type ColumnCardsSliceFourColumnHeaderOnly = prismic.SharedSliceVariation<
-  "fourColumnHeaderOnly",
-  Simplify<ColumnCardsSliceFourColumnHeaderOnlyPrimary>,
+export type ColumnCardsSliceTwoColumn = prismic.SharedSliceVariation<
+  "twoColumn",
+  Simplify<ColumnCardsSliceTwoColumnPrimary>,
   never
 >;
 
@@ -1345,11 +948,8 @@ export type ColumnCardsSliceFourColumnHeaderOnly = prismic.SharedSliceVariation<
  */
 type ColumnCardsSliceVariation =
   | ColumnCardsSliceDefault
-  | ColumnCardsSliceThreeColumnHeaderOnly
-  | ColumnCardsSliceTwoColumn
-  | ColumnCardsSliceTwoColumnHeaderOnly
   | ColumnCardsSliceFourColumn
-  | ColumnCardsSliceFourColumnHeaderOnly;
+  | ColumnCardsSliceTwoColumn;
 
 /**
  * ColumnCards Shared Slice
@@ -2543,24 +2143,18 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       ColumnCardsSlice,
       ColumnCardsSliceDefaultPrimaryCardsItem,
+      ColumnCardsSliceDefaultPrimaryButtonGroupItem,
       ColumnCardsSliceDefaultPrimary,
-      ColumnCardsSliceThreeColumnHeaderOnlyPrimaryCardsItem,
-      ColumnCardsSliceThreeColumnHeaderOnlyPrimary,
-      ColumnCardsSliceTwoColumnPrimaryCardsItem,
-      ColumnCardsSliceTwoColumnPrimary,
-      ColumnCardsSliceTwoColumnHeaderOnlyPrimaryCardsItem,
-      ColumnCardsSliceTwoColumnHeaderOnlyPrimary,
       ColumnCardsSliceFourColumnPrimaryCardsItem,
+      ColumnCardsSliceFourColumnPrimaryButtonGroupItem,
       ColumnCardsSliceFourColumnPrimary,
-      ColumnCardsSliceFourColumnHeaderOnlyPrimaryCardsItem,
-      ColumnCardsSliceFourColumnHeaderOnlyPrimary,
+      ColumnCardsSliceTwoColumnPrimaryCardsItem,
+      ColumnCardsSliceTwoColumnPrimaryButtonGroupItem,
+      ColumnCardsSliceTwoColumnPrimary,
       ColumnCardsSliceVariation,
       ColumnCardsSliceDefault,
-      ColumnCardsSliceThreeColumnHeaderOnly,
-      ColumnCardsSliceTwoColumn,
-      ColumnCardsSliceTwoColumnHeaderOnly,
       ColumnCardsSliceFourColumn,
-      ColumnCardsSliceFourColumnHeaderOnly,
+      ColumnCardsSliceTwoColumn,
       FiftyFiftySlice,
       FiftyFiftySliceDefaultPrimary,
       FiftyFiftySliceVariation,
