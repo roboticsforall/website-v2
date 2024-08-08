@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   column_cards: dynamic(() => import("./ColumnCards")),
+  course_list: dynamic(() => import("./CourseList")),
   fifty_fifty: dynamic(() => import("./FiftyFifty")),
   hero: dynamic(() => import("./Hero")),
   horizontal_slice: dynamic(() => import("./HorizontalSlice")),

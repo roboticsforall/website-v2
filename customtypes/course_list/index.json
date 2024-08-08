@@ -1,0 +1,60 @@
+{
+  "format": "custom",
+  "id": "course_list",
+  "label": "Course List",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "courses": {
+        "type": "Group",
+        "config": {
+          "label": "Courses",
+          "repeat": true,
+          "fields": {
+            "course_name": {
+              "type": "Text",
+              "config": {
+                "label": "Course Name",
+                "placeholder": ""
+              }
+            },
+            "course_description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Course Description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "course_syllabi": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Course Syllabi",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "open_for_enrollment": {
+              "type": "Boolean",
+              "config": {
+                "label": "Open For Enrollment",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
