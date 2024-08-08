@@ -10,7 +10,6 @@ export const components = {
   hanna: dynamic(() => import("./HannaSlice")),
   hero: dynamic(() => import("./Hero")),
   horizontal_slice: dynamic(() => import("./HorizontalSlice")),
-  mikias_slice: dynamic(() => import("./MikiasSlice")),
   navigation: dynamic(() => import("./Navigation")),
   sarthak: dynamic(() => import("./Sarthak")),
   split_feature_block: dynamic(() => import("./SplitFeatureBlock")),

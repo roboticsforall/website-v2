@@ -14,7 +14,6 @@
 				"type": "Text"
 			},
 			"image": {
-				"__TYPE__": "ImageContent",
 				"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjE1MTU4OTN8MA&ixlib=rb-4.0.3&q=85",
 				"alt": "yellow lemon fruit beside green leaves",
 				"origin": {
@@ -33,6 +32,8 @@
 						"y": 0
 					}
 				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"buttontext": {
