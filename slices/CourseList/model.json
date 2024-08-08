@@ -12,21 +12,21 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "image": {
-          "type": "Image",
+        "course_list": {
+          "type": "Link",
           "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Course List",
+            "select": "document",
+            "customtypes": [
+              "course_list"
+            ]
           }
         },
-        "text": {
-          "type": "StructuredText",
+        "filter_menu": {
+          "type": "Link",
           "config": {
-            "label": "Text",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "label": "Filter Menu",
+            "select": "document"
           }
         }
       },

@@ -80,6 +80,26 @@ export interface CourseListDocumentDataCoursesItem {
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
   open_for_enrollment: prismic.BooleanField;
+
+  /**
+   * Subject field in *Course List → Courses*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_list.courses[].subject
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  subject: prismic.SelectField<"Programming" | "Scratch" | "Lego">;
+
+  /**
+   * Grade Level field in *Course List → Courses*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_list.courses[].grade_level
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  grade_level: prismic.SelectField<"1" | "2">;
 }
 
 /**
@@ -1056,24 +1076,24 @@ export type ColumnCardsSlice = prismic.SharedSlice<
  */
 export interface CourseListSliceDefaultPrimary {
   /**
-   * image field in *CourseList → Default → Primary*
+   * Course List field in *CourseList → Default → Primary*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: course_list.default.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **API ID Path**: course_list.default.primary.course_list
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  image: prismic.ImageField<never>;
+  course_list: prismic.ContentRelationshipField<"course_list">;
 
   /**
-   * Text field in *CourseList → Default → Primary*
+   * Filter Menu field in *CourseList → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: course_list.default.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: course_list.default.primary.filter_menu
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  text: prismic.RichTextField;
+  filter_menu: prismic.ContentRelationshipField;
 }
 
 /**

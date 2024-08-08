@@ -51,6 +51,22 @@
                 "placeholder_true": "true",
                 "placeholder_false": "false"
               }
+            },
+            "subject": {
+              "type": "Select",
+              "config": {
+                "label": "Subject",
+                "placeholder": "",
+                "options": ["Programming", "Scratch", "Lego"]
+              }
+            },
+            "grade_level": {
+              "type": "Select",
+              "config": {
+                "label": "Grade Level",
+                "placeholder": "",
+                "options": ["1", "2"]
+              }
             }
           }
         }
