@@ -1,6 +1,6 @@
 "use client";
-import { Box } from "@chakra-ui/react";
-import { KeyTextField, RichTextField } from "@prismicio/client";
+import { Box, Flex } from "@chakra-ui/react";
+import { asText, KeyTextField, RichTextField } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
 import { CustomHeading } from "@/app/components/CustomHeading";
 
@@ -12,15 +12,16 @@ interface ITopHeadingGroup {
 export const TopHeadingGroup = ({
   heading,
   subheading,
+  ...flexProps
 }: ITopHeadingGroup): JSX.Element => {
   return (
-    <Box mb={5} textAlign="center">
-      {heading && (
-        <CustomHeading mb={"1.25rem"} as="h2">
-          {heading}
-        </CustomHeading>
+    <>
+      {(heading || asText(subheading).trim().length != 0) && (
+        <Flex direction="column" {...flexProps} gap={"1.25rem"} mb={"2.5rem"}>
+          {heading && <CustomHeading as="h2">{heading}</CustomHeading>}
+          <PrismicRichText field={subheading} />
+        </Flex>
       )}
-      {subheading && <PrismicRichText field={subheading} />}
-    </Box>
+    </>
   );
 };

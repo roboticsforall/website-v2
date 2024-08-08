@@ -1083,66 +1083,199 @@ export type FiftyFiftySlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *HannaSlice → Default → Primary*
+ * Item in *Hero → Hero - Full Image Left Aligned → Primary → Button Group*
  */
-export interface HannaSliceDefaultPrimary {
+export interface HeroSliceDefaultPrimaryButtonGroupItem {
   /**
-   * image field in *HannaSlice → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hanna.default.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * link field in *HannaSlice → Default → Primary*
+   * Button Link field in *Hero → Hero - Full Image Left Aligned → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: hanna.default.primary.link
+   * - **API ID Path**: hero.default.primary.button_group[].button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.LinkField;
+  button_link: prismic.LinkField;
 
   /**
-   * title field in *HannaSlice → Default → Primary*
+   * Button Text field in *Hero → Hero - Full Image Left Aligned → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hanna.default.primary.title
+   * - **API ID Path**: hero.default.primary.button_group[].button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  title: prismic.KeyTextField;
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *Hero → Hero - Full Image Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.default.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
 }
 
 /**
- * Default variation for HannaSlice Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
+ * Item in *Hero → Hero - 50/50 Left Aligned → Primary → Button Group*
  */
-export type HannaSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<HannaSliceDefaultPrimary>,
-  never
->;
+export interface HeroSliceHero5050LeftAlignedPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *Hero → Hero - 50/50 Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *Hero → Hero - 50/50 Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *Hero → Hero - 50/50 Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
 
 /**
- * Slice variation for *HannaSlice*
+ * Item in *Hero → Hero - 50/50 Right Aligned → Primary → Button Group*
  */
-type HannaSliceVariation = HannaSliceDefault;
+export interface HeroSliceHero5050RightAlignedPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *Hero → Hero - 50/50 Right Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050RightAligned.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *Hero → Hero - 50/50 Right Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.hero5050RightAligned.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *Hero → Hero - 50/50 Right Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.hero5050RightAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
 
 /**
- * HannaSlice Shared Slice
- *
- * - **API ID**: `hanna`
- * - **Description**: Hanna
- * - **Documentation**: https://prismic.io/docs/slice
+ * Item in *Hero → Page Header Block Left Aligned → Primary → Button Group*
  */
-export type HannaSlice = prismic.SharedSlice<"hanna", HannaSliceVariation>;
+export interface HeroSlicePageHeaderBlockLeftAlignedPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *Hero → Page Header Block Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *Hero → Page Header Block Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *Hero → Page Header Block Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
+
+/**
+ * Item in *Hero → Page Header Block Centered → Primary → Button Group*
+ */
+export interface HeroSlicePageHeaderBlockCenteredPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *Hero → Page Header Block Centered → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *Hero → Page Header Block Centered → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *Hero → Page Header Block Centered → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
 
 /**
  * Primary content in *Hero → Hero - Full Image Left Aligned → Primary*
@@ -1190,35 +1323,16 @@ export interface HeroSliceDefaultPrimary {
   hero_description: prismic.RichTextField;
 
   /**
-   * Button Link field in *Hero → Hero - Full Image Left Aligned → Primary*
+   * Button Group field in *Hero → Hero - Full Image Left Aligned → Primary*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.button_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: hero.default.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  button_link: prismic.LinkField;
-
-  /**
-   * Button Text field in *Hero → Hero - Full Image Left Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  button_text: prismic.KeyTextField;
-
-  /**
-   * Button Variation field in *Hero → Hero - Full Image Left Aligned → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: hero.default.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+  button_group: prismic.GroupField<
+    Simplify<HeroSliceDefaultPrimaryButtonGroupItem>
+  >;
 }
 
 /**
@@ -1248,7 +1362,7 @@ export interface HeroSliceHero5050LeftAlignedPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   background_color: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
@@ -1294,35 +1408,16 @@ export interface HeroSliceHero5050LeftAlignedPrimary {
   hero_description: prismic.RichTextField;
 
   /**
-   * Button Text field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   * Button Group field in *Hero → Hero - 50/50 Left Aligned → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  button_text: prismic.KeyTextField;
-
-  /**
-   * Button Link field in *Hero → Hero - 50/50 Left Aligned → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_link: prismic.LinkField;
-
-  /**
-   * Button variation field in *Hero → Hero - 50/50 Left Aligned → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: hero.hero5050LeftAligned.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+  button_group: prismic.GroupField<
+    Simplify<HeroSliceHero5050LeftAlignedPrimaryButtonGroupItem>
+  >;
 }
 
 /**
@@ -1352,7 +1447,7 @@ export interface HeroSliceHero5050RightAlignedPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   background_color: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
@@ -1398,35 +1493,16 @@ export interface HeroSliceHero5050RightAlignedPrimary {
   hero_description: prismic.RichTextField;
 
   /**
-   * Button Text field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   * Button Group field in *Hero → Hero - 50/50 Right Aligned → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050RightAligned.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: hero.hero5050RightAligned.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  button_text: prismic.KeyTextField;
-
-  /**
-   * Button Link field in *Hero → Hero - 50/50 Right Aligned → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050RightAligned.primary.button_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_link: prismic.LinkField;
-
-  /**
-   * Button variation field in *Hero → Hero - 50/50 Right Aligned → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: hero.hero5050RightAligned.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+  button_group: prismic.GroupField<
+    Simplify<HeroSliceHero5050RightAlignedPrimaryButtonGroupItem>
+  >;
 }
 
 /**
@@ -1456,7 +1532,7 @@ export interface HeroSlicePageHeaderBlockLeftAlignedPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   background_color: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
@@ -1492,35 +1568,16 @@ export interface HeroSlicePageHeaderBlockLeftAlignedPrimary {
   hero_description: prismic.RichTextField;
 
   /**
-   * Button Text field in *Hero → Page Header Block Left Aligned → Primary*
+   * Button Group field in *Hero → Page Header Block Left Aligned → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  button_text: prismic.KeyTextField;
-
-  /**
-   * Button Link field in *Hero → Page Header Block Left Aligned → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_link: prismic.LinkField;
-
-  /**
-   * Button variation field in *Hero → Page Header Block Left Aligned → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+  button_group: prismic.GroupField<
+    Simplify<HeroSlicePageHeaderBlockLeftAlignedPrimaryButtonGroupItem>
+  >;
 }
 
 /**
@@ -1550,7 +1607,7 @@ export interface HeroSlicePageHeaderBlockCenteredPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   background_color: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
@@ -1586,35 +1643,16 @@ export interface HeroSlicePageHeaderBlockCenteredPrimary {
   hero_description: prismic.RichTextField;
 
   /**
-   * Button Text field in *Hero → Page Header Block Centered → Primary*
+   * Button Group field in *Hero → Page Header Block Centered → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  button_text: prismic.KeyTextField;
-
-  /**
-   * Button Link field in *Hero → Page Header Block Centered → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_link: prismic.LinkField;
-
-  /**
-   * Button variation field in *Hero → Page Header Block Centered → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.button_variation
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+  button_group: prismic.GroupField<
+    Simplify<HeroSlicePageHeaderBlockCenteredPrimaryButtonGroupItem>
+  >;
 }
 
 /**
@@ -1981,91 +2019,6 @@ export type HorizontalSliceSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *MikiasSlice → Default → Primary*
- */
-export interface MikiasSliceSliceDefaultPrimary {
-  /**
-   * Image field in *MikiasSlice → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: mikias_slice.default.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *MikiasSlice → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: mikias_slice.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *MikiasSlice → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: mikias_slice.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Link field in *MikiasSlice → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: mikias_slice.default.primary.link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * buttonText field in *MikiasSlice → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: mikias_slice.default.primary.buttontext
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  buttontext: prismic.KeyTextField;
-}
-
-/**
- * Default variation for MikiasSlice Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type MikiasSliceSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<MikiasSliceSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *MikiasSlice*
- */
-type MikiasSliceSliceVariation = MikiasSliceSliceDefault;
-
-/**
- * MikiasSlice Shared Slice
- *
- * - **API ID**: `mikias_slice`
- * - **Description**: MikiasSlice
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type MikiasSliceSlice = prismic.SharedSlice<
-  "mikias_slice",
-  MikiasSliceSliceVariation
->;
-
-/**
  * Item in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
  */
 export interface NavigationSliceDefaultPrimaryChildNavigationItem {
@@ -2185,72 +2138,6 @@ type NavigationSliceVariation =
 export type NavigationSlice = prismic.SharedSlice<
   "navigation",
   NavigationSliceVariation
->;
-
-/**
- * Primary content in *Sarthak → Default → Primary*
- */
-export interface SarthakSliceDefaultPrimary {
-  /**
-   * exampleBool field in *Sarthak → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: sarthak.default.primary.examplebool
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  examplebool: prismic.BooleanField;
-
-  /**
-   * EzampleDate field in *Sarthak → Default → Primary*
-   *
-   * - **Field Type**: Date
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.default.primary.ezampledate
-   * - **Documentation**: https://prismic.io/docs/field#date
-   */
-  ezampledate: prismic.DateField;
-
-  /**
-   * color field in *Sarthak → Default → Primary*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.default.primary.color
-   * - **Documentation**: https://prismic.io/docs/field#color
-   */
-  color: prismic.ColorField;
-}
-
-/**
- * Default variation for Sarthak Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SarthakSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<SarthakSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Sarthak*
- */
-type SarthakSliceVariation = SarthakSliceDefault;
-
-/**
- * Sarthak Shared Slice
- *
- * - **API ID**: `sarthak`
- * - **Description**: Sarthak
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SarthakSlice = prismic.SharedSlice<
-  "sarthak",
-  SarthakSliceVariation
 >;
 
 /**
@@ -2621,15 +2508,16 @@ declare module "@prismicio/client" {
       FiftyFiftySliceDefaultPrimary,
       FiftyFiftySliceVariation,
       FiftyFiftySliceDefault,
-      HannaSlice,
-      HannaSliceDefaultPrimary,
-      HannaSliceVariation,
-      HannaSliceDefault,
       HeroSlice,
+      HeroSliceDefaultPrimaryButtonGroupItem,
       HeroSliceDefaultPrimary,
+      HeroSliceHero5050LeftAlignedPrimaryButtonGroupItem,
       HeroSliceHero5050LeftAlignedPrimary,
+      HeroSliceHero5050RightAlignedPrimaryButtonGroupItem,
       HeroSliceHero5050RightAlignedPrimary,
+      HeroSlicePageHeaderBlockLeftAlignedPrimaryButtonGroupItem,
       HeroSlicePageHeaderBlockLeftAlignedPrimary,
+      HeroSlicePageHeaderBlockCenteredPrimaryButtonGroupItem,
       HeroSlicePageHeaderBlockCenteredPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
@@ -2647,10 +2535,6 @@ declare module "@prismicio/client" {
       HorizontalSliceSliceLeftImageNoButton,
       HorizontalSliceSliceRightImage,
       HorizontalSliceSliceRightImageNoButton,
-      MikiasSliceSlice,
-      MikiasSliceSliceDefaultPrimary,
-      MikiasSliceSliceVariation,
-      MikiasSliceSliceDefault,
       NavigationSlice,
       NavigationSliceDefaultPrimaryChildNavigationItem,
       NavigationSliceDefaultPrimary,
@@ -2658,10 +2542,6 @@ declare module "@prismicio/client" {
       NavigationSliceVariation,
       NavigationSliceDefault,
       NavigationSliceNavigationSingleLink,
-      SarthakSlice,
-      SarthakSliceDefaultPrimary,
-      SarthakSliceVariation,
-      SarthakSliceDefault,
       SplitFeatureBlockSlice,
       SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem,
       SplitFeatureBlockSliceDefaultPrimary,

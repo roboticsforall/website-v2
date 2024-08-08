@@ -1,11 +1,19 @@
 "use client";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { Hero5050LeftAligned } from "./Hero5050LeftAligned";
-import { Hero5050RightAligned } from "./Hero5050RightAligned";
-import { PageHeaderBlockCentered } from "./PageHeaderBlockCentered";
-import { PageHeaderBlockLeftAligned } from "./PageHeaderBlockLeftAligned";
+import dynamic from "next/dynamic";
 
+const Hero5050LeftAligned = dynamic(() => import("./Hero5050LeftAligned"));
+const Hero5050RightAligned = dynamic(() => import("./Hero5050RightAligned"));
+const PageHeaderBlockCentered = dynamic(
+  () => import("./PageHeaderBlockCentered")
+);
+const PageHeaderBlockLeftAligned = dynamic(
+  () => import("./PageHeaderBlockLeftAligned")
+);
+const HeroFullImageLeftAligned = dynamic(
+  () => import("./HeroFullImageLeftAligned")
+);
 /**
  * Props for `Hero`.
  */
@@ -21,7 +29,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       {/* Render different components based on slice.variation */}
-      {/* {slice.variation === "default" && <HeroFullImageLeftAligned {...slice} />} */}
+      {slice.variation === "default" && <HeroFullImageLeftAligned {...slice} />}
       {slice.variation === "hero5050LeftAligned" && (
         <Hero5050LeftAligned {...slice} />
       )}

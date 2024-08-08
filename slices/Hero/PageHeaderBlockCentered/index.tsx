@@ -1,4 +1,4 @@
-import { Content } from "@prismicio/client";
+import { asText, Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import {
   Card,
@@ -12,11 +12,15 @@ import {
   Center,
   SimpleGrid,
   Box,
+  Flex,
 } from "@chakra-ui/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
+import { TopHeadingGroup } from "@/app/components/TopHeadingGroup";
+import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
+import { BlurBox } from "@/app/components/BlurBox";
 
 export const PageHeaderBlockCentered = (
   slice: Content.HeroSlice
@@ -30,23 +34,22 @@ export const PageHeaderBlockCentered = (
       }
     >
       <ContainerWrapper>
-        <Box bgColor={"white"} textAlign={"center"}>
-          <CustomHeading mb={"1.25rem"} as="h2">
-            {slice.primary.hero_header}
-          </CustomHeading>
-          <PrismicRichText field={slice.primary.hero_description} />
-          <Button
-            mt="2.5rem"
-            as={PrismicNextLink}
-            field={slice.primary.button_link}
-            variant={
-              slice.primary.button_variation == "solid" ? "solid" : "outline"
-            }
-          >
-            {slice.primary.button_text}
-          </Button>
-        </Box>
+        <BlurBox
+          textAlign="center"
+          hasBlur={slice.primary.has_header_white_highlight}
+        >
+          <TopHeadingGroup
+            heading={slice.primary.hero_header}
+            subheading={slice.primary.hero_description}
+          />
+          <BottomButtonGroup
+            justifyContent="center"
+            button_group={slice.primary.button_group}
+          />
+        </BlurBox>
       </ContainerWrapper>
     </BackgroundColor>
   );
 };
+
+export default PageHeaderBlockCentered;

@@ -1,5 +1,11 @@
 "use client";
-import { Button, ButtonGroup, Center } from "@chakra-ui/react";
+import {
+  Button,
+  ButtonGroup,
+  Center,
+  Stack,
+  StackProps,
+} from "@chakra-ui/react";
 import { GroupField, KeyTextField, LinkField } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
 import { useEffect } from "react";
@@ -12,26 +18,29 @@ export interface IButtonProps {
 
 export const BottomButtonGroup = ({
   button_group,
+  ...stackProps
 }: {
   button_group: IButtonProps[];
-}): JSX.Element => {
+} & StackProps): JSX.Element => {
   return (
     <>
       {button_group.length > 0 ? (
-        <Center mt={"2.5rem"}>
-          <ButtonGroup spacing="1.25rem">
-            {button_group.map((item, i) => (
-              <Button
-                key={i}
-                variant={item.button_variation}
-                as={PrismicNextLink}
-                field={item.button_link}
-              >
-                {item.button_text}
-              </Button>
-            ))}
-          </ButtonGroup>
-        </Center>
+        <Stack
+          {...stackProps}
+          flexDirection={{ base: "column", md: "row" }}
+          gap="1.25rem"
+        >
+          {button_group.map((item, i) => (
+            <Button
+              key={i}
+              variant={item.button_variation}
+              as={PrismicNextLink}
+              field={item.button_link}
+            >
+              {item.button_text}
+            </Button>
+          ))}
+        </Stack>
       ) : (
         <></>
       )}

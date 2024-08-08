@@ -9,16 +9,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import {
-  Content,
   ImageField,
   KeyTextField,
   LinkField,
   RichTextField,
-  SelectField,
 } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
-import { Simplify } from "@/prismicio-types";
 import { CustomHeading } from "@/app/components/CustomHeading";
 
 export interface IColumnCardProps {

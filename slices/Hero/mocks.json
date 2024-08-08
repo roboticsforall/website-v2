@@ -1,204 +1,6 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"background_image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
-					"width": 3500,
-					"height": 2338
-				},
-				"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
-				"width": 3500,
-				"height": 2338,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"value": "outline",
-				"type": "Select"
-			},
-			"button_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "low",
-				"type": "Text"
-			},
-			"has_header_white_highlight": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			},
-			"hero_header": {
-				"__TYPE__": "FieldContent",
-				"value": "final",
-				"type": "Text"
-			},
-			"hero_description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Ut nulla ut anim."
-						}
-					}
-				]
-			}
-		},
-		"items": []
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "pageHeaderBlockLeftAligned",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"value": "secondary",
-				"type": "Select"
-			},
-			"hero_header": {
-				"__TYPE__": "FieldContent",
-				"value": "tall",
-				"type": "Text"
-			},
-			"has_header_white_highlight": {
-				"__TYPE__": "BooleanContent",
-				"value": true
-			},
-			"hero_description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Id ex cillum ipsum est et sunt laborum est laboris velit. Quis dolor proident nulla duis ex."
-						}
-					}
-				]
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "electric",
-				"type": "Text"
-			},
-			"button_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
-				}
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"value": "solid",
-				"type": "Select"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "hero5050RightAligned",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"value": "gradient",
-				"type": "Select"
-			},
-			"image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-					"width": 3456,
-					"height": 3456
-				},
-				"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-				"width": 3456,
-				"height": 3456,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": "Hello",
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"hero_header": {
-				"__TYPE__": "FieldContent",
-				"value": "office",
-				"type": "Text"
-			},
-			"has_header_white_highlight": {
-				"__TYPE__": "BooleanContent",
-				"value": true
-			},
-			"hero_description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Irure in fugiat nisi pariatur elit laboris magna nisi amet qui aliqua esse voluptate. Voluptate ex cillum commodo consequat nisi labore aute sunt amet nisi Lorem reprehenderit aliquip enim cupidatat."
-						}
-					}
-				]
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "indicate",
-				"type": "Text"
-			},
-			"button_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"value": "solid",
-				"type": "Select"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "hero5050LeftAligned",
 		"primary": {
 			"image": {
@@ -226,24 +28,7 @@
 			},
 			"background_color": {
 				"__TYPE__": "FieldContent",
-				"value": "white",
-				"type": "Select"
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "tight",
-				"type": "Text"
-			},
-			"button_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"value": "outline",
+				"value": "secondary",
 				"type": "Select"
 			},
 			"hero_header": {
@@ -265,6 +50,230 @@
 			"has_header_white_highlight": {
 				"__TYPE__": "BooleanContent",
 				"value": true
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "independent",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Enroll in a course today"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "link"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "hero5050RightAligned",
+		"primary": {
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "swoosh"
+			},
+			"hero_header": {
+				"__TYPE__": "FieldContent",
+				"value": "signal",
+				"type": "Text"
+			},
+			"has_header_white_highlight": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"hero_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint dolore magna reprehenderit veniam reprehenderit exercitation et. Consequat incididunt qui ullamco. Officia enim laborum occaecat dolor magna in incididunt excepteur minim elit in minim ut labore."
+						}
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "ourselves",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "sfdsf"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "link"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "pageHeaderBlockLeftAligned",
+		"primary": {
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "primary"
+			},
+			"hero_header": {
+				"__TYPE__": "FieldContent",
+				"value": "test",
+				"type": "Text"
+			},
+			"has_header_white_highlight": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"hero_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Fugiat dolor commodo amet quis eiusmod nostrud et culpa non eiusmod aute commodo sit."
+						}
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "watch",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [
@@ -281,7 +290,116 @@
 			"background_color": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "gradient"
+				"value": "primary"
+			},
+			"hero_header": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Summer Enrollments Now Open!!!"
+			},
+			"has_header_white_highlight": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "solid"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Enroll Now!!!"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "link"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Enroll In a course today"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"background_image": {
+				"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
+				"alt": "orange fruit on brown wooden table",
+				"origin": {
+					"id": "agP9RgnWZAY",
+					"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
+					"width": 5143,
+					"height": 4114
+				},
+				"width": 5143,
+				"height": 4114,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
 			},
 			"has_header_white_highlight": {
 				"__TYPE__": "BooleanContent",
@@ -293,39 +411,76 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ipsum veniam consectetur aute adipisicing ad ad sunt duis elit amet anim mollit."
-						}
+							"text": " Robotics for all is a 503 non pofjsak fd sgsajg s sa gsg fsd gs sg sf ga Robotics for all is a 503 non pofjsak fd sgsajg s sa gsg fsd gs sg sf ga Robotics for all is a 503 non pofjsak fd sgsajg s sa gsg fsd gs sg sf ga  Robotics for all is a 503 non pofjsak fd sgsajg s sa gsg fsd gs sg sf ga Robotics for all is a 503 non pofjsak fd sgsajg s sa gsg fsd gs sg sf ga ",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "develop",
-				"type": "Text"
-			},
-			"button_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "http://google.com"
-				}
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"value": "solid",
-				"type": "Select"
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "previous",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Check out our courses"
+								}
+							]
+						]
+					}
+				]
 			},
 			"hero_header": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",
-				"value": "asdaf asdf  sdfds. sdf sd. sdfsd fsd sd fsdf. sfsdf. s fsd fds fsd fds fsd fsdf sdf sdf sd fsd"
+				"value": "Robotics For All"
 			}
 		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
+		"items": []
 	}
 ]

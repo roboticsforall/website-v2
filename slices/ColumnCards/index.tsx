@@ -6,8 +6,7 @@ import { TopHeadingGroup } from "../../app/components/TopHeadingGroup";
 import { BottomButtonGroup } from "../../app/components/BottomButtonGroup";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { Flex } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { Center, Flex } from "@chakra-ui/react";
 
 // Import all variation components
 const ThreeColumn = dynamic(() => import("./ThreeColumn"));
@@ -44,7 +43,9 @@ const ColumnCards = ({ slice }: ColumnCardsProps): JSX.Element => {
               </>
             ))}
           </Flex>
-          <BottomButtonGroup button_group={slice.primary.button_group} />
+          <Center mt={"2.5rem"}>
+            <BottomButtonGroup button_group={slice.primary.button_group} />
+          </Center>
         </ContainerWrapper>
       </BackgroundColor>
     </section>

@@ -1,4 +1,4 @@
-import { Content } from "@prismicio/client";
+import { asText, Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import {
   Card,
@@ -12,52 +12,53 @@ import {
   Center,
   SimpleGrid,
   Box,
+  GridItem,
+  Grid,
+  Flex,
 } from "@chakra-ui/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { CustomHeading } from "@/app/components/CustomHeading";
+import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
+import { TopHeadingGroup } from "@/app/components/TopHeadingGroup";
+import { BlurBox } from "@/app/components/BlurBox";
 
-export const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
+const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
   return (
     <BackgroundColor
       backgroundColor={
-        slice.variation === "hero5050LeftAligned"
+        slice.variation === "hero5050RightAligned"
           ? slice.primary.background_color
           : "white"
       }
     >
-      <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
-        templateAreas={{ base: `"image content"`, lg: `"content image"` }}
+      <Grid
+        templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+        templateAreas={{ base: `"image" "content"`, md: `"content image"` }}
+        alignItems={"center"}
       >
-        <Stack gridArea="content" justifyContent={"center"}>
+        <GridItem gridArea={"content"}>
           <ContainerWrapper>
-            <Box>
-              <Heading mb={"1.25rem"} as="h2">
-                {slice.primary.hero_header}
-              </Heading>
-              <PrismicRichText field={slice.primary.hero_description} />
-              <Button
-                mt="2.5rem"
-                as={PrismicNextLink}
-                field={slice.primary.button_link}
-                variant={
-                  slice.primary.button_variation == "solid"
-                    ? "solid"
-                    : "outline"
-                }
-              >
-                {slice.primary.button_text}
-              </Button>
-            </Box>
+            <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
+              <TopHeadingGroup
+                heading={slice.primary.hero_header}
+                subheading={slice.primary.hero_description}
+              />
+              <BottomButtonGroup button_group={slice.primary.button_group} />
+            </BlurBox>
           </ContainerWrapper>
-        </Stack>
-        <Box gridArea="image">
-          {slice.variation === "hero5050RightAligned" && (
-            <PrismicNextImage field={slice.primary.image} />
-          )}
-        </Box>
-      </SimpleGrid>
+        </GridItem>
+        <GridItem gridArea={"image"}>
+          <Box>
+            {slice.variation === "hero5050RightAligned" && (
+              <PrismicNextImage field={slice.primary.image} />
+            )}
+          </Box>
+        </GridItem>
+      </Grid>
     </BackgroundColor>
   );
 };
+
+export default Hero5050RightAligned;
