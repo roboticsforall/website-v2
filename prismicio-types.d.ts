@@ -839,29 +839,19 @@ export interface ColumnCardsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
   /**
-   * Heading field in *ColumnCards → ThreeColumn → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.default.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Subheading field in *ColumnCards → ThreeColumn → Primary*
+   * Heading Text Block field in *ColumnCards → ThreeColumn → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.default.primary.subheading
+   * - **API ID Path**: column_cards.default.primary.heading_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  subheading: prismic.RichTextField;
+  heading_text_block: prismic.RichTextField;
 
   /**
    * Cards field in *ColumnCards → ThreeColumn → Primary*
@@ -913,29 +903,19 @@ export interface ColumnCardsSliceFourColumnPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
   /**
-   * Heading field in *ColumnCards → FourColumn → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumn.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Subheading field in *ColumnCards → FourColumn → Primary*
+   * Heading Text Block field in *ColumnCards → FourColumn → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.fourColumn.primary.subheading
+   * - **API ID Path**: column_cards.fourColumn.primary.heading_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  subheading: prismic.RichTextField;
+  heading_text_block: prismic.RichTextField;
 
   /**
    * Cards field in *ColumnCards → FourColumn → Primary*
@@ -989,29 +969,19 @@ export interface ColumnCardsSliceTwoColumnPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
   /**
-   * Heading field in *ColumnCards → TwoColumn → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Subheading field in *ColumnCards → TwoColumn → Primary*
+   * Heading Text Block field in *ColumnCards → TwoColumn → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: column_cards.twoColumn.primary.subheading
+   * - **API ID Path**: column_cards.twoColumn.primary.heading_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  subheading: prismic.RichTextField;
+  heading_text_block: prismic.RichTextField;
 
   /**
    * Cards field in *ColumnCards → TwoColumn → Primary*
@@ -1446,14 +1416,14 @@ export interface HeroSliceDefaultPrimary {
   background_image: prismic.ImageField<never>;
 
   /**
-   * Hero Header field in *Hero → Hero - Full Image Left Aligned → Primary*
+   * Hero Text Block field in *Hero → Hero - Full Image Left Aligned → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_header
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: hero.default.primary.hero_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  hero_header: prismic.KeyTextField;
+  hero_text_block: prismic.RichTextField;
 
   /**
    * Has Header White Highlight field in *Hero → Hero - Full Image Left Aligned → Primary*
@@ -1465,16 +1435,6 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
   has_header_white_highlight: prismic.BooleanField;
-
-  /**
-   * Hero Description field in *Hero → Hero - Full Image Left Aligned → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  hero_description: prismic.RichTextField;
 
   /**
    * Button Group field in *Hero → Hero - Full Image Left Aligned → Primary*
@@ -1531,16 +1491,6 @@ export interface HeroSliceHero5050LeftAlignedPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Hero Header field in *Hero → Hero - 50/50 Left Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050LeftAligned.primary.hero_header
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_header: prismic.KeyTextField;
-
-  /**
    * Has Header White Highlight field in *Hero → Hero - 50/50 Left Aligned → Primary*
    *
    * - **Field Type**: Boolean
@@ -1552,14 +1502,14 @@ export interface HeroSliceHero5050LeftAlignedPrimary {
   has_header_white_highlight: prismic.BooleanField;
 
   /**
-   * Header Description field in *Hero → Hero - 50/50 Left Aligned → Primary*
+   * Hero Text Block field in *Hero → Hero - 50/50 Left Aligned → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050LeftAligned.primary.hero_description
+   * - **API ID Path**: hero.hero5050LeftAligned.primary.hero_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  hero_description: prismic.RichTextField;
+  hero_text_block: prismic.RichTextField;
 
   /**
    * Button Group field in *Hero → Hero - 50/50 Left Aligned → Primary*
@@ -1616,16 +1566,6 @@ export interface HeroSliceHero5050RightAlignedPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Hero Header field in *Hero → Hero - 50/50 Right Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050RightAligned.primary.hero_header
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_header: prismic.KeyTextField;
-
-  /**
    * Has Header White Highlight field in *Hero → Hero - 50/50 Right Aligned → Primary*
    *
    * - **Field Type**: Boolean
@@ -1637,14 +1577,14 @@ export interface HeroSliceHero5050RightAlignedPrimary {
   has_header_white_highlight: prismic.BooleanField;
 
   /**
-   * Header Description field in *Hero → Hero - 50/50 Right Aligned → Primary*
+   * Hero Text Block field in *Hero → Hero - 50/50 Right Aligned → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.hero5050RightAligned.primary.hero_description
+   * - **API ID Path**: hero.hero5050RightAligned.primary.hero_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  hero_description: prismic.RichTextField;
+  hero_text_block: prismic.RichTextField;
 
   /**
    * Button Group field in *Hero → Hero - 50/50 Right Aligned → Primary*
@@ -1691,16 +1631,6 @@ export interface HeroSlicePageHeaderBlockLeftAlignedPrimary {
   >;
 
   /**
-   * Hero Header field in *Hero → Page Header Block Left Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.hero_header
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_header: prismic.KeyTextField;
-
-  /**
    * Has Header White Highlight field in *Hero → Page Header Block Left Aligned → Primary*
    *
    * - **Field Type**: Boolean
@@ -1712,14 +1642,14 @@ export interface HeroSlicePageHeaderBlockLeftAlignedPrimary {
   has_header_white_highlight: prismic.BooleanField;
 
   /**
-   * Header Description field in *Hero → Page Header Block Left Aligned → Primary*
+   * Hero Text Block field in *Hero → Page Header Block Left Aligned → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.hero_description
+   * - **API ID Path**: hero.pageHeaderBlockLeftAligned.primary.hero_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  hero_description: prismic.RichTextField;
+  hero_text_block: prismic.RichTextField;
 
   /**
    * Button Group field in *Hero → Page Header Block Left Aligned → Primary*
@@ -1766,16 +1696,6 @@ export interface HeroSlicePageHeaderBlockCenteredPrimary {
   >;
 
   /**
-   * Hero Header field in *Hero → Page Header Block Centered → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.hero_header
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_header: prismic.KeyTextField;
-
-  /**
    * Has Header White Highlight field in *Hero → Page Header Block Centered → Primary*
    *
    * - **Field Type**: Boolean
@@ -1787,14 +1707,14 @@ export interface HeroSlicePageHeaderBlockCenteredPrimary {
   has_header_white_highlight: prismic.BooleanField;
 
   /**
-   * Header Description field in *Hero → Page Header Block Centered → Primary*
+   * Hero Text Block field in *Hero → Page Header Block Centered → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.hero_description
+   * - **API ID Path**: hero.pageHeaderBlockCentered.primary.hero_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  hero_description: prismic.RichTextField;
+  hero_text_block: prismic.RichTextField;
 
   /**
    * Button Group field in *Hero → Page Header Block Centered → Primary*

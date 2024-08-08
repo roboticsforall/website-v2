@@ -3,9 +3,8 @@ import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
-import { TopHeadingGroup } from "@/app/components/TopHeadingGroup";
 import { BlurBox } from "@/app/components/BlurBox";
+import { TextBlockBottomButtonGroup } from "@/app/components/TextBlockBottomButtonGroup";
 
 const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
   return (
@@ -24,11 +23,10 @@ const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
         <GridItem gridArea={"content"}>
           <ContainerWrapper>
             <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
-              <TopHeadingGroup
-                heading={slice.primary.hero_header}
-                subheading={slice.primary.hero_description}
+              <TextBlockBottomButtonGroup
+                textBlock={slice.primary.hero_text_block}
+                button_group={slice.primary.button_group}
               />
-              <BottomButtonGroup button_group={slice.primary.button_group} />
             </BlurBox>
           </ContainerWrapper>
         </GridItem>

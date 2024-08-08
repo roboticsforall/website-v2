@@ -344,28 +344,21 @@
 			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "gradient"
+				"value": "white",
+				"type": "Select"
 			},
 			"button_group": {
 				"__TYPE__": "GroupContentType",
 				"value": []
 			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "My Heading"
-			},
-			"subheading": {
+			"heading_text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Add new cool stuff here",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Nostrud amet esse eiusmod Lorem ex ex."
+						}
 					}
 				]
 			}
@@ -378,24 +371,8 @@
 		"primary": {
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "primary"
-			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "tomorrow",
-				"type": "Text"
-			},
-			"subheading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Ad nulla incididunt in eiusmod fugiat aliquip ad occaecat cupidatat cillum reprehenderit pariatur officia. Nulla veniam mollit aute enim reprehenderit nostrud fugiat laborum aliqua."
-						}
-					}
-				]
+				"value": "white",
+				"type": "Select"
 			},
 			"cards": {
 				"__TYPE__": "GroupContentType",
@@ -580,6 +557,17 @@
 						]
 					}
 				]
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur non dolor nostrud ad veniam dolore cupidatat qui consequat magna est ut."
+						}
+					}
+				]
 			}
 		},
 		"items": [
@@ -597,22 +585,6 @@
 				"__TYPE__": "FieldContent",
 				"value": "white",
 				"type": "Select"
-			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "forth",
-				"type": "Text"
-			},
-			"subheading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Reprehenderit eu veniam nisi qui exercitation ea nulla. Cupidatat ea eiusmod laborum aliquip officia ad sunt et nisi id amet occaecat. Eu nulla est dolor cupidatat occaecat labore."
-						}
-					}
-				]
 			},
 			"cards": {
 				"__TYPE__": "GroupContentType",
@@ -766,6 +738,17 @@
 								}
 							]
 						]
+					}
+				]
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud consequat id anim officia id ut labore amet nostrud. Tempor reprehenderit id id ipsum."
+						}
 					}
 				]
 			}
