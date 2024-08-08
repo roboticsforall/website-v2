@@ -118,100 +118,6 @@
 	},
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "hero5050RightAligned",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "swoosh"
-			},
-			"hero_header": {
-				"__TYPE__": "FieldContent",
-				"value": "signal",
-				"type": "Text"
-			},
-			"has_header_white_highlight": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			},
-			"hero_description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Sint dolore magna reprehenderit veniam reprehenderit exercitation et. Consequat incididunt qui ullamco. Officia enim laborum occaecat dolor magna in incididunt excepteur minim elit in minim ut labore."
-						}
-					}
-				]
-			},
-			"button_group": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"button_link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://twitter.com"
-									}
-								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "ourselves",
-									"type": "Text"
-								}
-							],
-							[
-								"button_variation",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "solid",
-									"type": "Select"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "sfdsf"
-								}
-							],
-							[
-								"button_variation",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "link"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "pageHeaderBlockLeftAligned",
 		"primary": {
 			"background_color": {
@@ -482,5 +388,121 @@
 			}
 		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "hero5050RightAligned",
+		"primary": {
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "primary"
+			},
+			"hero_header": {
+				"__TYPE__": "FieldContent",
+				"value": "signal",
+				"type": "Text"
+			},
+			"has_header_white_highlight": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"hero_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint dolore magna reprehenderit veniam reprehenderit exercitation et. Consequat incididunt qui ullamco. Officia enim laborum occaecat dolor magna in incididunt excepteur minim elit in minim ut labore."
+						}
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "ourselves",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "sfdsf"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "link"
+								}
+							]
+						]
+					}
+				]
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"url": "https://images.unsplash.com/photo-1603824231744-517ef271df7e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
+				"alt": "sliced lemon fruit on blue surface",
+				"origin": {
+					"id": "SDX4_TQcxGU",
+					"url": "https://images.unsplash.com/photo-1603824231744-517ef271df7e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3690,
+					"height": 2470
+				},
+				"width": 3690,
+				"height": 2470,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]

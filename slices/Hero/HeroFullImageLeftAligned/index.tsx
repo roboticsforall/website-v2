@@ -1,9 +1,6 @@
-import { asText, Content } from "@prismicio/client";
-import { Stack, SimpleGrid, Box, Grid, GridItem } from "@chakra-ui/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { Content } from "@prismicio/client";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { CustomHeading } from "@/app/components/CustomHeading";
 import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
 import { TopHeadingGroup } from "@/app/components/TopHeadingGroup";
 import { BlurBox } from "@/app/components/BlurBox";
