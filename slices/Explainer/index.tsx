@@ -22,27 +22,25 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
-        <Box>
-          <ContainerWrapper>
-            <Flex
-              gap="1.5rem"
-              alignItems={"center"}
-              flexDirection={{ base: "column", md: "row" }}
-            >
-              <Center flex={1}>
-                <CustomHeading as="h2" position={"absolute"}>
-                  {slice.primary.title}
-                </CustomHeading>
-                <PrismicNextImage field={slice.primary.image} />
-              </Center>
-              <TopHeadingGroup
-                flex={2}
-                heading={slice.primary.explainer_title}
-                subheading={slice.primary.explainer_description}
-              />
-            </Flex>
-          </ContainerWrapper>
-        </Box>
+        <ContainerWrapper>
+          <Flex
+            gap="1.5rem"
+            alignItems={"center"}
+            flexDirection={{ base: "column", md: "row" }}
+          >
+            <Center flex={1}>
+              <CustomHeading as="h2" position={"absolute"}>
+                {slice.primary.title}
+              </CustomHeading>
+              <PrismicNextImage field={slice.primary.image} />
+            </Center>
+            <TopHeadingGroup
+              flex={2}
+              heading={slice.primary.explainer_title}
+              subheading={slice.primary.explainer_description}
+            />
+          </Flex>
+        </ContainerWrapper>
       </BackgroundColor>
     </section>
   );
