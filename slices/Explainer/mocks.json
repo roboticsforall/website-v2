@@ -8,67 +8,48 @@
 				"type": "Text",
 				"value": "What we do"
 			},
-			"icon": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-					"width": 5243,
-					"height": 3495
-				},
-				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-				"width": 5243,
-				"height": 3495,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"explainer": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Lorem ipsum dolor sit amet consectetur."
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum. Tortor mauris libero non tellus consectetur tristique phasellus sit. Eget elit fringilla sit viverra amet mus mattis et enim.",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							]
-						]
-					}
-				]
-			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"value": "white",
 				"type": "Select"
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"url": "https://images.unsplash.com/photo-1661882002589-d93b357a2ffc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzIzMDMxOTAxfDA&ixlib=rb-4.0.3&q=85",
+				"alt": "a pile of oranges",
+				"origin": {
+					"id": "ASOGZQvLKt0",
+					"url": "https://images.unsplash.com/photo-1661882002589-d93b357a2ffc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzIzMDMxOTAxfDA&ixlib=rb-4.0.3&q=85",
+					"width": 3648,
+					"height": 2736
+				},
+				"width": 3648,
+				"height": 2736,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"thumbnails": {}
+			},
+			"explainer_title": {
+				"__TYPE__": "FieldContent",
+				"value": "although",
+				"type": "Text"
+			},
+			"explainer_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nulla non culpa irure. Pariatur magna cillum sit minim enim adipisicing aute sunt mollit ex in incididunt aliquip et exercitation. Voluptate exercitation tempor excepteur adipisicing voluptate in laboris."
+						}
+					}
+				]
 			}
 		},
 		"items": []

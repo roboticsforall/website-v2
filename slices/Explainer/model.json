@@ -33,37 +33,28 @@
             "placeholder": ""
           }
         },
-        "icon": {
+        "image": {
           "type": "Image",
           "config": {
-            "label": "Icon",
+            "label": "Image",
             "constraint": {},
             "thumbnails": []
           }
         },
-        "explainer": {
-          "type": "Group",
+        "explainer_title": {
+          "type": "Text",
           "config": {
-            "label": "Explainer",
-            "repeat": true,
-            "fields": {
-              "title": {
-                "type": "Text",
-                "config": {
-                  "label": "Title",
-                  "placeholder": ""
-                }
-              },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Description",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                }
-              }
-            }
+            "label": "Explainer Title",
+            "placeholder": ""
+          }
+        },
+        "explainer_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Explainer Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

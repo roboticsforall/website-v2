@@ -4,15 +4,11 @@ import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
 import { TopHeadingGroup } from "@/app/components/TopHeadingGroup";
 import { BlurBox } from "@/app/components/BlurBox";
+import { Box } from "@chakra-ui/react";
 
 const HeroFullImageLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
   return (
-    <BackgroundColor
-      backgroundColor={
-        slice.variation === "hero5050LeftAligned"
-          ? slice.primary.background_color
-          : "white"
-      }
+    <Box
       bgImage={
         slice.variation == "default"
           ? `url(${slice.primary.background_image.url})`
@@ -31,7 +27,7 @@ const HeroFullImageLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
           <BottomButtonGroup button_group={slice.primary.button_group} />
         </BlurBox>
       </ContainerWrapper>
-    </BackgroundColor>
+    </Box>
   );
 };
 

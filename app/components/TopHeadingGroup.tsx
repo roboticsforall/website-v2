@@ -1,10 +1,10 @@
 "use client";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, FlexProps } from "@chakra-ui/react";
 import { asText, KeyTextField, RichTextField } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
 import { CustomHeading } from "@/app/components/CustomHeading";
 
-interface ITopHeadingGroup {
+interface ITopHeadingGroup extends FlexProps {
   heading: KeyTextField;
   subheading: RichTextField;
 }
