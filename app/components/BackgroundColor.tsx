@@ -1,6 +1,8 @@
 "use client";
 import { Box, BoxProps } from "@chakra-ui/react";
 import { backgroundColorOptions } from "./background_options";
+import blueSwoosh from "../media/blue_swoosh.svg";
+import Image from "next/image";
 
 interface BackgroundColorProps extends BoxProps {
   children: React.ReactNode;
@@ -34,6 +36,19 @@ export const BackgroundColor = ({
     case "gradient":
       return (
         <Box {...boxProps} bgGradient={backgroundColorOptions.GRADIENT}>
+          {children}
+        </Box>
+      );
+    case "swoosh":
+      return (
+        <Box
+          {...boxProps}
+          bgImage={`url(${blueSwoosh.src})`}
+          bgRepeat="no-repeat"
+          bgPosition={"bottom"}
+          backgroundSize={"cover"}
+          bgColor={backgroundColorOptions.PRIMARY}
+        >
           {children}
         </Box>
       );
