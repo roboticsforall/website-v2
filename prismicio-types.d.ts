@@ -2215,24 +2215,14 @@ export interface NumberedCardSectionSliceDefaultPrimary {
   >;
 
   /**
-   * Title field in *NumberedCardSection → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: numbered_card_section.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *NumberedCardSection → Default → Primary*
+   * Heading Text Block field in *NumberedCardSection → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: numbered_card_section.default.primary.description
+   * - **API ID Path**: numbered_card_section.default.primary.heading_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.RichTextField;
+  heading_text_block: prismic.RichTextField;
 
   /**
    * Numbered_Cards field in *NumberedCardSection → Default → Primary*
@@ -2687,7 +2677,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 

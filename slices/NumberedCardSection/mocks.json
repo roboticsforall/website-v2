@@ -8,24 +8,6 @@
 				"type": "Select",
 				"value": "gradient"
 			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "How to enroll"
-			},
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Lorem ipsum dolor sit amet consectetur. Enim cursus congue pulvinar mauris.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
 			"numbered_cards": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -244,6 +226,17 @@
 								}
 							]
 						]
+					}
+				]
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Magna Lorem incididunt proident minim magna. Consequat laborum irure esse et mollit enim officia pariatur incididunt enim nostrud dolor veniam laboris. Cillum id dolor duis amet."
+						}
 					}
 				]
 			}
