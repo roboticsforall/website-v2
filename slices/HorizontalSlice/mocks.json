@@ -1,6 +1,61 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
+		"variation": "rightImage",
+		"primary": {
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "swoosh",
+				"type": "Select"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+					"width": 4272,
+					"height": 2848
+				},
+				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+				"width": 4272,
+				"height": 2848,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute aliquip ea enim consectetur aute deserunt cillum adipisicing commodo mollit qui tempor voluptate nulla anim. Reprehenderit laborum magna non sunt fugiat pariatur ipsum. Velit quis irure laborum sit minim irure enim."
+						}
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": []
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
 		"variation": "leftImage",
 		"primary": {
 			"image": {
@@ -26,204 +81,88 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"buttonlink": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
 			"background_color": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "primary"
+				"value": "gradient"
 			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Our Purpose"
-			},
-			"description": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Lorem Ipsum"
-			},
-			"buttontext": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Button"
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "solid"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "leftImageNoButton",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"value": "gradient",
-				"type": "Select"
-			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "thread",
-				"type": "Text"
-			},
-			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "spend",
-				"type": "Text"
-			},
-			"image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-					"width": 6000,
-					"height": 4000
-				},
-				"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
-				"width": 6000,
-				"height": 4000,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Heading",
+							"spans": []
+						},
+						"direction": "ltr"
 					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "rightImage",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"value": "primary",
-				"type": "Select"
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Adipisicing laborum est est excepteur. Dolor do ea reprehenderit incididunt eiusmod in amet esse. Excepteur ea anim minim exercitation consectetur occaecat sit enim voluptate laborum nisi ullamco.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
 			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "president",
-				"type": "Text"
-			},
-			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "knew",
-				"type": "Text"
-			},
-			"image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-					"width": 4272,
-					"height": 2848
-				},
-				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-				"width": 4272,
-				"height": 2848,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Enroll in a course today"
+								}
+							]
+						]
 					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"buttontext": {
-				"__TYPE__": "FieldContent",
-				"value": "fellow",
-				"type": "Text"
-			},
-			"buttonlink": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
-				}
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"value": "solid",
-				"type": "Select"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "rightImageNoButton",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"value": "gradient",
-				"type": "Select"
-			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "block",
-				"type": "Text"
-			},
-			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "principal",
-				"type": "Text"
-			},
-			"image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-					"width": 6597,
-					"height": 4398
-				},
-				"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-				"width": 6597,
-				"height": 4398,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Try out three courses now"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [

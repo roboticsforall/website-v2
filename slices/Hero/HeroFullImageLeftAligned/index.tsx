@@ -3,7 +3,6 @@ import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { BlurBox } from "@/app/components/BlurBox";
 import { TextBlockBottomButtonGroup } from "@/app/components/TextBlockBottomButtonGroup";
-import { useEffect } from "react";
 import { Box } from "@chakra-ui/react";
 
 const HeroFullImageLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
@@ -19,7 +18,10 @@ const HeroFullImageLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
       bgSize="cover" // Adjust to cover the container
     >
       <ContainerWrapper>
-        <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
+        <BlurBox
+          width={{ md: "50%" }}
+          hasBlur={slice.primary.has_header_white_highlight}
+        >
           <TextBlockBottomButtonGroup
             textBlock={slice.primary.hero_text_block}
             button_group={slice.primary.button_group}

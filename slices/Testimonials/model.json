@@ -1,8 +1,8 @@
 {
-  "id": "team_cards_section",
+  "id": "testimonials",
   "type": "SharedSlice",
-  "name": "TeamCardsSection",
-  "description": "TeamCardsSection",
+  "name": "Testimonials",
+  "description": "Testimonials",
   "variations": [
     {
       "id": "default",
@@ -12,21 +12,6 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "backgroundcolor": {
-          "type": "Select",
-          "config": {
-            "label": "BackgroundColor",
-            "placeholder": "",
-            "options": [
-              "white",
-              "primary",
-              "secondary",
-              "gradient",
-              "swoosh"
-            ],
-            "default_value": "white"
-          }
-        },
         "title": {
           "type": "Text",
           "config": {
@@ -34,21 +19,19 @@
             "placeholder": ""
           }
         },
-        "grid": {
+        "testimonials": {
           "type": "Group",
           "config": {
-            "label": "Grid",
+            "label": "testimonials",
             "repeat": true,
             "fields": {
-              "image": {
-                "type": "Image",
+              "description": {
+                "type": "StructuredText",
                 "config": {
-                  "label": "Image",
-                  "constraint": {
-                    "width": 500,
-                    "height": 500
-                  },
-                  "thumbnails": []
+                  "label": "Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               },
               "name": {
@@ -58,14 +41,22 @@
                   "placeholder": ""
                 }
               },
-              "title": {
+              "user": {
                 "type": "Text",
                 "config": {
-                  "label": "Title",
+                  "label": "User",
                   "placeholder": ""
                 }
               }
             }
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

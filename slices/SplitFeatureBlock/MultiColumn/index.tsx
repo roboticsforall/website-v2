@@ -1,6 +1,7 @@
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { CustomHeading } from "@/app/components/CustomHeading";
+import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
@@ -26,12 +27,10 @@ const MultiColumn = (slice: Content.SplitFeatureBlockSlice): JSX.Element => {
         >
           {slice.primary.split_feature_block.map((item, index) => (
             <Box key={index}>
-              <Heading as="h1" size="3xl" mb={"1.25rem"}>
-                {item.title}
-              </Heading>
-              <Text as="b" fontSize="lg">
-                {item.description}
-              </Text>
+              <Stack gap={"1.25rem"}>
+                <CustomHeading size="3xl">{item.title}</CustomHeading>
+                <Text>{item.description}</Text>
+              </Stack>
             </Box>
           ))}
         </Flex>

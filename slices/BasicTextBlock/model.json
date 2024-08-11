@@ -1,21 +1,21 @@
 {
-  "id": "horizontal_slice",
+  "id": "basic_text_block",
   "type": "SharedSlice",
-  "name": "HorizontalSlice",
-  "description": "HorizontalSlice",
+  "name": "BasicTextBlock",
+  "description": "BasicTextBlock",
   "variations": [
     {
-      "id": "leftImage",
-      "name": "leftImage",
+      "id": "blockLeftAligned",
+      "name": "Block Left Aligned",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "background_color": {
+        "backgroundcolor": {
           "type": "Select",
           "config": {
-            "label": "Background Color",
+            "label": "BackgroundColor",
             "placeholder": "",
             "options": [
               "white",
@@ -27,21 +27,13 @@
             "default_value": "white"
           }
         },
-        "heading_text_block": {
+        "text_block": {
           "type": "StructuredText",
           "config": {
-            "label": "Heading Text Block",
+            "label": "Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading2,paragraph"
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
         "button_group": {
@@ -50,19 +42,20 @@
             "label": "Button Group",
             "repeat": true,
             "fields": {
-              "button_text": {
-                "type": "Text",
-                "config": {
-                  "label": "Button Text",
-                  "placeholder": ""
-                }
-              },
               "button_link": {
                 "type": "Link",
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
                 }
               },
               "button_variation": {
@@ -86,17 +79,17 @@
       "items": {}
     },
     {
-      "id": "rightImage",
-      "name": "rightImage",
+      "id": "blockCenterAligned",
+      "name": "Block Center Aligned",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "background_color": {
+        "backgroundcolor": {
           "type": "Select",
           "config": {
-            "label": "Background Color",
+            "label": "BackgroundColor",
             "placeholder": "",
             "options": [
               "white",
@@ -108,21 +101,13 @@
             "default_value": "white"
           }
         },
-        "heading_text_block": {
+        "text_block": {
           "type": "StructuredText",
           "config": {
-            "label": "Heading Text Block",
+            "label": "Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading2,paragraph"
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
         "button_group": {
@@ -131,19 +116,20 @@
             "label": "Button Group",
             "repeat": true,
             "fields": {
-              "button_text": {
-                "type": "Text",
-                "config": {
-                  "label": "Button Text",
-                  "placeholder": ""
-                }
-              },
               "button_link": {
                 "type": "Link",
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
                 }
               },
               "button_variation": {

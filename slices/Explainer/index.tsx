@@ -1,11 +1,12 @@
-import { Box, Flex, Heading, Text, Center } from "@chakra-ui/react";
+"use client";
+import { Flex, Center } from "@chakra-ui/react";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "../../app/components/CustomHeading";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
+import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import { TopHeadingGroup } from "@/app/components/TopHeadingGroup";
+import { TextBlock } from "@/app/components/TextBlock";
 
 /**
  * Props for `Explainer`.
@@ -34,11 +35,7 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
               </CustomHeading>
               <PrismicNextImage field={slice.primary.image} />
             </Center>
-            <TopHeadingGroup
-              flex={2}
-              heading={slice.primary.explainer_title}
-              subheading={slice.primary.explainer_description}
-            />
+            <TextBlock flex={2} textBlock={slice.primary.heading_text_block} />
           </Flex>
         </ContainerWrapper>
       </BackgroundColor>
