@@ -1,5 +1,5 @@
 "use client";
-import { Stack } from "@chakra-ui/react";
+import { Stack, StackProps } from "@chakra-ui/react";
 import { ITextBlock, TextBlock } from "@/app/components/TextBlock";
 import {
   BottomButtonGroup,
@@ -9,11 +9,12 @@ import {
 export const TextBlockBottomButtonGroup = ({
   textBlock,
   button_group,
-}: ITextBlock & { button_group: IButtonProps[] }): JSX.Element => {
+  ...stackProps
+}: ITextBlock & { button_group: IButtonProps[] } & StackProps): JSX.Element => {
   return (
-    <Stack gap={"2.5rem"}>
+    <Stack {...stackProps} gap={"2.5rem"}>
       <TextBlock textBlock={textBlock} />
-      <BottomButtonGroup button_group={button_group} />
+      <BottomButtonGroup {...stackProps} button_group={button_group} />
     </Stack>
   );
 };

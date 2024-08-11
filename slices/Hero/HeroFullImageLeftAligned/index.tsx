@@ -3,7 +3,6 @@ import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { BlurBox } from "@/app/components/BlurBox";
 import { TextBlockBottomButtonGroup } from "@/app/components/TextBlockBottomButtonGroup";
-import { useEffect } from "react";
 import { Box } from "@chakra-ui/react";
 
 const HeroFullImageLeftAligned = (slice: Content.HeroSlice): JSX.Element => {

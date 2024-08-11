@@ -1,0 +1,63 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "What we do"
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "swoosh"
+			},
+			"image": {
+				"url": "https://images.unsplash.com/photo-1661882002589-d93b357a2ffc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzIzMDMxOTAxfDA&ixlib=rb-4.0.3&q=85",
+				"alt": "a pile of oranges",
+				"origin": {
+					"id": "ASOGZQvLKt0",
+					"url": "https://images.unsplash.com/photo-1661882002589-d93b357a2ffc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzIzMDMxOTAxfDA&ixlib=rb-4.0.3&q=85",
+					"width": 3648,
+					"height": 2736
+				},
+				"width": 3648,
+				"height": 2736,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Heading",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Voluptate velit cupidatat id nostrud eu consectetur laboris.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

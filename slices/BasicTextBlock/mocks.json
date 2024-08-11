@@ -1,0 +1,208 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "blockLeftAligned",
+		"primary": {
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
+			},
+			"text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Heading 2",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Heading 3",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Veniam velit nisi non nisi veniam ipsum incididunt voluptate nisi cillum aliquip est incididunt. Id in reprehenderit enim laborum laboris est qui Lorem cupidatat anim ut. Laborum in nostrud eiusmod ad.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "page",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "solid"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Another one"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "blockCenterAligned",
+		"primary": {
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "primary"
+			},
+			"text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Summer Enrollment Now Open!!!",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Heading 3",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit commodo sint id cillum laboris ex sit amet aliqua. Velit esse aute ea cupidatat commodo.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "officer",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "solid"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Another one"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

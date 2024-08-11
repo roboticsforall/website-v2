@@ -286,6 +286,212 @@ export type AllDocumentTypes =
   | PageDocument;
 
 /**
+ * Item in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
+ */
+export interface BasicTextBlockSliceBlockLeftAlignedPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
+
+/**
+ * Item in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
+ */
+export interface BasicTextBlockSliceBlockCenterAlignedPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
+
+/**
+ * Primary content in *BasicTextBlock → Block Left Aligned → Primary*
+ */
+export interface BasicTextBlockSliceBlockLeftAlignedPrimary {
+  /**
+   * BackgroundColor field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
+   * Text Block field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text_block: prismic.RichTextField;
+
+  /**
+   * Button Group field in *BasicTextBlock → Block Left Aligned → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  button_group: prismic.GroupField<
+    Simplify<BasicTextBlockSliceBlockLeftAlignedPrimaryButtonGroupItem>
+  >;
+}
+
+/**
+ * Block Left Aligned variation for BasicTextBlock Slice
+ *
+ * - **API ID**: `blockLeftAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BasicTextBlockSliceBlockLeftAligned = prismic.SharedSliceVariation<
+  "blockLeftAligned",
+  Simplify<BasicTextBlockSliceBlockLeftAlignedPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *BasicTextBlock → Block Center Aligned → Primary*
+ */
+export interface BasicTextBlockSliceBlockCenterAlignedPrimary {
+  /**
+   * BackgroundColor field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
+   * Text Block field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text_block: prismic.RichTextField;
+
+  /**
+   * Button Group field in *BasicTextBlock → Block Center Aligned → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  button_group: prismic.GroupField<
+    Simplify<BasicTextBlockSliceBlockCenterAlignedPrimaryButtonGroupItem>
+  >;
+}
+
+/**
+ * Block Center Aligned variation for BasicTextBlock Slice
+ *
+ * - **API ID**: `blockCenterAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BasicTextBlockSliceBlockCenterAligned =
+  prismic.SharedSliceVariation<
+    "blockCenterAligned",
+    Simplify<BasicTextBlockSliceBlockCenterAlignedPrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *BasicTextBlock*
+ */
+type BasicTextBlockSliceVariation =
+  | BasicTextBlockSliceBlockLeftAligned
+  | BasicTextBlockSliceBlockCenterAligned;
+
+/**
+ * BasicTextBlock Shared Slice
+ *
+ * - **API ID**: `basic_text_block`
+ * - **Description**: BasicTextBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BasicTextBlockSlice = prismic.SharedSlice<
+  "basic_text_block",
+  BasicTextBlockSliceVariation
+>;
+
+/**
  * Item in *ColumnCards → ThreeColumn → Primary → Cards*
  */
 export interface ColumnCardsSliceDefaultPrimaryCardsItem {
@@ -940,6 +1146,85 @@ type ColumnCardsSliceVariation =
 export type ColumnCardsSlice = prismic.SharedSlice<
   "column_cards",
   ColumnCardsSliceVariation
+>;
+
+/**
+ * Primary content in *Explainer → Default → Primary*
+ */
+export interface ExplainerSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: explainer.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
+   * Title field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Image field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Heading Text Block field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.heading_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading_text_block: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Explainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExplainerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ExplainerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Explainer*
+ */
+type ExplainerSliceVariation = ExplainerSliceDefault;
+
+/**
+ * Explainer Shared Slice
+ *
+ * - **API ID**: `explainer`
+ * - **Description**: Explainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExplainerSlice = prismic.SharedSlice<
+  "explainer",
+  ExplainerSliceVariation
 >;
 
 /**
@@ -2301,6 +2586,108 @@ export type TeamCardsSectionSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Testimonials → Default → Primary → testimonials*
+ */
+export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
+  /**
+   * Description field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Name field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * User field in *Testimonials → Default → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[].user
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  user: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Testimonials → Default → Primary*
+ */
+export interface TestimonialsSliceDefaultPrimary {
+  /**
+   * Title field in *Testimonials → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * testimonials field in *Testimonials → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonials[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  testimonials: prismic.GroupField<
+    Simplify<TestimonialsSliceDefaultPrimaryTestimonialsItem>
+  >;
+
+  /**
+   * Background Image field in *Testimonials → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Testimonials Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimonialsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Testimonials*
+ */
+type TestimonialsSliceVariation = TestimonialsSliceDefault;
+
+/**
+ * Testimonials Shared Slice
+ *
+ * - **API ID**: `testimonials`
+ * - **Description**: Testimonials
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialsSlice = prismic.SharedSlice<
+  "testimonials",
+  TestimonialsSliceVariation
+>;
+
+/**
  * Default variation for Theming Slice
  *
  * - **API ID**: `default`
@@ -2438,6 +2825,14 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      BasicTextBlockSlice,
+      BasicTextBlockSliceBlockLeftAlignedPrimaryButtonGroupItem,
+      BasicTextBlockSliceBlockLeftAlignedPrimary,
+      BasicTextBlockSliceBlockCenterAlignedPrimaryButtonGroupItem,
+      BasicTextBlockSliceBlockCenterAlignedPrimary,
+      BasicTextBlockSliceVariation,
+      BasicTextBlockSliceBlockLeftAligned,
+      BasicTextBlockSliceBlockCenterAligned,
       ColumnCardsSlice,
       ColumnCardsSliceDefaultPrimaryCardsItem,
       ColumnCardsSliceDefaultPrimaryButtonGroupItem,
@@ -2452,6 +2847,10 @@ declare module "@prismicio/client" {
       ColumnCardsSliceDefault,
       ColumnCardsSliceFourColumn,
       ColumnCardsSliceTwoColumn,
+      ExplainerSlice,
+      ExplainerSliceDefaultPrimary,
+      ExplainerSliceVariation,
+      ExplainerSliceDefault,
       FiftyFiftySlice,
       FiftyFiftySliceDefaultPrimary,
       FiftyFiftySliceVariation,
@@ -2504,6 +2903,11 @@ declare module "@prismicio/client" {
       TeamCardsSectionSliceDefaultPrimary,
       TeamCardsSectionSliceVariation,
       TeamCardsSectionSliceDefault,
+      TestimonialsSlice,
+      TestimonialsSliceDefaultPrimaryTestimonialsItem,
+      TestimonialsSliceDefaultPrimary,
+      TestimonialsSliceVariation,
+      TestimonialsSliceDefault,
       ThemingSlice,
       ThemingSliceVariation,
       ThemingSliceDefault,

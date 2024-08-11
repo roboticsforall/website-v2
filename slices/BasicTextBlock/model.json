@@ -1,0 +1,156 @@
+{
+  "id": "basic_text_block",
+  "type": "SharedSlice",
+  "name": "BasicTextBlock",
+  "description": "BasicTextBlock",
+  "variations": [
+    {
+      "id": "blockLeftAligned",
+      "name": "Block Left Aligned",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "blockCenterAligned",
+      "name": "Block Center Aligned",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
