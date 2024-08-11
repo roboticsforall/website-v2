@@ -27,7 +27,7 @@ export const BottomButtonGroup = ({
       {button_group.length > 0 ? (
         <Stack
           {...stackProps}
-          flexDirection={{ base: "column", md: "row" }}
+          flexDirection={{ base: "column", sm: "row" }}
           gap="1.25rem"
         >
           {button_group.map((item, i) => (
