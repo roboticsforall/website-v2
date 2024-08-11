@@ -1,8 +1,6 @@
 "use client";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-export type HorizontalSliceProps =
-  SliceComponentProps<Content.HorizontalSliceSlice>;
 import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";

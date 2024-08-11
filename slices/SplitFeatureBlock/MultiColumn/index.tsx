@@ -6,12 +6,6 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
 /**
- * Props for `SplitFeatureBlock`.
- */
-export type SplitFeatureBlockProps =
-  SliceComponentProps<Content.SplitFeatureBlockSlice>;
-
-/**
  * Component for "SplitFeatureBlock" Slices.
  */
 const MultiColumn = (slice: Content.SplitFeatureBlockSlice): JSX.Element => {
