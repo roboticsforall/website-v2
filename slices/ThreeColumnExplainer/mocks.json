@@ -3,6 +3,27 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Hello",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Hello",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
 			"multi_column_explainer": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -17,8 +38,18 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Excepteur consectetur laboris aliquip adipisicing magna veniam esse. Culpa nulla occaecat dolor culpa."
-											}
+												"text": "Hello",
+												"spans": []
+											},
+											"direction": "ltr"
+										},
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Hello",
+												"spans": []
+											},
+											"direction": "ltr"
 										}
 									]
 								}
@@ -36,8 +67,18 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Minim cillum excepteur Lorem ex id do Lorem occaecat. Fugiat adipisicing consectetur consectetur et et minim minim et id commodo enim."
-											}
+												"text": "Hello",
+												"spans": []
+											},
+											"direction": "ltr"
+										},
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Hello",
+												"spans": []
+											},
+											"direction": "ltr"
 										}
 									]
 								}
@@ -55,8 +96,18 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Aute fugiat incididunt dolor tempor deserunt occaecat est ex sunt occaecat exercitation. Occaecat eu dolor incididunt. Ad aute cupidatat mollit proident qui eu veniam do laborum voluptate qui."
-											}
+												"text": "Hello",
+												"spans": []
+											},
+											"direction": "ltr"
+										},
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Hello",
+												"spans": []
+											},
+											"direction": "ltr"
 										}
 									]
 								}
@@ -68,18 +119,7 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "swoosh"
-			},
-			"heading_text_block": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Irure deserunt ipsum quis incididunt duis adipisicing quis cillum eu sunt sit ex occaecat proident."
-						}
-					}
-				]
+				"value": "primary"
 			}
 		},
 		"items": []

@@ -1955,6 +1955,160 @@ export type NavigationSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *NumberedCardSection → Default → Primary → Numbered_Cards*
+ */
+export interface NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem {
+  /**
+   * Number field in *NumberedCardSection → Default → Primary → Numbered_Cards*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.numbered_cards[].number
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  number: prismic.NumberField;
+
+  /**
+   * Card_Title field in *NumberedCardSection → Default → Primary → Numbered_Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.numbered_cards[].card_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  card_title: prismic.KeyTextField;
+
+  /**
+   * Card_Description field in *NumberedCardSection → Default → Primary → Numbered_Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.numbered_cards[].card_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  card_description: prismic.RichTextField;
+}
+
+/**
+ * Item in *NumberedCardSection → Default → Primary → Button Group*
+ */
+export interface NumberedCardSectionSliceDefaultPrimaryButtonGroupItem {
+  /**
+   * Button Variation field in *NumberedCardSection → Default → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+
+  /**
+   * Button field in *NumberedCardSection → Default → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button: prismic.LinkField;
+
+  /**
+   * Button Text field in *NumberedCardSection → Default → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *NumberedCardSection → Default → Primary*
+ */
+export interface NumberedCardSectionSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *NumberedCardSection → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: numbered_card_section.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
+   * Heading Text Block field in *NumberedCardSection → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.heading_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading_text_block: prismic.RichTextField;
+
+  /**
+   * Numbered_Cards field in *NumberedCardSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.numbered_cards[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  numbered_cards: prismic.GroupField<
+    Simplify<NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem>
+  >;
+
+  /**
+   * Button Group field in *NumberedCardSection → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  button_group: prismic.GroupField<
+    Simplify<NumberedCardSectionSliceDefaultPrimaryButtonGroupItem>
+  >;
+}
+
+/**
+ * Default variation for NumberedCardSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NumberedCardSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<NumberedCardSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *NumberedCardSection*
+ */
+type NumberedCardSectionSliceVariation = NumberedCardSectionSliceDefault;
+
+/**
+ * NumberedCardSection Shared Slice
+ *
+ * - **API ID**: `numbered_card_section`
+ * - **Description**: NumberedCardSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NumberedCardSectionSlice = prismic.SharedSlice<
+  "numbered_card_section",
+  NumberedCardSectionSliceVariation
+>;
+
+/**
  * Item in *SplitFeatureBlock → Default → Primary → Split Feature Block*
  */
 export interface SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem {
@@ -2334,6 +2488,12 @@ declare module "@prismicio/client" {
       NavigationSliceVariation,
       NavigationSliceDefault,
       NavigationSliceNavigationSingleLink,
+      NumberedCardSectionSlice,
+      NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem,
+      NumberedCardSectionSliceDefaultPrimaryButtonGroupItem,
+      NumberedCardSectionSliceDefaultPrimary,
+      NumberedCardSectionSliceVariation,
+      NumberedCardSectionSliceDefault,
       SplitFeatureBlockSlice,
       SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem,
       SplitFeatureBlockSliceDefaultPrimary,

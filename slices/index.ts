@@ -12,4 +12,5 @@ export const components = {
   team_cards_section: dynamic(() => import("./TeamCardsSection")),
   theming: dynamic(() => import("./Theming")),
   three_column_explainer: dynamic(() => import("./ThreeColumnExplainer")),
+  numbered_card_section: dynamic(() => import("./NumberedCardSection")),
 };

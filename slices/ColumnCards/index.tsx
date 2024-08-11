@@ -4,7 +4,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import dynamic from "next/dynamic";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { Center, Flex, Stack } from "@chakra-ui/react";
+import { Center, Container, Flex, Stack } from "@chakra-ui/react";
 import { TextBlock } from "@/app/components/TextBlock";
 import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
 
@@ -25,7 +25,9 @@ const ColumnCards = ({ slice }: ColumnCardsProps): JSX.Element => {
       <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
         <ContainerWrapper>
           <Stack gap={"2.5rem"}>
-            <TextBlock textBlock={slice.primary.heading_text_block} />
+            <Container textAlign={"center"}>
+              <TextBlock textBlock={slice.primary.heading_text_block} />
+            </Container>
             <Flex gap={6} wrap="wrap" justifyContent={"center"}>
               {slice.primary.cards.map((item, i) => (
                 <>

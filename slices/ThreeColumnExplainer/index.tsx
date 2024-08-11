@@ -11,7 +11,7 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `ThreeColumnExplainer`.
@@ -56,12 +56,7 @@ const ThreeColumnExplainer = ({
                 }}
                 key={i}
               >
-                <Card
-                  bg={"primary.500"}
-                  color="white"
-                  height="100%"
-                  padding={5}
-                >
+                <Card bg={"gray.gray2"} height="100%">
                   <CardBody>
                     <TextBlock textBlock={item.card_text_block} />
                   </CardBody>
