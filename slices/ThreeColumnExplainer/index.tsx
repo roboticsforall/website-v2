@@ -1,5 +1,6 @@
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { TextBlock } from "@/app/components/TextBlock";
 import {
   Box,
   Flex,
@@ -10,7 +11,7 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `ThreeColumnExplainer`.
@@ -25,11 +26,7 @@ const ThreeColumnExplainer = ({
   slice,
 }: ThreeColumnExplainerProps): JSX.Element => {
   return (
-    <BackgroundColor
-      backgroundColor={
-        slice.variation === "default" ? slice.primary.backgroundcolor : "white"
-      }
-    >
+    <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
       <ContainerWrapper>
         <Grid
           templateColumns={{
@@ -37,8 +34,6 @@ const ThreeColumnExplainer = ({
             lg: "1fr 2fr",
           }}
           gap="1.5rem"
-          py="8"
-          color="black"
         >
           {/* First Column */}
           <Flex justify="center" align="center">
@@ -48,12 +43,7 @@ const ThreeColumnExplainer = ({
                 lg: "calc(100% - 1.5rem * 2/3)",
               }}
             >
-              <Heading as="h3" size="xl">
-                {slice.primary.title}
-              </Heading>
-              <Text mt="1.25rem">
-                <PrismicRichText field={slice.primary.description} />
-              </Text>
+              <TextBlock textBlock={slice.primary.heading_text_block} />
             </Box>
           </Flex>
 
@@ -64,15 +54,11 @@ const ThreeColumnExplainer = ({
                 width={{
                   md: "calc(50% - 1.5rem * 2/3)",
                 }}
+                key={i}
               >
-                <Card bg={"gray.gray2"} height="100%" padding={5}>
+                <Card bg={"gray.gray2"} height="100%">
                   <CardBody>
-                    <Text as="b" fontSize="2xl">
-                      {item.title}
-                    </Text>
-                    <Text mt="1.25rem">
-                      <PrismicRichText field={item.description} />
-                    </Text>
+                    <TextBlock textBlock={item.card_text_block} />
                   </CardBody>
                 </Card>
               </Box>

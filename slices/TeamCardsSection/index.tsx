@@ -1,5 +1,6 @@
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { CustomHeading } from "@/app/components/CustomHeading";
 import {
   Box,
   Card,
@@ -8,6 +9,7 @@ import {
   Center,
   Grid,
   Heading,
+  Stack,
   Text,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
@@ -39,9 +41,7 @@ const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
     >
       <ContainerWrapper>
         <Box mb={6} color={`${textColor}`}>
-          <Heading as="h3" size="xl">
-            {slice.primary.title}
-          </Heading>
+          <CustomHeading as="h2">{slice.primary.title}</CustomHeading>
         </Box>
         <Grid
           templateColumns={{
@@ -72,12 +72,10 @@ const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
                 </Center>
               </CardHeader>
               <CardBody>
-                <Box alignContent="center" color={`${textColor}`}>
-                  <Text fontWeight="bold" mb="4">
-                    {item.name}
-                  </Text>
+                <Stack gap={"1.25rem"} color={`${textColor}`}>
+                  <CustomHeading as="h4">{item.name}</CustomHeading>
                   <Text>{item.title}</Text>
-                </Box>
+                </Stack>
               </CardBody>
             </Card>
           ))}

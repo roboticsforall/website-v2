@@ -22,7 +22,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "Active volunteers"
+									"value": "3"
 								}
 							]
 						]
@@ -43,7 +43,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "Student taught"
+									"value": "2"
 								}
 							]
 						]
@@ -64,7 +64,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "Levels of curriculum"
+									"value": "1"
 								}
 							]
 						]
@@ -73,8 +73,8 @@
 			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "secondary"
+				"value": "white",
+				"type": "Select"
 			}
 		},
 		"items": []

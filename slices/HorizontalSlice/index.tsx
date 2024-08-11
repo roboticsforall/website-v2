@@ -21,12 +21,6 @@ const HorizontalSlice = ({ slice }: HorizontalSliceProps): JSX.Element => {
     >
       {slice.variation === "rightImage" && <RightImage {...slice} />}
       {slice.variation === "leftImage" && <LeftImage {...slice} />}
-      {slice.variation === "leftImageNoButton" && (
-        <LeftImageNoButton {...slice} />
-      )}
-      {slice.variation === "rightImageNoButton" && (
-        <RightImageNoButton {...slice} />
-      )}
     </section>
   );
 };
@@ -115,7 +109,6 @@ export default HorizontalSlice;
 //   );
 // };
 
-
 // const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
 //   return (
 //     <BackgroundColor
@@ -126,9 +119,9 @@ export default HorizontalSlice;
 //       }
 //     >
 //       <ContainerWrapper>
-//         <SimpleGrid 
-//           columns={{ base: 1, lg: 2 }} 
-//           spacing={"1.5rem"} 
+//         <SimpleGrid
+//           columns={{ base: 1, lg: 2 }}
+//           spacing={"1.5rem"}
 //           templateAreas={{ base: `"image" "content"`, lg: `"content image"` }}
 //           direction={{ base: "column", lg: "row" }}
 //         >
@@ -179,9 +172,9 @@ export default HorizontalSlice;
 //       }
 //     >
 //       <ContainerWrapper>
-//         <SimpleGrid 
-//           columns={{ base: 1, lg: 2 }} 
-//           spacing={"1.5rem"} 
+//         <SimpleGrid
+//           columns={{ base: 1, lg: 2 }}
+//           spacing={"1.5rem"}
 //           templateAreas={{ base: `"image" "content"`, lg: `"content image"` }}
 //           direction={{ base: "column", lg: "row" }}
 //         >
@@ -194,7 +187,7 @@ export default HorizontalSlice;
 //                 {slice.primary.title}
 //               </Heading>
 //               <Text >{slice.primary.description}</Text>
-              
+
 //             </Box>
 //           </Stack>
 //         </SimpleGrid>
@@ -202,4 +195,3 @@ export default HorizontalSlice;
 //     </BackgroundColor>
 //   );
 // };
-
