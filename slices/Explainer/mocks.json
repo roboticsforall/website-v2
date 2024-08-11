@@ -11,7 +11,7 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "white"
+				"value": "swoosh"
 			},
 			"image": {
 				"url": "https://images.unsplash.com/photo-1661882002589-d93b357a2ffc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzIzMDMxOTAxfDA&ixlib=rb-4.0.3&q=85",
@@ -36,19 +36,24 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"explainer_title": {
-				"__TYPE__": "FieldContent",
-				"value": "although",
-				"type": "Text"
-			},
-			"explainer_description": {
+			"heading_text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Nulla non culpa irure. Pariatur magna cillum sit minim enim adipisicing aute sunt mollit ex in incididunt aliquip et exercitation. Voluptate exercitation tempor excepteur adipisicing voluptate in laboris."
-						}
+							"text": "Heading",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Voluptate velit cupidatat id nostrud eu consectetur laboris.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			}

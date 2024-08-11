@@ -3,57 +3,53 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "blockLeftAligned",
 		"primary": {
-			"title": {
+			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Heading 2 - Lorem ipsum dolor sit amet consectetur"
+				"value": "white",
+				"type": "Select"
 			},
-			"subtitle": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Heading 3 -Lorem ipsum dolor sit amet consectetur"
-			},
-			"description": {
+			"text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Lorem ipsum dolor sit amet consectetur. At aliquam tellus nunc magnis commodo etiam pellentesque aliquam nisi. Mi a odio nulla dolor in quis lacus integer. Nunc eget at dignissim vel. Vitae dignissim commodo dolor dui phasellus.",
+							"text": "Heading 2",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Heading 3",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Veniam velit nisi non nisi veniam ipsum incididunt voluptate nisi cillum aliquip est incididunt. Id in reprehenderit enim laborum laboris est qui Lorem cupidatat anim ut. Laborum in nostrud eiusmod ad.",
 							"spans": []
 						},
 						"direction": "ltr"
 					}
 				]
 			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"value": "secondary",
-				"type": "Select"
-			},
-			"buttons": {
+			"button_group": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"button_solid",
+								"button_link",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "http://twitter.com"
-									}
-								}
-							],
-							[
-								"button_outlined",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev"
+										"url": "https://prismic.io"
 									}
 								}
 							],
@@ -61,8 +57,37 @@
 								"button_text",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "letter",
+									"value": "page",
 									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "solid"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Another one"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
 								}
 							]
 						]
@@ -81,52 +106,48 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "blockCenterAligned",
 		"primary": {
-			"title": {
+			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Heading 2 - Lorem ipsum dolor sit amet consectetur"
+				"type": "Select",
+				"value": "primary"
 			},
-			"subtitle": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Heading 3 -Lorem ipsum dolor sit amet consectetur"
-			},
-			"description": {
+			"text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Lorem ipsum dolor sit amet consectetur. At aliquam tellus nunc magnis commodo etiam pellentesque aliquam nisi. Mi a odio nulla dolor in quis lacus integer. Nunc eget at dignissim vel. Vitae dignissim commodo dolor dui phasellus.",
+							"text": "Summer Enrollment Now Open!!!",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Heading 3",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit commodo sint id cillum laboris ex sit amet aliqua. Velit esse aute ea cupidatat commodo.",
 							"spans": []
 						},
 						"direction": "ltr"
 					}
 				]
 			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"value": "white",
-				"type": "Select"
-			},
-			"buttons": {
+			"button_group": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"button_solid",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
-									}
-								}
-							],
-							[
-								"button_outlined",
+								"button_link",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
@@ -139,8 +160,37 @@
 								"button_text",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "social",
+									"value": "officer",
 									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "solid"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Another one"
 								}
 							]
 						]

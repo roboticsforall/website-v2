@@ -21,7 +21,8 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
@@ -41,20 +42,13 @@
             "thumbnails": []
           }
         },
-        "explainer_title": {
-          "type": "Text",
-          "config": {
-            "label": "Explainer Title",
-            "placeholder": ""
-          }
-        },
-        "explainer_description": {
+        "heading_text_block": {
           "type": "StructuredText",
           "config": {
-            "label": "Explainer Description",
+            "label": "Heading Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,heading2"
           }
         }
       },

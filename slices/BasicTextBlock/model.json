@@ -21,53 +21,33 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "subtitle": {
-          "type": "Text",
-          "config": {
-            "label": "Subtitle",
-            "placeholder": ""
-          }
-        },
-        "description": {
+        "text_block": {
           "type": "StructuredText",
           "config": {
-            "label": "Description",
+            "label": "Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "buttons": {
+        "button_group": {
           "type": "Group",
           "config": {
-            "label": "Buttons",
+            "label": "Button Group",
             "repeat": true,
             "fields": {
-              "button_solid": {
+              "button_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Button Solid",
+                  "label": "Button Link",
                   "placeholder": "",
-                  "select": null
-                }
-              },
-              "button_outlined": {
-                "type": "Link",
-                "config": {
-                  "label": "Button outlined",
-                  "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
                 }
               },
@@ -76,6 +56,20 @@
                 "config": {
                   "label": "Button Text",
                   "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
                 }
               }
             }
@@ -101,53 +95,33 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "subtitle": {
-          "type": "Text",
-          "config": {
-            "label": "Subtitle",
-            "placeholder": ""
-          }
-        },
-        "description": {
+        "text_block": {
           "type": "StructuredText",
           "config": {
-            "label": "Description",
+            "label": "Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "buttons": {
+        "button_group": {
           "type": "Group",
           "config": {
-            "label": "Buttons",
+            "label": "Button Group",
             "repeat": true,
             "fields": {
-              "button_solid": {
+              "button_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Button Solid",
+                  "label": "Button Link",
                   "placeholder": "",
-                  "select": null
-                }
-              },
-              "button_outlined": {
-                "type": "Link",
-                "config": {
-                  "label": "Button outlined",
-                  "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
                 }
               },
@@ -156,6 +130,20 @@
                 "config": {
                   "label": "Button Text",
                   "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
                 }
               }
             }

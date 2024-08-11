@@ -286,73 +286,81 @@ export type AllDocumentTypes =
   | PageDocument;
 
 /**
- * Item in *BasicTextBlock → Block Left Aligned → Primary → Buttons*
+ * Item in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
  */
-export interface BasicTextBlockSliceBlockLeftAlignedPrimaryButtonsItem {
+export interface BasicTextBlockSliceBlockLeftAlignedPrimaryButtonGroupItem {
   /**
-   * Button Solid field in *BasicTextBlock → Block Left Aligned → Primary → Buttons*
+   * Button Link field in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.buttons[].button_solid
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[].button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button_solid: prismic.LinkField;
+  button_link: prismic.LinkField;
 
   /**
-   * Button outlined field in *BasicTextBlock → Block Left Aligned → Primary → Buttons*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.buttons[].button_outlined
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_outlined: prismic.LinkField;
-
-  /**
-   * Button Text field in *BasicTextBlock → Block Left Aligned → Primary → Buttons*
+   * Button Text field in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.buttons[].button_text
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[].button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *BasicTextBlock → Block Left Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
 }
 
 /**
- * Item in *BasicTextBlock → Block Center Aligned → Primary → Buttons*
+ * Item in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
  */
-export interface BasicTextBlockSliceBlockCenterAlignedPrimaryButtonsItem {
+export interface BasicTextBlockSliceBlockCenterAlignedPrimaryButtonGroupItem {
   /**
-   * Button Solid field in *BasicTextBlock → Block Center Aligned → Primary → Buttons*
+   * Button Link field in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.buttons[].button_solid
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[].button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button_solid: prismic.LinkField;
+  button_link: prismic.LinkField;
 
   /**
-   * Button outlined field in *BasicTextBlock → Block Center Aligned → Primary → Buttons*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.buttons[].button_outlined
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_outlined: prismic.LinkField;
-
-  /**
-   * Button Text field in *BasicTextBlock → Block Center Aligned → Primary → Buttons*
+   * Button Text field in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.buttons[].button_text
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[].button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *BasicTextBlock → Block Center Aligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
 }
 
 /**
@@ -369,50 +377,30 @@ export interface BasicTextBlockSliceBlockLeftAlignedPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
   /**
-   * Title field in *BasicTextBlock → Block Left Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Subtitle field in *BasicTextBlock → Block Left Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.subtitle
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  subtitle: prismic.KeyTextField;
-
-  /**
-   * Description field in *BasicTextBlock → Block Left Aligned → Primary*
+   * Text Block field in *BasicTextBlock → Block Left Aligned → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.description
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.RichTextField;
+  text_block: prismic.RichTextField;
 
   /**
-   * Buttons field in *BasicTextBlock → Block Left Aligned → Primary*
+   * Button Group field in *BasicTextBlock → Block Left Aligned → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.buttons[]
+   * - **API ID Path**: basic_text_block.blockLeftAligned.primary.button_group[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  buttons: prismic.GroupField<
-    Simplify<BasicTextBlockSliceBlockLeftAlignedPrimaryButtonsItem>
+  button_group: prismic.GroupField<
+    Simplify<BasicTextBlockSliceBlockLeftAlignedPrimaryButtonGroupItem>
   >;
 }
 
@@ -443,50 +431,30 @@ export interface BasicTextBlockSliceBlockCenterAlignedPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
   /**
-   * Title field in *BasicTextBlock → Block Center Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Subtitle field in *BasicTextBlock → Block Center Aligned → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.subtitle
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  subtitle: prismic.KeyTextField;
-
-  /**
-   * Description field in *BasicTextBlock → Block Center Aligned → Primary*
+   * Text Block field in *BasicTextBlock → Block Center Aligned → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.description
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.RichTextField;
+  text_block: prismic.RichTextField;
 
   /**
-   * Buttons field in *BasicTextBlock → Block Center Aligned → Primary*
+   * Button Group field in *BasicTextBlock → Block Center Aligned → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.buttons[]
+   * - **API ID Path**: basic_text_block.blockCenterAligned.primary.button_group[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  buttons: prismic.GroupField<
-    Simplify<BasicTextBlockSliceBlockCenterAlignedPrimaryButtonsItem>
+  button_group: prismic.GroupField<
+    Simplify<BasicTextBlockSliceBlockCenterAlignedPrimaryButtonGroupItem>
   >;
 }
 
@@ -1194,7 +1162,7 @@ export interface ExplainerSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
@@ -1219,24 +1187,14 @@ export interface ExplainerSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Explainer Title field in *Explainer → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: explainer.default.primary.explainer_title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  explainer_title: prismic.KeyTextField;
-
-  /**
-   * Explainer Description field in *Explainer → Default → Primary*
+   * Heading Text Block field in *Explainer → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: explainer.default.primary.explainer_description
+   * - **API ID Path**: explainer.default.primary.heading_text_block
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  explainer_description: prismic.RichTextField;
+  heading_text_block: prismic.RichTextField;
 }
 
 /**
@@ -2868,9 +2826,9 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
       BasicTextBlockSlice,
-      BasicTextBlockSliceBlockLeftAlignedPrimaryButtonsItem,
+      BasicTextBlockSliceBlockLeftAlignedPrimaryButtonGroupItem,
       BasicTextBlockSliceBlockLeftAlignedPrimary,
-      BasicTextBlockSliceBlockCenterAlignedPrimaryButtonsItem,
+      BasicTextBlockSliceBlockCenterAlignedPrimaryButtonGroupItem,
       BasicTextBlockSliceBlockCenterAlignedPrimary,
       BasicTextBlockSliceVariation,
       BasicTextBlockSliceBlockLeftAligned,
