@@ -6,7 +6,7 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "gradient"
+				"value": "swoosh"
 			},
 			"numbered_cards": {
 				"__TYPE__": "GroupContentType",
@@ -158,10 +158,132 @@
 								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"number",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Number",
+									"value": "5"
+								}
+							],
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Hello"
+								}
+							],
+							[
+								"card_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem ipsum",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"number",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Number",
+									"value": "6"
+								}
+							],
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Hello"
+								}
+							],
+							[
+								"card_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Some Lorem ispum Text",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"number",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Number",
+									"value": "7"
+								}
+							],
+							[
+								"card_title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Hello"
+								}
+							],
+							[
+								"card_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Some Lorem ipsum Text",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							]
+						]
 					}
 				]
 			},
-			"buttongroup": {
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Magna Lorem incididunt proident minim magna. Consequat laborum irure esse et mollit enim officia pariatur incididunt enim nostrud dolor veniam laboris. Cillum id dolor duis amet."
+						}
+					}
+				]
+			},
+			"button_group": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
@@ -189,8 +311,8 @@
 								"button_text",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Button"
+									"value": "unusual",
+									"type": "Text"
 								}
 							]
 						]
@@ -199,44 +321,27 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"button_variation",
+								"button_text",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "outline"
+									"type": "Text",
+									"value": "sfdsdfsdf sdfsdfsfsfsdfsfsdfsdfsdf"
 								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://google.com",
-										"target": ""
-									}
-								}
-							],
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
 							[
 								"button_text",
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "Button"
+									"value": "ssfsdfsdfsdfsdfsfsfssfsdfsdf"
 								}
 							]
 						]
-					}
-				]
-			},
-			"heading_text_block": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Magna Lorem incididunt proident minim magna. Consequat laborum irure esse et mollit enim officia pariatur incididunt enim nostrud dolor veniam laboris. Cillum id dolor duis amet."
-						}
 					}
 				]
 			}

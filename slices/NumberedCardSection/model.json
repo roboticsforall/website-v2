@@ -21,7 +21,8 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
@@ -67,10 +68,10 @@
             }
           }
         },
-        "buttongroup": {
+        "button_group": {
           "type": "Group",
           "config": {
-            "label": "ButtonGroup",
+            "label": "Button Group",
             "repeat": true,
             "fields": {
               "button_variation": {

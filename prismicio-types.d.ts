@@ -2061,7 +2061,6 @@ export type NavigationSlice = prismic.SharedSlice<
 >;
 
 /**
-<<<<<<< HEAD
  * Item in *NumberedCardSection → Default → Primary → Numbered_Cards*
  */
 export interface NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem {
@@ -2097,36 +2096,36 @@ export interface NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem {
 }
 
 /**
- * Item in *NumberedCardSection → Default → Primary → ButtonGroup*
+ * Item in *NumberedCardSection → Default → Primary → Button Group*
  */
-export interface NumberedCardSectionSliceDefaultPrimaryButtongroupItem {
+export interface NumberedCardSectionSliceDefaultPrimaryButtonGroupItem {
   /**
-   * Button Variation field in *NumberedCardSection → Default → Primary → ButtonGroup*
+   * Button Variation field in *NumberedCardSection → Default → Primary → Button Group*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **Default Value**: solid
-   * - **API ID Path**: numbered_card_section.default.primary.buttongroup[].button_variation
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button_variation
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   button_variation: prismic.SelectField<"solid" | "outline", "filled">;
 
   /**
-   * Button field in *NumberedCardSection → Default → Primary → ButtonGroup*
+   * Button field in *NumberedCardSection → Default → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: numbered_card_section.default.primary.buttongroup[].button
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   button: prismic.LinkField;
 
   /**
-   * Button Text field in *NumberedCardSection → Default → Primary → ButtonGroup*
+   * Button Text field in *NumberedCardSection → Default → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: numbered_card_section.default.primary.buttongroup[].button_text
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
@@ -2146,7 +2145,7 @@ export interface NumberedCardSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   backgroundcolor: prismic.SelectField<
-    "white" | "primary" | "secondary" | "gradient",
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
     "filled"
   >;
 
@@ -2173,15 +2172,15 @@ export interface NumberedCardSectionSliceDefaultPrimary {
   >;
 
   /**
-   * ButtonGroup field in *NumberedCardSection → Default → Primary*
+   * Button Group field in *NumberedCardSection → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: numbered_card_section.default.primary.buttongroup[]
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  buttongroup: prismic.GroupField<
-    Simplify<NumberedCardSectionSliceDefaultPrimaryButtongroupItem>
+  button_group: prismic.GroupField<
+    Simplify<NumberedCardSectionSliceDefaultPrimaryButtonGroupItem>
   >;
 }
 
@@ -2216,74 +2215,6 @@ export type NumberedCardSectionSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Sarthak → Default → Primary*
- */
-export interface SarthakSliceDefaultPrimary {
-  /**
-   * exampleBool field in *Sarthak → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: sarthak.default.primary.examplebool
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  examplebool: prismic.BooleanField;
-
-  /**
-   * EzampleDate field in *Sarthak → Default → Primary*
-   *
-   * - **Field Type**: Date
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.default.primary.ezampledate
-   * - **Documentation**: https://prismic.io/docs/field#date
-   */
-  ezampledate: prismic.DateField;
-
-  /**
-   * color field in *Sarthak → Default → Primary*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sarthak.default.primary.color
-   * - **Documentation**: https://prismic.io/docs/field#color
-   */
-  color: prismic.ColorField;
-}
-
-/**
- * Default variation for Sarthak Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SarthakSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<SarthakSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Sarthak*
- */
-type SarthakSliceVariation = SarthakSliceDefault;
-
-/**
- * Sarthak Shared Slice
- *
- * - **API ID**: `sarthak`
- * - **Description**: Sarthak
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SarthakSlice = prismic.SharedSlice<
-  "sarthak",
-  SarthakSliceVariation
->;
-
-/**
-=======
->>>>>>> main
  * Item in *SplitFeatureBlock → Default → Primary → Split Feature Block*
  */
 export interface SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem {
@@ -2685,19 +2616,12 @@ declare module "@prismicio/client" {
       NavigationSliceVariation,
       NavigationSliceDefault,
       NavigationSliceNavigationSingleLink,
-<<<<<<< HEAD
       NumberedCardSectionSlice,
       NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem,
-      NumberedCardSectionSliceDefaultPrimaryButtongroupItem,
+      NumberedCardSectionSliceDefaultPrimaryButtonGroupItem,
       NumberedCardSectionSliceDefaultPrimary,
       NumberedCardSectionSliceVariation,
       NumberedCardSectionSliceDefault,
-      SarthakSlice,
-      SarthakSliceDefaultPrimary,
-      SarthakSliceVariation,
-      SarthakSliceDefault,
-=======
->>>>>>> main
       SplitFeatureBlockSlice,
       SplitFeatureBlockSliceDefaultPrimarySplitFeatureBlockItem,
       SplitFeatureBlockSliceDefaultPrimary,

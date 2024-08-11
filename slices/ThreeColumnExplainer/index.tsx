@@ -1,6 +1,14 @@
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { Box, Flex, Text, Heading, Card, CardBody, Grid,} from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  Card,
+  CardBody,
+  Grid,
+} from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
@@ -22,7 +30,7 @@ const ThreeColumnExplainer = ({
         slice.variation === "default" ? slice.primary.backgroundcolor : "white"
       }
     >
-      <ContainerWrapper >
+      <ContainerWrapper>
         <Grid
           templateColumns={{
             base: "1fr",
@@ -32,12 +40,8 @@ const ThreeColumnExplainer = ({
           py="8"
           color="black"
         >
-
           {/* First Column */}
-          <Flex
-            justify="center"
-            align="center"
-          >
+          <Flex justify="center" align="center">
             <Box
               width={{
                 sm: "100%",
@@ -61,13 +65,13 @@ const ThreeColumnExplainer = ({
                   md: "calc(50% - 1.5rem * 2/3)",
                 }}
               >
-                <Card bg={"primary.500"} color="white" height="100%" padding={5}>
+                <Card bg={"gray.gray2"} height="100%" padding={5}>
                   <CardBody>
-                    <Text as='b' fontSize='2xl' >
+                    <Text as="b" fontSize="2xl">
                       {item.title}
                     </Text>
                     <Text mt="1.25rem">
-                        <PrismicRichText field={item.description} />
+                      <PrismicRichText field={item.description} />
                     </Text>
                   </CardBody>
                 </Card>
