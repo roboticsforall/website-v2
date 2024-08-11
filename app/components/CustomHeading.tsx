@@ -12,39 +12,39 @@ export const CustomHeading = ({
   switch (headingProps.as) {
     case "h1": {
       return (
-        <Heading {...headingProps} as="h1">
+        <Heading {...headingProps} size="3xl">
           {children}
         </Heading>
       );
     }
     case "h2": {
       return (
-        <Heading {...headingProps} as="h2">
+        <Heading {...headingProps} size="xl">
           {children}
         </Heading>
       );
     }
     case "h3":
       return (
-        <Heading {...headingProps} as="h3">
+        <Heading {...headingProps} size="lg">
           {children}
         </Heading>
       );
     case "h4":
       return (
-        <Heading {...headingProps} as="h4">
+        <Heading {...headingProps} size="md">
           {children}
         </Heading>
       );
     case "h5":
       return (
-        <Heading {...headingProps} as="h5">
+        <Heading {...headingProps} size="md">
           {children}
         </Heading>
       );
     case "h6":
       return (
-        <Heading {...headingProps} as="h6">
+        <Heading {...headingProps} size="sm">
           {children}
         </Heading>
       );

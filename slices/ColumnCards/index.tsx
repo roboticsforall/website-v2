@@ -1,14 +1,17 @@
+"use client";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import dynamic from "next/dynamic";
+import { BackgroundColor } from "@/app/components/BackgroundColor";
+import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { Center, Flex } from "@chakra-ui/react";
+import { TextBlock } from "@/app/components/TextBlock";
+import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
 
 // Import all variation components
 const ThreeColumn = dynamic(() => import("./ThreeColumn"));
 const TwoColumn = dynamic(() => import("./TwoColumn"));
 const FourColumn = dynamic(() => import("./FourColumn"));
-const ThreeColumnHeaderOnly = dynamic(() => import("./ThreeColumnHeaderOnly"));
-const TwoColumnHeaderOnly = dynamic(() => import("./TwoColumnHeaderOnly"));
-const FourColumnHeaderOnly = dynamic(() => import("./FourColumnHeaderOnly"));
 
 export type ColumnCardsProps = SliceComponentProps<Content.ColumnCardsSlice>;
 
@@ -19,18 +22,29 @@ const ColumnCards = ({ slice }: ColumnCardsProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       {/* Render different components based on slice.variation */}
-      {slice.variation === "default" && <ThreeColumn {...slice} />}
-      {slice.variation === "threeColumnHeaderOnly" && (
-        <ThreeColumnHeaderOnly {...slice} />
-      )}
-      {slice.variation === "twoColumn" && <TwoColumn {...slice} />}
-      {slice.variation === "twoColumnHeaderOnly" && (
-        <TwoColumnHeaderOnly {...slice} />
-      )}
-      {slice.variation === "fourColumn" && <FourColumn {...slice} />}
-      {slice.variation === "fourColumnHeaderOnly" && (
-        <FourColumnHeaderOnly {...slice} />
-      )}
+      <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
+        <ContainerWrapper>
+          <TextBlock textBlock={slice.primary.heading_text_block} />
+          <Flex gap={6} wrap="wrap" justifyContent={"center"}>
+            {slice.primary.cards.map((item, i) => (
+              <>
+                {slice.variation === "default" && (
+                  <ThreeColumn key={i} {...item} />
+                )}
+                {slice.variation === "twoColumn" && (
+                  <TwoColumn key={i} {...item} />
+                )}
+                {slice.variation === "fourColumn" && (
+                  <FourColumn key={i} {...item} />
+                )}
+              </>
+            ))}
+          </Flex>
+          <Center mt={"2.5rem"}>
+            <BottomButtonGroup button_group={slice.primary.button_group} />
+          </Center>
+        </ContainerWrapper>
+      </BackgroundColor>
     </section>
   );
 };

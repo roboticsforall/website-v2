@@ -58,43 +58,12 @@
 								}
 							],
 							[
-								"hasbutton",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
 								"link",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
 										"url": "http://twitter.com"
-									}
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
 									}
 								}
 							],
@@ -112,6 +81,37 @@
 									"__TYPE__": "FieldContent",
 									"value": "long",
 									"type": "Text"
+								}
+							],
+							[
+								"has_image",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"has_link",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"has_button",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
 								}
 							]
 						]
@@ -146,20 +146,6 @@
 								}
 							],
 							[
-								"hasbutton",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
 								"title",
 								{
 									"__TYPE__": "FieldContent",
@@ -184,24 +170,7 @@
 								}
 							],
 							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
 								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://twitter.com"
-									}
-								}
-							],
-							[
-								"button",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
@@ -224,6 +193,37 @@
 									"__TYPE__": "FieldContent",
 									"value": "flat",
 									"type": "Text"
+								}
+							],
+							[
+								"has_image",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"has_link",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"has_button",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
 								}
 							]
 						]
@@ -282,38 +282,7 @@
 								}
 							],
 							[
-								"hasbutton",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
 								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
-									}
-								}
-							],
-							[
-								"button",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
@@ -337,130 +306,30 @@
 									"value": "grass",
 									"type": "Text"
 								}
-							]
-						]
-					}
-				]
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "solid"
-			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "My Heading"
-			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "gradient"
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Yes"
-			}
-		},
-		"items": []
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "threeColumnHeaderOnly",
-		"primary": {
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "part",
-				"type": "Text"
-			},
-			"cards": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-										"width": 4076,
-										"height": 2712
-									},
-									"url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-									"width": 4076,
-									"height": 2712,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"credits": null,
-									"alt": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
 							],
 							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "plenty",
-									"type": "Text"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Eu nulla aute ad dolore officia nostrud exercitation ea elit nisi non dolor cillum. Adipisicing ad cupidatat ex sunt sit velit cupidatat aute aliqua duis esse consequat ad. Laborum anim reprehenderit cupidatat proident voluptate."
-											}
-										}
-									]
-								}
-							],
-							[
-								"hasbutton",
+								"has_image",
 								{
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
 							],
 							[
-								"hasimage",
+								"has_link",
 								{
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
 							],
 							[
-								"haslink",
+								"has_button",
 								{
 									"__TYPE__": "BooleanContent",
-									"value": false
+									"value": true
 								}
 							],
 							[
-								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev"
-									}
-								}
-							],
-							[
-								"button",
+								"button_link",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
@@ -468,32 +337,8 @@
 										"url": "https://prismic.io"
 									}
 								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "one",
-									"type": "Text"
-								}
-							],
-							[
-								"link_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "find",
-									"type": "Text"
-								}
 							]
 						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": []
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": []
 					}
 				]
 			},
@@ -502,318 +347,32 @@
 				"value": "white",
 				"type": "Select"
 			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "industry",
-				"type": "Text"
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": []
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud amet esse eiusmod Lorem ex ex."
+						}
+					}
+				]
 			}
 		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
+		"items": []
 	},
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "fourColumn",
 		"primary": {
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "cook",
-				"type": "Text"
-			},
-			"cards": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
-										"width": 4024,
-										"height": 4024
-									},
-									"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
-									"width": 4024,
-									"height": 4024,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"credits": null,
-									"alt": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "habit",
-									"type": "Text"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Dolore pariatur est anim pariatur pariatur nisi dolor veniam nostrud. Exercitation in et consequat qui. Pariatur id mollit esse adipisicing."
-											}
-										}
-									]
-								}
-							],
-							[
-								"hasbutton",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
-							],
-							[
-								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
-									}
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://twitter.com"
-									}
-								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "rocky",
-									"type": "Text"
-								}
-							],
-							[
-								"link_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "bow",
-									"type": "Text"
-								}
-							]
-						]
-					}
-				]
-			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"value": "solid",
-				"type": "Select"
-			},
-			"button": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
-			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"value": "gradient",
-				"type": "Select"
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "not",
-				"type": "Text"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "fourColumnHeaderOnly",
-		"primary": {
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "fairly",
-				"type": "Text"
-			},
-			"cards": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-										"width": 3168,
-										"height": 4752
-									},
-									"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-									"width": 3168,
-									"height": 4752,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"credits": null,
-									"alt": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "sea",
-									"type": "Text"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Nostrud velit aliquip ex consequat eiusmod incididunt ipsum mollit ad quis do magna. Aliqua laborum amet non dolor mollit aliquip magna id culpa aute ea aute do."
-											}
-										}
-									]
-								}
-							],
-							[
-								"hasbutton",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
-							],
-							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
-									}
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://twitter.com"
-									}
-								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "bee",
-									"type": "Text"
-								}
-							],
-							[
-								"link_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "gently",
-									"type": "Text"
-								}
-							]
-						]
-					}
-				]
-			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"value": "white",
 				"type": "Select"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "twoColumnHeaderOnly",
-		"primary": {
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "held",
-				"type": "Text"
 			},
 			"cards": {
 				"__TYPE__": "GroupContentType",
@@ -826,13 +385,13 @@
 								{
 									"origin": {
 										"id": "main",
-										"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
-										"width": 3560,
-										"height": 5340
+										"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+										"width": 3810,
+										"height": 5715
 									},
-									"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
-									"width": 3560,
-									"height": 5340,
+									"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+									"width": 3810,
+									"height": 5715,
 									"edit": {
 										"zoom": 1,
 										"crop": {
@@ -851,7 +410,7 @@
 								"title",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "grain",
+									"value": "frequently",
 									"type": "Text"
 								}
 							],
@@ -863,31 +422,18 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Qui adipisicing consequat incididunt nulla. Nisi et laboris nisi."
+												"text": "Ullamco quis do tempor est cillum. Consectetur deserunt elit in."
 											}
 										}
 									]
 								}
 							],
 							[
-								"hasbutton",
+								"button_text",
 								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
+									"__TYPE__": "FieldContent",
+									"value": "duck",
+									"type": "Text"
 								}
 							],
 							[
@@ -901,7 +447,36 @@
 								}
 							],
 							[
-								"button",
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "letter",
+									"type": "Text"
+								}
+							],
+							[
+								"has_button",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"has_image",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"has_link",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"button_link",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
@@ -909,31 +484,90 @@
 										"url": "http://google.com"
 									}
 								}
-							],
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
 							[
 								"button_text",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "grandfather",
+									"value": "office",
 									"type": "Text"
 								}
 							],
 							[
-								"link_text",
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button_variation",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "tea",
-									"type": "Text"
+									"value": "outline",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "fasfsdfdsafasdfasdfsad"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "solid"
 								}
 							]
 						]
 					}
 				]
 			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "primary"
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur non dolor nostrud ad veniam dolore cupidatat qui consequat magna est ut."
+						}
+					}
+				]
 			}
 		},
 		"items": [
@@ -947,6 +581,11 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "twoColumn",
 		"primary": {
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
+			},
 			"cards": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -956,27 +595,35 @@
 							[
 								"image",
 								{
-									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
-									"alt": "sliced orange fruit on white surface",
 									"origin": {
-										"id": "92HwFhCp-MQ",
-										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
-										"width": 3699,
-										"height": 2959
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+										"width": 3648,
+										"height": 4560
 									},
-									"width": 3699,
-									"height": 2959,
+									"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+									"width": 3648,
+									"height": 4560,
 									"edit": {
-										"background": "transparent",
 										"zoom": 1,
 										"crop": {
 											"x": 0,
 											"y": 0
-										}
+										},
+										"background": "transparent"
 									},
 									"credits": null,
+									"alt": null,
 									"__TYPE__": "ImageContent",
 									"thumbnails": {}
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "tired",
+									"type": "Text"
 								}
 							],
 							[
@@ -987,165 +634,22 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Cillum adipisicing non enim anim est minim pariatur tempor. Ex dolor proident magna. Nulla et anim nostrud sit non."
+												"text": "Irure voluptate deserunt ea reprehenderit ad excepteur laborum laboris quis veniam sit exercitation. Eu sit quis cillum enim ea."
 											}
 										}
 									]
 								}
 							],
 							[
-								"hasbutton",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Card 1"
-								}
-							],
-							[
-								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev"
-									}
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
-									}
-								}
-							],
-							[
 								"button_text",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "birth",
+									"value": "road",
 									"type": "Text"
-								}
-							],
-							[
-								"link_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "giving",
-									"type": "Text"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
-									"alt": "sliced orange fruit on white surface",
-									"origin": {
-										"id": "92HwFhCp-MQ",
-										"url": "https://images.unsplash.com/photo-1590004828948-09db7606e5ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjAyMDU5NTZ8MA&ixlib=rb-4.0.3&q=85",
-										"width": 3699,
-										"height": 2959
-									},
-									"width": 3699,
-									"height": 2959,
-									"edit": {
-										"background": "transparent",
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										}
-									},
-									"credits": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Card 2"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Lorem ipsum",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							],
-							[
-								"hasbutton",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
-								"hasimage",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
-							],
-							[
-								"haslink",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
 								}
 							],
 							[
 								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev"
-									}
-								}
-							],
-							[
-								"button",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
@@ -1155,103 +659,98 @@
 								}
 							],
 							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "mine",
-									"type": "Text"
-								}
-							],
-							[
 								"link_text",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "carbon",
+									"value": "block",
 									"type": "Text"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjIwMjM0NjJ8MA&ixlib=rb-4.0.3&q=85",
-									"alt": "yellow lemon fruit beside green leaves",
-									"origin": {
-										"id": "3t8rQ3LD2JI",
-										"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjIwMjM0NjJ8MA&ixlib=rb-4.0.3&q=85",
-										"width": 3024,
-										"height": 3024
-									},
-									"width": 3024,
-									"height": 3024,
-									"edit": {
-										"background": "transparent",
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										}
-									},
-									"credits": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
 								}
 							],
 							[
-								"hasimage",
+								"has_button",
 								{
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
 							],
 							[
-								"haslink",
+								"has_image",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"has_link",
 								{
 									"__TYPE__": "BooleanContent",
 									"value": false
 								}
 							],
 							[
-								"hasbutton",
+								"button_link",
 								{
-									"__TYPE__": "BooleanContent",
-									"value": false
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "twice",
+									"type": "Text"
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
 								}
 							]
 						]
 					}
 				]
 			},
-			"button_variation": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "solid"
-			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Two Columns"
-			},
-			"button": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
-			},
-			"backgroundcolor": {
-				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "white"
-			},
-			"button_text": {
-				"__TYPE__": "FieldContent",
-				"value": "tea",
-				"type": "Text"
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud consequat id anim officia id ut labore amet nostrud. Tempor reprehenderit id id ipsum."
+						}
+					}
+				]
 			}
 		},
 		"items": [

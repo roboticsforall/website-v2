@@ -6,12 +6,102 @@
   "variations": [
     {
       "id": "default",
-      "name": "Default",
+      "name": "Hero - Full Image Left Aligned",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "hero_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1"
+          }
+        },
+        "has_header_white_highlight": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has Header White Highlight",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "hero5050LeftAligned",
+      "name": "Hero - 50/50 Left Aligned",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
         "image": {
           "type": "Image",
           "config": {
@@ -20,11 +110,314 @@
             "thumbnails": []
           }
         },
-        "hero_text": {
-          "type": "Text",
+        "has_header_white_highlight": {
+          "type": "Boolean",
           "config": {
-            "label": "Hero Text",
-            "placeholder": ""
+            "label": "Has Header White Highlight",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "hero_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading1,paragraph"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "hero5050RightAligned",
+      "name": "Hero - 50/50 Right Aligned",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "has_header_white_highlight": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has Header White Highlight",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "hero_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "pageHeaderBlockLeftAligned",
+      "name": "Page Header Block Left Aligned",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "has_header_white_highlight": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has Header White Highlight",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "hero_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "pageHeaderBlockCentered",
+      "name": "Page Header Block Centered",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_color": {
+          "type": "Select",
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "has_header_white_highlight": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has Header White Highlight",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "hero_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading1,paragraph"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
           }
         }
       },

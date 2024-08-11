@@ -21,16 +21,19 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "heading": {
-          "type": "Text",
+        "heading_text_block": {
+          "type": "StructuredText",
           "config": {
-            "label": "Heading",
-            "placeholder": ""
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
           }
         },
         "cards": {
@@ -63,11 +66,12 @@
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               },
-              "button": {
+              "button_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Button",
+                  "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
                 }
               },
@@ -93,28 +97,28 @@
                   "placeholder": ""
                 }
               },
-              "hasbutton": {
+              "has_button": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasButton",
+                  "label": "Has Button",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
                 }
               },
-              "hasimage": {
+              "has_image": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasImage",
+                  "label": "Has Image",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
                 }
               },
-              "haslink": {
+              "has_link": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasLink",
+                  "label": "Has Link",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
@@ -123,104 +127,12 @@
             }
           }
         },
-        "button_variation": {
-          "type": "Select",
-          "config": {
-            "label": "Button Variation",
-            "placeholder": "Style Variation of Button (Filled or Outlined Button)",
-            "options": [
-              "solid",
-              "outline"
-            ],
-            "default_value": "solid"
-          }
-        },
-        "button": {
-          "type": "Link",
-          "config": {
-            "label": "Button",
-            "placeholder": "",
-            "allowTargetBlank": false,
-            "select": null
-          }
-        },
-        "button_text": {
-          "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
-        }
-      },
-      "items": {}
-    },
-    {
-      "id": "threeColumnHeaderOnly",
-      "name": "ThreeColumnHeaderOnly",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "backgroundcolor": {
-          "type": "Select",
-          "config": {
-            "label": "BackgroundColor",
-            "placeholder": "",
-            "options": [
-              "white",
-              "primary",
-              "secondary",
-              "gradient"
-            ],
-            "default_value": "white"
-          }
-        },
-        "heading": {
-          "type": "Text",
-          "config": {
-            "label": "Heading",
-            "placeholder": ""
-          }
-        },
-        "cards": {
+        "button_group": {
           "type": "Group",
           "config": {
-            "label": "Cards",
+            "label": "Button Group",
             "repeat": true,
             "fields": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              },
-              "title": {
-                "type": "Text",
-                "config": {
-                  "label": "Title",
-                  "placeholder": ""
-                }
-              },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Description",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                }
-              },
-              "button": {
-                "type": "Link",
-                "config": {
-                  "label": "Button",
-                  "placeholder": "",
-                  "select": null
-                }
-              },
               "button_text": {
                 "type": "Text",
                 "config": {
@@ -228,317 +140,26 @@
                   "placeholder": ""
                 }
               },
-              "link": {
+              "button_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Link",
+                  "label": "Button Link",
                   "placeholder": "",
                   "select": null
                 }
               },
-              "link_text": {
-                "type": "Text",
+              "button_variation": {
+                "type": "Select",
                 "config": {
-                  "label": "Link Text",
-                  "placeholder": ""
-                }
-              },
-              "hasbutton": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasButton",
-                  "default_value": false,
-                  "placeholder_true": "true",
-                  "placeholder_false": "false"
-                }
-              },
-              "hasimage": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasImage",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
-                }
-              },
-              "haslink": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasLink",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
-                }
-              }
-            }
-          }
-        }
-      },
-      "items": {}
-    },
-    {
-      "id": "twoColumn",
-      "name": "TwoColumn",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "backgroundcolor": {
-          "type": "Select",
-          "config": {
-            "label": "BackgroundColor",
-            "placeholder": "",
-            "options": [
-              "white",
-              "primary",
-              "secondary",
-              "gradient"
-            ],
-            "default_value": "white"
-          }
-        },
-        "heading": {
-          "type": "Text",
-          "config": {
-            "label": "Heading",
-            "placeholder": ""
-          }
-        },
-        "cards": {
-          "type": "Group",
-          "config": {
-            "label": "Cards",
-            "repeat": true,
-            "fields": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              },
-              "title": {
-                "type": "Text",
-                "config": {
-                  "label": "Title",
-                  "placeholder": ""
-                }
-              },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Description",
+                  "label": "Button Variation",
                   "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                }
-              },
-              "button": {
-                "type": "Link",
-                "config": {
-                  "label": "Button",
-                  "placeholder": "",
-                  "select": null
-                }
-              },
-              "button_text": {
-                "type": "Text",
-                "config": {
-                  "label": "Button Text",
-                  "placeholder": ""
-                }
-              },
-              "link": {
-                "type": "Link",
-                "config": {
-                  "label": "Link",
-                  "placeholder": "",
-                  "select": null
-                }
-              },
-              "link_text": {
-                "type": "Text",
-                "config": {
-                  "label": "Link Text",
-                  "placeholder": ""
-                }
-              },
-              "hasbutton": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasButton",
-                  "default_value": false,
-                  "placeholder_true": "true",
-                  "placeholder_false": "false"
-                }
-              },
-              "hasimage": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasImage",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
-                }
-              },
-              "haslink": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasLink",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
-                }
-              }
-            }
-          }
-        },
-        "button_variation": {
-          "type": "Select",
-          "config": {
-            "label": "Button Variation",
-            "placeholder": "Style Variation of Button (Filled or Outlined Button)",
-            "options": [
-              "solid",
-              "outline"
-            ],
-            "default_value": "solid"
-          }
-        },
-        "button": {
-          "type": "Link",
-          "config": {
-            "label": "Button",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "button_text": {
-          "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
-        }
-      },
-      "items": {}
-    },
-    {
-      "id": "twoColumnHeaderOnly",
-      "name": "TwoColumnHeaderOnly",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "backgroundcolor": {
-          "type": "Select",
-          "config": {
-            "label": "BackgroundColor",
-            "placeholder": "",
-            "options": [
-              "white",
-              "primary",
-              "secondary",
-              "gradient"
-            ],
-            "default_value": "white"
-          }
-        },
-        "heading": {
-          "type": "Text",
-          "config": {
-            "label": "Heading",
-            "placeholder": ""
-          }
-        },
-        "cards": {
-          "type": "Group",
-          "config": {
-            "label": "Cards",
-            "repeat": true,
-            "fields": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              },
-              "title": {
-                "type": "Text",
-                "config": {
-                  "label": "Title",
-                  "placeholder": ""
-                }
-              },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Description",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                }
-              },
-              "button": {
-                "type": "Link",
-                "config": {
-                  "label": "Button",
-                  "placeholder": "",
-                  "select": null
-                }
-              },
-              "button_text": {
-                "type": "Text",
-                "config": {
-                  "label": "Button Text",
-                  "placeholder": ""
-                }
-              },
-              "link": {
-                "type": "Link",
-                "config": {
-                  "label": "Link",
-                  "placeholder": "",
-                  "select": null
-                }
-              },
-              "link_text": {
-                "type": "Text",
-                "config": {
-                  "label": "Link Text",
-                  "placeholder": ""
-                }
-              },
-              "hasbutton": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasButton",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
-                }
-              },
-              "hasimage": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasImage",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
-                }
-              },
-              "haslink": {
-                "type": "Boolean",
-                "config": {
-                  "label": "HasLink",
-                  "placeholder_false": "false",
-                  "placeholder_true": "true",
-                  "default_value": false
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
                 }
               }
             }
@@ -564,16 +185,19 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "heading": {
-          "type": "Text",
+        "heading_text_block": {
+          "type": "StructuredText",
           "config": {
-            "label": "Heading",
-            "placeholder": ""
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
           }
         },
         "cards": {
@@ -585,7 +209,7 @@
               "image": {
                 "type": "Image",
                 "config": {
-                  "label": "image",
+                  "label": "Image",
                   "constraint": {},
                   "thumbnails": []
                 }
@@ -606,11 +230,12 @@
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               },
-              "button": {
+              "button_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Button",
+                  "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
                 }
               },
@@ -636,28 +261,28 @@
                   "placeholder": ""
                 }
               },
-              "hasbutton": {
+              "has_button": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasButton",
+                  "label": "Has Button",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
                 }
               },
-              "hasimage": {
+              "has_image": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasImage",
+                  "label": "Has Image",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
                 }
               },
-              "haslink": {
+              "has_link": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasLink",
+                  "label": "Has Link",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
@@ -666,39 +291,50 @@
             }
           }
         },
-        "button_variation": {
-          "type": "Select",
+        "button_group": {
+          "type": "Group",
           "config": {
-            "label": "Button Variation",
-            "placeholder": "Style Variation of Button (Filled or Outlined Button)",
-            "options": [
-              "solid",
-              "outline"
-            ],
-            "default_value": "solid"
-          }
-        },
-        "button": {
-          "type": "Link",
-          "config": {
-            "label": "Button",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "button_text": {
-          "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
           }
         }
       },
       "items": {}
     },
     {
-      "id": "fourColumnHeaderOnly",
-      "name": "FourColumnHeaderOnly",
+      "id": "twoColumn",
+      "name": "TwoColumn",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
@@ -713,16 +349,19 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "heading": {
-          "type": "Text",
+        "heading_text_block": {
+          "type": "StructuredText",
           "config": {
-            "label": "Heading",
-            "placeholder": ""
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
           }
         },
         "cards": {
@@ -734,7 +373,7 @@
               "image": {
                 "type": "Image",
                 "config": {
-                  "label": "image",
+                  "label": "Image",
                   "constraint": {},
                   "thumbnails": []
                 }
@@ -755,11 +394,12 @@
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               },
-              "button": {
+              "button_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Button",
+                  "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
                 }
               },
@@ -785,31 +425,69 @@
                   "placeholder": ""
                 }
               },
-              "hasbutton": {
+              "has_button": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasButton",
+                  "label": "Has Button",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
                 }
               },
-              "hasimage": {
+              "has_image": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasImage",
+                  "label": "Has Image",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
                 }
               },
-              "haslink": {
+              "has_link": {
                 "type": "Boolean",
                 "config": {
-                  "label": "HasLink",
+                  "label": "Has Link",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
+                }
+              }
+            }
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
                 }
               }
             }
