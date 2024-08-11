@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Stack } from "@chakra-ui/react";
+import { Box, Flex, FlexProps, Stack, StackProps } from "@chakra-ui/react";
 import { asText, KeyTextField, RichTextField } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
 import { CustomHeading } from "@/app/components/CustomHeading";
@@ -11,7 +11,7 @@ export interface ITextBlock {
 export const TextBlock = ({
   textBlock,
   ...flexProps
-}: ITextBlock): JSX.Element => {
+}: ITextBlock & StackProps): JSX.Element => {
   return (
     <>
       {asText(textBlock).trim().length != 0 && (

@@ -1,3 +1,4 @@
+"use client";
 import { Content } from "@prismicio/client";
 import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { PrismicNextImage } from "@prismicio/next";

@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { ColumnCard } from "../../../app/components/ColumnCard";

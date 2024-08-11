@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, FlexProps } from "@chakra-ui/react";
+import { Flex, FlexProps } from "@chakra-ui/react";
 import { asText, KeyTextField, RichTextField } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
 import { CustomHeading } from "@/app/components/CustomHeading";

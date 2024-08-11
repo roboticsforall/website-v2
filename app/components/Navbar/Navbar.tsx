@@ -1,5 +1,4 @@
 "use client";
-
 import { Container, Show } from "@chakra-ui/react";
 import { GlobalNavigationDocument } from "@/prismicio-types";
 import { BackgroundColor } from "../BackgroundColor";
