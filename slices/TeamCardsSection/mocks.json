@@ -297,8 +297,8 @@
 			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"type": "Select",
-				"value": "white"
+				"value": "primary",
+				"type": "Select"
 			}
 		},
 		"items": []

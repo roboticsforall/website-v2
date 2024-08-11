@@ -21,23 +21,19 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "title": {
-          "type": "Text",
+        "heading_text_block": {
+          "type": "StructuredText",
           "config": {
-            "label": "title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "description",
-            "placeholder": ""
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
           }
         },
         "image": {
@@ -48,78 +44,42 @@
             "thumbnails": []
           }
         },
-        "buttontext": {
-          "type": "Text",
+        "button_group": {
+          "type": "Group",
           "config": {
-            "label": "buttontext",
-            "placeholder": ""
-          }
-        },
-        "buttonlink": {
-          "type": "Link",
-          "config": {
-            "label": "buttonlink",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "button_variation": {
-          "type": "Select",
-          "config": {
-            "label": "Button Variation",
-            "placeholder": "",
-            "options": [
-              "solid",
-              "outline"
-            ],
-            "default_value": "solid"
-          }
-        }
-      },
-      "items": {}
-    },
-    {
-      "id": "leftImageNoButton",
-      "name": "leftImageNoButton",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "background_color": {
-          "type": "Select",
-          "config": {
-            "label": "Background Color",
-            "placeholder": "",
-            "options": [
-              "white",
-              "primary",
-              "secondary",
-              "gradient"
-            ],
-            "default_value": "white"
-          }
-        },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "description",
-            "placeholder": ""
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
           }
         }
       },
@@ -142,23 +102,19 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "title": {
-          "type": "Text",
+        "heading_text_block": {
+          "type": "StructuredText",
           "config": {
-            "label": "title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "description",
-            "placeholder": ""
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
           }
         },
         "image": {
@@ -169,77 +125,42 @@
             "thumbnails": []
           }
         },
-        "buttontext": {
-          "type": "Text",
+        "button_group": {
+          "type": "Group",
           "config": {
-            "label": "buttontext",
-            "placeholder": ""
-          }
-        },
-        "buttonlink": {
-          "type": "Link",
-          "config": {
-            "label": "buttonlink",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "button_variation": {
-          "type": "Select",
-          "config": {
-            "label": "Button Variation",
-            "placeholder": "",
-            "options": [
-              "solid",
-              "outline"
-            ],
-            "default_value": "solid"
-          }
-        }
-      },
-      "items": {}
-    },
-    {
-      "id": "rightImageNoButton",
-      "name": "rightImageNoButton",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "background_color": {
-          "type": "Select",
-          "config": {
-            "label": "Background Color",
-            "placeholder": "",
-            "options": [
-              "primary",
-              "secondary",
-              "gradient",
-              "white"
-            ]
-          }
-        },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "description",
-            "placeholder": ""
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
           }
         }
       },

@@ -21,25 +21,19 @@
               "white",
               "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
             "default_value": "white"
           }
         },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "description": {
+        "heading_text_block": {
           "type": "StructuredText",
           "config": {
-            "label": "Description",
+            "label": "Heading Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "heading3,paragraph"
           }
         },
         "multi_column_explainer": {
@@ -48,20 +42,13 @@
             "label": "Multi Column Explainer",
             "repeat": true,
             "fields": {
-              "title": {
-                "type": "Text",
-                "config": {
-                  "label": "Title",
-                  "placeholder": ""
-                }
-              },
-              "description": {
+              "card_text_block": {
                 "type": "StructuredText",
                 "config": {
-                  "label": "Description",
+                  "label": "Card Text Block",
                   "placeholder": "",
                   "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  "multi": "heading3,paragraph"
                 }
               }
             }

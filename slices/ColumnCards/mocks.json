@@ -349,7 +349,42 @@
 			},
 			"button_group": {
 				"__TYPE__": "GroupContentType",
-				"value": []
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Hello"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Explore Options Today"
+								}
+							]
+						]
+					}
+				]
 			},
 			"heading_text_block": {
 				"__TYPE__": "StructuredTextContent",
@@ -357,7 +392,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Nostrud amet esse eiusmod Lorem ex ex."
+							"text": "Incididunt nulla in est ipsum aliquip dolore consectetur est dolor deserunt consequat excepteur exercitation adipisicing elit."
 						}
 					}
 				]

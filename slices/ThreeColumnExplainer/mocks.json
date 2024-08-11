@@ -3,24 +3,6 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"title": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Our standard curriculum provided to you."
-			},
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Access a comprehensive, research-based STEM curriculum designed to engage and challenge students.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
 			"multi_column_explainer": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -28,25 +10,15 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Expert guidance and support"
-								}
-							],
-							[
-								"description",
+								"card_text_block",
 								{
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Connect with our team of STEM educators and mentors for guidance and support.",
-												"spans": []
-											},
-											"direction": "ltr"
+												"text": "Excepteur consectetur laboris aliquip adipisicing magna veniam esse. Culpa nulla occaecat dolor culpa."
+											}
 										}
 									]
 								}
@@ -57,25 +29,15 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Expert guidance and support"
-								}
-							],
-							[
-								"description",
+								"card_text_block",
 								{
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Connect with our team of STEM educators and mentors for guidance and support.",
-												"spans": []
-											},
-											"direction": "ltr"
+												"text": "Minim cillum excepteur Lorem ex id do Lorem occaecat. Fugiat adipisicing consectetur consectetur et et minim minim et id commodo enim."
+											}
 										}
 									]
 								}
@@ -86,27 +48,17 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"description",
+								"card_text_block",
 								{
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Connect with our team of STEM educators and mentors for guidance and support.",
-												"spans": []
-											},
-											"direction": "ltr"
+												"text": "Aute fugiat incididunt dolor tempor deserunt occaecat est ex sunt occaecat exercitation. Occaecat eu dolor incididunt. Ad aute cupidatat mollit proident qui eu veniam do laborum voluptate qui."
+											}
 										}
 									]
-								}
-							],
-							[
-								"title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Expert guidance and support"
 								}
 							]
 						]
@@ -116,7 +68,18 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "gradient"
+				"value": "swoosh"
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure deserunt ipsum quis incididunt duis adipisicing quis cillum eu sunt sit ex occaecat proident."
+						}
+					}
+				]
 			}
 		},
 		"items": []

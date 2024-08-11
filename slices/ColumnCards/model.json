@@ -33,7 +33,7 @@
             "label": "Heading Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading2,paragraph"
+            "multi": "paragraph,heading2"
           }
         },
         "cards": {
