@@ -4,11 +4,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import dynamic from "next/dynamic";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-<<<<<<< HEAD
 import { Center, Container, Flex, Stack } from "@chakra-ui/react";
-=======
-import { Center, Container, Flex, Stack } from "@chakra-ui/react";
->>>>>>> main
 import { TextBlock } from "@/app/components/TextBlock";
 import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
 
@@ -47,11 +43,7 @@ const ColumnCards = ({ slice }: ColumnCardsProps): JSX.Element => {
                 </>
               ))}
             </Flex>
-<<<<<<< HEAD
-            <Center mt={"2.5rem"}>
-=======
             <Center>
->>>>>>> main
               <BottomButtonGroup button_group={slice.primary.button_group} />
             </Center>
           </Stack>

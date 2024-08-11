@@ -68,13 +68,34 @@
 								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "1000"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "4"
+								}
+							]
+						]
 					}
 				]
 			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"value": "white",
-				"type": "Select"
+				"type": "Select",
+				"value": "primary"
 			}
 		},
 		"items": []

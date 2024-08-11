@@ -84,13 +84,13 @@
 			"background_color": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "gradient"
+				"value": "primary"
 			},
 			"heading_text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "paragraph",
+						"type": "heading2",
 						"content": {
 							"text": "Heading",
 							"spans": []

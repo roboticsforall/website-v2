@@ -109,13 +109,13 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "primary"
+				"value": "white"
 			},
 			"text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "paragraph",
+						"type": "heading2",
 						"content": {
 							"text": "Summer Enrollment Now Open!!!",
 							"spans": []
@@ -123,7 +123,7 @@
 						"direction": "ltr"
 					},
 					{
-						"type": "paragraph",
+						"type": "heading3",
 						"content": {
 							"text": "Heading 3",
 							"spans": []
