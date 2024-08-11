@@ -41,6 +41,16 @@ export type CategoryDocument<Lang extends string = string> =
  */
 export interface CourseListDocumentDataCoursesItem {
   /**
+   * Course Image field in *Course List → Courses*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_list.courses[].course_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  course_image: prismic.ImageField<never>;
+
+  /**
    * Course Name field in *Course List → Courses*
    *
    * - **Field Type**: Text
@@ -203,6 +213,7 @@ export type GlobalNavigationDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | CourseListSlice
   | TeamCardsSectionSlice
   | ThreeColumnExplainerSlice
   | ColumnCardsSlice
@@ -287,6 +298,7 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | CourseListSlice
   | FiftyFiftySlice
   | HorizontalSliceSlice
   | ThreeColumnExplainerSlice

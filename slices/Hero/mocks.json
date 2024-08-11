@@ -1,118 +1,6 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"background_image": {
-				"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
-				"alt": "orange fruit on brown wooden table",
-				"origin": {
-					"id": "agP9RgnWZAY",
-					"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
-					"width": 5143,
-					"height": 4114
-				},
-				"width": 5143,
-				"height": 4114,
-				"edit": {
-					"background": "transparent",
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					}
-				},
-				"credits": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"has_header_white_highlight": {
-				"__TYPE__": "BooleanContent",
-				"value": true
-			},
-			"button_group": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"button_link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev"
-									}
-								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "previous",
-									"type": "Text"
-								}
-							],
-							[
-								"button_variation",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "solid",
-									"type": "Select"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"button_variation",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "outline"
-								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Check out our courses"
-								}
-							]
-						]
-					}
-				]
-			},
-			"hero_text_block": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "/",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			}
-		},
-		"items": []
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "hero5050LeftAligned",
 		"primary": {
 			"image": {
@@ -465,5 +353,117 @@
 				"value": []
 			}
 		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"background_image": {
+				"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
+				"alt": "orange fruit on brown wooden table",
+				"origin": {
+					"id": "agP9RgnWZAY",
+					"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjMwMzE5MDF8MA&ixlib=rb-4.0.3&q=85",
+					"width": 5143,
+					"height": 4114
+				},
+				"width": 5143,
+				"height": 4114,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"has_header_white_highlight": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "previous",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "solid",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Check out our courses"
+								}
+							]
+						]
+					}
+				]
+			},
+			"hero_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "/",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
 	}
 ]

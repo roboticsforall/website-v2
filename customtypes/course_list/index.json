@@ -18,6 +18,14 @@
           "label": "Courses",
           "repeat": true,
           "fields": {
+            "course_image": {
+              "type": "Image",
+              "config": {
+                "label": "Course Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
             "course_name": {
               "type": "Text",
               "config": {
