@@ -2,11 +2,11 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import dynamic from "next/dynamic";
-import { TopHeadingGroup } from "../../app/components/TopHeadingGroup";
-import { BottomButtonGroup } from "../../app/components/BottomButtonGroup";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { Center, Flex } from "@chakra-ui/react";
+import { Center, Container, Flex, Stack } from "@chakra-ui/react";
+import { TextBlock } from "@/app/components/TextBlock";
+import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
 
 // Import all variation components
 const ThreeColumn = dynamic(() => import("./ThreeColumn"));
@@ -24,28 +24,29 @@ const ColumnCards = ({ slice }: ColumnCardsProps): JSX.Element => {
       {/* Render different components based on slice.variation */}
       <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
         <ContainerWrapper>
-          <TopHeadingGroup
-            heading={slice.primary.heading}
-            subheading={slice.primary.subheading}
-          />
-          <Flex gap={6} wrap="wrap" justifyContent={"center"}>
-            {slice.primary.cards.map((item, i) => (
-              <>
-                {slice.variation === "default" && (
-                  <ThreeColumn key={i} {...item} />
-                )}
-                {slice.variation === "twoColumn" && (
-                  <TwoColumn key={i} {...item} />
-                )}
-                {slice.variation === "fourColumn" && (
-                  <FourColumn key={i} {...item} />
-                )}
-              </>
-            ))}
-          </Flex>
-          <Center mt={"2.5rem"}>
-            <BottomButtonGroup button_group={slice.primary.button_group} />
-          </Center>
+          <Stack gap={"2.5rem"}>
+            <Container textAlign={"center"}>
+              <TextBlock textBlock={slice.primary.heading_text_block} />
+            </Container>
+            <Flex gap={6} wrap="wrap" justifyContent={"center"}>
+              {slice.primary.cards.map((item, i) => (
+                <>
+                  {slice.variation === "default" && (
+                    <ThreeColumn key={i} {...item} />
+                  )}
+                  {slice.variation === "twoColumn" && (
+                    <TwoColumn key={i} {...item} />
+                  )}
+                  {slice.variation === "fourColumn" && (
+                    <FourColumn key={i} {...item} />
+                  )}
+                </>
+              ))}
+            </Flex>
+            <Center>
+              <BottomButtonGroup button_group={slice.primary.button_group} />
+            </Center>
+          </Stack>
         </ContainerWrapper>
       </BackgroundColor>
     </section>
