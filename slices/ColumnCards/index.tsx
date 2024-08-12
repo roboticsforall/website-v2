@@ -1,17 +1,14 @@
 "use client";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import dynamic from "next/dynamic";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { Center, Container, Flex, Stack } from "@chakra-ui/react";
 import { TextBlock } from "@/app/components/TextBlock";
 import { BottomButtonGroup } from "@/app/components/BottomButtonGroup";
-
-// Import all variation components
-const ThreeColumn = dynamic(() => import("./ThreeColumn"));
-const TwoColumn = dynamic(() => import("./TwoColumn"));
-const FourColumn = dynamic(() => import("./FourColumn"));
+import ThreeColumn from "./ThreeColumn";
+import TwoColumn from "./TwoColumn";
+import FourColumn from "./FourColumn";
 
 export type ColumnCardsProps = SliceComponentProps<Content.ColumnCardsSlice>;
 
@@ -29,19 +26,16 @@ const ColumnCards = ({ slice }: ColumnCardsProps): JSX.Element => {
               <TextBlock textBlock={slice.primary.heading_text_block} />
             </Container>
             <Flex gap={6} wrap="wrap" justifyContent={"center"}>
-              {slice.primary.cards.map((item, i) => (
-                <>
-                  {slice.variation === "default" && (
-                    <ThreeColumn key={i} {...item} />
-                  )}
-                  {slice.variation === "twoColumn" && (
-                    <TwoColumn key={i} {...item} />
-                  )}
-                  {slice.variation === "fourColumn" && (
-                    <FourColumn key={i} {...item} />
-                  )}
-                </>
-              ))}
+              {slice.primary.cards.map((item, i) => {
+                if (slice.variation === "default") {
+                  return <ThreeColumn key={i} {...item} />;
+                } else if (slice.variation === "twoColumn") {
+                  return <TwoColumn key={i} {...item} />;
+                } else if (slice.variation === "fourColumn") {
+                  return <FourColumn key={i} {...item} />;
+                }
+                return <></>;
+              })}
             </Flex>
             <Center>
               <BottomButtonGroup button_group={slice.primary.button_group} />

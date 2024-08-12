@@ -1,9 +1,7 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
-import dynamic from "next/dynamic";
-
-const BlockCenterAligned = dynamic(() => import("./BlockCenterAligned"));
-const BlockLeftAligned = dynamic(() => import("./BlockLeftAligned"));
+import BlockCenterAligned from "./BlockCenterAligned";
+import BlockLeftAligned from "./BlockLeftAligned";
 
 /**
  * Props for `BasicTextBlock`.
