@@ -1,7 +1,9 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import LeftImage from "./LeftImage";
-import RightImage from "./RightImage";
+import dynamic from "next/dynamic";
+
+const LeftImage = dynamic(() => import("./LeftImage"));
+const RightImage = dynamic(() => import("./RightImage"));
 
 /**
  * Props for `HorizontalSlice`.
