@@ -20,7 +20,7 @@ const HeroFullImageLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
     >
       <ContainerWrapper>
         <BlurBox
-          width={{ md: "50%" }}
+          maxWidth="70ch"
           hasBlur={slice.primary.has_header_white_highlight}
         >
           <TextBlockBottomButtonGroup

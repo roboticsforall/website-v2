@@ -14,26 +14,8 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Heading 2",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Heading 3",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Veniam velit nisi non nisi veniam ipsum incididunt voluptate nisi cillum aliquip est incididunt. Id in reprehenderit enim laborum laboris est qui Lorem cupidatat anim ut. Laborum in nostrud eiusmod ad.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Ea deserunt elit incididunt dolor enim ad anim et. Ea sunt id deserunt anim nisi commodo irure proident in laboris magna."
+						}
 					}
 				]
 			},
@@ -117,26 +99,8 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Summer Enrollment Now Open!!!",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Heading 3",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Elit commodo sint id cillum laboris ex sit amet aliqua. Velit esse aute ea cupidatat commodo.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Dolor consectetur magna laboris. Deserunt commodo aliquip mollit dolore laboris officia proident ex eu duis elit laboris deserunt."
+						}
 					}
 				]
 			},

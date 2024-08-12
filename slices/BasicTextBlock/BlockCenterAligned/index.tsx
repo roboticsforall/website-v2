@@ -11,12 +11,14 @@ const BlockCenterAligned = (
   return (
     <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
       <ContainerWrapper>
-        <TextBlockBottomButtonGroup
-          textBlock={slice.primary.text_block}
-          button_group={slice.primary.button_group}
-          textAlign="center"
-          justifyContent="center"
-        />
+        <Center>
+          <TextBlockBottomButtonGroup
+            textBlock={slice.primary.text_block}
+            button_group={slice.primary.button_group}
+            textAlign="center"
+            justifyContent="center"
+          />
+        </Center>
       </ContainerWrapper>
     </BackgroundColor>
   );
