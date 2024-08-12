@@ -1,3 +1,4 @@
+"use client";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
