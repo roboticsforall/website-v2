@@ -1,5 +1,6 @@
 "use client";
 import { CustomHeading } from "@/app/components/CustomHeading";
+import { CourseListDocument } from "@/prismicio-types";
 import { InfoIcon, StarIcon } from "@chakra-ui/icons";
 import {
   Accordion,
@@ -31,11 +32,11 @@ export type CourseListProps = SliceComponentProps<Content.CourseListSlice>;
  * Component for "CourseList" Slices.
  */
 const CourseList = ({ slice }: CourseListProps): JSX.Element => {
-  const [data, setData] = useState<Content.PageDocument | null>(null);
+  const [data, setData] = useState<CourseListDocument<string> | null>(null);
   const [isLoading, setLoading] = useState(true);
 
   async function getCourseData() {
-    const data = await client.getByUID<Content.PageDocument>(
+    const data = await client.getByUID(
       "course_list",
       slice.primary.course_list.uid
     );
