@@ -10,10 +10,7 @@ const PageHeaderBlockLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
   return (
     <BackgroundColor backgroundColor={slice.primary.background_color}>
       <ContainerWrapper>
-        <BlurBox
-          maxWidth="70ch"
-          hasBlur={slice.primary.has_header_white_highlight}
-        >
+        <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
           <TextBlockBottomButtonGroup
             textBlock={slice.primary.hero_text_block}
             button_group={slice.primary.button_group}

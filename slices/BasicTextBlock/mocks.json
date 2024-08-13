@@ -91,16 +91,34 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "primary"
+				"value": "white"
 			},
 			"text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
+						"type": "heading2",
+						"content": {
+							"text": "Summer Enrollment Now Open!!!",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Check out below to enroll in a class",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
 						"type": "paragraph",
 						"content": {
-							"text": "Dolor consectetur magna laboris. Deserunt commodo aliquip mollit dolore laboris officia proident ex eu duis elit laboris deserunt."
-						}
+							"text": "Elit commodo sint id cillum laboris ex sit amet aliqua. Velit esse aute ea cupidatat commodo.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
