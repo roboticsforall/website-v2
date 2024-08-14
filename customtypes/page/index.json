@@ -34,6 +34,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "numbered_card_section": {
+              "type": "SharedSlice"
+            },
+            "testimonials": {
+              "type": "SharedSlice"
+            },
+            "basic_text_block": {
+              "type": "SharedSlice"
+            },
+            "explainer": {
+              "type": "SharedSlice"
+            },
             "course_listing": {
               "type": "SharedSlice"
             },

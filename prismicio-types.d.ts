@@ -246,6 +246,10 @@ export type GlobalNavigationDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | TestimonialsSlice
+  | NumberedCardSectionSlice
+  | ExplainerSlice
+  | BasicTextBlockSlice
   | CourseListingSlice
   | TeamCardsSectionSlice
   | ThreeColumnExplainerSlice
@@ -331,6 +335,10 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | NumberedCardSectionSlice
+  | TestimonialsSlice
+  | BasicTextBlockSlice
+  | ExplainerSlice
   | CourseListingSlice
   | FiftyFiftySlice
   | HorizontalSliceSlice
