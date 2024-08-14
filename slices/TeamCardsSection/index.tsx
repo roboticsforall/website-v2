@@ -62,11 +62,10 @@ const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
             >
               <CardHeader>
                 <Center>
-                  <PrismicNextImage
+                  <Box
+                    as={PrismicNextImage}
+                    borderRadius={"md"}
                     field={item.image}
-                    width={"500"}
-                    height={"500"}
-                    style={{ objectFit: "cover" }}
                   />
                 </Center>
               </CardHeader>

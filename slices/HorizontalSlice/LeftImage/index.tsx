@@ -1,6 +1,6 @@
 "use client";
 import { Content } from "@prismicio/client";
-import { SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
@@ -12,7 +12,11 @@ const LeftImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
     <BackgroundColor backgroundColor={slice.primary.background_color!}>
       <ContainerWrapper>
         <SimpleGrid columns={{ lg: 2 }} spacing={"1.5rem"}>
-          <PrismicNextImage field={slice.primary.image} />
+          <Box
+            as={PrismicNextImage}
+            borderRadius={"md"}
+            field={slice.primary.image}
+          />
           <Stack justifyContent={"center"}>
             <TextBlockBottomButtonGroup
               textBlock={slice.primary.heading_text_block}
