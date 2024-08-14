@@ -1,3 +1,4 @@
+"use client";
 import { Box, Button, Text, Flex } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";

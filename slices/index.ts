@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 export const components = {
   basic_text_block: dynamic(() => import("./BasicTextBlock")),
   column_cards: dynamic(() => import("./ColumnCards")),
+  course_listing: dynamic(() => import("./CourseListing")),
   explainer: dynamic(() => import("./Explainer")),
   fifty_fifty: dynamic(() => import("./FiftyFifty")),
   footer: dynamic(() => import("./Footer")),

@@ -1,9 +1,7 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import dynamic from "next/dynamic";
-
-// Import all variation components
-const MultiColumn = dynamic(() => import("./MultiColumn"));
+import MultiColumn from "./MultiColumn";
 
 /**
  * Props for `SplitFeatureBlock`.

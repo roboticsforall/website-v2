@@ -14,26 +14,8 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Heading 2",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Heading 3",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Veniam velit nisi non nisi veniam ipsum incididunt voluptate nisi cillum aliquip est incididunt. Id in reprehenderit enim laborum laboris est qui Lorem cupidatat anim ut. Laborum in nostrud eiusmod ad.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Ea deserunt elit incididunt dolor enim ad anim et. Ea sunt id deserunt anim nisi commodo irure proident in laboris magna."
+						}
 					}
 				]
 			},
@@ -109,13 +91,13 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "primary"
+				"value": "white"
 			},
 			"text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "paragraph",
+						"type": "heading2",
 						"content": {
 							"text": "Summer Enrollment Now Open!!!",
 							"spans": []
@@ -123,9 +105,9 @@
 						"direction": "ltr"
 					},
 					{
-						"type": "paragraph",
+						"type": "heading3",
 						"content": {
-							"text": "Heading 3",
+							"text": "Check out below to enroll in a class",
 							"spans": []
 						},
 						"direction": "ltr"

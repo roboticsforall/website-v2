@@ -1,15 +1,8 @@
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
-import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
-
-/**
- * Props for `SplitFeatureBlock`.
- */
-export type SplitFeatureBlockProps =
-  SliceComponentProps<Content.SplitFeatureBlockSlice>;
 
 /**
  * Component for "SplitFeatureBlock" Slices.

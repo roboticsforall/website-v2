@@ -6,73 +6,161 @@
   "variations": [
     {
       "id": "default",
-      "name": "Default",
+      "name": "FiftyFiftyLeftAligned",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "title",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "Text",
-          "config": {
-            "label": "description",
-            "placeholder": ""
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "buttontext": {
-          "type": "Text",
-          "config": {
-            "label": "buttonText",
-            "placeholder": ""
-          }
-        },
-        "buttonlink": {
-          "type": "Link",
-          "config": {
-            "label": "buttonLink",
-            "placeholder": "",
-            "select": null
-          }
-        },
         "background_color": {
           "type": "Select",
           "config": {
             "label": "Background Color",
             "placeholder": "",
             "options": [
-              "primary",
               "white",
+              "primary",
               "secondary",
-              "gradient"
+              "gradient",
+              "swoosh"
             ],
-            "default_value": "primary"
+            "default_value": "white"
           }
         },
-        "button_variations": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "fiftyFiftyRightAligned",
+      "name": "FiftyFiftyRightAligned",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_color": {
           "type": "Select",
           "config": {
-            "label": "Button Variation",
+            "label": "Background Color",
             "placeholder": "",
             "options": [
-              "solid",
-              "outline"
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
             ],
-            "default_value": "solid"
+            "default_value": "white"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "button_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Text",
+                  "placeholder": ""
+                }
+              },
+              "button_variation": {
+                "type": "Select",
+                "config": {
+                  "label": "Button Variation",
+                  "placeholder": "",
+                  "options": [
+                    "solid",
+                    "outline",
+                    "ghost",
+                    "link"
+                  ],
+                  "default_value": "solid"
+                }
+              }
+            }
           }
         }
       },

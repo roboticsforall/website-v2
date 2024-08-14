@@ -5,7 +5,6 @@ import {
   CardBody,
   CardHeader,
   Heading,
-  Stack,
   Text,
   Divider,
   Box,
@@ -13,8 +12,6 @@ import {
   CardFooter,
   Flex,
   Container,
-  Grid,
-  GridItem,
   Center,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";

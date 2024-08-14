@@ -1,3 +1,4 @@
+"use client";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
@@ -8,14 +9,12 @@ import {
   CardHeader,
   Center,
   Grid,
-  Heading,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
-import Image from "next/image";
 
 /**
  * Props for `TeamCardsSection`.
@@ -63,11 +62,10 @@ const TeamCardsSection = ({ slice }: TeamCardsSectionProps): JSX.Element => {
             >
               <CardHeader>
                 <Center>
-                  <PrismicNextImage
+                  <Box
+                    as={PrismicNextImage}
+                    borderRadius={"md"}
                     field={item.image}
-                    width={"500"}
-                    height={"500"}
-                    style={{ objectFit: "cover" }}
                   />
                 </Center>
               </CardHeader>

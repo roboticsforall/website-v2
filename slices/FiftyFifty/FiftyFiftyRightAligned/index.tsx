@@ -4,18 +4,13 @@ import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { BlurBox } from "@/app/components/BlurBox";
 import { TextBlockBottomButtonGroup } from "@/app/components/TextBlockBottomButtonGroup";
 
-const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
+const FiftyFiftyRightAligned = (
+  slice: Content.FiftyFiftySlice
+): JSX.Element => {
   return (
-    <BackgroundColor
-      backgroundColor={
-        slice.variation === "hero5050RightAligned"
-          ? slice.primary.background_color
-          : "white"
-      }
-    >
+    <BackgroundColor backgroundColor={slice.primary.background_color}>
       <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         templateAreas={{ base: `"image" "content"`, md: `"content image"` }}
@@ -23,19 +18,15 @@ const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
       >
         <GridItem gridArea={"content"}>
           <ContainerWrapper>
-            <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
-              <TextBlockBottomButtonGroup
-                textBlock={slice.primary.hero_text_block}
-                button_group={slice.primary.button_group}
-              />
-            </BlurBox>
+            <TextBlockBottomButtonGroup
+              textBlock={slice.primary.text_block}
+              button_group={slice.primary.button_group}
+            />
           </ContainerWrapper>
         </GridItem>
         <GridItem gridArea={"image"}>
           <Box>
-            {slice.variation === "hero5050RightAligned" && (
-              <PrismicNextImage field={slice.primary.image} />
-            )}
+            <PrismicNextImage field={slice.primary.image} />
           </Box>
         </GridItem>
       </Grid>
@@ -43,4 +34,4 @@ const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
   );
 };
 
-export default Hero5050RightAligned;
+export default FiftyFiftyRightAligned;

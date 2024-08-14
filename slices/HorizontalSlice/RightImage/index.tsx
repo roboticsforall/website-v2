@@ -1,30 +1,11 @@
+"use client";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
-export type HorizontalSliceProps =
-  SliceComponentProps<Content.HorizontalSliceSlice>;
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  SimpleGrid,
-} from "@chakra-ui/react";
-import {
-  Card,
-  Image,
-  Stack,
-  CardBody,
-  Heading,
-  Text,
-  CardFooter,
-  Button,
-  Center,
-} from "@chakra-ui/react";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
+import { PrismicNextImage } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { TextBlockBottomButtonGroup } from "@/app/components/TextBlockBottomButtonGroup";
+
 const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
   return (
     <BackgroundColor backgroundColor={slice.primary.background_color!}>
@@ -43,9 +24,11 @@ const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
             </ContainerWrapper>
           </GridItem>
           <GridItem gridArea={"image"}>
-            <Box>
-              <PrismicNextImage field={slice.primary.image} />
-            </Box>
+            <Box
+              as={PrismicNextImage}
+              borderRadius={"md"}
+              field={slice.primary.image}
+            />
           </GridItem>
         </Grid>
       </ContainerWrapper>

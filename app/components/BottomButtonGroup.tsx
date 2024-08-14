@@ -1,19 +1,12 @@
 "use client";
-import {
-  Button,
-  ButtonGroup,
-  Center,
-  Stack,
-  StackProps,
-} from "@chakra-ui/react";
-import { GroupField, KeyTextField, LinkField } from "@prismicio/client";
+import { Button, Stack, StackProps } from "@chakra-ui/react";
+import { KeyTextField, LinkField } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
-import { useEffect } from "react";
 
 export interface IButtonProps {
-  button_text: KeyTextField;
-  button_link: LinkField;
-  button_variation: string;
+  button_text?: KeyTextField;
+  button_link?: LinkField;
+  button_variation?: string;
 }
 
 export const BottomButtonGroup = ({

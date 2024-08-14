@@ -2,7 +2,6 @@
 import { Box, BoxProps } from "@chakra-ui/react";
 import { backgroundColorOptions } from "./background_options";
 import blueSwoosh from "../media/blue_swoosh.svg";
-import Image from "next/image";
 
 interface BackgroundColorProps extends BoxProps {
   children: React.ReactNode;

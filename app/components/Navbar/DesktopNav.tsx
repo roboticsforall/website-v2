@@ -1,5 +1,4 @@
 "use client";
-
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import {
   Box,

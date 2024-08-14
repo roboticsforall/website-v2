@@ -1,15 +1,8 @@
+"use client";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { TextBlock } from "@/app/components/TextBlock";
-import {
-  Box,
-  Flex,
-  Text,
-  Heading,
-  Card,
-  CardBody,
-  Grid,
-} from "@chakra-ui/react";
+import { Box, Flex, Card, CardBody, Grid } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 

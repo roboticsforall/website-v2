@@ -6,7 +6,9 @@ import {
   CardFooter,
   ButtonGroup,
   Button,
+  Image,
   Text,
+  Box,
 } from "@chakra-ui/react";
 import {
   ImageField,
@@ -36,11 +38,7 @@ export const ColumnCard = (props: IColumnCardProps): JSX.Element => {
     <Card h="100%" variant={"outline"} borderWidth={1.5}>
       {props.has_image && (
         <CardHeader>
-          <PrismicNextImage
-            field={props.image}
-            width={props.image.dimensions?.width}
-            height={props.image.dimensions?.height}
-          />
+          <Box as={PrismicNextImage} borderRadius={"md"} field={props.image} />
         </CardHeader>
       )}
       <CardBody>

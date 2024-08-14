@@ -1,10 +1,10 @@
+"use client";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
 import {
   Box,
   Center,
-  SimpleGrid,
   VStack,
   Text,
   Container,
@@ -36,8 +36,9 @@ const NumberedCardSection = ({
             <TextBlock textBlock={slice.primary.heading_text_block} />
           </Container>
           <Flex gap={6} wrap="wrap" justifyContent={"center"}>
-            {slice.primary.numbered_cards.map((item, index) => (
+            {slice.primary.numbered_cards.map((item, i) => (
               <Box
+                key={i}
                 width={{
                   sm: "100%",
                   md: "calc(50% - 1.5rem * 1/2)",
@@ -48,7 +49,6 @@ const NumberedCardSection = ({
                   justifyContent="center"
                   alignItems={["center", null, "start"]}
                   p={"1.25rem"}
-                  key={index}
                   textAlign={["center", null, "start"]}
                 >
                   <Center

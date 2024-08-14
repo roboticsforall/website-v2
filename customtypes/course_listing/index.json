@@ -1,0 +1,107 @@
+{
+  "format": "custom",
+  "id": "course_listing",
+  "label": "Course Listing",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "courses": {
+        "type": "Group",
+        "config": {
+          "label": "Courses",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "course_name": {
+              "type": "Text",
+              "config": {
+                "label": "Course Name",
+                "placeholder": ""
+              }
+            },
+            "course_description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Course Description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "course_syllabi": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Course Syllabi",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "open_for_enrollment": {
+              "type": "Boolean",
+              "config": {
+                "label": "Open For Enrollment",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "subject": {
+              "type": "Select",
+              "config": {
+                "label": "Subject",
+                "placeholder": "",
+                "options": ["Programming", "Scratch", "Lego"],
+                "default_value": "Programming"
+              }
+            },
+            "grade_level": {
+              "type": "Select",
+              "config": {
+                "label": "Grade Level",
+                "placeholder": "",
+                "options": ["1", "2"]
+              }
+            },
+            "minimum_grade": {
+              "type": "Number",
+              "config": {
+                "label": "Minimum Grade",
+                "placeholder": ""
+              }
+            },
+            "maximum_grade": {
+              "type": "Number",
+              "config": {
+                "label": "Maximum Grade",
+                "placeholder": ""
+              }
+            },
+            "minimum_technology": {
+              "type": "Select",
+              "config": {
+                "label": "Minimum Technology",
+                "placeholder": "",
+                "options": ["Computer", "Mobile", "Computer and Mobile"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
