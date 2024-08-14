@@ -5,7 +5,6 @@ import {
     Container,
     Flex,
     Grid,
-    Icon,
     Link,
     SimpleGrid,
     Stack,
@@ -13,13 +12,12 @@ import {
 } from "@chakra-ui/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { GlobalNavigationDocument } from "@/prismicio-types";
-import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
 import { BackgroundColor } from "../BackgroundColor";
 import { CustomHeading } from "../CustomHeading";
+import { PrismicRichText } from "@prismicio/react";
 
 
 interface FooterProps {
-    //navbar_color?: string;
     footer: GlobalNavigationDocument<string>;
 }
 
@@ -38,15 +36,14 @@ export function Footer({ footer }: FooterProps) {
                             <CustomHeading as="h4" ml={2}>{footer.data.name}</CustomHeading>
                         </Flex>
                         <Text fontSize="sm" maxW={300}>
-                            Robotics for All is a 501(c)(3) nonprofit that provides robotics education to children of all communities.
+                            <PrismicRichText field={footer.data.description} />
                         </Text>
                         <Stack direction="row" spacing={6}>
-                            <Link href="https://facebook.com" isExternal>
-                                <Icon as={EmailIcon} boxSize={5} />
-                            </Link>
-                            <Link href="https://twitter.com" isExternal>
-                                <Icon as={EmailIcon} boxSize={5} />
-                            </Link>
+                            {footer.data.social_links.map((item, s) => (
+                                <Link as={PrismicNextLink} key={s} field={item.link}>
+                                    <PrismicNextImage field={item.icon} />
+                                </Link>
+                            ))}
                         </Stack>
                     </Stack>
                     <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5} >

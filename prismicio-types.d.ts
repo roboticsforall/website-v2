@@ -177,6 +177,31 @@ export type CourseListingDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Global Navigation → Social_Links*
+ */
+export interface GlobalNavigationDocumentDataSocialLinksItem {
+  /**
+   * Icon field in *Global Navigation → Social_Links*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.social_links[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Link field in *Global Navigation → Social_Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.social_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
 type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
 
 /**
@@ -216,6 +241,30 @@ interface GlobalNavigationDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   donate_button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+
+  /**
+   * Social_Links field in *Global Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.social_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  social_links: prismic.GroupField<
+    Simplify<GlobalNavigationDocumentDataSocialLinksItem>
+  >;
+
+  /**
+   * Description field in *Global Navigation*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
 
   /**
    * Slice Zone field in *Global Navigation*
@@ -3133,6 +3182,7 @@ declare module "@prismicio/client" {
       CourseListingDocumentDataCoursesItem,
       GlobalNavigationDocument,
       GlobalNavigationDocumentData,
+      GlobalNavigationDocumentDataSocialLinksItem,
       GlobalNavigationDocumentDataSlicesSlice,
       HomePageDocument,
       HomePageDocumentData,
