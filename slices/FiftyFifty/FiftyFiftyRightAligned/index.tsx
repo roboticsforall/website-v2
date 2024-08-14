@@ -4,7 +4,6 @@ import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
-import { BlurBox } from "@/app/components/BlurBox";
 import { TextBlockBottomButtonGroup } from "@/app/components/TextBlockBottomButtonGroup";
 
 const FiftyFiftyRightAligned = (
