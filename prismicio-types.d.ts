@@ -36,6 +36,147 @@ export type CategoryDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Course Listing → Courses*
+ */
+export interface CourseListingDocumentDataCoursesItem {
+  /**
+   * image field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Course Name field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].course_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  course_name: prismic.KeyTextField;
+
+  /**
+   * Course Description field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].course_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  course_description: prismic.RichTextField;
+
+  /**
+   * Course Syllabi field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].course_syllabi
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  course_syllabi: prismic.RichTextField;
+
+  /**
+   * Open For Enrollment field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: course_listing.courses[].open_for_enrollment
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  open_for_enrollment: prismic.BooleanField;
+
+  /**
+   * Subject field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Programming
+   * - **API ID Path**: course_listing.courses[].subject
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  subject: prismic.SelectField<"Programming" | "Scratch" | "Lego", "filled">;
+
+  /**
+   * Grade Level field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].grade_level
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  grade_level: prismic.SelectField<"1" | "2">;
+
+  /**
+   * Minimum Grade field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].minimum_grade
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  minimum_grade: prismic.NumberField;
+
+  /**
+   * Maximum Grade field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].maximum_grade
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  maximum_grade: prismic.NumberField;
+
+  /**
+   * Minimum Technology field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].minimum_technology
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  minimum_technology: prismic.SelectField<
+    "Computer" | "Mobile" | "Computer and Mobile"
+  >;
+}
+
+/**
+ * Content for Course Listing documents
+ */
+interface CourseListingDocumentData {
+  /**
+   * Courses field in *Course Listing*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  courses: prismic.GroupField<Simplify<CourseListingDocumentDataCoursesItem>>;
+}
+
+/**
+ * Course Listing document from Prismic
+ *
+ * - **API ID**: `course_listing`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CourseListingDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<CourseListingDocumentData>,
+    "course_listing",
+    Lang
+  >;
+
 type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
 
 /**
@@ -105,6 +246,7 @@ export type GlobalNavigationDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | CourseListingSlice
   | TeamCardsSectionSlice
   | ThreeColumnExplainerSlice
   | ColumnCardsSlice
@@ -189,6 +331,7 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | CourseListingSlice
   | FiftyFiftySlice
   | HorizontalSliceSlice
   | ThreeColumnExplainerSlice
@@ -281,6 +424,7 @@ export type PageDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CategoryDocument
+  | CourseListingDocument
   | GlobalNavigationDocument
   | HomePageDocument
   | PageDocument;
@@ -1146,6 +1290,51 @@ type ColumnCardsSliceVariation =
 export type ColumnCardsSlice = prismic.SharedSlice<
   "column_cards",
   ColumnCardsSliceVariation
+>;
+
+/**
+ * Primary content in *CourseListing → Default → Primary*
+ */
+export interface CourseListingSliceDefaultPrimary {
+  /**
+   * Course Listing field in *CourseListing → Default → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.default.primary.course_listing
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  course_listing: prismic.ContentRelationshipField<"course_listing">;
+}
+
+/**
+ * Default variation for CourseListing Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CourseListingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CourseListingSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CourseListing*
+ */
+type CourseListingSliceVariation = CourseListingSliceDefault;
+
+/**
+ * CourseListing Shared Slice
+ *
+ * - **API ID**: `course_listing`
+ * - **Description**: CourseListing
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CourseListingSlice = prismic.SharedSlice<
+  "course_listing",
+  CourseListingSliceVariation
 >;
 
 /**
@@ -2815,6 +3004,9 @@ declare module "@prismicio/client" {
     export type {
       CategoryDocument,
       CategoryDocumentData,
+      CourseListingDocument,
+      CourseListingDocumentData,
+      CourseListingDocumentDataCoursesItem,
       GlobalNavigationDocument,
       GlobalNavigationDocumentData,
       GlobalNavigationDocumentDataSlicesSlice,
@@ -2847,6 +3039,10 @@ declare module "@prismicio/client" {
       ColumnCardsSliceDefault,
       ColumnCardsSliceFourColumn,
       ColumnCardsSliceTwoColumn,
+      CourseListingSlice,
+      CourseListingSliceDefaultPrimary,
+      CourseListingSliceVariation,
+      CourseListingSliceDefault,
       ExplainerSlice,
       ExplainerSliceDefaultPrimary,
       ExplainerSliceVariation,

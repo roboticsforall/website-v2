@@ -1,0 +1,29 @@
+{
+  "id": "course_listing",
+  "type": "SharedSlice",
+  "name": "CourseListing",
+  "description": "CourseListing",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "course_listing": {
+          "type": "Link",
+          "config": {
+            "label": "Course Listing",
+            "select": "document",
+            "customtypes": [
+              "course_listing"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
