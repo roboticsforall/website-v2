@@ -20,6 +20,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "course_listing": {
+              "type": "SharedSlice"
+            },
             "team_cards_section": {
               "type": "SharedSlice"
             },
