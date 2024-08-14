@@ -36,6 +36,109 @@ export type CategoryDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Footer → Social_Links*
+ */
+export interface FooterDocumentDataSocialLinksItem {
+  /**
+   * Icon field in *Footer → Social_Links*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Link field in *Footer → Social_Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+type FooterDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Name field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Description field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Social_Links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  social_links: prismic.GroupField<Simplify<FooterDocumentDataSocialLinksItem>>;
+
+  /**
+   * Slice Zone field in *Footer*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
 type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
 
 /**
@@ -281,6 +384,7 @@ export type PageDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CategoryDocument
+  | FooterDocument
   | GlobalNavigationDocument
   | HomePageDocument
   | PageDocument;
@@ -1336,6 +1440,149 @@ export type FiftyFiftySlice = prismic.SharedSlice<
   "fifty_fifty",
   FiftyFiftySliceVariation
 >;
+
+/**
+ * Item in *Footer → Default → Primary → AboutColumn*
+ */
+export interface FooterSliceDefaultPrimaryAboutcolumnItem {
+  /**
+   * Name field in *Footer → Default → Primary → AboutColumn*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.aboutcolumn[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Link field in *Footer → Default → Primary → AboutColumn*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.aboutcolumn[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Item in *Footer → Default → Primary → ProgramsColumn*
+ */
+export interface FooterSliceDefaultPrimaryProgramscolumnItem {
+  /**
+   * Name field in *Footer → Default → Primary → ProgramsColumn*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.programscolumn[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Link field in *Footer → Default → Primary → ProgramsColumn*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.programscolumn[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Item in *Footer → Default → Primary → VolunteerColumn*
+ */
+export interface FooterSliceDefaultPrimaryVolunteercolumnItem {
+  /**
+   * Name field in *Footer → Default → Primary → VolunteerColumn*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.volunteercolumn[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Link field in *Footer → Default → Primary → VolunteerColumn*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.volunteercolumn[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Footer → Default → Primary*
+ */
+export interface FooterSliceDefaultPrimary {
+  /**
+   * AboutColumn field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.aboutcolumn[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  aboutcolumn: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimaryAboutcolumnItem>
+  >;
+
+  /**
+   * ProgramsColumn field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.programscolumn[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  programscolumn: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimaryProgramscolumnItem>
+  >;
+
+  /**
+   * VolunteerColumn field in *Footer → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.default.primary.volunteercolumn[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  volunteercolumn: prismic.GroupField<
+    Simplify<FooterSliceDefaultPrimaryVolunteercolumnItem>
+  >;
+}
+
+/**
+ * Default variation for Footer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FooterSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Footer*
+ */
+type FooterSliceVariation = FooterSliceDefault;
+
+/**
+ * Footer Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: Footer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterSlice = prismic.SharedSlice<"footer", FooterSliceVariation>;
 
 /**
  * Item in *Hero → Hero - Full Image Left Aligned → Primary → Button Group*
@@ -2815,6 +3062,10 @@ declare module "@prismicio/client" {
     export type {
       CategoryDocument,
       CategoryDocumentData,
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataSocialLinksItem,
+      FooterDocumentDataSlicesSlice,
       GlobalNavigationDocument,
       GlobalNavigationDocumentData,
       GlobalNavigationDocumentDataSlicesSlice,
@@ -2855,6 +3106,13 @@ declare module "@prismicio/client" {
       FiftyFiftySliceDefaultPrimary,
       FiftyFiftySliceVariation,
       FiftyFiftySliceDefault,
+      FooterSlice,
+      FooterSliceDefaultPrimaryAboutcolumnItem,
+      FooterSliceDefaultPrimaryProgramscolumnItem,
+      FooterSliceDefaultPrimaryVolunteercolumnItem,
+      FooterSliceDefaultPrimary,
+      FooterSliceVariation,
+      FooterSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimaryButtonGroupItem,
       HeroSliceDefaultPrimary,
