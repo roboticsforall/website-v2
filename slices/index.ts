@@ -8,7 +8,6 @@ export const components = {
   course_listing: dynamic(() => import("./CourseListing")),
   explainer: dynamic(() => import("./Explainer")),
   fifty_fifty: dynamic(() => import("./FiftyFifty")),
-  footer: dynamic(() => import("./Footer")),
   hero: dynamic(() => import("./Hero")),
   horizontal_slice: dynamic(() => import("./HorizontalSlice")),
   navigation: dynamic(() => import("./Navigation")),

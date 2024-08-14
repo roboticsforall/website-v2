@@ -5,6 +5,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import { fonts } from "./fonts";
 import { NavbarWrapper } from "./components/Navbar/NavbarWrapper";
+import { FooterWrapper } from "./components/Footer/FooterWrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,6 +23,7 @@ export default async function RootLayout({
         <Providers>
           <NavbarWrapper />
           {children}
+          <FooterWrapper />
         </Providers>
         <PrismicPreview repositoryName={repositoryName} />
       </body>
