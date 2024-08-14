@@ -59,7 +59,11 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "footer": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     }

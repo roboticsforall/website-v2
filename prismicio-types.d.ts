@@ -61,7 +61,7 @@ export interface FooterDocumentDataSocialLinksItem {
   link: prismic.LinkField;
 }
 
-type FooterDocumentDataSlicesSlice = never;
+type FooterDocumentDataSlicesSlice = FooterSlice;
 
 /**
  * Content for Footer documents

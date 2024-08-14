@@ -3,6 +3,7 @@ import { components } from "../slices";
 import { createClient } from "@/prismicio";
 import { notFound } from "next/navigation";
 import { Navbar } from "./components/Navbar/Navbar";
+import { Footer } from "./components/Footer/Footer";
 
 export default async function Home() {
   const client = createClient();
