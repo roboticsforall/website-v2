@@ -1228,31 +1228,103 @@ export type ExplainerSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *FiftyFifty → Default → Primary*
+ * Item in *FiftyFifty → FiftyFiftyLeftAligned → Primary → Button Group*
+ */
+export interface FiftyFiftySliceDefaultPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *FiftyFifty → FiftyFiftyLeftAligned → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.default.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *FiftyFifty → FiftyFiftyLeftAligned → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.default.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *FiftyFifty → FiftyFiftyLeftAligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: fifty_fifty.default.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
+
+/**
+ * Item in *FiftyFifty → FiftyFiftyRightAligned → Primary → Button Group*
+ */
+export interface FiftyFiftySliceFiftyFiftyRightAlignedPrimaryButtonGroupItem {
+  /**
+   * Button Link field in *FiftyFifty → FiftyFiftyRightAligned → Primary → Button Group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.fiftyFiftyRightAligned.primary.button_group[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Text field in *FiftyFifty → FiftyFiftyRightAligned → Primary → Button Group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.fiftyFiftyRightAligned.primary.button_group[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Variation field in *FiftyFifty → FiftyFiftyRightAligned → Primary → Button Group*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: solid
+   * - **API ID Path**: fifty_fifty.fiftyFiftyRightAligned.primary.button_group[].button_variation
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  button_variation: prismic.SelectField<
+    "solid" | "outline" | "ghost" | "link",
+    "filled"
+  >;
+}
+
+/**
+ * Primary content in *FiftyFifty → FiftyFiftyLeftAligned → Primary*
  */
 export interface FiftyFiftySliceDefaultPrimary {
   /**
-   * title field in *FiftyFifty → Default → Primary*
+   * Background Color field in *FiftyFifty → FiftyFiftyLeftAligned → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Default Value**: white
+   * - **API ID Path**: fifty_fifty.default.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  title: prismic.KeyTextField;
+  background_color: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
 
   /**
-   * description field in *FiftyFifty → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description: prismic.KeyTextField;
-
-  /**
-   * image field in *FiftyFifty → Default → Primary*
+   * Image field in *FiftyFifty → FiftyFiftyLeftAligned → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -1262,53 +1334,30 @@ export interface FiftyFiftySliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * buttonText field in *FiftyFifty → Default → Primary*
+   * Text Block field in *FiftyFifty → FiftyFiftyLeftAligned → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.default.primary.buttontext
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: fifty_fifty.default.primary.text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  buttontext: prismic.KeyTextField;
+  text_block: prismic.RichTextField;
 
   /**
-   * buttonLink field in *FiftyFifty → Default → Primary*
+   * Button Group field in *FiftyFifty → FiftyFiftyLeftAligned → Primary*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: fifty_fifty.default.primary.buttonlink
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: fifty_fifty.default.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  buttonlink: prismic.LinkField;
-
-  /**
-   * Background Color field in *FiftyFifty → Default → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: primary
-   * - **API ID Path**: fifty_fifty.default.primary.background_color
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  background_color: prismic.SelectField<
-    "primary" | "white" | "secondary" | "gradient",
-    "filled"
+  button_group: prismic.GroupField<
+    Simplify<FiftyFiftySliceDefaultPrimaryButtonGroupItem>
   >;
-
-  /**
-   * Button Variation field in *FiftyFifty → Default → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: fifty_fifty.default.primary.button_variations
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  button_variations: prismic.SelectField<"solid" | "outline", "filled">;
 }
 
 /**
- * Default variation for FiftyFifty Slice
+ * FiftyFiftyLeftAligned variation for FiftyFifty Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1321,9 +1370,76 @@ export type FiftyFiftySliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *FiftyFifty → FiftyFiftyRightAligned → Primary*
+ */
+export interface FiftyFiftySliceFiftyFiftyRightAlignedPrimary {
+  /**
+   * Background Color field in *FiftyFifty → FiftyFiftyRightAligned → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: fifty_fifty.fiftyFiftyRightAligned.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
+   * Image field in *FiftyFifty → FiftyFiftyRightAligned → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.fiftyFiftyRightAligned.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Text Block field in *FiftyFifty → FiftyFiftyRightAligned → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.fiftyFiftyRightAligned.primary.text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text_block: prismic.RichTextField;
+
+  /**
+   * Button Group field in *FiftyFifty → FiftyFiftyRightAligned → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: fifty_fifty.fiftyFiftyRightAligned.primary.button_group[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  button_group: prismic.GroupField<
+    Simplify<FiftyFiftySliceFiftyFiftyRightAlignedPrimaryButtonGroupItem>
+  >;
+}
+
+/**
+ * FiftyFiftyRightAligned variation for FiftyFifty Slice
+ *
+ * - **API ID**: `fiftyFiftyRightAligned`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FiftyFiftySliceFiftyFiftyRightAligned =
+  prismic.SharedSliceVariation<
+    "fiftyFiftyRightAligned",
+    Simplify<FiftyFiftySliceFiftyFiftyRightAlignedPrimary>,
+    never
+  >;
+
+/**
  * Slice variation for *FiftyFifty*
  */
-type FiftyFiftySliceVariation = FiftyFiftySliceDefault;
+type FiftyFiftySliceVariation =
+  | FiftyFiftySliceDefault
+  | FiftyFiftySliceFiftyFiftyRightAligned;
 
 /**
  * FiftyFifty Shared Slice
@@ -2852,9 +2968,13 @@ declare module "@prismicio/client" {
       ExplainerSliceVariation,
       ExplainerSliceDefault,
       FiftyFiftySlice,
+      FiftyFiftySliceDefaultPrimaryButtonGroupItem,
       FiftyFiftySliceDefaultPrimary,
+      FiftyFiftySliceFiftyFiftyRightAlignedPrimaryButtonGroupItem,
+      FiftyFiftySliceFiftyFiftyRightAlignedPrimary,
       FiftyFiftySliceVariation,
       FiftyFiftySliceDefault,
+      FiftyFiftySliceFiftyFiftyRightAligned,
       HeroSlice,
       HeroSliceDefaultPrimaryButtonGroupItem,
       HeroSliceDefaultPrimary,
