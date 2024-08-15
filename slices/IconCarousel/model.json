@@ -1,0 +1,36 @@
+{
+  "id": "icon_carousel",
+  "type": "SharedSlice",
+  "name": "IconCarousel",
+  "description": "IconCarousel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "icons": {
+          "type": "Group",
+          "config": {
+            "label": "Icons",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
