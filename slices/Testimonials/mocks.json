@@ -47,6 +47,80 @@
 								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "“Lorem ipsum dolor sit amet consectetur. Est aliquet aliquam est venenatis feugiat mauris. Sed cras turpis sit bibendum dictumst gravida.”",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "name"
+								}
+							],
+							[
+								"user",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "user"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "“Lorem ipsum dolor sit amet consectetur. Est aliquet aliquam est venenatis feugiat mauris. Sed cras turpis sit bibendum dictumst gravida.”",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "apple"
+								}
+							],
+							[
+								"user",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "parent"
+								}
+							]
+						]
 					}
 				]
 			},
