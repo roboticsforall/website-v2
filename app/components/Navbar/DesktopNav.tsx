@@ -86,13 +86,13 @@ export function DesktopNav(navigation: GlobalNavigationDocument<string>) {
         </HStack>
       </Flex>
       <Flex justifyContent="end">
-        {navigation.data.donate_button_variation === "solid" ? (
-          <Button size={"lg"}>Donate</Button>
-        ) : (
-          <Button variant={"outline"} size={"lg"}>
-            Donate
-          </Button>
-        )}
+        <Button
+          size="lg"
+          as={PrismicNextLink}
+          field={navigation.data.donate_link}
+        >
+          Donate
+        </Button>
       </Flex>
     </Flex>
   );

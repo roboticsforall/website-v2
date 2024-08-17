@@ -209,7 +209,7 @@ type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
  */
 interface GlobalNavigationDocumentData {
   /**
-   * Name field in *Global Navigation*
+   * Company Name field in *Global Navigation*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -220,7 +220,18 @@ interface GlobalNavigationDocumentData {
   name: prismic.KeyTextField;
 
   /**
-   * Logo field in *Global Navigation*
+   * Description field in *Global Navigation*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Company Logo field in *Global Navigation*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -231,16 +242,15 @@ interface GlobalNavigationDocumentData {
   logo: prismic.ImageField<never>;
 
   /**
-   * Donate Button Variation field in *Global Navigation*
+   * Donate Link field in *Global Navigation*
    *
-   * - **Field Type**: Select
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: global_navigation.donate_button_variation
+   * - **API ID Path**: global_navigation.donate_link
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#select
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  donate_button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+  donate_link: prismic.LinkField;
 
   /**
    * Social_Links field in *Global Navigation*
@@ -254,17 +264,6 @@ interface GlobalNavigationDocumentData {
   social_links: prismic.GroupField<
     Simplify<GlobalNavigationDocumentDataSocialLinksItem>
   >;
-
-  /**
-   * Description field in *Global Navigation*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: global_navigation.description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
 
   /**
    * Slice Zone field in *Global Navigation*

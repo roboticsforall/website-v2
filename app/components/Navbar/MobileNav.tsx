@@ -58,15 +58,15 @@ export function MobileNav(navigation: GlobalNavigationDocument<string>) {
             <DrawerCloseButton />
           </DrawerHeader>
           <DrawerBody>
-            {navigation.data.donate_button_variation === "solid" ? (
-              <Button my={6} w="full" size={"lg"}>
-                Donate
-              </Button>
-            ) : (
-              <Button variant={"outline"} my={6} w="full" size={"lg"}>
-                Donate
-              </Button>
-            )}
+            <Button
+              my={6}
+              w="full"
+              size={"lg"}
+              as={PrismicNextLink}
+              field={navigation.data.donate_link}
+            >
+              Donate
+            </Button>
             <Accordion allowMultiple>
               {navigation.data.slices.map((navItem, i) =>
                 navItem.variation == "default" ? (
