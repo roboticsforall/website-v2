@@ -42,7 +42,7 @@ export function Footer({ footer }: FooterProps) {
                 </CustomHeading>
               </Flex>
               <Box maxW="50ch">
-                <Text as={PrismicRichText} field={footer.data.description} />
+                <PrismicRichText field={footer.data.description} />
                 <Button
                   mt={"1.5rem"}
                   variant="link"
@@ -69,7 +69,7 @@ export function Footer({ footer }: FooterProps) {
               {footer.data.slices.map(
                 (navItem, i) =>
                   navItem.variation == "default" && (
-                    <Stack align={"flex-start"}>
+                    <Stack key={navItem.primary.name} align={"flex-start"}>
                       <CustomHeading as="h5" mb={4} textTransform={"uppercase"}>
                         {navItem.primary.name}
                       </CustomHeading>
