@@ -3116,6 +3116,171 @@ export type ThreeColumnExplainerSlice = prismic.SharedSlice<
   ThreeColumnExplainerSliceVariation
 >;
 
+/**
+ * Item in *Timeline → Default → Primary → Timeline Cards*
+ */
+export interface TimelineSliceDefaultPrimaryTimelineCardsItem {
+  /**
+   * Image field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Date field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Description field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Button Text field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Link field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Link Text field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
+
+  /**
+   * Link field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Has Image field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].has_image
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_image: prismic.BooleanField;
+
+  /**
+   * Has Button field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].has_button
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_button: prismic.BooleanField;
+
+  /**
+   * Has Link field in *Timeline → Default → Primary → Timeline Cards*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: timeline.default.primary.timeline_cards[].has_link
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  has_link: prismic.BooleanField;
+}
+
+/**
+ * Primary content in *Timeline → Default → Primary*
+ */
+export interface TimelineSliceDefaultPrimary {
+  /**
+   * Heading Text Block field in *Timeline → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.heading_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading_text_block: prismic.RichTextField;
+
+  /**
+   * Timeline Cards field in *Timeline → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.default.primary.timeline_cards[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  timeline_cards: prismic.GroupField<
+    Simplify<TimelineSliceDefaultPrimaryTimelineCardsItem>
+  >;
+}
+
+/**
+ * Default variation for Timeline Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TimelineSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TimelineSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Timeline*
+ */
+type TimelineSliceVariation = TimelineSliceDefault;
+
+/**
+ * Timeline Shared Slice
+ *
+ * - **API ID**: `timeline`
+ * - **Description**: Timeline
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TimelineSlice = prismic.SharedSlice<
+  "timeline",
+  TimelineSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -3240,6 +3405,11 @@ declare module "@prismicio/client" {
       ThreeColumnExplainerSliceDefaultPrimary,
       ThreeColumnExplainerSliceVariation,
       ThreeColumnExplainerSliceDefault,
+      TimelineSlice,
+      TimelineSliceDefaultPrimaryTimelineCardsItem,
+      TimelineSliceDefaultPrimary,
+      TimelineSliceVariation,
+      TimelineSliceDefault,
     };
   }
 }
