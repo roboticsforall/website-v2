@@ -20,7 +20,8 @@
     "framer-motion": "^11.2.10",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-multi-carousel": "^2.8.5"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.41",

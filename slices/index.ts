@@ -10,6 +10,7 @@ export const components = {
   fifty_fifty: dynamic(() => import("./FiftyFifty")),
   hero: dynamic(() => import("./Hero")),
   horizontal_slice: dynamic(() => import("./HorizontalSlice")),
+  icon_carousel: dynamic(() => import("./IconCarousel")),
   navigation: dynamic(() => import("./Navigation")),
   numbered_card_section: dynamic(() => import("./NumberedCardSection")),
   split_feature_block: dynamic(() => import("./SplitFeatureBlock")),

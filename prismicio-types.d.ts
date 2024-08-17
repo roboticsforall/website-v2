@@ -2481,6 +2481,80 @@ export type HorizontalSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *IconCarousel → Default → Primary → Icons*
+ */
+export interface IconCarouselSliceDefaultPrimaryIconsItem {
+  /**
+   * Icon field in *IconCarousel → Default → Primary → Icons*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_carousel.default.primary.icons[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *IconCarousel → Default → Primary*
+ */
+export interface IconCarouselSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *IconCarousel → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: icon_carousel.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
+   * Icons field in *IconCarousel → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_carousel.default.primary.icons[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  icons: prismic.GroupField<Simplify<IconCarouselSliceDefaultPrimaryIconsItem>>;
+}
+
+/**
+ * Default variation for IconCarousel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconCarouselSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<IconCarouselSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *IconCarousel*
+ */
+type IconCarouselSliceVariation = IconCarouselSliceDefault;
+
+/**
+ * IconCarousel Shared Slice
+ *
+ * - **API ID**: `icon_carousel`
+ * - **Description**: IconCarousel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconCarouselSlice = prismic.SharedSlice<
+  "icon_carousel",
+  IconCarouselSliceVariation
+>;
+
+/**
  * Item in *Navigation → NavigationWithChildLinks → Primary → Child Navigation*
  */
 export interface NavigationSliceDefaultPrimaryChildNavigationItem {
@@ -3413,6 +3487,11 @@ declare module "@prismicio/client" {
       HorizontalSliceSliceVariation,
       HorizontalSliceSliceLeftImage,
       HorizontalSliceSliceRightImage,
+      IconCarouselSlice,
+      IconCarouselSliceDefaultPrimaryIconsItem,
+      IconCarouselSliceDefaultPrimary,
+      IconCarouselSliceVariation,
+      IconCarouselSliceDefault,
       NavigationSlice,
       NavigationSliceDefaultPrimaryChildNavigationItem,
       NavigationSliceDefaultPrimary,
