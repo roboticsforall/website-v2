@@ -9,7 +9,7 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Heading",
+							"text": "Our Milestones",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -85,7 +85,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "May 10, 2024"
+									"value": "May 10th, 2024"
 								}
 							],
 							[
@@ -163,13 +163,17 @@
 								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
 					}
 				]
 			},
 			"background_color": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "primary"
+				"value": "white"
 			}
 		},
 		"items": []

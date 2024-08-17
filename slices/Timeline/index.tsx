@@ -11,7 +11,6 @@ import {
   ButtonGroup,
   Card,
   CardBody,
-  CardHeader,
   CardProps,
   Center,
   Container,
@@ -43,7 +42,9 @@ const MilestoneCard: React.FC<MilestoneCardProps> = ({
       <CardBody>
         <Stack gap={"2.5rem"}>
           <Stack gap={"1.25rem"}>
-            <Text color={"primary.500"}>{card.date}</Text>
+            <CustomHeading as="h6" color={"primary.500"}>
+              {card.date}
+            </CustomHeading>
             <CustomHeading as="h4">{card.title}</CustomHeading>
             <Text>{card.description}</Text>
           </Stack>
@@ -77,41 +78,6 @@ const MilestoneCard: React.FC<MilestoneCardProps> = ({
 const Timeline = ({ slice }: TimelineProps): JSX.Element => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
   const isMobile = useBreakpointValue({ base: true, md: false });
-  const milestones = [
-    {
-      id: 1,
-      date: "MARCH 30, 2022",
-      title: "Chakra Hackathon",
-      description: `Winner of first ever ChakraUI Hackathon. On sait depuis longtemps que travailler avec du texte lisible et contenant du sens.`,
-    },
-    {
-      id: 2,
-      date: "July 30, 2021",
-      title: "Open Source, first contribution",
-      description: `Fixing a typo, to fix a bug, contributing to Open Source and collaborating to improve technology for everyone, Ahmad's world changed again!.`,
-    },
-    {
-      id: 3,
-      date: "July 30, 2018",
-      title: "Freelancing, started working for myself",
-      description:
-        "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
-    },
-    {
-      id: 4,
-      date: "July 30, 2018",
-      title: "Freelancing, started working for myself",
-      description:
-        "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
-    },
-    {
-      id: 5,
-      date: "July 30, 2018",
-      title: "Freelancing, started working for myself",
-      description:
-        "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
-    },
-  ];
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -120,7 +86,7 @@ const Timeline = ({ slice }: TimelineProps): JSX.Element => {
       <BackgroundColor backgroundColor={slice.primary.background_color}>
         <ContainerWrapper>
           <Stack gap={"2.25rem"}>
-            <Container textAlign={"center"}>
+            <Container p={0} textAlign={{ md: "center" }}>
               <TextBlock textBlock={slice.primary.heading_text_block} />
             </Container>
             <Box>
@@ -241,7 +207,7 @@ const Timeline = ({ slice }: TimelineProps): JSX.Element => {
                           ></Box>
                         </Center>
                         <Flex justifyContent="center" flex={1}>
-                          {i == milestones.length - 1 ||
+                          {i == slice.primary.timeline_cards.length - 1 ||
                           i == slice.primary.timeline_cards.length - 1 ? (
                             <Box height="100%"></Box>
                           ) : (

@@ -246,6 +246,7 @@ export type GlobalNavigationDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | TimelineSlice
   | TestimonialsSlice
   | NumberedCardSectionSlice
   | ExplainerSlice
@@ -335,6 +336,7 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | TimelineSlice
   | NumberedCardSectionSlice
   | TestimonialsSlice
   | BasicTextBlockSlice
@@ -2557,17 +2559,7 @@ export type NavigationSlice = prismic.SharedSlice<
  */
 export interface NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem {
   /**
-   * Number field in *NumberedCardSection → Default → Primary → Numbered_Cards*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: numbered_card_section.default.primary.numbered_cards[].number
-   * - **Documentation**: https://prismic.io/docs/field#number
-   */
-  number: prismic.NumberField;
-
-  /**
-   * Card_Title field in *NumberedCardSection → Default → Primary → Numbered_Cards*
+   * Card Title field in *NumberedCardSection → Default → Primary → Numbered_Cards*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -2577,7 +2569,7 @@ export interface NumberedCardSectionSliceDefaultPrimaryNumberedCardsItem {
   card_title: prismic.KeyTextField;
 
   /**
-   * Card_Description field in *NumberedCardSection → Default → Primary → Numbered_Cards*
+   * Card Description field in *NumberedCardSection → Default → Primary → Numbered_Cards*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
