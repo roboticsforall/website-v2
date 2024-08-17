@@ -27,18 +27,17 @@
             "label": "Timeline Cards",
             "repeat": true,
             "fields": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "label": "Image",
-                  "constraint": {},
-                  "thumbnails": []
-                }
-              },
               "date": {
-                "type": "Date",
+                "type": "Text",
                 "config": {
                   "label": "Date",
+                  "placeholder": ""
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
                   "placeholder": ""
                 }
               },
@@ -77,15 +76,6 @@
                   "label": "Link",
                   "placeholder": "",
                   "select": null
-                }
-              },
-              "has_image": {
-                "type": "Boolean",
-                "config": {
-                  "label": "Has Image",
-                  "default_value": false,
-                  "placeholder_true": "true",
-                  "placeholder_false": "false"
                 }
               },
               "has_button": {

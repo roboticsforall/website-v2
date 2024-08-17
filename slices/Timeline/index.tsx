@@ -1,12 +1,15 @@
 "use client";
 import { backgroundColorOptions } from "@/app/components/background_options";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
+import { CustomHeading } from "@/app/components/CustomHeading";
+import { Simplify } from "@/prismicio-types";
 import {
   Box,
   Card,
   CardBody,
+  CardHeader,
+  CardProps,
   Center,
-  Divider,
   Flex,
   Stack,
   Text,
@@ -19,6 +22,26 @@ import { SliceComponentProps } from "@prismicio/react";
  * Props for `Timeline`.
  */
 export type TimelineProps = SliceComponentProps<Content.TimelineSlice>;
+
+interface MilestoneCardProps extends CardProps {
+  card: Simplify<Content.TimelineSliceDefaultPrimaryTimelineCardsItem>;
+}
+
+// MilestoneCard component
+const MilestoneCard: React.FC<MilestoneCardProps> = ({
+  card,
+  ...cardProps
+}) => {
+  return (
+    <Card {...cardProps}>
+      <Text color={"primary.500"}>{card.date}</Text>
+      <CustomHeading as="h4">{card.title}</CustomHeading>
+      <CardBody>
+        <Text>{card.description}</Text>
+      </CardBody>
+    </Card>
+  );
+};
 
 /**
  * Component for "Timeline" Slices.
@@ -46,6 +69,20 @@ const Timeline = ({ slice }: TimelineProps): JSX.Element => {
       description:
         "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
     },
+    {
+      id: 4,
+      date: "July 30, 2018",
+      title: "Freelancing, started working for myself",
+      description:
+        "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
+    },
+    {
+      id: 5,
+      date: "July 30, 2018",
+      title: "Freelancing, started working for myself",
+      description:
+        "Ahmad starts his own business consulting for companies as a fullstack developer. Clients include UK Government departments, UK banks, global fintechs and startups.",
+    },
   ];
   return (
     <section
@@ -53,17 +90,11 @@ const Timeline = ({ slice }: TimelineProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <ContainerWrapper>
-        {milestones.map((milestone, i) => (
-          <Flex key={milestone.id}>
-            {isDesktop && i % 2 == 0 && (
+        {slice.primary.timeline_cards.map((card, i) => (
+          <Flex key={i}>
+            {isDesktop && i % 2 != 0 && (
               <>
-                <Card flex={1}>
-                  <CardBody>
-                    <Text>
-                      View a summary of all your customers over the last month.
-                    </Text>
-                  </CardBody>
-                </Card>
+                <MilestoneCard card={card} flex={1} />
                 <Stack pos="relative" gap={0} mx={"1.5rem"}>
                   <Flex justifyContent="center" flex={1}>
                     <Box
@@ -87,87 +118,106 @@ const Timeline = ({ slice }: TimelineProps): JSX.Element => {
                     ></Box>
                   </Center>
                   <Flex justifyContent="center" flex={1}>
-                    <Box
-                      height="100%"
-                      borderWidth={1}
-                      borderColor={backgroundColorOptions.SECONDARY}
-                    ></Box>
+                    {i == milestones.length - 1 ? (
+                      <Box height="100%"></Box>
+                    ) : (
+                      <Box
+                        height="100%"
+                        borderWidth={1}
+                        borderColor={backgroundColorOptions.SECONDARY}
+                      ></Box>
+                    )}
                   </Flex>
                 </Stack>
                 <Box flex={1}></Box>
               </>
             )}
-            {isDesktop && i % 2 != 0 && (
+            {isDesktop && i % 2 == 0 && (
               <>
                 <Box flex={1}></Box>
-                <Box pos="relative" mx="1.5rem">
-                  {/* <Box flex={1}></Box> */}
-                  <Box
-                    pos="absolute"
-                    left="50%"
-                    transform={"translate(-50%, 0)"}
-                    height="calc(50% - 0.625rem)"
-                    border="1px solid black"
-                  ></Box>
-                  <Box
-                    pos="absolute"
-                    top="50%"
-                    left="50%"
-                    transform={"translate(-50%, -50%)"}
-                    border="1px solid black"
+                <Stack pos="relative" gap={0} mx={"1.5rem"}>
+                  <Flex justifyContent="center" flex={1}>
+                    {i == 0 ? (
+                      <Box height="100%"></Box>
+                    ) : (
+                      <Box
+                        height="100%"
+                        borderWidth={1}
+                        borderColor={backgroundColorOptions.SECONDARY}
+                      ></Box>
+                    )}
+                  </Flex>
+                  <Center
                     width="1.25rem"
                     height="1.25rem"
                     borderRadius={"50%"}
+                    borderWidth={2}
+                    borderColor={backgroundColorOptions.SECONDARY}
                   >
                     <Box
-                      pos="absolute"
-                      border="1px solid black"
-                      top="50%"
-                      left="50%"
-                      transform={"translate(-50%, -50%)"}
                       width="0.75rem"
                       height="0.75rem"
                       borderRadius={"50%"}
-                      bg="black"
+                      bg={backgroundColorOptions.SECONDARY}
                     ></Box>
-                  </Box>
-                  <Box
-                    pos="absolute"
-                    bottom="0"
-                    left="50%"
-                    transform={"translate(-50%, 0)"}
-                    height="calc(50% - 0.625rem)"
-                    border="1px solid black"
-                  ></Box>
-                </Box>
-                <Card flex={1}>
-                  <CardBody>
-                    <Text>
-                      View a summary of all your customers over the last month.
-                    </Text>
-                  </CardBody>
-                </Card>
+                  </Center>
+                  <Flex justifyContent="center" flex={1}>
+                    {slice.primary.timeline_cards.length == 1 ||
+                    i == milestones.length - 1 ? (
+                      <Box height="100%"></Box>
+                    ) : (
+                      <Box
+                        height="100%"
+                        borderWidth={1}
+                        borderColor={backgroundColorOptions.SECONDARY}
+                      ></Box>
+                    )}
+                  </Flex>
+                </Stack>
+                <MilestoneCard card={card} flex={1} />
               </>
             )}
             {isMobile && (
               <>
-                <Center pos="relative" mr="1.5rem">
-                  <Box height="100%" border="1px solid black"></Box>
-                  <Box
-                    pos="absolute"
+                <Stack pos="relative" gap={0} mr={"1.5rem"}>
+                  <Flex justifyContent="center" flex={1}>
+                    {i == 0 || slice.primary.timeline_cards.length == 1 ? (
+                      <Box height="100%"></Box>
+                    ) : (
+                      <Box
+                        height="100%"
+                        borderWidth={1}
+                        borderColor={backgroundColorOptions.SECONDARY}
+                      ></Box>
+                    )}
+                  </Flex>
+                  <Center
                     width="1.25rem"
                     height="1.25rem"
                     borderRadius={"50%"}
-                    bg="black"
-                  ></Box>
-                </Center>
-                <Card flex={1}>
-                  <CardBody>
-                    <Text>
-                      View a summary of all your customers over the last month.
-                    </Text>
-                  </CardBody>
-                </Card>
+                    borderWidth={2}
+                    borderColor={backgroundColorOptions.SECONDARY}
+                  >
+                    <Box
+                      width="0.75rem"
+                      height="0.75rem"
+                      borderRadius={"50%"}
+                      bg={backgroundColorOptions.SECONDARY}
+                    ></Box>
+                  </Center>
+                  <Flex justifyContent="center" flex={1}>
+                    {i == milestones.length - 1 ? (
+                      <Box height="100%"></Box>
+                    ) : (
+                      <Box
+                        height="100%"
+                        borderWidth={1}
+                        borderColor={backgroundColorOptions.SECONDARY}
+                      ></Box>
+                    )}
+                  </Flex>
+                </Stack>
+                <MilestoneCard card={card} flex={1} my={"1rem"} />
               </>
             )}
           </Flex>

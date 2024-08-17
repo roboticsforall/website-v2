@@ -21,40 +21,6 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"image",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
-										"width": 4000,
-										"height": 4000
-									},
-									"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
-									"width": 4000,
-									"height": 4000,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"credits": null,
-									"alt": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"date",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Date",
-									"value": "2020-09-11"
-								}
-							],
-							[
 								"description",
 								{
 									"__TYPE__": "FieldContent",
@@ -99,13 +65,6 @@
 								}
 							],
 							[
-								"has_image",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": false
-								}
-							],
-							[
 								"has_button",
 								{
 									"__TYPE__": "BooleanContent",
@@ -118,8 +77,28 @@
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
+							],
+							[
+								"date",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "wrong",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "once",
+									"type": "Text"
+								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
 					}
 				]
 			}
