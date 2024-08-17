@@ -12,7 +12,6 @@
 							[
 								"icon",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1586374579358-9d19d632b6df?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8cm9ib3RpY3N8ZW58MHx8fHwxNzIzNzI4ODAzfDA&ixlib=rb-4.0.3&q=85",
 									"alt": "blue and white lego blocks",
 									"origin": {
@@ -31,6 +30,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]
@@ -42,7 +43,6 @@
 							[
 								"icon",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1694878982190-6e37aa9eb306?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxyb2JvdGljcyUyMGxvZ298ZW58MHx8fHwxNzIzNzI4OTI1fDA&ixlib=rb-4.0.3&q=85",
 									"alt": "a cell phone with a green icon on it",
 									"origin": {
@@ -61,6 +61,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]
@@ -72,7 +74,6 @@
 							[
 								"icon",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1496200186974-4293800e2c20?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxyb2JvdGljcyUyMGxvZ298ZW58MHx8fHwxNzIzNzI4OTI1fDA&ixlib=rb-4.0.3&q=85",
 									"alt": "# slack text",
 									"origin": {
@@ -91,6 +92,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]
@@ -102,7 +105,6 @@
 							[
 								"icon",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1610801653372-eeda4cbcd298?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMnx8cm9ib3RpY3MlMjBsb2dvfGVufDB8fHx8MTcyMzcyODkyNXww&ixlib=rb-4.0.3&q=85",
 									"alt": "blue and white concrete building",
 									"origin": {
@@ -121,6 +123,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]
@@ -132,7 +136,6 @@
 							[
 								"icon",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1620632523414-054c7bea12ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8cm9ib3RpY3MlMjBsb2dvfGVufDB8fHx8MTcyMzcyODkyNXww&ixlib=rb-4.0.3&q=85",
 									"alt": "white and brown horse figurine",
 									"origin": {
@@ -151,6 +154,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]
@@ -162,7 +167,6 @@
 							[
 								"icon",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1633311905139-7b6088a69e33?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxyb2JvdGljcyUyMGxvZ298ZW58MHx8fHwxNzIzNzI4OTI1fDA&ixlib=rb-4.0.3&q=85",
 									"alt": "a yellow letter sitting on top of a black floor",
 									"origin": {
@@ -181,12 +185,19 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]
 						]
 					}
 				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "white"
 			}
 		},
 		"items": []

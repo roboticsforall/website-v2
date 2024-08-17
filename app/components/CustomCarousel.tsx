@@ -77,7 +77,6 @@ const CustomCarousel: React.FC<ImageSliderProps> = ({ slides }) => {
             boxSizing="border-box"
             height="300px"
             borderRadius="md"
-            bg="white"
             display="flex"
             alignItems="center"
             justifyContent="center"

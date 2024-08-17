@@ -12,6 +12,21 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
         "icons": {
           "type": "Group",
           "config": {

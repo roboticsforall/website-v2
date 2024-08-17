@@ -3,6 +3,8 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
 import CustomCarousel from "@/app/components/CustomCarousel";
+import { BackgroundColor } from "@/app/components/BackgroundColor";
+import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 
 /**
  * Props for `IconCarousel`.
@@ -19,9 +21,11 @@ const IconCarousel = ({ slice }: IconCarouselProps): JSX.Element => {
   }));
 
   return (
-    <Container py={12} size={[null, "sm", "md", "lg", "xl", "2xl"]}>
-      <CustomCarousel slides={slideData} />   
-    </Container>
+    <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
+      <ContainerWrapper>
+        <CustomCarousel slides={slideData} />
+      </ContainerWrapper>
+    </BackgroundColor>
   );
 };
 

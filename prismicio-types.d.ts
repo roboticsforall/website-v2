@@ -2450,6 +2450,20 @@ export interface IconCarouselSliceDefaultPrimaryIconsItem {
  */
 export interface IconCarouselSliceDefaultPrimary {
   /**
+   * BackgroundColor field in *IconCarousel → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: icon_carousel.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
    * Icons field in *IconCarousel → Default → Primary*
    *
    * - **Field Type**: Group
