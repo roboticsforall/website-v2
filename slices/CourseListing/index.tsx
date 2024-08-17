@@ -104,8 +104,9 @@ const CourseList = ({ slice }: CourseListingProps): JSX.Element => {
   async function getCourseData() {
     const data = await client.getByUID(
       "course_listing",
-      slice.primary.course_listing.uid
+      (slice.primary.course_listing as { uid: string }).uid // type assertion bc .uid doesn't seem to exist. Futher research shows .course_listing is of type EmptyLinkDocument bc SliceSimulator doesn't support content relationship yet
     );
+    console.log(slice.primary.course_listing);
     data.data.courses.sort((a, b) => {
       return (a.open_for_enrollment ? 0 : 1) - (b.open_for_enrollment ? 0 : 1);
     });
