@@ -32,25 +32,20 @@ const NumberedCardSection = ({
     <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
       <ContainerWrapper>
         <VStack spacing={"2.5rem"} align="center">
-          <Container textAlign={"center"}>
+          <Container p={0} textAlign={{ md: "center" }}>
             <TextBlock textBlock={slice.primary.heading_text_block} />
           </Container>
-          <Flex gap={6} wrap="wrap" justifyContent={"center"}>
+          <Flex gap={"2.5rem"} wrap="wrap" justifyContent={"center"}>
             {slice.primary.numbered_cards.map((item, i) => (
               <Box
                 key={i}
                 width={{
                   sm: "100%",
-                  md: "calc(50% - 1.5rem * 1/2)",
-                  lg: "calc(25% - 1.5rem * 3/4)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
+                  md: "calc(50% - 2.5rem * 1/2)",
+                  lg: "calc(25% - 2.5rem * 3/4)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
                 }}
               >
-                <Stack
-                  justifyContent="center"
-                  alignItems={["center", null, "start"]}
-                  p={"1.25rem"}
-                  textAlign={["center", null, "start"]}
-                >
+                <Stack justifyContent="center">
                   <Center
                     w={12}
                     h={12}
@@ -60,7 +55,7 @@ const NumberedCardSection = ({
                     mb={4}
                   >
                     <Text as="b" fontSize="2xl">
-                      {item.number}
+                      {i + 1}
                     </Text>
                   </Center>
                   <Stack gap={"1.25rem"}>

@@ -22,7 +22,7 @@ const ColumnCards = ({ slice }: ColumnCardsProps): JSX.Element => {
       <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
         <ContainerWrapper>
           <Stack gap={"2.5rem"}>
-            <Container textAlign={"center"}>
+            <Container p={0} textAlign={{ md: "center" }}>
               <TextBlock textBlock={slice.primary.heading_text_block} />
             </Container>
             <Flex gap={6} wrap="wrap" justifyContent={"center"}>

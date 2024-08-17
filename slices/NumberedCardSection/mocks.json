@@ -6,7 +6,7 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "swoosh"
+				"value": "primary"
 			},
 			"numbered_cards": {
 				"__TYPE__": "GroupContentType",
@@ -15,19 +15,11 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"number",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Number",
-									"value": "1"
-								}
-							],
-							[
 								"card_title",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Contact us"
+									"value": "bound",
+									"type": "Text"
 								}
 							],
 							[
@@ -38,10 +30,8 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Lorem ipsum dolor sit amet consectetur. Enim cursus congue pulvinar mauris.",
-												"spans": []
-											},
-											"direction": "ltr"
+												"text": "Et sit culpa in commodo minim commodo. Velit reprehenderit irure sunt."
+											}
 										}
 									]
 								}
@@ -52,19 +42,11 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"number",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Number",
-									"value": "2"
-								}
-							],
-							[
 								"card_title",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Consultation & program design"
+									"value": "plus",
+									"type": "Text"
 								}
 							],
 							[
@@ -75,10 +57,8 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Lorem ipsum dolor sit amet consectetur. Enim cursus congue pulvinar mauris.",
-												"spans": []
-											},
-											"direction": "ltr"
+												"text": "Minim aliqua quis nulla aute ex sint excepteur in."
+											}
 										}
 									]
 								}
@@ -89,19 +69,11 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"number",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Number",
-									"value": "3"
-								}
-							],
-							[
 								"card_title",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Enrollement"
+									"value": "solve",
+									"type": "Text"
 								}
 							],
 							[
@@ -112,10 +84,8 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Lorem ipsum dolor sit amet consectetur. Enim cursus congue pulvinar mauris.",
-												"spans": []
-											},
-											"direction": "ltr"
+												"text": "Dolore sint laboris quis quis ipsum fugiat laboris veniam est excepteur. Nostrud Lorem pariatur elit culpa proident mollit aliquip et excepteur cupidatat non incididunt do commodo."
+											}
 										}
 									]
 								}
@@ -126,19 +96,11 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"number",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Number",
-									"value": "4"
-								}
-							],
-							[
 								"card_title",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Start learning"
+									"value": "learn",
+									"type": "Text"
 								}
 							],
 							[
@@ -149,121 +111,8 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Lorem ipsum dolor sit amet consectetur. Enim cursus congue pulvinar mauris.",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"number",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Number",
-									"value": "5"
-								}
-							],
-							[
-								"card_title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Hello"
-								}
-							],
-							[
-								"card_description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Lorem ipsum",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"number",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Number",
-									"value": "6"
-								}
-							],
-							[
-								"card_title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Hello"
-								}
-							],
-							[
-								"card_description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Some Lorem ispum Text",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"number",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Number",
-									"value": "7"
-								}
-							],
-							[
-								"card_title",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Hello"
-								}
-							],
-							[
-								"card_description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Some Lorem ipsum Text",
-												"spans": []
-											},
-											"direction": "ltr"
+												"text": "Occaecat proident esse reprehenderit excepteur. Magna deserunt sit eu aliquip eiusmod do eiusmod ut ea tempor fugiat."
+											}
 										}
 									]
 								}
@@ -276,10 +125,20 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
+						"type": "heading2",
+						"content": {
+							"text": "Heading",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
 						"type": "paragraph",
 						"content": {
-							"text": "Magna Lorem incididunt proident minim magna. Consequat laborum irure esse et mollit enim officia pariatur incididunt enim nostrud dolor veniam laboris. Cillum id dolor duis amet."
-						}
+							"text": "Magna Lorem incididunt proident minim magna. Consequat laborum irure esse et mollit enim officia pariatur incididunt enim nostrud dolor veniam laboris. Cillum id dolor duis amet.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
