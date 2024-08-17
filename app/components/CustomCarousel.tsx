@@ -1,10 +1,10 @@
 "use client";
 
-import React from 'react';
-import { Box, Image, IconButton } from '@chakra-ui/react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React from "react";
+import { Box, Image, IconButton } from "@chakra-ui/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 interface SlideData {
   icon: string;
@@ -38,34 +38,31 @@ const CustomCarousel: React.FC<ImageSliderProps> = ({ slides }) => {
     <Box position="relative" width="full" overflow="hidden">
       <Carousel
         responsive={responsive}
+        autoPlay={true}
+        autoPlaySpeed={3000} // Adjust speed for better smoothness
         infinite
         customLeftArrow={
           <IconButton
             aria-label="Previous Slide"
-            icon={<ChevronLeftIcon />}
+            icon={<ChevronLeftIcon w={8} h={8} />}
             position="absolute"
-            left={0}
-            top="50%"
-            transform="translateY(-50%)"
-            zIndex={2}
-            bg="white"
+            colorScheme="white"
             color="black"
-            _hover={{ bg: "rgba(255, 255, 255, 0.5)", color: "black" }}
+            borderRadius={"50%"}
+            bg="white"
             border="1px solid grey"
           />
         }
         customRightArrow={
           <IconButton
-            aria-label="Next Slide"
-            icon={<ChevronRightIcon />}
+            aria-label="Previous Slide"
+            icon={<ChevronRightIcon w={8} h={8} />}
             position="absolute"
             right={0}
-            top="50%"
-            transform="translateY(-50%)"
-            zIndex={2}
-            bg="white"
+            colorScheme="white"
             color="black"
-            _hover={{ bg: "rgba(255, 255, 255, 0.5)", color: "black" }}
+            borderRadius={"50%"}
+            bg="white"
             border="1px solid grey"
           />
         }
