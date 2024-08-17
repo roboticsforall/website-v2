@@ -18,4 +18,5 @@ export const components = {
   testimonials: dynamic(() => import("./Testimonials")),
   theming: dynamic(() => import("./Theming")),
   three_column_explainer: dynamic(() => import("./ThreeColumnExplainer")),
+  timeline: dynamic(() => import("./Timeline")),
 };
