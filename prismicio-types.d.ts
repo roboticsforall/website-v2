@@ -177,6 +177,31 @@ export type CourseListingDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Global Navigation → Social_Links*
+ */
+export interface GlobalNavigationDocumentDataSocialLinksItem {
+  /**
+   * Icon field in *Global Navigation → Social_Links*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.social_links[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Link field in *Global Navigation → Social_Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.social_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
 type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
 
 /**
@@ -184,7 +209,7 @@ type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
  */
 interface GlobalNavigationDocumentData {
   /**
-   * Name field in *Global Navigation*
+   * Company Name field in *Global Navigation*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -195,7 +220,18 @@ interface GlobalNavigationDocumentData {
   name: prismic.KeyTextField;
 
   /**
-   * Logo field in *Global Navigation*
+   * Description field in *Global Navigation*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Company Logo field in *Global Navigation*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -206,16 +242,28 @@ interface GlobalNavigationDocumentData {
   logo: prismic.ImageField<never>;
 
   /**
-   * Donate Button Variation field in *Global Navigation*
+   * Donate Link field in *Global Navigation*
    *
-   * - **Field Type**: Select
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **Default Value**: solid
-   * - **API ID Path**: global_navigation.donate_button_variation
+   * - **API ID Path**: global_navigation.donate_link
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#select
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  donate_button_variation: prismic.SelectField<"solid" | "outline", "filled">;
+  donate_link: prismic.LinkField;
+
+  /**
+   * Social_Links field in *Global Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: global_navigation.social_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  social_links: prismic.GroupField<
+    Simplify<GlobalNavigationDocumentDataSocialLinksItem>
+  >;
 
   /**
    * Slice Zone field in *Global Navigation*
@@ -3293,6 +3341,7 @@ declare module "@prismicio/client" {
       CourseListingDocumentDataCoursesItem,
       GlobalNavigationDocument,
       GlobalNavigationDocumentData,
+      GlobalNavigationDocumentDataSocialLinksItem,
       GlobalNavigationDocumentDataSlicesSlice,
       HomePageDocument,
       HomePageDocumentData,

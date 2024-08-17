@@ -16,25 +16,58 @@
       "name": {
         "type": "Text",
         "config": {
-          "label": "Name",
+          "label": "Company Name",
           "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "logo": {
         "type": "Image",
         "config": {
-          "label": "Logo",
+          "label": "Company Logo",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "donate_button_variation": {
-        "type": "Select",
+      "donate_link": {
+        "type": "Link",
         "config": {
-          "label": "Donate Button Variation",
+          "label": "Donate Link",
           "placeholder": "",
-          "options": ["solid", "outline"],
-          "default_value": "solid"
+          "select": null
+        }
+      },
+      "social_links": {
+        "type": "Group",
+        "config": {
+          "label": "Social_Links",
+          "repeat": true,
+          "fields": {
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "Icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
         }
       },
       "slices": {
