@@ -8,7 +8,13 @@ import { Box, Container } from "@chakra-ui/react";
 
 const PageHeaderBlockLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
   return (
-    <BackgroundColor backgroundColor={slice.primary.background_color}>
+    <BackgroundColor
+      backgroundColor={
+        slice.variation === "hero5050RightAligned"
+          ? slice.primary.background_color
+          : "white"
+      }
+    >
       <ContainerWrapper>
         <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
           <TextBlockBottomButtonGroup

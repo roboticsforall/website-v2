@@ -208,59 +208,61 @@ const CourseList = ({ slice }: CourseListingProps): JSX.Element => {
         <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap="1.5rem">
           <GridItem>
             <Stack py={2}>
-              {Object.keys(filterOptions).map((section) => (
-                <Box key={section}>
-                  <HStack spacing={1}>
-                    <Text fontWeight="bold">
-                      {filterOptions[section].filterName}
-                    </Text>
-                    <CloseButton
-                      aria-label={`Clear ${section} Filter`}
-                      onClick={() => clearFilter(section)}
-                    />
-                  </HStack>
-                  {filterOptions[section].checkbox &&
-                    filterOptions[section].checkbox.map((checkboxInfo) => (
-                      <Box key={checkboxInfo.value}>
-                        <Checkbox
-                          value={checkboxInfo.value}
-                          onChange={() =>
-                            handleCheckboxChange(section, checkboxInfo.value)
-                          }
-                          isChecked={(filters[section] as string[]).includes(
-                            checkboxInfo.value
-                          )}
-                        >
-                          {checkboxInfo.label}
-                        </Checkbox>
-                      </Box>
-                    ))}
-                  {filterOptions[section].slider && (
-                    <Slider
-                      aria-label={filterOptions[section].slider.label}
-                      onChange={handleSliderChanged}
-                      min={filterOptions[section].slider.min}
-                      max={filterOptions[section].slider.max}
-                      step={filterOptions[section].slider.step}
-                      defaultValue={filterOptions[section].slider.defaultValue}
-                      value={(filters.grade as number) || 0}
-                    >
-                      <SliderTrack>
-                        <SliderFilledTrack bg="yellow.yellow3" />
-                      </SliderTrack>
-                      <SliderThumb boxSize={6} />
-                      {Array.from(
-                        { length: filterOptions[section].slider.max + 1 },
-                        (_, i) => (
-                          <SliderMark key={i} value={i} mt="1" fontSize="sm">
-                            {i}
-                          </SliderMark>
-                        )
-                      )}
-                    </Slider>
-                  )}
-                </Box>
-              ))}
+              {Object.keys(filterOptions).map((section) => {
+                const sectionOptions = filterOptions[section];
+
+                return (
+                  <Box key={section}>
+                    <HStack spacing={1}>
+                      <Text fontWeight="bold">{sectionOptions.filterName}</Text>
+                      <CloseButton
+                        aria-label={`Clear ${section} Filter`}
+                        onClick={() => clearFilter(section)}
+                      />
+                    </HStack>
+                    {sectionOptions.checkbox &&
+                      sectionOptions.checkbox.map((checkboxInfo) => (
+                        <Box key={checkboxInfo.value}>
+                          <Checkbox
+                            value={checkboxInfo.value}
+                            onChange={() =>
+                              handleCheckboxChange(section, checkboxInfo.value)
+                            }
+                            isChecked={(filters[section] as string[]).includes(
+                              checkboxInfo.value
+                            )}
+                          >
+                            {checkboxInfo.label}
+                          </Checkbox>
+                        </Box>
+                      ))}
+                    {sectionOptions.slider && (
+                      <Slider
+                        aria-label={sectionOptions.slider.label}
+                        onChange={handleSliderChanged}
+                        min={sectionOptions.slider.min}
+                        max={sectionOptions.slider.max}
+                        step={sectionOptions.slider.step}
+                        defaultValue={sectionOptions.slider.defaultValue}
+                        value={(filters.grade as number) || 0}
+                      >
+                        <SliderTrack>
+                          <SliderFilledTrack bg="yellow.yellow3" />
+                        </SliderTrack>
+                        <SliderThumb boxSize={6} />
+                        {Array.from(
+                          { length: sectionOptions.slider.max + 1 },
+                          (_, i) => (
+                            <SliderMark key={i} value={i} mt="1" fontSize="sm">
+                              {i}
+                            </SliderMark>
+                          )
+                        )}
+                      </Slider>
+                    )}
+                  </Box>
+                );
+              })}
             </Stack>
           </GridItem>
           <GridItem>
