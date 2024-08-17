@@ -3218,6 +3218,20 @@ export interface TimelineSliceDefaultPrimaryTimelineCardsItem {
  */
 export interface TimelineSliceDefaultPrimary {
   /**
+   * Background Color field in *Timeline → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: timeline.default.primary.background_color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  background_color: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
    * Heading Text Block field in *Timeline → Default → Primary*
    *
    * - **Field Type**: Rich Text

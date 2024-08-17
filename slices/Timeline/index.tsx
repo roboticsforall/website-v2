@@ -1,21 +1,27 @@
 "use client";
 import { backgroundColorOptions } from "@/app/components/background_options";
+import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
+import { TextBlock } from "@/app/components/TextBlock";
 import { Simplify } from "@/prismicio-types";
 import {
   Box,
+  Button,
+  ButtonGroup,
   Card,
   CardBody,
   CardHeader,
   CardProps,
   Center,
+  Container,
   Flex,
   Stack,
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
+import { PrismicNextLink } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
 
 /**
@@ -34,10 +40,32 @@ const MilestoneCard: React.FC<MilestoneCardProps> = ({
 }) => {
   return (
     <Card {...cardProps}>
-      <Text color={"primary.500"}>{card.date}</Text>
-      <CustomHeading as="h4">{card.title}</CustomHeading>
       <CardBody>
-        <Text>{card.description}</Text>
+        <Stack gap={"2.5rem"}>
+          <Stack gap={"1.25rem"}>
+            <Text color={"primary.500"}>{card.date}</Text>
+            <CustomHeading as="h4">{card.title}</CustomHeading>
+            <Text>{card.description}</Text>
+          </Stack>
+          {(card.has_link || card.has_button) && (
+            <ButtonGroup spacing="1rem">
+              {card.has_button && (
+                <Button
+                  variant="solid"
+                  as={PrismicNextLink}
+                  field={card.button_link}
+                >
+                  {card.button_text}
+                </Button>
+              )}
+              {card.has_link && (
+                <Button variant="link" as={PrismicNextLink} field={card.link}>
+                  {card.link_text}
+                </Button>
+              )}
+            </ButtonGroup>
+          )}
+        </Stack>
       </CardBody>
     </Card>
   );
@@ -89,140 +117,151 @@ const Timeline = ({ slice }: TimelineProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <ContainerWrapper>
-        {slice.primary.timeline_cards.map((card, i) => (
-          <Flex key={i}>
-            {isDesktop && i % 2 != 0 && (
-              <>
-                <MilestoneCard card={card} flex={1} />
-                <Stack pos="relative" gap={0} mx={"1.5rem"}>
-                  <Flex justifyContent="center" flex={1}>
-                    <Box
-                      height="100%"
-                      borderWidth={1}
-                      borderColor={backgroundColorOptions.SECONDARY}
-                    ></Box>
-                  </Flex>
-                  <Center
-                    width="1.25rem"
-                    height="1.25rem"
-                    borderRadius={"50%"}
-                    borderWidth={2}
-                    borderColor={backgroundColorOptions.SECONDARY}
-                  >
-                    <Box
-                      width="0.75rem"
-                      height="0.75rem"
-                      borderRadius={"50%"}
-                      bg={backgroundColorOptions.SECONDARY}
-                    ></Box>
-                  </Center>
-                  <Flex justifyContent="center" flex={1}>
-                    {i == milestones.length - 1 ? (
-                      <Box height="100%"></Box>
-                    ) : (
-                      <Box
-                        height="100%"
-                        borderWidth={1}
-                        borderColor={backgroundColorOptions.SECONDARY}
-                      ></Box>
-                    )}
-                  </Flex>
-                </Stack>
-                <Box flex={1}></Box>
-              </>
-            )}
-            {isDesktop && i % 2 == 0 && (
-              <>
-                <Box flex={1}></Box>
-                <Stack pos="relative" gap={0} mx={"1.5rem"}>
-                  <Flex justifyContent="center" flex={1}>
-                    {i == 0 ? (
-                      <Box height="100%"></Box>
-                    ) : (
-                      <Box
-                        height="100%"
-                        borderWidth={1}
-                        borderColor={backgroundColorOptions.SECONDARY}
-                      ></Box>
-                    )}
-                  </Flex>
-                  <Center
-                    width="1.25rem"
-                    height="1.25rem"
-                    borderRadius={"50%"}
-                    borderWidth={2}
-                    borderColor={backgroundColorOptions.SECONDARY}
-                  >
-                    <Box
-                      width="0.75rem"
-                      height="0.75rem"
-                      borderRadius={"50%"}
-                      bg={backgroundColorOptions.SECONDARY}
-                    ></Box>
-                  </Center>
-                  <Flex justifyContent="center" flex={1}>
-                    {slice.primary.timeline_cards.length == 1 ||
-                    i == milestones.length - 1 ? (
-                      <Box height="100%"></Box>
-                    ) : (
-                      <Box
-                        height="100%"
-                        borderWidth={1}
-                        borderColor={backgroundColorOptions.SECONDARY}
-                      ></Box>
-                    )}
-                  </Flex>
-                </Stack>
-                <MilestoneCard card={card} flex={1} />
-              </>
-            )}
-            {isMobile && (
-              <>
-                <Stack pos="relative" gap={0} mr={"1.5rem"}>
-                  <Flex justifyContent="center" flex={1}>
-                    {i == 0 || slice.primary.timeline_cards.length == 1 ? (
-                      <Box height="100%"></Box>
-                    ) : (
-                      <Box
-                        height="100%"
-                        borderWidth={1}
-                        borderColor={backgroundColorOptions.SECONDARY}
-                      ></Box>
-                    )}
-                  </Flex>
-                  <Center
-                    width="1.25rem"
-                    height="1.25rem"
-                    borderRadius={"50%"}
-                    borderWidth={2}
-                    borderColor={backgroundColorOptions.SECONDARY}
-                  >
-                    <Box
-                      width="0.75rem"
-                      height="0.75rem"
-                      borderRadius={"50%"}
-                      bg={backgroundColorOptions.SECONDARY}
-                    ></Box>
-                  </Center>
-                  <Flex justifyContent="center" flex={1}>
-                    {i == milestones.length - 1 ? (
-                      <Box height="100%"></Box>
-                    ) : (
-                      <Box
-                        height="100%"
-                        borderWidth={1}
-                        borderColor={backgroundColorOptions.SECONDARY}
-                      ></Box>
-                    )}
-                  </Flex>
-                </Stack>
-                <MilestoneCard card={card} flex={1} my={"1rem"} />
-              </>
-            )}
-          </Flex>
-        ))}
-      </ContainerWrapper>
+      <BackgroundColor backgroundColor={slice.primary.background_color}>
+        <ContainerWrapper>
+          <Stack gap={"2.25rem"}>
+            <Container textAlign={"center"}>
+              <TextBlock textBlock={slice.primary.heading_text_block} />
+            </Container>
+            <Box>
+              {slice.primary.timeline_cards.map((card, i) => (
+                <Flex key={i}>
+                  {isDesktop && i % 2 != 0 && (
+                    <>
+                      <MilestoneCard card={card} flex={1} />
+                      <Stack pos="relative" gap={0} mx={"1.5rem"}>
+                        <Flex justifyContent="center" flex={1}>
+                          <Box
+                            height="100%"
+                            borderWidth={1}
+                            borderColor={backgroundColorOptions.SECONDARY}
+                          ></Box>
+                        </Flex>
+                        <Center
+                          width="1.25rem"
+                          height="1.25rem"
+                          borderRadius={"50%"}
+                          borderWidth={2}
+                          borderColor={backgroundColorOptions.SECONDARY}
+                        >
+                          <Box
+                            width="0.75rem"
+                            height="0.75rem"
+                            borderRadius={"50%"}
+                            bg={backgroundColorOptions.SECONDARY}
+                          ></Box>
+                        </Center>
+                        <Flex justifyContent="center" flex={1}>
+                          {i == slice.primary.timeline_cards.length - 1 ? (
+                            <Box height="100%"></Box>
+                          ) : (
+                            <Box
+                              height="100%"
+                              borderWidth={1}
+                              borderColor={backgroundColorOptions.SECONDARY}
+                            ></Box>
+                          )}
+                        </Flex>
+                      </Stack>
+                      <Box flex={1}></Box>
+                    </>
+                  )}
+                  {isDesktop && i % 2 == 0 && (
+                    <>
+                      <Box flex={1}></Box>
+                      <Stack pos="relative" gap={0} mx={"1.5rem"}>
+                        <Flex justifyContent="center" flex={1}>
+                          {i == 0 ? (
+                            <Box height="100%"></Box>
+                          ) : (
+                            <Box
+                              height="100%"
+                              borderWidth={1}
+                              borderColor={backgroundColorOptions.SECONDARY}
+                            ></Box>
+                          )}
+                        </Flex>
+                        <Center
+                          width="1.25rem"
+                          height="1.25rem"
+                          borderRadius={"50%"}
+                          borderWidth={2}
+                          borderColor={backgroundColorOptions.SECONDARY}
+                        >
+                          <Box
+                            width="0.75rem"
+                            height="0.75rem"
+                            borderRadius={"50%"}
+                            bg={backgroundColorOptions.SECONDARY}
+                          ></Box>
+                        </Center>
+                        <Flex justifyContent="center" flex={1}>
+                          {slice.primary.timeline_cards.length == 1 ||
+                          i == slice.primary.timeline_cards.length - 1 ? (
+                            <Box height="100%"></Box>
+                          ) : (
+                            <Box
+                              height="100%"
+                              borderWidth={1}
+                              borderColor={backgroundColorOptions.SECONDARY}
+                            ></Box>
+                          )}
+                        </Flex>
+                      </Stack>
+                      <MilestoneCard card={card} flex={1} />
+                    </>
+                  )}
+                  {isMobile && (
+                    <>
+                      <Stack pos="relative" gap={0} mr={"1.5rem"}>
+                        <Flex justifyContent="center" flex={1}>
+                          {i == 0 ||
+                          slice.primary.timeline_cards.length == 1 ? (
+                            <Box height="100%"></Box>
+                          ) : (
+                            <Box
+                              height="100%"
+                              borderWidth={1}
+                              borderColor={backgroundColorOptions.SECONDARY}
+                            ></Box>
+                          )}
+                        </Flex>
+                        <Center
+                          width="1.25rem"
+                          height="1.25rem"
+                          borderRadius={"50%"}
+                          borderWidth={2}
+                          borderColor={backgroundColorOptions.SECONDARY}
+                        >
+                          <Box
+                            width="0.75rem"
+                            height="0.75rem"
+                            borderRadius={"50%"}
+                            bg={backgroundColorOptions.SECONDARY}
+                          ></Box>
+                        </Center>
+                        <Flex justifyContent="center" flex={1}>
+                          {i == milestones.length - 1 ||
+                          i == slice.primary.timeline_cards.length - 1 ? (
+                            <Box height="100%"></Box>
+                          ) : (
+                            <Box
+                              height="100%"
+                              borderWidth={1}
+                              borderColor={backgroundColorOptions.SECONDARY}
+                            ></Box>
+                          )}
+                        </Flex>
+                      </Stack>
+                      <MilestoneCard card={card} flex={1} my={"1rem"} />
+                    </>
+                  )}
+                </Flex>
+              ))}
+            </Box>
+          </Stack>
+        </ContainerWrapper>
+      </BackgroundColor>
     </section>
   );
 };

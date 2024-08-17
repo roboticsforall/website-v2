@@ -7,10 +7,20 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
+						"type": "heading2",
+						"content": {
+							"text": "Heading",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
 						"type": "paragraph",
 						"content": {
-							"text": "Occaecat eu consequat occaecat in aliquip ex proident consectetur aliquip reprehenderit Lorem esse do reprehenderit. Occaecat aliqua officia et aliquip pariatur et qui aute enim adipisicing aliquip enim nisi."
-						}
+							"text": "Occaecat eu consequat occaecat in aliquip ex proident consectetur aliquip reprehenderit Lorem esse do reprehenderit. Occaecat aliqua officia et aliquip pariatur et qui aute enim adipisicing aliquip enim nisi.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -20,14 +30,6 @@
 					{
 						"__TYPE__": "GroupItemContent",
 						"value": [
-							[
-								"description",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "lying",
-									"type": "Text"
-								}
-							],
 							[
 								"button_text",
 								{
@@ -68,7 +70,7 @@
 								"has_button",
 								{
 									"__TYPE__": "BooleanContent",
-									"value": false
+									"value": true
 								}
 							],
 							[
@@ -82,25 +84,92 @@
 								"date",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "wrong",
-									"type": "Text"
+									"type": "Text",
+									"value": "May 10, 2024"
 								}
 							],
 							[
 								"title",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "once",
-									"type": "Text"
+									"type": "Text",
+									"value": "RFA is created"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "fsdafsafsa. safads"
 								}
 							]
 						]
 					},
 					{
 						"__TYPE__": "GroupItemContent",
-						"value": []
+						"value": [
+							[
+								"date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "June 30th, 2024"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "RFA has its first three classes"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "fsdafsafsa. safads"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"date",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "July 15th, 2024"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "RFA has its first three classes"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "fsdafsafsa. safads"
+								}
+							]
+						]
 					}
 				]
+			},
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "primary"
 			}
 		},
 		"items": []
