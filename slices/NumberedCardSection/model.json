@@ -42,24 +42,17 @@
             "label": "Numbered_Cards",
             "repeat": true,
             "fields": {
-              "number": {
-                "type": "Number",
-                "config": {
-                  "label": "Number",
-                  "placeholder": ""
-                }
-              },
               "card_title": {
                 "type": "Text",
                 "config": {
-                  "label": "Card_Title",
+                  "label": "Card Title",
                   "placeholder": ""
                 }
               },
               "card_description": {
                 "type": "StructuredText",
                 "config": {
-                  "label": "Card_Description",
+                  "label": "Card Description",
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
