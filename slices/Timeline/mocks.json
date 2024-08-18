@@ -176,13 +176,17 @@
 								}
 							]
 						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
 					}
 				]
 			},
 			"background_color": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "white"
+				"value": "primary"
 			}
 		},
 		"items": []
