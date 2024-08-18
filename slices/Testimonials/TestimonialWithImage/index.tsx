@@ -75,12 +75,13 @@ const TestimonialWithImage = (
                     <Stack gap="1.25rem">
                       <Divider borderWidth={1} />
                       <Text fontSize="xl" fontStyle={"italic"}>
-                        "{item.description}"
+                        &quot;{item.description}&quot;
                       </Text>
                       <Divider borderWidth={1} />
 
                       <Flex gap="1.5rem">
-                        {slice.variation == "testimonialWithImage" ? (
+                        {slice.variation == "testimonialWithImage" &&
+                        "image" in item ? (
                           <Box
                             borderRadius={"50%"}
                             as={PrismicNextImage}
