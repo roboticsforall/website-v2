@@ -3159,16 +3159,6 @@ export interface TestimonialsSliceTestimonialWithImagePrimary {
   testimonials: prismic.GroupField<
     Simplify<TestimonialsSliceTestimonialWithImagePrimaryTestimonialsItem>
   >;
-
-  /**
-   * Background Image field in *Testimonials → Testimonial - With Portraits → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.testimonialWithImage.primary.background_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  background_image: prismic.ImageField<never>;
 }
 
 /**
@@ -3492,7 +3482,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
