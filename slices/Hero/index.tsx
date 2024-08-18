@@ -29,10 +29,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       {/* Render different components based on slice.variation */}
-      {slice.variation === "default" && <HeroFullImageLeftAligned {...slice} />}
       {slice.variation === "hero5050LeftAligned" && (
         <Hero5050LeftAligned {...slice} />
       )}
+      {slice.variation === "default" && <HeroFullImageLeftAligned {...slice} />}
       {slice.variation === "hero5050RightAligned" && (
         <Hero5050RightAligned {...slice} />
       )}
