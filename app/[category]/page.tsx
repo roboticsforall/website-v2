@@ -7,9 +7,10 @@ type PageParams = {
   category: string;
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function Page({ params }: { params: PageParams }) {
   const client = createClient();
-  console.log("My params " + params.category);
 
   const page = await client
     .getByUID("page", params.category)
