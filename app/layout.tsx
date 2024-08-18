@@ -19,6 +19,13 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          defer
+          src="https://static.cdn.prismic.io/prismic.js?new=true&repo=rfa-cms"
+        ></script>
+      </head>
       <body className={fonts.beVietnamPro.className}>
         <Providers>
           <NavbarWrapper />
