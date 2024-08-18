@@ -34,6 +34,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "icon_carousel": {
+              "type": "SharedSlice"
+            },
             "timeline": {
               "type": "SharedSlice"
             },

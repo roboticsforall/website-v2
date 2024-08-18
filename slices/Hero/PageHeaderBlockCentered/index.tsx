@@ -12,7 +12,7 @@ export const PageHeaderBlockCentered = (
   return (
     <BackgroundColor
       backgroundColor={
-        slice.variation === "hero5050RightAligned"
+        slice.variation === "pageHeaderBlockCentered"
           ? slice.primary.background_color
           : "white"
       }

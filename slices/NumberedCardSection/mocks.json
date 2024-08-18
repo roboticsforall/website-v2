@@ -149,55 +149,32 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Button"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Button"
+								}
+							],
+							[
 								"button_variation",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "solid",
-									"type": "Select"
-								}
-							],
-							[
-								"button",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
-									}
-								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "unusual",
-									"type": "Text"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "sfdsdfsdf sdfsdfsfsfsdfsfsdfsdfsdf"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "ssfsdfsdfsdfsdfsfsfssfsdfsdf"
+									"type": "Select",
+									"value": "outline"
 								}
 							]
 						]

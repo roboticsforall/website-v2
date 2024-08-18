@@ -294,6 +294,7 @@ export type GlobalNavigationDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | IconCarouselSlice
   | TimelineSlice
   | TestimonialsSlice
   | NumberedCardSectionSlice
@@ -384,6 +385,7 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | IconCarouselSlice
   | TimelineSlice
   | NumberedCardSectionSlice
   | TestimonialsSlice
@@ -2256,11 +2258,11 @@ type HeroSliceVariation =
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
- * Item in *HorizontalSlice → leftImage → Primary → Button Group*
+ * Item in *HorizontalSlice → Left Image → Primary → Button Group*
  */
 export interface HorizontalSliceSliceLeftImagePrimaryButtonGroupItem {
   /**
-   * Button Text field in *HorizontalSlice → leftImage → Primary → Button Group*
+   * Button Text field in *HorizontalSlice → Left Image → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -2270,7 +2272,7 @@ export interface HorizontalSliceSliceLeftImagePrimaryButtonGroupItem {
   button_text: prismic.KeyTextField;
 
   /**
-   * Button Link field in *HorizontalSlice → leftImage → Primary → Button Group*
+   * Button Link field in *HorizontalSlice → Left Image → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -2280,7 +2282,7 @@ export interface HorizontalSliceSliceLeftImagePrimaryButtonGroupItem {
   button_link: prismic.LinkField;
 
   /**
-   * Button Variation field in *HorizontalSlice → leftImage → Primary → Button Group*
+   * Button Variation field in *HorizontalSlice → Left Image → Primary → Button Group*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
@@ -2295,11 +2297,11 @@ export interface HorizontalSliceSliceLeftImagePrimaryButtonGroupItem {
 }
 
 /**
- * Item in *HorizontalSlice → rightImage → Primary → Button Group*
+ * Item in *HorizontalSlice → Right Image → Primary → Button Group*
  */
 export interface HorizontalSliceSliceRightImagePrimaryButtonGroupItem {
   /**
-   * Button Text field in *HorizontalSlice → rightImage → Primary → Button Group*
+   * Button Text field in *HorizontalSlice → Right Image → Primary → Button Group*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -2309,7 +2311,7 @@ export interface HorizontalSliceSliceRightImagePrimaryButtonGroupItem {
   button_text: prismic.KeyTextField;
 
   /**
-   * Button Link field in *HorizontalSlice → rightImage → Primary → Button Group*
+   * Button Link field in *HorizontalSlice → Right Image → Primary → Button Group*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -2319,7 +2321,7 @@ export interface HorizontalSliceSliceRightImagePrimaryButtonGroupItem {
   button_link: prismic.LinkField;
 
   /**
-   * Button Variation field in *HorizontalSlice → rightImage → Primary → Button Group*
+   * Button Variation field in *HorizontalSlice → Right Image → Primary → Button Group*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
@@ -2334,11 +2336,11 @@ export interface HorizontalSliceSliceRightImagePrimaryButtonGroupItem {
 }
 
 /**
- * Primary content in *HorizontalSlice → leftImage → Primary*
+ * Primary content in *HorizontalSlice → Left Image → Primary*
  */
 export interface HorizontalSliceSliceLeftImagePrimary {
   /**
-   * Background Color field in *HorizontalSlice → leftImage → Primary*
+   * Background Color field in *HorizontalSlice → Left Image → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
@@ -2352,7 +2354,7 @@ export interface HorizontalSliceSliceLeftImagePrimary {
   >;
 
   /**
-   * Heading Text Block field in *HorizontalSlice → leftImage → Primary*
+   * Heading Text Block field in *HorizontalSlice → Left Image → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -2362,7 +2364,7 @@ export interface HorizontalSliceSliceLeftImagePrimary {
   heading_text_block: prismic.RichTextField;
 
   /**
-   * image field in *HorizontalSlice → leftImage → Primary*
+   * image field in *HorizontalSlice → Left Image → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -2372,7 +2374,7 @@ export interface HorizontalSliceSliceLeftImagePrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Button Group field in *HorizontalSlice → leftImage → Primary*
+   * Button Group field in *HorizontalSlice → Left Image → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -2385,7 +2387,7 @@ export interface HorizontalSliceSliceLeftImagePrimary {
 }
 
 /**
- * leftImage variation for HorizontalSlice Slice
+ * Left Image variation for HorizontalSlice Slice
  *
  * - **API ID**: `leftImage`
  * - **Description**: Default
@@ -2398,11 +2400,11 @@ export type HorizontalSliceSliceLeftImage = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *HorizontalSlice → rightImage → Primary*
+ * Primary content in *HorizontalSlice → Right Image → Primary*
  */
 export interface HorizontalSliceSliceRightImagePrimary {
   /**
-   * Background Color field in *HorizontalSlice → rightImage → Primary*
+   * Background Color field in *HorizontalSlice → Right Image → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
@@ -2416,7 +2418,7 @@ export interface HorizontalSliceSliceRightImagePrimary {
   >;
 
   /**
-   * Heading Text Block field in *HorizontalSlice → rightImage → Primary*
+   * Heading Text Block field in *HorizontalSlice → Right Image → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -2426,7 +2428,7 @@ export interface HorizontalSliceSliceRightImagePrimary {
   heading_text_block: prismic.RichTextField;
 
   /**
-   * image field in *HorizontalSlice → rightImage → Primary*
+   * image field in *HorizontalSlice → Right Image → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -2436,7 +2438,7 @@ export interface HorizontalSliceSliceRightImagePrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Button Group field in *HorizontalSlice → rightImage → Primary*
+   * Button Group field in *HorizontalSlice → Right Image → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -2449,7 +2451,7 @@ export interface HorizontalSliceSliceRightImagePrimary {
 }
 
 /**
- * rightImage variation for HorizontalSlice Slice
+ * Right Image variation for HorizontalSlice Slice
  *
  * - **API ID**: `rightImage`
  * - **Description**: Default

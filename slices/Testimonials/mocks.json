@@ -238,7 +238,6 @@
 							[
 								"image",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxwZW9wbGV8ZW58MHx8fHwxNzIzOTQ4ODAwfDA&ixlib=rb-4.0.3&q=85&rect=864%2C0%2C3456%2C3456&w=100&h=100",
 									"alt": "shallow focus photography of woman outdoor during day",
 									"origin": {
@@ -257,6 +256,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							],

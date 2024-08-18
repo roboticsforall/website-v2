@@ -10,7 +10,7 @@ const PageHeaderBlockLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
   return (
     <BackgroundColor
       backgroundColor={
-        slice.variation === "hero5050RightAligned"
+        slice.variation === "pageHeaderBlockLeftAligned"
           ? slice.primary.background_color
           : "white"
       }

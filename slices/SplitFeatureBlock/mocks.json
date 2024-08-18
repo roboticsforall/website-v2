@@ -22,7 +22,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "3"
+									"value": "Volunteers"
 								}
 							]
 						]
@@ -43,7 +43,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "2"
+									"value": "Students"
 								}
 							]
 						]
@@ -64,7 +64,7 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Text",
-									"value": "1"
+									"value": "Curriculum"
 								}
 							]
 						]
@@ -73,8 +73,8 @@
 			},
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"value": "white",
-				"type": "Select"
+				"type": "Select",
+				"value": "secondary"
 			}
 		},
 		"items": []

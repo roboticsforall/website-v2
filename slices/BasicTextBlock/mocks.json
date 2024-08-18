@@ -5,17 +5,35 @@
 		"primary": {
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
-				"value": "white",
-				"type": "Select"
+				"type": "Select",
+				"value": "white"
 			},
 			"text_block": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
+						"type": "heading2",
+						"content": {
+							"text": "Heading 2",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Heading 3",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ea deserunt elit incididunt dolor enim ad anim et. Ea sunt id deserunt anim nisi commodo irure proident in laboris magna."
-						}
+							"text": "Ea deserunt elit incididunt dolor enim ad anim et. Ea sunt id deserunt anim nisi commodo irure proident in laboris magna.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},

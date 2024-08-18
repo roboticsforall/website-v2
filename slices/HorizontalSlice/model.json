@@ -6,7 +6,7 @@
   "variations": [
     {
       "id": "leftImage",
-      "name": "leftImage",
+      "name": "Left Image",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
@@ -87,7 +87,7 @@
     },
     {
       "id": "rightImage",
-      "name": "rightImage",
+      "name": "Right Image",
       "docURL": "...",
       "version": "initial",
       "description": "Default",

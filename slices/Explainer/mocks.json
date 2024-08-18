@@ -40,7 +40,7 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "paragraph",
+						"type": "heading2",
 						"content": {
 							"text": "Heading",
 							"spans": []

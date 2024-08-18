@@ -1,61 +1,6 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "rightImage",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"value": "swoosh",
-				"type": "Select"
-			},
-			"image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-					"width": 4272,
-					"height": 2848
-				},
-				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
-				"width": 4272,
-				"height": 2848,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"heading_text_block": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Aute aliquip ea enim consectetur aute deserunt cillum adipisicing commodo mollit qui tempor voluptate nulla anim. Reprehenderit laborum magna non sunt fugiat pariatur ipsum. Velit quis irure laborum sit minim irure enim."
-						}
-					}
-				]
-			},
-			"button_group": {
-				"__TYPE__": "GroupContentType",
-				"value": []
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "leftImage",
 		"primary": {
 			"image": {
@@ -90,7 +35,7 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "paragraph",
+						"type": "heading2",
 						"content": {
 							"text": "Heading",
 							"spans": []
@@ -158,6 +103,106 @@
 									"__TYPE__": "FieldContent",
 									"type": "Text",
 									"value": "Try out three courses now"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "rightImage",
+		"primary": {
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "gradient"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+					"width": 4272,
+					"height": 2848
+				},
+				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+				"width": 4272,
+				"height": 2848,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Heading",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute aliquip ea enim consectetur aute deserunt cillum adipisicing commodo mollit qui tempor voluptate nulla anim. Reprehenderit laborum magna non sunt fugiat pariatur ipsum. Velit quis irure laborum sit minim irure enim.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Button"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "outline"
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Button"
 								}
 							]
 						]

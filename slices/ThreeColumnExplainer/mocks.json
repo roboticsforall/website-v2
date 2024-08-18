@@ -7,9 +7,9 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "paragraph",
+						"type": "heading3",
 						"content": {
-							"text": "Hello",
+							"text": "Your contributions make a difference",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -17,7 +17,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Hello",
+							"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum. Tortor mauris libero non tellus consectetur tristique phasellus sit. Eget elit fringilla sit viverra amet mus mattis et enim.",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -36,9 +36,9 @@
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
-											"type": "paragraph",
+											"type": "heading3",
 											"content": {
-												"text": "Hello",
+												"text": "Heading",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -46,7 +46,7 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Hello",
+												"text": "Text",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -65,9 +65,9 @@
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
-											"type": "paragraph",
+											"type": "heading3",
 											"content": {
-												"text": "Hello",
+												"text": "Heading",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -75,7 +75,7 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Hello",
+												"text": "text",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -94,9 +94,9 @@
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
-											"type": "paragraph",
+											"type": "heading3",
 											"content": {
-												"text": "Hello",
+												"text": "Heading",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -104,7 +104,7 @@
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Hello",
+												"text": "Text",
 												"spans": []
 											},
 											"direction": "ltr"
@@ -119,7 +119,7 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "primary"
+				"value": "gradient"
 			}
 		},
 		"items": []

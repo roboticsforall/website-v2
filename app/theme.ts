@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import _default from "@emotion/styled";
 import { containerTheme } from "./components/Container";
+import { buttonTheme } from "./theme/ButtonTheme";
 
 export const theme = extendTheme(
   {
@@ -49,6 +50,7 @@ export const theme = extendTheme(
     },
     components: {
       Container: containerTheme,
+      Button: buttonTheme,
     },
   },
   withDefaultColorScheme({ colorScheme: "primary" })
