@@ -1,5 +1,5 @@
 "use client";
-import { Container, Show } from "@chakra-ui/react";
+import { Container, Hide, Show } from "@chakra-ui/react";
 import { GlobalNavigationDocument } from "@/prismicio-types";
 import { BackgroundColor } from "../BackgroundColor";
 import { MobileNav } from "./MobileNav";
@@ -18,9 +18,9 @@ export function Navbar({ navbar_color, navigation }: NavbarProps) {
           <Show above="md">
             <DesktopNav {...navigation} />
           </Show>
-          <Show below="md">
+          <Hide above="md">
             <MobileNav {...navigation} />
-          </Show>
+          </Hide>
         </Container>
       </BackgroundColor>
     </nav>

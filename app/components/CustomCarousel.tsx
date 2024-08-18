@@ -70,7 +70,7 @@ const CustomCarousel: React.FC<ImageSliderProps> = ({ slides }) => {
         {slides.map((slide, index) => (
           <Box
             key={index}
-            p={12}
+            p={"1.5rem"}
             boxSizing="border-box"
             height="300px"
             borderRadius="md"

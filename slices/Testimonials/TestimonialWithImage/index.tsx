@@ -68,8 +68,8 @@ const TestimonialWithImage = (
                     borderRadius={"md"}
                     padding="1.25rem"
                     width={{
-                      sm: "calc(30% - 1.5rem * 2/3)",
-                      lg: "calc(70% - 1.5rem * 2/3)",
+                      base: "100%",
+                      md: "70%",
                     }}
                   >
                     <Stack gap="1.25rem">
@@ -115,8 +115,8 @@ const TestimonialWithImage = (
               <Center pt="2.25rem">
                 <Flex
                   width={{
-                    sm: "calc(30% - 1.5rem * 2/3)",
-                    lg: "calc(60% - 1.5rem * 2/3)",
+                    base: "100%",
+                    md: "70%",
                   }}
                   justifyContent={"end"}
                 >
