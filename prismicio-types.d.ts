@@ -3013,21 +3013,21 @@ export type TeamCardsSectionSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *Testimonials → Default → Primary → testimonials*
+ * Item in *Testimonials → Testimonial - No Portraits → Primary → testimonials*
  */
 export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
   /**
-   * Description field in *Testimonials → Default → Primary → testimonials*
+   * Description field in *Testimonials → Testimonial - No Portraits → Primary → testimonials*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: testimonials.default.primary.testimonials[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  description: prismic.RichTextField;
+  description: prismic.KeyTextField;
 
   /**
-   * Name field in *Testimonials → Default → Primary → testimonials*
+   * Name field in *Testimonials → Testimonial - No Portraits → Primary → testimonials*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -3037,7 +3037,7 @@ export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
   name: prismic.KeyTextField;
 
   /**
-   * User field in *Testimonials → Default → Primary → testimonials*
+   * User field in *Testimonials → Testimonial - No Portraits → Primary → testimonials*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -3048,11 +3048,56 @@ export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
 }
 
 /**
- * Primary content in *Testimonials → Default → Primary*
+ * Item in *Testimonials → Testimonial - With Portraits → Primary → testimonials*
+ */
+export interface TestimonialsSliceTestimonialWithImagePrimaryTestimonialsItem {
+  /**
+   * Image field in *Testimonials → Testimonial - With Portraits → Primary → testimonials*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.testimonialWithImage.primary.testimonials[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *Testimonials → Testimonial - With Portraits → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.testimonialWithImage.primary.testimonials[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Name field in *Testimonials → Testimonial - With Portraits → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.testimonialWithImage.primary.testimonials[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * User field in *Testimonials → Testimonial - With Portraits → Primary → testimonials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.testimonialWithImage.primary.testimonials[].user
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  user: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Testimonials → Testimonial - No Portraits → Primary*
  */
 export interface TestimonialsSliceDefaultPrimary {
   /**
-   * Title field in *Testimonials → Default → Primary*
+   * Title field in *Testimonials → Testimonial - No Portraits → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -3062,7 +3107,7 @@ export interface TestimonialsSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * testimonials field in *Testimonials → Default → Primary*
+   * testimonials field in *Testimonials → Testimonial - No Portraits → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -3072,20 +3117,10 @@ export interface TestimonialsSliceDefaultPrimary {
   testimonials: prismic.GroupField<
     Simplify<TestimonialsSliceDefaultPrimaryTestimonialsItem>
   >;
-
-  /**
-   * Background Image field in *Testimonials → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.background_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  background_image: prismic.ImageField<never>;
 }
 
 /**
- * Default variation for Testimonials Slice
+ * Testimonial - No Portraits variation for Testimonials Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -3098,9 +3133,62 @@ export type TestimonialsSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Testimonials → Testimonial - With Portraits → Primary*
+ */
+export interface TestimonialsSliceTestimonialWithImagePrimary {
+  /**
+   * Title field in *Testimonials → Testimonial - With Portraits → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.testimonialWithImage.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * testimonials field in *Testimonials → Testimonial - With Portraits → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.testimonialWithImage.primary.testimonials[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  testimonials: prismic.GroupField<
+    Simplify<TestimonialsSliceTestimonialWithImagePrimaryTestimonialsItem>
+  >;
+
+  /**
+   * Background Image field in *Testimonials → Testimonial - With Portraits → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.testimonialWithImage.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+}
+
+/**
+ * Testimonial - With Portraits variation for Testimonials Slice
+ *
+ * - **API ID**: `testimonialWithImage`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestimonialsSliceTestimonialWithImage =
+  prismic.SharedSliceVariation<
+    "testimonialWithImage",
+    Simplify<TestimonialsSliceTestimonialWithImagePrimary>,
+    never
+  >;
+
+/**
  * Slice variation for *Testimonials*
  */
-type TestimonialsSliceVariation = TestimonialsSliceDefault;
+type TestimonialsSliceVariation =
+  | TestimonialsSliceDefault
+  | TestimonialsSliceTestimonialWithImage;
 
 /**
  * Testimonials Shared Slice
@@ -3518,8 +3606,11 @@ declare module "@prismicio/client" {
       TestimonialsSlice,
       TestimonialsSliceDefaultPrimaryTestimonialsItem,
       TestimonialsSliceDefaultPrimary,
+      TestimonialsSliceTestimonialWithImagePrimaryTestimonialsItem,
+      TestimonialsSliceTestimonialWithImagePrimary,
       TestimonialsSliceVariation,
       TestimonialsSliceDefault,
+      TestimonialsSliceTestimonialWithImage,
       ThemingSlice,
       ThemingSliceVariation,
       ThemingSliceDefault,

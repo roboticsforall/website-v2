@@ -17,24 +17,119 @@
 							[
 								"description",
 								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "“Lorem ipsum dolor sit amet consectetur. Est aliquet aliquam est venenatis feugiat mauris. Sed cras turpis sit bibendum dictumst gravida.”",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Get an unmatched integration experience that goes beyond simple data fetching. Slice Machine generates components and data models within your project's environment, enabling you to work more efficiently."
 								}
 							],
 							[
 								"name",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "differ",
+									"type": "Text",
+									"value": "John Doe"
+								}
+							],
+							[
+								"user",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Parent"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "author"
+								}
+							],
+							[
+								"user",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "user"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Get an unmatched integration experience that goes beyond simple data fetching. Slice Machine generates components and data models within your project's environment, enabling you to work more efficiently."
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "apple"
+								}
+							],
+							[
+								"user",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "parent"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Get an unmatched integration experience that goes beyond simple data fetching. Slice Machine generates components and data models within your project's environment, enabling you to work more efficiently."
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": []
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "testimonialWithImage",
+		"primary": {
+			"testimonials": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "This mode enables continuous scrolling through an unlimited number of items, providing a smooth and uninterrupted user experience."
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "case",
 									"type": "Text"
 								}
 							],
@@ -42,8 +137,143 @@
 								"user",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "barn",
+									"value": "bat",
 									"type": "Text"
+								}
+							],
+							[
+								"image",
+								{
+									"url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8cGVvcGxlfGVufDB8fHx8MTcyMzk0ODgwMHww&ixlib=rb-4.0.3&q=85&rect=1524%2C1020%2C2820%2C2820&w=100&h=100",
+									"alt": "man wearing green polo shirt",
+									"origin": {
+										"id": "6anudmpILw4",
+										"url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMXx8cGVvcGxlfGVufDB8fHx8MTcyMzk0ODgwMHww&ixlib=rb-4.0.3&q=85",
+										"width": 5760,
+										"height": 3840
+									},
+									"width": 100,
+									"height": 100,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1.3617398669570693,
+										"crop": {
+											"x": 1524,
+											"y": 1020
+										}
+									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxwZW9wbGV8ZW58MHx8fHwxNzIzOTQ4ODAwfDA&ixlib=rb-4.0.3&q=85&rect=0%2C410%2C3276%2C3276&w=100&h=100",
+									"alt": "woman wearing black crew-neck shirt",
+									"origin": {
+										"id": "3TLl_97HNJo",
+										"url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxwZW9wbGV8ZW58MHx8fHwxNzIzOTQ4ODAwfDA&ixlib=rb-4.0.3&q=85",
+										"width": 3276,
+										"height": 4096
+									},
+									"width": 100,
+									"height": 100,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 410
+										}
+									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "This mode enables continuous scrolling through an unlimited number of items, providing a smooth and uninterrupted user experience."
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Amy Weather"
+								}
+							],
+							[
+								"user",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Parent"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"description",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "This mode enables continuous scrolling through an unlimited number of items, providing a smooth and uninterrupted user experience."
+								}
+							],
+							[
+								"image",
+								{
+									"__TYPE__": "ImageContent",
+									"url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxwZW9wbGV8ZW58MHx8fHwxNzIzOTQ4ODAwfDA&ixlib=rb-4.0.3&q=85&rect=864%2C0%2C3456%2C3456&w=100&h=100",
+									"alt": "shallow focus photography of woman outdoor during day",
+									"origin": {
+										"id": "rDEOVtE7vOs",
+										"url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxwZW9wbGV8ZW58MHx8fHwxNzIzOTQ4ODAwfDA&ixlib=rb-4.0.3&q=85",
+										"width": 5184,
+										"height": 3456
+									},
+									"width": 100,
+									"height": 100,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 864,
+											"y": 0
+										}
+									},
+									"thumbnails": {}
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Kathy"
+								}
+							],
+							[
+								"user",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Volunteer"
 								}
 							]
 						]
@@ -53,13 +283,13 @@
 			"background_image": {
 				"origin": {
 					"id": "main",
-					"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
-					"width": 2747,
-					"height": 4120
+					"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+					"width": 6597,
+					"height": 4398
 				},
-				"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
-				"width": 2747,
-				"height": 4120,
+				"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+				"width": 6597,
+				"height": 4398,
 				"edit": {
 					"zoom": 1,
 					"crop": {
@@ -72,8 +302,18 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Testimonials"
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]
