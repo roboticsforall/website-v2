@@ -103,16 +103,6 @@ export interface CourseListingDocumentDataCoursesItem {
   subject: prismic.SelectField<"Programming" | "Scratch" | "Lego", "filled">;
 
   /**
-   * Grade Level field in *Course Listing → Courses*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: course_listing.courses[].grade_level
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  grade_level: prismic.SelectField<"1" | "2">;
-
-  /**
    * Minimum Grade field in *Course Listing → Courses*
    *
    * - **Field Type**: Number
@@ -141,7 +131,7 @@ export interface CourseListingDocumentDataCoursesItem {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   minimum_technology: prismic.SelectField<
-    "Computer" | "Mobile" | "Computer and Mobile"
+    "Computer" | "Mobile" | "Computer or Mobile"
   >;
 }
 

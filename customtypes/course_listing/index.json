@@ -69,14 +69,6 @@
                 "default_value": "Programming"
               }
             },
-            "grade_level": {
-              "type": "Select",
-              "config": {
-                "label": "Grade Level",
-                "placeholder": "",
-                "options": ["1", "2"]
-              }
-            },
             "minimum_grade": {
               "type": "Number",
               "config": {
@@ -96,7 +88,7 @@
               "config": {
                 "label": "Minimum Technology",
                 "placeholder": "",
-                "options": ["Computer", "Mobile", "Computer and Mobile"]
+                "options": ["Computer", "Mobile", "Computer or Mobile"]
               }
             }
           }

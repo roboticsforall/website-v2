@@ -48,7 +48,7 @@ const filterOptions: IFilterOptionType = {
     checkbox: [
       { label: "Computer", value: "Computer" },
       { label: "Mobile", value: "Mobile" },
-      { label: "Computer and Mobile", value: "Computer and Mobile" },
+      { label: "Computer or Mobile", value: "Computer or Mobile" },
     ],
   },
   grade: {
