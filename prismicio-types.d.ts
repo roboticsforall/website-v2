@@ -1353,11 +1353,11 @@ export type ColumnCardsSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *CourseListing → Default → Primary*
+ * Primary content in *CourseListing → Individual Learners → Primary*
  */
 export interface CourseListingSliceDefaultPrimary {
   /**
-   * Course Listing field in *CourseListing → Default → Primary*
+   * Course Listing field in *CourseListing → Individual Learners → Primary*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
@@ -1368,7 +1368,7 @@ export interface CourseListingSliceDefaultPrimary {
 }
 
 /**
- * Default variation for CourseListing Slice
+ * Individual Learners variation for CourseListing Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1381,9 +1381,39 @@ export type CourseListingSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *CourseListing → Schools and Partners → Primary*
+ */
+export interface CourseListingSliceSchoolsAndPartnersPrimary {
+  /**
+   * Course Listing field in *CourseListing → Schools and Partners → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.schoolsAndPartners.primary.course_listing
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  course_listing: prismic.ContentRelationshipField<"course_listing">;
+}
+
+/**
+ * Schools and Partners variation for CourseListing Slice
+ *
+ * - **API ID**: `schoolsAndPartners`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CourseListingSliceSchoolsAndPartners = prismic.SharedSliceVariation<
+  "schoolsAndPartners",
+  Simplify<CourseListingSliceSchoolsAndPartnersPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *CourseListing*
  */
-type CourseListingSliceVariation = CourseListingSliceDefault;
+type CourseListingSliceVariation =
+  | CourseListingSliceDefault
+  | CourseListingSliceSchoolsAndPartners;
 
 /**
  * CourseListing Shared Slice
@@ -3528,8 +3558,10 @@ declare module "@prismicio/client" {
       ColumnCardsSliceTwoColumn,
       CourseListingSlice,
       CourseListingSliceDefaultPrimary,
+      CourseListingSliceSchoolsAndPartnersPrimary,
       CourseListingSliceVariation,
       CourseListingSliceDefault,
+      CourseListingSliceSchoolsAndPartners,
       ExplainerSlice,
       ExplainerSliceDefaultPrimary,
       ExplainerSliceVariation,

@@ -6,7 +6,28 @@
   "variations": [
     {
       "id": "default",
-      "name": "Default",
+      "name": "Individual Learners",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "course_listing": {
+          "type": "Link",
+          "config": {
+            "label": "Course Listing",
+            "select": "document",
+            "customtypes": [
+              "course_listing"
+            ]
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "schoolsAndPartners",
+      "name": "Schools and Partners",
       "docURL": "...",
       "version": "initial",
       "description": "Default",
