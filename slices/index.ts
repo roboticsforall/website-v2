@@ -7,6 +7,7 @@ export const components = {
   column_cards: dynamic(() => import("./ColumnCards")),
   course_listing: dynamic(() => import("./CourseListing")),
   explainer: dynamic(() => import("./Explainer")),
+  faq_slice: dynamic(() => import("./FaqSlice")),
   fifty_fifty: dynamic(() => import("./FiftyFifty")),
   hero: dynamic(() => import("./Hero")),
   horizontal_slice: dynamic(() => import("./HorizontalSlice")),

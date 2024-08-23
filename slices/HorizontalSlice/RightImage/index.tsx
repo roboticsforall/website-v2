@@ -27,6 +27,7 @@ const RightImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
             <Box
               as={PrismicNextImage}
               borderRadius={"md"}
+              style={{ objectFit: "cover" }}
               field={slice.primary.image}
             />
           </GridItem>

@@ -1507,6 +1507,102 @@ export type ExplainerSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *FaqSlice → Default → Primary → Accordion*
+ */
+export interface FaqSliceSliceDefaultPrimaryAccordionItem {
+  /**
+   * Heading field in *FaqSlice → Default → Primary → Accordion*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_slice.default.primary.accordion[].heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *FaqSlice → Default → Primary → Accordion*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_slice.default.primary.accordion[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *FaqSlice → Default → Primary*
+ */
+export interface FaqSliceSliceDefaultPrimary {
+  /**
+   * BackgroundColor field in *FaqSlice → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: white
+   * - **API ID Path**: faq_slice.default.primary.backgroundcolor
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  backgroundcolor: prismic.SelectField<
+    "white" | "primary" | "secondary" | "gradient" | "swoosh",
+    "filled"
+  >;
+
+  /**
+   * Heading Text Block field in *FaqSlice → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_slice.default.primary.heading_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading_text_block: prismic.RichTextField;
+
+  /**
+   * Accordion field in *FaqSlice → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_slice.default.primary.accordion[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  accordion: prismic.GroupField<
+    Simplify<FaqSliceSliceDefaultPrimaryAccordionItem>
+  >;
+}
+
+/**
+ * Default variation for FaqSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FaqSliceSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FaqSlice*
+ */
+type FaqSliceSliceVariation = FaqSliceSliceDefault;
+
+/**
+ * FaqSlice Shared Slice
+ *
+ * - **API ID**: `faq_slice`
+ * - **Description**: FaqSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSliceSlice = prismic.SharedSlice<
+  "faq_slice",
+  FaqSliceSliceVariation
+>;
+
+/**
  * Item in *FiftyFifty → FiftyFiftyLeftAligned → Primary → Button Group*
  */
 export interface FiftyFiftySliceDefaultPrimaryButtonGroupItem {
@@ -3566,6 +3662,11 @@ declare module "@prismicio/client" {
       ExplainerSliceDefaultPrimary,
       ExplainerSliceVariation,
       ExplainerSliceDefault,
+      FaqSliceSlice,
+      FaqSliceSliceDefaultPrimaryAccordionItem,
+      FaqSliceSliceDefaultPrimary,
+      FaqSliceSliceVariation,
+      FaqSliceSliceDefault,
       FiftyFiftySlice,
       FiftyFiftySliceDefaultPrimaryButtonGroupItem,
       FiftyFiftySliceDefaultPrimary,
