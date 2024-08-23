@@ -6,7 +6,7 @@
 			"backgroundcolor": {
 				"__TYPE__": "FieldContent",
 				"type": "Select",
-				"value": "gradient"
+				"value": "white"
 			},
 			"heading_text_block": {
 				"__TYPE__": "StructuredTextContent",
