@@ -1,0 +1,66 @@
+{
+  "id": "faq_slice",
+  "type": "SharedSlice",
+  "name": "FaqSlice",
+  "description": "FaqSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "backgroundcolor": {
+          "type": "Select",
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "primary",
+              "secondary",
+              "gradient",
+              "swoosh"
+            ],
+            "default_value": "white"
+          }
+        },
+        "heading_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
+          }
+        },
+        "accordion": {
+          "type": "Group",
+          "config": {
+            "label": "Accordion",
+            "repeat": true,
+            "fields": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
