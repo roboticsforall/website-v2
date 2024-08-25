@@ -19,10 +19,7 @@ const Hero5050LeftAligned = (slice: Content.HeroSlice): JSX.Element => {
       <SimpleGrid columns={{ base: 1, md: 2 }}>
         <Box>
           {slice.variation === "hero5050LeftAligned" && (
-            <PrismicNextImage
-              style={{ width: "100%" }}
-              field={slice.primary.image}
-            />
+            <PrismicNextImage field={slice.primary.image} />
           )}
         </Box>
 

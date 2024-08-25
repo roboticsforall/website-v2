@@ -34,10 +34,7 @@ const Hero5050RightAligned = (slice: Content.HeroSlice): JSX.Element => {
         <GridItem gridArea={"image"}>
           <Box>
             {slice.variation === "hero5050RightAligned" && (
-              <PrismicNextImage
-                style={{ width: "100%" }}
-                field={slice.primary.image}
-              />
+              <PrismicNextImage field={slice.primary.image} />
             )}
           </Box>
         </GridItem>

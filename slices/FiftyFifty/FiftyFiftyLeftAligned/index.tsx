@@ -11,10 +11,7 @@ const FiftyFiftyLeftAligned = (slice: Content.FiftyFiftySlice): JSX.Element => {
     <BackgroundColor backgroundColor={slice.primary.background_color}>
       <SimpleGrid columns={{ base: 1, md: 2 }}>
         <Box>
-          <PrismicNextImage
-            style={{ width: "100%" }}
-            field={slice.primary.image}
-          />
+          <PrismicNextImage field={slice.primary.image} />
         </Box>
 
         <Stack justifyContent={"center"}>
