@@ -103,16 +103,6 @@ export interface CourseListingDocumentDataCoursesItem {
   subject: prismic.SelectField<"Programming" | "Scratch" | "Lego", "filled">;
 
   /**
-   * Grade Level field in *Course Listing → Courses*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: course_listing.courses[].grade_level
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  grade_level: prismic.SelectField<"1" | "2">;
-
-  /**
    * Minimum Grade field in *Course Listing → Courses*
    *
    * - **Field Type**: Number
@@ -141,7 +131,7 @@ export interface CourseListingDocumentDataCoursesItem {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   minimum_technology: prismic.SelectField<
-    "Computer" | "Mobile" | "Computer and Mobile"
+    "Computer" | "Mobile" | "Computer or Mobile"
   >;
 }
 
@@ -1468,14 +1458,14 @@ export interface ExplainerSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Heading Text Block field in *Explainer → Default → Primary*
+   * Description field in *Explainer → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: explainer.default.primary.heading_text_block
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: explainer.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  heading_text_block: prismic.RichTextField;
+  description: prismic.KeyTextField;
 }
 
 /**

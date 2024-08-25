@@ -25,6 +25,8 @@ import {
   ArrowForwardIcon,
   ChevronRightIcon,
   HamburgerIcon,
+  TriangleDownIcon,
+  TriangleUpIcon,
 } from "@chakra-ui/icons";
 
 export function MobileNav(navigation: GlobalNavigationDocument<string>) {
@@ -71,26 +73,37 @@ export function MobileNav(navigation: GlobalNavigationDocument<string>) {
               {navigation.data.slices.map((navItem, i) =>
                 navItem.variation == "default" ? (
                   <AccordionItem key={i}>
-                    <AccordionButton _expanded={{ fontWeight: "bold" }}>
-                      <Box flex="1" textAlign={"left"}>
-                        <Text>{navItem.primary.name}</Text>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                    {navItem.primary.child_navigation.map((childNavItem, j) => (
-                      <AccordionPanel pb={4} key={j}>
-                        <Link
-                          onClick={onClose}
-                          as={PrismicNextLink}
-                          textAlign={"left"}
-                          field={childNavItem.link}
-                        >
-                          <Box>
-                            <Text>{childNavItem.name}</Text>
+                    {({ isExpanded }: { isExpanded: Boolean }) => (
+                      <>
+                        <AccordionButton _expanded={{ fontWeight: "bold" }}>
+                          <Box flex="1" textAlign={"left"}>
+                            <Text>{navItem.primary.name}</Text>
                           </Box>
-                        </Link>
-                      </AccordionPanel>
-                    ))}
+                          {isExpanded ? (
+                            <TriangleUpIcon ml={1} color={"primary.900"} />
+                          ) : (
+                            <TriangleDownIcon ml={1} color={"primary.900"} />
+                          )}
+                        </AccordionButton>
+
+                        {navItem.primary.child_navigation.map(
+                          (childNavItem, j) => (
+                            <AccordionPanel pb={4} key={j}>
+                              <Link
+                                onClick={onClose}
+                                as={PrismicNextLink}
+                                textAlign={"left"}
+                                field={childNavItem.link}
+                              >
+                                <Box>
+                                  <Text>{childNavItem.name}</Text>
+                                </Box>
+                              </Link>
+                            </AccordionPanel>
+                          )
+                        )}
+                      </>
+                    )}
                   </AccordionItem>
                 ) : (
                   <AccordionItem key={i}>

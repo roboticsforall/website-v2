@@ -42,13 +42,11 @@
             "thumbnails": []
           }
         },
-        "heading_text_block": {
-          "type": "StructuredText",
+        "description": {
+          "type": "Text",
           "config": {
-            "label": "Heading Text Block",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,heading2"
+            "label": "Description",
+            "placeholder": ""
           }
         }
       },
