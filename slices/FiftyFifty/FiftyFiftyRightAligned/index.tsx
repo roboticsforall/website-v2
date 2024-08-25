@@ -26,7 +26,10 @@ const FiftyFiftyRightAligned = (
         </GridItem>
         <GridItem gridArea={"image"}>
           <Box>
-            <PrismicNextImage field={slice.primary.image} />
+            <PrismicNextImage
+              style={{ width: "100%" }}
+              field={slice.primary.image}
+            />
           </Box>
         </GridItem>
       </Grid>

@@ -15,6 +15,7 @@ const LeftImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
           <Box
             as={PrismicNextImage}
             borderRadius={"md"}
+            style={{ width: "100%" }}
             field={slice.primary.image}
           />
           <Stack justifyContent={"center"}>
