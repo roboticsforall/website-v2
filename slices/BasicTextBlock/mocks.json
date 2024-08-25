@@ -12,28 +12,10 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading2",
-						"content": {
-							"text": "Heading 2",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "heading3",
-						"content": {
-							"text": "Heading 3",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ea deserunt elit incididunt dolor enim ad anim et. Ea sunt id deserunt anim nisi commodo irure proident in laboris magna.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Irure excepteur veniam aute do Lorem. Est est ad mollit eu minim irure dolore et."
+						}
 					}
 				]
 			},
@@ -115,28 +97,10 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading2",
-						"content": {
-							"text": "Summer Enrollment Now Open!!!",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "heading3",
-						"content": {
-							"text": "Check out below to enroll in a class",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
 						"type": "paragraph",
 						"content": {
-							"text": "Elit commodo sint id cillum laboris ex sit amet aliqua. Velit esse aute ea cupidatat commodo.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Exercitation exercitation aliquip irure irure anim consequat do incididunt exercitation est sunt ex cillum."
+						}
 					}
 				]
 			},

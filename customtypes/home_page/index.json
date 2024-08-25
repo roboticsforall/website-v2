@@ -20,6 +20,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "faq_slice": {
+              "type": "SharedSlice"
+            },
             "icon_carousel": {
               "type": "SharedSlice"
             },

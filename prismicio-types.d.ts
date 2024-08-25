@@ -294,6 +294,7 @@ export type GlobalNavigationDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | FaqSliceSlice
   | IconCarouselSlice
   | TimelineSlice
   | TestimonialsSlice
@@ -385,6 +386,7 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | FaqSliceSlice
   | IconCarouselSlice
   | TimelineSlice
   | NumberedCardSectionSlice
