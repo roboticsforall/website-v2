@@ -1456,14 +1456,14 @@ export interface ExplainerSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Heading Text Block field in *Explainer → Default → Primary*
+   * Description field in *Explainer → Default → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: explainer.default.primary.heading_text_block
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: explainer.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  heading_text_block: prismic.RichTextField;
+  description: prismic.KeyTextField;
 }
 
 /**

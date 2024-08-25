@@ -1,5 +1,5 @@
 "use client";
-import { Flex, Center } from "@chakra-ui/react";
+import { Flex, Center, Text, Container } from "@chakra-ui/react";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "../../app/components/CustomHeading";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
@@ -35,7 +35,7 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
               </CustomHeading>
               <PrismicNextImage field={slice.primary.image} />
             </Center>
-            <TextBlock flex={2} textBlock={slice.primary.heading_text_block} />
+            <Text flex={2}>{slice.primary.description}</Text>
           </Flex>
         </ContainerWrapper>
       </BackgroundColor>

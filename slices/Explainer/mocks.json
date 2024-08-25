@@ -36,26 +36,10 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"heading_text_block": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Heading",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Voluptate velit cupidatat id nostrud eu consectetur laboris.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
+			"description": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Robotics For All provides free STEM education to students of all backgrounds, particularly students from underserved communities. We aim to inspire children to pursue careers in STEM later in their lives. We support student volunteers to teach our classes and engage with their local communities.\n\nAt Robotics For All, we believe in a future where all students are able to access equitable educational opportunities in STEM, regardless of their background. The recent pandemic has only exacerbated the already wide opportunity gap in the United States, providing greater need for action."
 			}
 		},
 		"items": []
