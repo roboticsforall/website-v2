@@ -1349,6 +1349,16 @@ export type ColumnCardsSlice = prismic.SharedSlice<
  */
 export interface CourseListingSliceDefaultPrimary {
   /**
+   * Heading Text Block field in *CourseListing → Individual Learners → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.default.primary.heading_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading_text_block: prismic.RichTextField;
+
+  /**
    * Course Listing field in *CourseListing → Individual Learners → Primary*
    *
    * - **Field Type**: Content Relationship
@@ -1376,6 +1386,16 @@ export type CourseListingSliceDefault = prismic.SharedSliceVariation<
  * Primary content in *CourseListing → Schools and Partners → Primary*
  */
 export interface CourseListingSliceSchoolsAndPartnersPrimary {
+  /**
+   * Heading Text Block field in *CourseListing → Schools and Partners → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.schoolsAndPartners.primary.heading_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading_text_block: prismic.RichTextField;
+
   /**
    * Course Listing field in *CourseListing → Schools and Partners → Primary*
    *
@@ -1438,16 +1458,6 @@ export interface ExplainerSliceDefaultPrimary {
   >;
 
   /**
-   * Title field in *Explainer → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: explainer.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
    * Image field in *Explainer → Default → Primary*
    *
    * - **Field Type**: Image
@@ -1456,6 +1466,16 @@ export interface ExplainerSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Explainer → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: explainer.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
 
   /**
    * Description field in *Explainer → Default → Primary*
@@ -1499,11 +1519,11 @@ export type ExplainerSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *FaqSlice → Default → Primary → Accordion*
+ * Item in *Faq → Default → Primary → Accordion*
  */
 export interface FaqSliceSliceDefaultPrimaryAccordionItem {
   /**
-   * Heading field in *FaqSlice → Default → Primary → Accordion*
+   * Heading field in *Faq → Default → Primary → Accordion*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1513,7 +1533,7 @@ export interface FaqSliceSliceDefaultPrimaryAccordionItem {
   heading: prismic.KeyTextField;
 
   /**
-   * Description field in *FaqSlice → Default → Primary → Accordion*
+   * Description field in *Faq → Default → Primary → Accordion*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1524,11 +1544,11 @@ export interface FaqSliceSliceDefaultPrimaryAccordionItem {
 }
 
 /**
- * Primary content in *FaqSlice → Default → Primary*
+ * Primary content in *Faq → Default → Primary*
  */
 export interface FaqSliceSliceDefaultPrimary {
   /**
-   * BackgroundColor field in *FaqSlice → Default → Primary*
+   * BackgroundColor field in *Faq → Default → Primary*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
@@ -1542,7 +1562,7 @@ export interface FaqSliceSliceDefaultPrimary {
   >;
 
   /**
-   * Heading Text Block field in *FaqSlice → Default → Primary*
+   * Heading Text Block field in *Faq → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -1552,7 +1572,7 @@ export interface FaqSliceSliceDefaultPrimary {
   heading_text_block: prismic.RichTextField;
 
   /**
-   * Accordion field in *FaqSlice → Default → Primary*
+   * Accordion field in *Faq → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -1565,7 +1585,7 @@ export interface FaqSliceSliceDefaultPrimary {
 }
 
 /**
- * Default variation for FaqSlice Slice
+ * Default variation for Faq Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1578,12 +1598,12 @@ export type FaqSliceSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *FaqSlice*
+ * Slice variation for *Faq*
  */
 type FaqSliceSliceVariation = FaqSliceSliceDefault;
 
 /**
- * FaqSlice Shared Slice
+ * Faq Shared Slice
  *
  * - **API ID**: `faq_slice`
  * - **Description**: FaqSlice

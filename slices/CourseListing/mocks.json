@@ -9,6 +9,17 @@
 					"__TYPE__": "DocumentLink",
 					"id": "mock_document_id"
 				}
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo esse ullamco sint ea ullamco reprehenderit amet do pariatur consectetur reprehenderit ex culpa dolor ea. Culpa laboris et nulla veniam consequat commodo est laboris."
+						}
+					}
+				]
 			}
 		},
 		"items": []
@@ -23,6 +34,17 @@
 					"__TYPE__": "DocumentLink",
 					"id": "mock_document_id"
 				}
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Et ipsum non quis commodo exercitation et incididunt. Quis officia nulla amet Lorem amet laboris deserunt id labore elit est qui commodo commodo. Sunt dolore cupidatat aliqua excepteur sunt in."
+						}
+					}
+				]
 			}
 		},
 		"items": [

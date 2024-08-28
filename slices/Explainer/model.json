@@ -27,19 +27,19 @@
             "default_value": "white"
           }
         },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
         "image": {
           "type": "Image",
           "config": {
             "label": "Image",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
           }
         },
         "description": {
