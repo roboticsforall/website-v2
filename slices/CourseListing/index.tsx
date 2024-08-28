@@ -39,11 +39,13 @@ const CourseList = ({ slice }: CourseListingProps): JSX.Element => {
     >
       {slice.variation == "schoolsAndPartners" && (
         <ForSchoolsAndPartnersCourseListing
+          heading_text_block={slice.primary.heading_text_block}
           course_listing={slice.primary.course_listing}
         />
       )}
       {slice.variation == "default" && (
         <IndividualLearnersCourseListing
+          heading_text_block={slice.primary.heading_text_block}
           course_listing={slice.primary.course_listing}
         />
       )}

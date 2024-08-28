@@ -12,6 +12,15 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "heading_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading2"
+          }
+        },
         "course_listing": {
           "type": "Link",
           "config": {
@@ -33,6 +42,15 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "heading_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading2"
+          }
+        },
         "course_listing": {
           "type": "Link",
           "config": {

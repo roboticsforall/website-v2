@@ -1,7 +1,7 @@
 {
   "id": "faq_slice",
   "type": "SharedSlice",
-  "name": "FaqSlice",
+  "name": "Faq",
   "description": "FaqSlice",
   "variations": [
     {

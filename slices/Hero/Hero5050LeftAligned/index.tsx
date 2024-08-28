@@ -1,6 +1,6 @@
 "use client";
 import { Content } from "@prismicio/client";
-import { Stack, SimpleGrid, Box } from "@chakra-ui/react";
+import { Stack, SimpleGrid, Box, Flex } from "@chakra-ui/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
@@ -17,11 +17,11 @@ const Hero5050LeftAligned = (slice: Content.HeroSlice): JSX.Element => {
       }
     >
       <SimpleGrid columns={{ base: 1, md: 2 }}>
-        <Box>
+        <Flex alignItems="center">
           {slice.variation === "hero5050LeftAligned" && (
             <PrismicNextImage field={slice.primary.image} />
           )}
-        </Box>
+        </Flex>
 
         <Stack justifyContent={"center"}>
           <ContainerWrapper>

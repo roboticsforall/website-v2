@@ -14,7 +14,7 @@ export const TextBlock = ({
 }: ITextBlock & StackProps): JSX.Element => {
   return (
     <>
-      {asText(textBlock).trim().length != 0 && (
+      {textBlock && asText(textBlock).trim().length != 0 && (
         <Stack maxW="70ch" {...flexProps} gap={"1.25rem"}>
           <PrismicRichText
             field={textBlock}
@@ -37,7 +37,9 @@ export const TextBlock = ({
               heading6: ({ children }) => (
                 <CustomHeading as="h6">{children}</CustomHeading>
               ),
-              paragraph: ({ children }) => <Text>{children}</Text>,
+              paragraph: ({ children }) => (
+                <Text fontSize="lg">{children}</Text>
+              ),
             }}
           />
         </Stack>
