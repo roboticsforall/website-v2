@@ -286,7 +286,7 @@ const IndividualLearnersCourseListing = ({
                           width={"150"}
                           height={"150"}
                           field={item.image}
-                          style={{padding:"15px"}}
+                          style={{padding:"12px"}}
                         />
                       </Box>
                       <Stack gap={"1rem"} py={3} flex={1} textAlign={"start"}>
