@@ -45,31 +45,6 @@
           "select": null
         }
       },
-      "social_links": {
-        "type": "Group",
-        "config": {
-          "label": "Social_Links",
-          "repeat": true,
-          "fields": {
-            "icon": {
-              "type": "Image",
-              "config": {
-                "label": "Icon",
-                "constraint": {},
-                "thumbnails": []
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null
-              }
-            }
-          }
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
