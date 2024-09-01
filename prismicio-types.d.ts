@@ -277,7 +277,7 @@ interface FooterNavigationDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type FooterNavigationDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
+  prismic.PrismicDocumentWithUID<
     Simplify<FooterNavigationDocumentData>,
     "footer_navigation",
     Lang

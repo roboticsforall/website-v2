@@ -5,7 +5,7 @@ import { Footer } from "./Footer";
 export async function FooterWrapper() {
   const client = createClient();
   const footer = await client
-    .getSingle("global_navigation")
+    .getSingle("footer_navigation")
     .catch(() => notFound());
 
   return <Footer footer={footer} />;
