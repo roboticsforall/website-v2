@@ -168,29 +168,120 @@ export type CourseListingDocument<Lang extends string = string> =
   >;
 
 /**
- * Item in *Global Navigation → Social_Links*
+ * Item in *Footer Navigation → Social_Links*
  */
-export interface GlobalNavigationDocumentDataSocialLinksItem {
+export interface FooterNavigationDocumentDataSocialLinksItem {
   /**
-   * Icon field in *Global Navigation → Social_Links*
+   * Icon field in *Footer Navigation → Social_Links*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: global_navigation.social_links[].icon
+   * - **API ID Path**: footer_navigation.social_links[].icon
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   icon: prismic.ImageField<never>;
 
   /**
-   * Link field in *Global Navigation → Social_Links*
+   * Link field in *Footer Navigation → Social_Links*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: global_navigation.social_links[].link
+   * - **API ID Path**: footer_navigation.social_links[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
 }
+
+type FooterNavigationDocumentDataSlicesSlice = NavigationSlice;
+
+/**
+ * Content for Footer Navigation documents
+ */
+interface FooterNavigationDocumentData {
+  /**
+   * Company Name field in *Footer Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_navigation.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Description field in *Footer Navigation*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_navigation.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Company Logo field in *Footer Navigation*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_navigation.company_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  company_logo: prismic.ImageField<never>;
+
+  /**
+   * Donate Link field in *Footer Navigation*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_navigation.donate_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  donate_link: prismic.LinkField;
+
+  /**
+   * Social_Links field in *Footer Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_navigation.social_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  social_links: prismic.GroupField<
+    Simplify<FooterNavigationDocumentDataSocialLinksItem>
+  >;
+
+  /**
+   * Slice Zone field in *Footer Navigation*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer_navigation.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<FooterNavigationDocumentDataSlicesSlice>;
+}
+
+/**
+ * Footer Navigation document from Prismic
+ *
+ * - **API ID**: `footer_navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterNavigationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<FooterNavigationDocumentData>,
+    "footer_navigation",
+    Lang
+  >;
 
 type GlobalNavigationDocumentDataSlicesSlice = NavigationSlice;
 
@@ -241,19 +332,6 @@ interface GlobalNavigationDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   donate_link: prismic.LinkField;
-
-  /**
-   * Social_Links field in *Global Navigation*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: global_navigation.social_links[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  social_links: prismic.GroupField<
-    Simplify<GlobalNavigationDocumentDataSocialLinksItem>
-  >;
 
   /**
    * Slice Zone field in *Global Navigation*
@@ -477,6 +555,7 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | CategoryDocument
   | CourseListingDocument
+  | FooterNavigationDocument
   | GlobalNavigationDocument
   | HomePageDocument
   | PageDocument;
@@ -3631,9 +3710,12 @@ declare module "@prismicio/client" {
       CourseListingDocument,
       CourseListingDocumentData,
       CourseListingDocumentDataCoursesItem,
+      FooterNavigationDocument,
+      FooterNavigationDocumentData,
+      FooterNavigationDocumentDataSocialLinksItem,
+      FooterNavigationDocumentDataSlicesSlice,
       GlobalNavigationDocument,
       GlobalNavigationDocumentData,
-      GlobalNavigationDocumentDataSocialLinksItem,
       GlobalNavigationDocumentDataSlicesSlice,
       HomePageDocument,
       HomePageDocumentData,

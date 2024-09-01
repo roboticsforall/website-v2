@@ -13,15 +13,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { GlobalNavigationDocument } from "@/prismicio-types";
-import { BackgroundColor } from "../BackgroundColor";
+import { FooterNavigationDocument } from "@/prismicio-types";
 import { CustomHeading } from "../CustomHeading";
 import { PrismicRichText } from "@prismicio/react";
 import { ContainerWrapper } from "../ContainerWrapper";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 interface FooterProps {
-  footer: GlobalNavigationDocument<string>;
+  footer: FooterNavigationDocument<string>;
 }
 
 export function Footer({ footer }: FooterProps) {
@@ -34,7 +33,7 @@ export function Footer({ footer }: FooterProps) {
               <Flex align="center">
                 <Box width="51px" height="51px">
                   <Link as={PrismicNextLink} href={"/"}>
-                    <PrismicNextImage field={footer.data.logo} />
+                    <PrismicNextImage field={footer.data.company_logo} />
                   </Link>
                 </Box>
                 <CustomHeading as="h4" ml={2}>
