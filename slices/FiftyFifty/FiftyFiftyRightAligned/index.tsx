@@ -19,13 +19,14 @@ const FiftyFiftyRightAligned = (
         <GridItem gridArea={"content"}>
           <ContainerWrapper>
             <TextBlockBottomButtonGroup
+              
               textBlock={slice.primary.text_block}
               button_group={slice.primary.button_group}
             />
           </ContainerWrapper>
         </GridItem>
         <GridItem gridArea={"image"}>
-          <Box>
+          <Box >
             <PrismicNextImage field={slice.primary.image} />
           </Box>
         </GridItem>
