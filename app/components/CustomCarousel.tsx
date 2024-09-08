@@ -5,9 +5,11 @@ import { Box, Image, IconButton } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { PrismicNextImage, PrismicNextImageProps } from "@prismicio/next";
+import { ImageField } from "@prismicio/client";
 
 interface SlideData {
-  icon: string;
+  icon: ImageField;
 }
 
 interface ImageSliderProps {
@@ -72,17 +74,15 @@ const CustomCarousel: React.FC<ImageSliderProps> = ({ slides }) => {
             key={index}
             p={"1.5rem"}
             boxSizing="border-box"
-            maxHeight="300px"
+            height="100%"
             borderRadius="md"
             display="flex"
             alignItems="center"
             justifyContent="center"
           >
-            <Image
-              src={slide.icon}
-              alt={`Slide ${index}`}
-              width="100%"
-              borderRadius="md"
+            <PrismicNextImage
+              field={slide.icon}
+              style={{ borderRadius: "md" }}
             />
           </Box>
         ))}
