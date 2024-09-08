@@ -17,7 +17,7 @@ export type IconCarouselProps = SliceComponentProps<Content.IconCarouselSlice>;
  */
 const IconCarousel = ({ slice }: IconCarouselProps): JSX.Element => {
   const slideData = slice.primary.icons.map((item) => ({
-    icon: item.icon.url || "",
+    icon: item.icon,
   }));
 
   return (
