@@ -198,6 +198,27 @@
 				"__TYPE__": "FieldContent",
 				"type": "Select",
 				"value": "white"
+			},
+			"heading_text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Heading",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco in ipsum esse dolore ullamco magna dolor ut ut. Consequat aliqua irure nostrud fugiat mollit exercitation cupidatat ipsum nostrud elit excepteur Lorem.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
 			}
 		},
 		"items": []

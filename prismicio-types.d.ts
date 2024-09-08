@@ -2733,6 +2733,16 @@ export interface IconCarouselSliceDefaultPrimary {
   >;
 
   /**
+   * Heading Text Block field in *IconCarousel → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_carousel.default.primary.heading_text_block
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading_text_block: prismic.RichTextField;
+
+  /**
    * Icons field in *IconCarousel → Default → Primary*
    *
    * - **Field Type**: Group
