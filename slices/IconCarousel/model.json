@@ -27,6 +27,15 @@
             "default_value": "white"
           }
         },
+        "heading_text_block": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading Text Block",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,paragraph"
+          }
+        },
         "icons": {
           "type": "Group",
           "config": {

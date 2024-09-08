@@ -238,7 +238,7 @@ const IndividualLearnersCourseListing = ({
                           width={{ base: "100%", md: "60%" }}
                         >
                           <SliderMark value={0} mt="2" fontSize="sm">
-                            0
+                            K
                           </SliderMark>
                           <SliderMark value={6} mt="2" fontSize="sm">
                             6
@@ -286,6 +286,7 @@ const IndividualLearnersCourseListing = ({
                           width={"150"}
                           height={"150"}
                           field={item.image}
+                          style={{ padding: "12px" }}
                         />
                       </Box>
                       <Stack gap={"1rem"} py={3} flex={1} textAlign={"start"}>

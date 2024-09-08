@@ -82,8 +82,6 @@ const CustomCarousel: React.FC<ImageSliderProps> = ({ slides }) => {
               src={slide.icon}
               alt={`Slide ${index}`}
               width="100%"
-              height="100%"
-              objectFit="cover"
               borderRadius="md"
             />
           </Box>
