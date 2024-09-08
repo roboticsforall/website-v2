@@ -72,7 +72,7 @@ const CustomCarousel: React.FC<ImageSliderProps> = ({ slides }) => {
             key={index}
             p={"1.5rem"}
             boxSizing="border-box"
-            height="300px"
+            maxHeight="300px"
             borderRadius="md"
             display="flex"
             alignItems="center"
