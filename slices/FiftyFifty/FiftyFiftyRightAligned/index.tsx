@@ -16,7 +16,7 @@ const FiftyFiftyRightAligned = (
         templateAreas={{ base: `"image" "content"`, md: `"content image"` }}
         alignItems={"center"}
       >
-        <GridItem gridArea={"content"} pl={'2.5rem'}>
+        <GridItem gridArea={"content"} pl={'2rem'}>
           <ContainerWrapper>
             <TextBlockBottomButtonGroup
               
