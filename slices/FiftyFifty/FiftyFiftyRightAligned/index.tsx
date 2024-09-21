@@ -16,16 +16,17 @@ const FiftyFiftyRightAligned = (
         templateAreas={{ base: `"image" "content"`, md: `"content image"` }}
         alignItems={"center"}
       >
-        <GridItem gridArea={"content"}>
+        <GridItem gridArea={"content"} pl={'2rem'}>
           <ContainerWrapper>
             <TextBlockBottomButtonGroup
+              
               textBlock={slice.primary.text_block}
               button_group={slice.primary.button_group}
             />
           </ContainerWrapper>
         </GridItem>
         <GridItem gridArea={"image"}>
-          <Box>
+          <Box >
             <PrismicNextImage field={slice.primary.image} />
           </Box>
         </GridItem>
