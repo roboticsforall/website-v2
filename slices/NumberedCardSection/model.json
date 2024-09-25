@@ -79,11 +79,12 @@
                   "default_value": "solid"
                 }
               },
-              "button": {
+              "button_link": {
                 "type": "Link",
                 "config": {
                   "label": "Button",
                   "placeholder": "",
+                  "allowTargetBlank": false,
                   "select": null
                 }
               },

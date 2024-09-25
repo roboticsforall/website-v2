@@ -155,6 +155,16 @@
 									"type": "Text",
 									"value": "Button"
 								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
 							]
 						]
 					},
@@ -175,6 +185,16 @@
 									"__TYPE__": "FieldContent",
 									"type": "Select",
 									"value": "outline"
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
 								}
 							]
 						]

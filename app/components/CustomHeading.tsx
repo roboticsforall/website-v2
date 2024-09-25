@@ -12,7 +12,7 @@ export const CustomHeading = ({
   switch (headingProps.as) {
     case "h1": {
       return (
-        <Heading {...headingProps} size="3xl">
+        <Heading {...headingProps} size={{ base: "2xl", lg: "3xl" }}>
           {children}
         </Heading>
       );

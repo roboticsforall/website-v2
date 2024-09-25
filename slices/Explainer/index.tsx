@@ -35,7 +35,9 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
               </CustomHeading>
               <PrismicNextImage field={slice.primary.image} />
             </Center>
-            <Text flex={2}>{slice.primary.description}</Text>
+            <Text fontSize="lg" flex={2}>
+              {slice.primary.description}
+            </Text>
           </Flex>
         </ContainerWrapper>
       </BackgroundColor>

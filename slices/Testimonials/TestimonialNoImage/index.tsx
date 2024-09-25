@@ -48,7 +48,7 @@ const TestimonialNoImage = (slice: Content.TestimonialsSlice): JSX.Element => {
     >
       <Box className={styles.backgroundImage}>
         <ContainerWrapper overflow={"hidden"}>
-          <CustomHeading as="h3" mb={"2.5rem"}>
+          <CustomHeading as="h2" mb={"2.5rem"}>
             {slice.primary.title}
           </CustomHeading>
           <Flex
