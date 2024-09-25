@@ -7,20 +7,10 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading3",
-						"content": {
-							"text": "Your contributions make a difference",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
 						"type": "paragraph",
 						"content": {
-							"text": "Lorem ipsum dolor sit amet consectetur. Ullamcorper volutpat vel porta sed condimentum. Tortor mauris libero non tellus consectetur tristique phasellus sit. Eget elit fringilla sit viverra amet mus mattis et enim.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Irure tempor Lorem laborum dolor ipsum labore."
+						}
 					}
 				]
 			},

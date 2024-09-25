@@ -33,7 +33,7 @@
             "label": "Heading Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading2,paragraph"
+            "multi": "paragraph,heading2,strong,list-item,o-list-item"
           }
         },
         "image": {
@@ -114,7 +114,7 @@
             "label": "Heading Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading2,paragraph"
+            "multi": "paragraph,heading2,strong,list-item,o-list-item"
           }
         },
         "image": {

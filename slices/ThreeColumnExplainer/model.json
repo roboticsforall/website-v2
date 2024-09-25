@@ -33,7 +33,7 @@
             "label": "Heading Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading3,paragraph"
+            "multi": "paragraph,heading2"
           }
         },
         "multi_column_explainer": {

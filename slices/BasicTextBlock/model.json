@@ -33,7 +33,7 @@
             "label": "Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,heading2,heading3,list-item,o-list-item"
+            "multi": "paragraph,heading2,heading3,list-item,o-list-item,strong"
           }
         },
         "button_group": {
@@ -107,7 +107,7 @@
             "label": "Text Block",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,heading2,heading3,list-item,o-list-item"
+            "multi": "paragraph,heading2,heading3,list-item,o-list-item,strong"
           }
         },
         "button_group": {

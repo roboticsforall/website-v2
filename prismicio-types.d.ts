@@ -2950,10 +2950,10 @@ export interface NumberedCardSectionSliceDefaultPrimaryButtonGroupItem {
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button
+   * - **API ID Path**: numbered_card_section.default.primary.button_group[].button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button: prismic.LinkField;
+  button_link: prismic.LinkField;
 
   /**
    * Button Text field in *NumberedCardSection → Default → Primary → Button Group*

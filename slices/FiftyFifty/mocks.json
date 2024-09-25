@@ -1,103 +1,6 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "fiftyFiftyRightAligned",
-		"primary": {
-			"background_color": {
-				"__TYPE__": "FieldContent",
-				"value": "white",
-				"type": "Select"
-			},
-			"image": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
-					"width": 5848,
-					"height": 3899
-				},
-				"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
-				"width": 5848,
-				"height": 3899,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"text_block": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Heading",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Fugiat deserunt officia ut non elit incididunt aliqua culpa ullamco ut esse. Mollit officia laborum dolor et ad non aute velit cupidatat dolor ea laborum voluptate officia culpa. Anim ut eiusmod eiusmod non duis laborum ullamco incididunt irure ex qui.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
-			"button_group": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"button_link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
-									}
-								}
-							],
-							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "having",
-									"type": "Text"
-								}
-							],
-							[
-								"button_variation",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "solid"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
 			"background_color": {
@@ -132,20 +35,10 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading2",
-						"content": {
-							"text": "Heading",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
 						"type": "paragraph",
 						"content": {
-							"text": "Sit do officia adipisicing consequat cupidatat id do. Quis Lorem velit ullamco mollit velit commodo excepteur occaecat amet commodo in cupidatat eu pariatur.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Aute nulla duis id elit magna Lorem sint elit occaecat."
+						}
 					}
 				]
 			},
@@ -208,5 +101,92 @@
 			}
 		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "fiftyFiftyRightAligned",
+		"primary": {
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+					"width": 5848,
+					"height": 3899
+				},
+				"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+				"width": 5848,
+				"height": 3899,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"text_block": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Fugiat nisi laborum amet id duis sit quis dolor commodo est eiusmod. Elit dolor magna est ipsum sunt anim ipsum duis nostrud minim aute excepteur non incididunt. Mollit tempor consequat sint aute pariatur aliqua magna nulla in aute officia est amet mollit."
+						}
+					}
+				]
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "having",
+									"type": "Text"
+								}
+							],
+							[
+								"button_variation",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "solid"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]
