@@ -47,7 +47,7 @@
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
-                  "allowTargetBlank": false,
+                  "allowTargetBlank": true,
                   "select": null
                 }
               },
@@ -121,7 +121,7 @@
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
-                  "allowTargetBlank": false,
+                  "allowTargetBlank": true,
                   "select": null
                 }
               },

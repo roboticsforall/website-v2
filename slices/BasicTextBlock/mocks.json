@@ -31,7 +31,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
+										"url": "https://slicemachine.dev"
 									}
 								}
 							],
@@ -70,6 +70,16 @@
 									"__TYPE__": "FieldContent",
 									"type": "Select",
 									"value": "outline"
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
 								}
 							]
 						]
@@ -116,7 +126,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
+										"url": "http://twitter.com"
 									}
 								}
 							],
@@ -155,6 +165,16 @@
 									"__TYPE__": "FieldContent",
 									"type": "Text",
 									"value": "Another one"
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
 								}
 							]
 						]

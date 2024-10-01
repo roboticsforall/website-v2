@@ -110,7 +110,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
+										"url": "http://twitter.com"
 									}
 								}
 							]
@@ -175,7 +175,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "http://twitter.com"
+										"url": "https://slicemachine.dev"
 									}
 								}
 							],
@@ -222,7 +222,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
+										"url": "http://twitter.com"
 									}
 								}
 							]
@@ -334,7 +334,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
+										"url": "http://google.com"
 									}
 								}
 							]
@@ -360,6 +360,16 @@
 									"type": "Text",
 									"value": "Hello"
 								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
 							]
 						]
 					},
@@ -380,6 +390,16 @@
 									"__TYPE__": "FieldContent",
 									"type": "Text",
 									"value": "Explore Options Today"
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
 								}
 							]
 						]
@@ -487,7 +507,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev"
+										"url": "http://google.com"
 									}
 								}
 							],
@@ -522,6 +542,118 @@
 							],
 							[
 								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjM5Mjc0MDF8MA&ixlib=rb-4.0.3&q=85",
+									"alt": "yellow lemon fruit beside green leaves",
+									"origin": {
+										"id": "3t8rQ3LD2JI",
+										"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjM5Mjc0MDF8MA&ixlib=rb-4.0.3&q=85",
+										"width": 3024,
+										"height": 3024
+									},
+									"width": 3024,
+									"height": 3024,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										}
+									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "frequently"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ullamco quis do tempor est cillum. Consectetur deserunt elit in.",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"button_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Button"
+								}
+							],
+							[
+								"link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Link"
+								}
+							],
+							[
+								"has_button",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"has_image",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"has_link",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"link",
 								{
 									"__TYPE__": "LinkContent",
 									"value": {
@@ -586,29 +718,6 @@
 								}
 							],
 							[
-								"button_text",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Button"
-								}
-							],
-							[
-								"link_text",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Link"
-								}
-							],
-							[
-								"has_button",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							],
-							[
 								"has_image",
 								{
 									"__TYPE__": "BooleanContent",
@@ -616,72 +725,23 @@
 								}
 							],
 							[
-								"has_link",
+								"button_link",
 								{
-									"__TYPE__": "BooleanContent",
-									"value": true
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"image",
-								{
-									"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjM5Mjc0MDF8MA&ixlib=rb-4.0.3&q=85",
-									"alt": "yellow lemon fruit beside green leaves",
-									"origin": {
-										"id": "3t8rQ3LD2JI",
-										"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjM5Mjc0MDF8MA&ixlib=rb-4.0.3&q=85",
-										"width": 3024,
-										"height": 3024
-									},
-									"width": 3024,
-									"height": 3024,
-									"edit": {
-										"background": "transparent",
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										}
-									},
-									"credits": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
 								}
 							],
 							[
-								"title",
+								"link",
 								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "frequently"
-								}
-							],
-							[
-								"description",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Ullamco quis do tempor est cillum. Consectetur deserunt elit in.",
-												"spans": []
-											},
-											"direction": "ltr"
-										}
-									]
-								}
-							],
-							[
-								"has_image",
-								{
-									"__TYPE__": "BooleanContent",
-									"value": true
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
 								}
 							]
 						]
@@ -774,6 +834,26 @@
 								{
 									"__TYPE__": "BooleanContent",
 									"value": true
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
 								}
 							]
 						]
@@ -800,7 +880,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://slicemachine.dev"
+										"url": "http://twitter.com"
 									}
 								}
 							],
@@ -831,6 +911,16 @@
 									"__TYPE__": "FieldContent",
 									"type": "Select",
 									"value": "solid"
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
 								}
 							]
 						]
@@ -884,7 +974,6 @@
 							[
 								"image",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjM5Mjc0MDF8MA&ixlib=rb-4.0.3&q=85",
 									"alt": "orange fruit on brown wooden table",
 									"origin": {
@@ -903,6 +992,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							],
@@ -942,7 +1033,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
+										"url": "http://google.com"
 									}
 								}
 							],
@@ -981,7 +1072,7 @@
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "https://prismic.io"
+										"url": "http://twitter.com"
 									}
 								}
 							]
@@ -993,7 +1084,6 @@
 							[
 								"image",
 								{
-									"__TYPE__": "ImageContent",
 									"url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjM5Mjc0MDF8MA&ixlib=rb-4.0.3&q=85",
 									"alt": "orange fruit on brown wooden table",
 									"origin": {
@@ -1012,6 +1102,8 @@
 											"y": 0
 										}
 									},
+									"credits": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							],
@@ -1074,6 +1166,26 @@
 											"direction": "ltr"
 										}
 									]
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
 								}
 							]
 						]
