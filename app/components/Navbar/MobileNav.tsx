@@ -35,11 +35,7 @@ export function MobileNav(navigation: GlobalNavigationDocument<string>) {
     <>
       <Flex justifyContent={"space-between"} alignItems="center">
         <Link as={PrismicNextLink} href={"/"}>
-          <PrismicNextImage
-            width={"50"}
-            height={"50"}
-            field={navigation.data.logo}
-          />
+          <PrismicNextImage field={navigation.data.logo} />
         </Link>
         <IconButton
           onClick={onOpen}

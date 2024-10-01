@@ -9,7 +9,7 @@ const TwoColumn = (
 ): JSX.Element => {
   // Implement TwoColumn layout based on `slice` data
   return (
-    <Box width={{ md: "calc(50% - 1.5rem)" }}>
+    <Box width={{ base: "100%", md: "calc(50% - 1.5rem)" }}>
       <ColumnCard {...item} />
     </Box>
   );
