@@ -90,6 +90,24 @@
                 "placeholder": "",
                 "options": ["Computer", "Mobile", "Computer or Mobile"]
               }
+            },
+            "enroll_link": {
+              "type": "Link",
+              "config": {
+                "label": "Enroll Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            },
+            "waitlist_link": {
+              "type": "Link",
+              "config": {
+                "label": "Waitlist Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
             }
           }
         }

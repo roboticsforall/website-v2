@@ -81,9 +81,6 @@ export function DesktopNav(navigation: GlobalNavigationDocument<string>) {
                 <PrismicNextLink field={navItem.primary.link}>
                   {navItem.primary.name}
                 </PrismicNextLink>
-                {/* <Link as={PrismicNextLink} field={navItem.primary.link}>
-                  {navItem.primary.name}
-                </Link> */}
               </Box>
             )
           )}

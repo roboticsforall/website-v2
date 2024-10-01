@@ -60,6 +60,7 @@ export function MobileNav(navigation: GlobalNavigationDocument<string>) {
               my={6}
               w="full"
               size={"lg"}
+              onClick={onClose}
               as={PrismicNextLink}
               field={navigation.data.donate_link}
             >

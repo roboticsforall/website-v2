@@ -1,7 +1,12 @@
 "use client";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
-import { InfoIcon, StarIcon, WarningIcon } from "@chakra-ui/icons";
+import {
+  ExternalLinkIcon,
+  InfoIcon,
+  StarIcon,
+  WarningIcon,
+} from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -26,9 +31,12 @@ import {
   Skeleton,
   SliderMark,
   Container,
+  Button,
+  Flex,
+  Link,
 } from "@chakra-ui/react";
 import { Content, createClient } from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { IFilterOptionType, IFilterType } from "..";
@@ -290,24 +298,41 @@ const IndividualLearnersCourseListing = ({
                         />
                       </Box>
                       <Stack gap={"1rem"} py={3} flex={1} textAlign={"start"}>
-                        <Box>
+                        <Flex gap={"1.5rem"} alignItems={"center"}>
+                          <Box>
+                            {item.open_for_enrollment ? (
+                              <Tag colorScheme="green">
+                                <TagLeftIcon as={StarIcon} />
+                                <TagLabel>Open for Enrollment!</TagLabel>
+                              </Tag>
+                            ) : (
+                              <Tag colorScheme="yellow">
+                                <TagLeftIcon as={WarningIcon} />
+                                <TagLabel>Waitlist Available</TagLabel>
+                              </Tag>
+                            )}
+                          </Box>
                           {item.open_for_enrollment ? (
-                            <Tag colorScheme="green">
-                              <TagLeftIcon as={StarIcon} />
-                              <TagLabel>Open for Enrollment!</TagLabel>
-                            </Tag>
+                            <Button
+                              as={PrismicNextLink}
+                              field={item.enroll_link}
+                            >
+                              ENROLL NOW! <ExternalLinkIcon ml={1} />
+                            </Button>
                           ) : (
-                            <Tag colorScheme="yellow">
-                              <TagLeftIcon as={WarningIcon} />
-                              <TagLabel>Waitlist Available</TagLabel>
-                            </Tag>
+                            <Button
+                              as={PrismicNextLink}
+                              field={item.enroll_link}
+                            >
+                              JOIN WAITLIST! <ExternalLinkIcon ml={1} />
+                            </Button>
                           )}
-                        </Box>
+                        </Flex>
                         <CustomHeading as="h4">
                           {item.course_name}
                         </CustomHeading>
                         <HStack spacing={"1rem"}>
-                          <Tag>
+                          <Tag colorScheme="gray">
                             <TagLeftIcon as={InfoIcon} />
                             <TagLabel>
                               Grades{" "}
@@ -322,7 +347,7 @@ const IndividualLearnersCourseListing = ({
                                   } - ${item.maximum_grade}`}
                             </TagLabel>
                           </Tag>
-                          <Tag>
+                          <Tag colorScheme="gray">
                             <TagLeftIcon as={InfoIcon} />
                             <TagLabel>
                               {item.minimum_technology} Required

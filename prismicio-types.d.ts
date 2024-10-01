@@ -133,6 +133,26 @@ export interface CourseListingDocumentDataCoursesItem {
   minimum_technology: prismic.SelectField<
     "Computer" | "Mobile" | "Computer or Mobile"
   >;
+
+  /**
+   * Enroll Link field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].enroll_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  enroll_link: prismic.LinkField;
+
+  /**
+   * Waitlist Link field in *Course Listing → Courses*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: course_listing.courses[].waitlist_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  waitlist_link: prismic.LinkField;
 }
 
 /**
