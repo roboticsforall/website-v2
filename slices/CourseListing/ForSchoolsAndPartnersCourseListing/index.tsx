@@ -41,8 +41,9 @@ const filterOptions: IFilterOptionType = {
     filterName: "Subject",
     checkbox: [
       { label: "Programming", value: "Programming" },
-      { label: "Scratch", value: "Scratch" },
-      { label: "Lego", value: "Lego" },
+      { label: "Kit-based", value: "Kit-based" },
+      { label: "CAD", value: "CAD" },
+      { label: "Science", value: "Science" },
     ],
   },
   requiredTechnology: {
@@ -268,7 +269,7 @@ const ForSchoolsAndPartnersCourseListing = ({
                           width={"150"}
                           height={"150"}
                           field={item.image}
-                          style={{padding:"12px"}}
+                          style={{ padding: "12px" }}
                         />
                       </Box>
                       <Stack gap={"1rem"} py={3} flex={1} textAlign={"start"}>

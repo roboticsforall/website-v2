@@ -65,7 +65,7 @@
               "config": {
                 "label": "Subject",
                 "placeholder": "",
-                "options": ["Programming", "Scratch", "Lego"],
+                "options": ["Programming", "Kit-based", "CAD", "Science"],
                 "default_value": "Programming"
               }
             },
