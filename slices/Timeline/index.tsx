@@ -60,7 +60,12 @@ const MilestoneCard: React.FC<MilestoneCardProps> = ({
                 </Button>
               )}
               {card.has_link && (
-                <Button variant="link" as={PrismicNextLink} field={card.link}>
+                <Button
+                  whiteSpace={"wrap"}
+                  variant="link"
+                  as={PrismicNextLink}
+                  field={card.link}
+                >
                   {card.link_text}
                 </Button>
               )}

@@ -96,13 +96,16 @@ export function Footer({ footer }: FooterProps) {
                   {footer.data.slices.map(
                     (navItem, i) =>
                       navItem.variation == "navigationSingleLink" && (
-                        <Link
+                        <Box
                           as={PrismicNextLink}
                           key={navItem.primary.name}
                           field={navItem.primary.link}
+                          _hover={{
+                            textDecoration: "underline",
+                          }}
                         >
                           {navItem.primary.name}
-                        </Link>
+                        </Box>
                       )
                   )}
                 </Stack>

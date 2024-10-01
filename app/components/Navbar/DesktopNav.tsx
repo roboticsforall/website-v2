@@ -74,12 +74,13 @@ export function DesktopNav(navigation: GlobalNavigationDocument<string>) {
                 _hover={{
                   borderTopColor: "primary.900",
                   cursor: "pointer",
+                  textDecoration: "underline",
                 }}
                 alignItems={"center"}
               >
-                <Link as={PrismicNextLink} field={navItem.primary.link}>
+                <PrismicNextLink field={navItem.primary.link}>
                   {navItem.primary.name}
-                </Link>
+                </PrismicNextLink>
               </Box>
             )
           )}

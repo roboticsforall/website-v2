@@ -49,6 +49,7 @@
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": true,
                   "select": null
                 }
               },
@@ -139,6 +140,7 @@
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": true,
                   "select": null
                 }
               },
@@ -229,6 +231,7 @@
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": true,
                   "select": null
                 }
               },
@@ -311,6 +314,7 @@
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": true,
                   "select": null
                 }
               },
@@ -393,6 +397,7 @@
                 "config": {
                   "label": "Button Link",
                   "placeholder": "",
+                  "allowTargetBlank": true,
                   "select": null
                 }
               },

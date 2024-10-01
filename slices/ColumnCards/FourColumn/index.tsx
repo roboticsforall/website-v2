@@ -11,6 +11,7 @@ const FourColumn = (
   return (
     <Box
       width={{
+        base: "100%",
         md: "calc(50% - 1.5rem * 1/2)",
         lg: "calc(25% - 1.5rem * 3/4)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
       }}
