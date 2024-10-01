@@ -100,7 +100,10 @@ export interface CourseListingDocumentDataCoursesItem {
    * - **API ID Path**: course_listing.courses[].subject
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  subject: prismic.SelectField<"Programming" | "Scratch" | "Lego", "filled">;
+  subject: prismic.SelectField<
+    "Programming" | "Kit-based" | "CAD" | "Science",
+    "filled"
+  >;
 
   /**
    * Minimum Grade field in *Course Listing → Courses*

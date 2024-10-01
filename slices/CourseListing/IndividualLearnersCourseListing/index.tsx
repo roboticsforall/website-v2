@@ -56,8 +56,9 @@ const filterOptions: IFilterOptionType = {
     filterName: "Subject",
     checkbox: [
       { label: "Programming", value: "Programming" },
-      { label: "Scratch", value: "Scratch" },
-      { label: "Lego", value: "Lego" },
+      { label: "Kit-based", value: "Kit-based" },
+      { label: "CAD", value: "CAD" },
+      { label: "Science", value: "Science" },
     ],
   },
   requiredTechnology: {
