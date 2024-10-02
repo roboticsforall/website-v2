@@ -26,6 +26,7 @@ import {
   Skeleton,
   SliderMark,
   Container,
+  Hide,
 } from "@chakra-ui/react";
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -85,7 +86,6 @@ const ForSchoolsAndPartnersCourseListing = ({
       "course_listing",
       (course_listing as { uid: string }).uid // type assertion bc .uid doesn't seem to exist. Futher research shows .course_listing is of type EmptyLinkDocument bc SliceSimulator doesn't support content relationship yet
     );
-    console.log(course_listing);
     data.data.courses.sort((a, b) => {
       return (a.open_for_enrollment ? 0 : 1) - (b.open_for_enrollment ? 0 : 1);
     });
@@ -264,15 +264,23 @@ const ForSchoolsAndPartnersCourseListing = ({
                 {filteredData.map((item, i) => (
                   <AccordionItem key={item.course_name} borderWidth={1}>
                     <AccordionButton p={0}>
-                      <Box py={4}>
-                        <PrismicNextImage
-                          width={"150"}
-                          height={"150"}
-                          field={item.image}
-                          style={{ padding: "12px" }}
-                        />
-                      </Box>
-                      <Stack gap={"1rem"} py={3} flex={1} textAlign={"start"}>
+                      <Hide below="md">
+                        <Box py={4}>
+                          <PrismicNextImage
+                            width={"150"}
+                            height={"150"}
+                            field={item.image}
+                            style={{ padding: "12px" }}
+                          />
+                        </Box>
+                      </Hide>
+                      <Stack
+                        gap={"1rem"}
+                        pl={{ base: 3, md: 0, lg: 0 }}
+                        py={3}
+                        flex={1}
+                        textAlign={"start"}
+                      >
                         <CustomHeading as="h4">
                           {item.course_name}
                         </CustomHeading>
