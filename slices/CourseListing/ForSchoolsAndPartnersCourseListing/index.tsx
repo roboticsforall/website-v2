@@ -27,6 +27,7 @@ import {
   SliderMark,
   Container,
   Hide,
+  Flex,
 } from "@chakra-ui/react";
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -284,7 +285,11 @@ const ForSchoolsAndPartnersCourseListing = ({
                         <CustomHeading as="h4">
                           {item.course_name}
                         </CustomHeading>
-                        <HStack spacing={"1rem"}>
+                        <Flex
+                          flexDirection={{ base: "column", md: "row" }}
+                          alignItems={"start"}
+                          gap={"1rem"}
+                        >
                           <Tag>
                             <TagLeftIcon as={InfoIcon} />
                             <TagLabel>
@@ -306,7 +311,7 @@ const ForSchoolsAndPartnersCourseListing = ({
                               {item.minimum_technology} Required
                             </TagLabel>
                           </Tag>
-                        </HStack>
+                        </Flex>
                         <PrismicRichText field={item.course_description} />
                       </Stack>
                       <AccordionIcon />
