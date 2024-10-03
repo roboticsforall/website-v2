@@ -306,7 +306,11 @@ const IndividualLearnersCourseListing = ({
                         flex={1}
                         textAlign={"start"}
                       >
-                        <Flex gap={"1.5rem"} alignItems={"center"}>
+                        <Flex
+                          gap={"1.5rem"}
+                          alignItems={{ md: "center" }}
+                          flexDirection={{ base: "column", md: "row" }}
+                        >
                           <Box>
                             {item.open_for_enrollment ? (
                               <Tag colorScheme="green">
@@ -339,7 +343,11 @@ const IndividualLearnersCourseListing = ({
                         <CustomHeading as="h4">
                           {item.course_name}
                         </CustomHeading>
-                        <HStack spacing={"1rem"}>
+                        <Flex
+                          flexDirection={{ base: "column", md: "row" }}
+                          alignItems={"start"}
+                          gap={"1rem"}
+                        >
                           <Tag colorScheme="gray">
                             <TagLeftIcon as={InfoIcon} />
                             <TagLabel>
@@ -361,7 +369,7 @@ const IndividualLearnersCourseListing = ({
                               {item.minimum_technology} Required
                             </TagLabel>
                           </Tag>
-                        </HStack>
+                        </Flex>
                         <PrismicRichText field={item.course_description} />
                       </Stack>
                       <AccordionIcon />
