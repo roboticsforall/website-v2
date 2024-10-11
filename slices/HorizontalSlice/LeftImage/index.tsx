@@ -11,7 +11,11 @@ const LeftImage = (slice: Content.HorizontalSliceSlice): JSX.Element => {
   return (
     <BackgroundColor backgroundColor={slice.primary.background_color!}>
       <ContainerWrapper>
-        <SimpleGrid columns={{ md: 2 }} spacing={"1.5rem"}>
+        <SimpleGrid
+          columns={{ md: 2 }}
+          spacing={"1.5rem"}
+          alignItems={"center"}
+        >
           <Box
             as={PrismicNextImage}
             borderRadius={"md"}
