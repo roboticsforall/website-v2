@@ -20,15 +20,6 @@
           "customtypes": ["category"]
         }
       },
-      "navbar_color": {
-        "type": "Select",
-        "config": {
-          "label": "Navbar Color",
-          "placeholder": "",
-          "options": ["white", "primary"],
-          "default_value": "white"
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
