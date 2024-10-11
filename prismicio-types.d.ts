@@ -406,18 +406,6 @@ type HomePageDocumentDataSlicesSlice =
  */
 interface HomePageDocumentData {
   /**
-   * Navbar Color field in *Home Page*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: home_page.navbar_color
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  navbar_color: prismic.SelectField<"white" | "primary", "filled">;
-
-  /**
    * Slice Zone field in *Home Page*
    *
    * - **Field Type**: Slice Zone
@@ -507,18 +495,6 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   category: prismic.ContentRelationshipField<"category">;
-
-  /**
-   * Navbar Color field in *Page*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: white
-   * - **API ID Path**: page.navbar_color
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  navbar_color: prismic.SelectField<"white" | "primary", "filled">;
 
   /**
    * Slice Zone field in *Page*
