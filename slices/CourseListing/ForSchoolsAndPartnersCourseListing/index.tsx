@@ -290,7 +290,7 @@ const ForSchoolsAndPartnersCourseListing = ({
                           alignItems={"start"}
                           gap={"1rem"}
                         >
-                          <Tag>
+                          <Tag colorScheme="gray">
                             <TagLeftIcon as={InfoIcon} />
                             <TagLabel>
                               Grades{" "}
@@ -305,7 +305,7 @@ const ForSchoolsAndPartnersCourseListing = ({
                                   } - ${item.maximum_grade}`}
                             </TagLabel>
                           </Tag>
-                          <Tag>
+                          <Tag colorScheme="gray">
                             <TagLeftIcon as={InfoIcon} />
                             <TagLabel>
                               {item.minimum_technology} Required

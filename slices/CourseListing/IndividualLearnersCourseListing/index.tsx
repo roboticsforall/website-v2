@@ -310,6 +310,7 @@ const IndividualLearnersCourseListing = ({
                           gap={"1.5rem"}
                           alignItems={{ md: "center" }}
                           flexDirection={{ base: "column", md: "row" }}
+                          justifyContent={"space-between"}
                         >
                           <Box>
                             {item.open_for_enrollment ? (
@@ -329,14 +330,14 @@ const IndividualLearnersCourseListing = ({
                               as={PrismicNextLink}
                               field={item.enroll_link}
                             >
-                              ENROLL NOW! <ExternalLinkIcon ml={1} />
+                              Enroll Now!
                             </Button>
                           ) : (
                             <Button
                               as={PrismicNextLink}
                               field={item.enroll_link}
                             >
-                              JOIN WAITLIST! <ExternalLinkIcon ml={1} />
+                              Join Waitlist!
                             </Button>
                           )}
                         </Flex>
