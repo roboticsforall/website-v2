@@ -22,7 +22,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleAnalytics gaId="G-B9JHKTVCMP" />
+        <GoogleAnalytics gaId="GT-NMDD4XDZ" />
         <script
           async
           defer
