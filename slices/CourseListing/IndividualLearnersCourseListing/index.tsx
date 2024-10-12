@@ -83,7 +83,7 @@ const filterOptions: IFilterOptionType = {
   },
 };
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 5;
 
 const IndividualLearnersCourseListing = ({
   course_listing,
