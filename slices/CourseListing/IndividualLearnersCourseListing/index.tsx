@@ -34,6 +34,7 @@ import {
   Button,
   Flex,
   Hide,
+  IconButton,
 } from "@chakra-ui/react";
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
@@ -41,6 +42,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { useEffect, useState, useMemo, useCallback } from "react";
 import { IFilterOptionType, IFilterType } from "..";
 import { TextBlock } from "@/app/components/TextBlock";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const client = createClient("rfa-cms");
 
@@ -81,6 +83,8 @@ const filterOptions: IFilterOptionType = {
   },
 };
 
+const ITEMS_PER_PAGE = 5;
+
 const IndividualLearnersCourseListing = ({
   course_listing,
   heading_text_block,
@@ -95,11 +99,12 @@ const IndividualLearnersCourseListing = ({
     grade: -1,
   });
   const [sliderValue, setSliderValue] = useState<number>(-1);
+  const [currentPage, setCurrentPage] = useState(1);
 
   async function getCourseData() {
     const data = await client.getByUID(
       "course_listing",
-      (course_listing as { uid: string }).uid // type assertion bc .uid doesn't seem to exist. Futher research shows .course_listing is of type EmptyLinkDocument bc SliceSimulator doesn't support content relationship yet
+      (course_listing as { uid: string }).uid
     );
     data.data.courses.sort((a, b) => {
       return (a.open_for_enrollment ? 0 : 1) - (b.open_for_enrollment ? 0 : 1);
@@ -113,6 +118,7 @@ const IndividualLearnersCourseListing = ({
   }, []);
 
   const handleCheckboxChange = useCallback((section: string, value: string) => {
+    setCurrentPage(1);
     setFilters((prevFilters) => {
       const updatedFilters = { ...prevFilters };
       const sectionFilters = prevFilters[section] as string[];
@@ -128,14 +134,15 @@ const IndividualLearnersCourseListing = ({
   }, []);
 
   const clearFilter = useCallback((section: string) => {
+    setCurrentPage(1);
     setFilters((prevFilters) => {
       const updatedFilters = { ...prevFilters };
       if (Array.isArray(updatedFilters[section])) {
         updatedFilters[section] = [];
       } else if (typeof updatedFilters[section] === "number") {
-        updatedFilters[section] = -1; // Or set to a default value of your choice
+        updatedFilters[section] = -1;
         if (section === "grade") {
-          setSliderValue(-1); // Reset slider value to 0
+          setSliderValue(-1);
         }
       }
       return updatedFilters;
@@ -143,6 +150,7 @@ const IndividualLearnersCourseListing = ({
   }, []);
 
   const handleSliderChanged = useCallback((value: number) => {
+    setCurrentPage(1);
     setSliderValue(value);
     setFilters((prevFilters) => ({
       ...prevFilters,
@@ -181,6 +189,17 @@ const IndividualLearnersCourseListing = ({
     });
   }, [data, filters]);
 
+  const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentCourses = filteredData.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
   if (isLoading)
     return (
       <ContainerWrapper>
@@ -196,12 +215,14 @@ const IndividualLearnersCourseListing = ({
       </ContainerWrapper>
     );
   if (!data) return <p>No profile data</p>;
+
   return (
     <ContainerWrapper>
       <Stack gap={"2.5rem"}>
         <Container p={0} textAlign={{ md: "center" }}>
           <TextBlock textBlock={heading_text_block} />
         </Container>
+
         <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap="1.5rem">
           <GridItem>
             <Stack py={2}>
@@ -284,9 +305,60 @@ const IndividualLearnersCourseListing = ({
             </Stack>
           </GridItem>
           <GridItem>
+            {/* Pagination Controls */}
+            <HStack mb={"1.5rem"} justifyContent="end" spacing={4}>
+              <IconButton
+                icon={<ChevronLeftIcon color="black" boxSize={6} />}
+                isDisabled={currentPage === 1}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Previous Page"
+                sx={{
+                  backgroundColor: "transparent",
+                  _hover: {
+                    backgroundColor: "gray.200", // Change to your desired gray color
+                    transition: "background-color 0.3s ease", // Smooth transition
+                  },
+                }}
+              />
+
+              {/* Page Numbers */}
+              {Array.from({ length: totalPages }, (_, index) => (
+                <Text
+                  key={index}
+                  fontWeight={currentPage === index + 1 ? "bold" : "normal"}
+                  borderWidth={currentPage === index + 1 ? 2 : "none"}
+                  borderRadius={"md"}
+                  padding={3}
+                  width={8} // Set a fixed width for square shape
+                  height={8} // Set a fixed height for square shape
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  onClick={() => handlePageChange(index + 1)}
+                >
+                  {index + 1}
+                </Text>
+              ))}
+
+              <IconButton
+                icon={<ChevronRightIcon color="black" boxSize={6} />}
+                isDisabled={currentPage === totalPages}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Next Page"
+                sx={{
+                  backgroundColor: "transparent",
+                  _hover: {
+                    backgroundColor: "gray.200", // Change to your desired gray color
+                    transition: "background-color 0.3s ease", // Smooth transition
+                  },
+                }}
+              />
+            </HStack>
+
             <Accordion allowMultiple>
               <Stack mb={"1.25rem"}>
-                {filteredData.map((item, i) => (
+                {currentCourses.map((item) => (
                   <AccordionItem key={item.course_name} borderWidth={1}>
                     <AccordionButton p={0}>
                       <Hide below="md">
