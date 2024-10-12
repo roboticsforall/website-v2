@@ -6,6 +6,7 @@ import { repositoryName } from "@/prismicio";
 import { fonts } from "./fonts";
 import { NavbarWrapper } from "./components/Navbar/NavbarWrapper";
 import { FooterWrapper } from "./components/Footer/FooterWrapper";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Robotics For All",
@@ -21,20 +22,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* <link
-          rel="icon"
-          type="image/png"
-          href="/favicon-48x48.png"
-          sizes="48x48"
-        /> */}
-        {/* <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> */}
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        {/* <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" /> */}
+        <GoogleAnalytics gaId="G-3SSN7BQCM1" />
         <script
           async
           defer
