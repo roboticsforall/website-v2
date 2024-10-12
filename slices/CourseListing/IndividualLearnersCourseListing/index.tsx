@@ -83,7 +83,7 @@ const filterOptions: IFilterOptionType = {
   },
 };
 
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 6;
 
 const IndividualLearnersCourseListing = ({
   course_listing,
@@ -456,6 +456,56 @@ const IndividualLearnersCourseListing = ({
                 ))}
               </Stack>
             </Accordion>
+            {/* Pagination Controls */}
+            <HStack mb={"1.5rem"} justifyContent="end" spacing={4}>
+              <IconButton
+                icon={<ChevronLeftIcon color="black" boxSize={6} />}
+                isDisabled={currentPage === 1}
+                onClick={() => handlePageChange(currentPage - 1)}
+                aria-label="Previous Page"
+                sx={{
+                  backgroundColor: "transparent",
+                  _hover: {
+                    backgroundColor: "gray.200", // Change to your desired gray color
+                    transition: "background-color 0.3s ease", // Smooth transition
+                  },
+                }}
+              />
+
+              {/* Page Numbers */}
+              {Array.from({ length: totalPages }, (_, index) => (
+                <Text
+                  key={index}
+                  fontWeight={currentPage === index + 1 ? "bold" : "normal"}
+                  borderWidth={currentPage === index + 1 ? 2 : "none"}
+                  borderRadius={"md"}
+                  padding={3}
+                  width={8} // Set a fixed width for square shape
+                  height={8} // Set a fixed height for square shape
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  onClick={() => handlePageChange(index + 1)}
+                >
+                  {index + 1}
+                </Text>
+              ))}
+
+              <IconButton
+                icon={<ChevronRightIcon color="black" boxSize={6} />}
+                isDisabled={currentPage === totalPages}
+                onClick={() => handlePageChange(currentPage + 1)}
+                aria-label="Next Page"
+                sx={{
+                  backgroundColor: "transparent",
+                  _hover: {
+                    backgroundColor: "gray.200", // Change to your desired gray color
+                    transition: "background-color 0.3s ease", // Smooth transition
+                  },
+                }}
+              />
+            </HStack>
           </GridItem>
         </Grid>
       </Stack>
