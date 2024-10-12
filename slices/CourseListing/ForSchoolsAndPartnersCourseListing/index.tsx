@@ -69,7 +69,7 @@ const filterOptions: IFilterOptionType = {
   },
 };
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 5;
 
 const ForSchoolsAndPartnersCourseListing = ({
   course_listing,
@@ -290,7 +290,7 @@ const ForSchoolsAndPartnersCourseListing = ({
           </GridItem>
           <GridItem>
             {/* Pagination Controls */}
-            <HStack mb={"1.5rem"} spacing={4}>
+            <HStack mb={"1.5rem"} spacing={4} justifyContent={"end"}>
               <IconButton
                 icon={<ChevronLeftIcon color="black" boxSize={6} />}
                 isDisabled={currentPage === 1}
