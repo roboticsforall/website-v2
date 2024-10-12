@@ -86,32 +86,6 @@ export function Footer({ footer }: FooterProps) {
                     </Stack>
                   )
               )}
-              {footer.data.slices.filter(
-                (item) => item.variation == "navigationSingleLink"
-              ) ? (
-                <Stack align={"flex-start"}>
-                  <CustomHeading as="h5" mb={4} textTransform={"uppercase"}>
-                    More on RFA
-                  </CustomHeading>
-                  {footer.data.slices.map(
-                    (navItem, i) =>
-                      navItem.variation == "navigationSingleLink" && (
-                        <Box
-                          as={PrismicNextLink}
-                          key={navItem.primary.name}
-                          field={navItem.primary.link}
-                          _hover={{
-                            textDecoration: "underline",
-                          }}
-                        >
-                          {navItem.primary.name}
-                        </Box>
-                      )
-                  )}
-                </Stack>
-              ) : (
-                <></>
-              )}
             </SimpleGrid>
           </GridItem>
         </Grid>
