@@ -35,6 +35,7 @@ import {
   Flex,
   Hide,
   IconButton,
+  Center,
 } from "@chakra-ui/react";
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
@@ -358,102 +359,108 @@ const IndividualLearnersCourseListing = ({
 
             <Accordion allowMultiple>
               <Stack mb={"1.25rem"}>
-                {currentCourses.map((item) => (
-                  <AccordionItem key={item.course_name} borderWidth={1}>
-                    <AccordionButton p={0}>
-                      <Hide below="md">
-                        <Box py={4}>
-                          <PrismicNextImage
-                            width={"150"}
-                            height={"150"}
-                            field={item.image}
-                            style={{ padding: "12px" }}
-                          />
-                        </Box>
-                      </Hide>
-                      <Stack
-                        gap={"1rem"}
-                        pl={{ base: 3, md: 0, lg: 0 }}
-                        py={3}
-                        flex={1}
-                        textAlign={"start"}
-                      >
-                        <Flex
-                          gap={"1.5rem"}
-                          alignItems={{ md: "center" }}
-                          flexDirection={{ base: "column", md: "row" }}
-                          justifyContent={"space-between"}
-                        >
-                          <Box>
-                            {item.open_for_enrollment ? (
-                              <Tag colorScheme="green">
-                                <TagLeftIcon as={StarIcon} />
-                                <TagLabel>Open for Enrollment!</TagLabel>
-                              </Tag>
-                            ) : (
-                              <Tag colorScheme="yellow">
-                                <TagLeftIcon as={WarningIcon} />
-                                <TagLabel>Waitlist Available</TagLabel>
-                              </Tag>
-                            )}
+                {currentCourses.length > 0 ? (
+                  currentCourses.map((item) => (
+                    <AccordionItem key={item.course_name} borderWidth={1}>
+                      <AccordionButton p={0}>
+                        <Hide below="md">
+                          <Box py={4}>
+                            <PrismicNextImage
+                              width={"150"}
+                              height={"150"}
+                              field={item.image}
+                              style={{ padding: "12px" }}
+                            />
                           </Box>
-                          {item.open_for_enrollment ? (
-                            <Button
-                              as={PrismicNextLink}
-                              field={item.enroll_link}
-                            >
-                              Enroll Now!
-                            </Button>
-                          ) : (
-                            <Button
-                              as={PrismicNextLink}
-                              field={item.enroll_link}
-                            >
-                              Join Waitlist!
-                            </Button>
-                          )}
-                        </Flex>
-                        <CustomHeading as="h4">
-                          {item.course_name}
-                        </CustomHeading>
-                        <Flex
-                          flexDirection={{ base: "column", md: "row" }}
-                          alignItems={"start"}
+                        </Hide>
+                        <Stack
                           gap={"1rem"}
+                          pl={{ base: 3, md: 0, lg: 0 }}
+                          py={3}
+                          flex={1}
+                          textAlign={"start"}
                         >
-                          <Tag colorScheme="gray">
-                            <TagLeftIcon as={InfoIcon} />
-                            <TagLabel>
-                              Grades{" "}
-                              {item.maximum_grade === item.minimum_grade
-                                ? item.minimum_grade === 0
-                                  ? "K"
-                                  : item.minimum_grade
-                                : `${
-                                    item.minimum_grade === 0
-                                      ? "K"
-                                      : item.minimum_grade
-                                  } - ${item.maximum_grade}`}
-                            </TagLabel>
-                          </Tag>
-                          <Tag colorScheme="gray">
-                            <TagLeftIcon as={InfoIcon} />
-                            <TagLabel>
-                              {item.minimum_technology} Required
-                            </TagLabel>
-                          </Tag>
-                        </Flex>
-                        <PrismicRichText field={item.course_description} />
-                      </Stack>
-                      <AccordionIcon />
-                    </AccordionButton>
-                    <AccordionPanel p={4}>
-                      <Box>
-                        <PrismicRichText field={item.course_syllabi} />
-                      </Box>
-                    </AccordionPanel>
-                  </AccordionItem>
-                ))}
+                          <Flex
+                            gap={"1.5rem"}
+                            alignItems={{ md: "center" }}
+                            flexDirection={{ base: "column", md: "row" }}
+                            justifyContent={"space-between"}
+                          >
+                            <Box>
+                              {item.open_for_enrollment ? (
+                                <Tag colorScheme="green">
+                                  <TagLeftIcon as={StarIcon} />
+                                  <TagLabel>Open for Enrollment!</TagLabel>
+                                </Tag>
+                              ) : (
+                                <Tag colorScheme="yellow">
+                                  <TagLeftIcon as={WarningIcon} />
+                                  <TagLabel>Waitlist Available</TagLabel>
+                                </Tag>
+                              )}
+                            </Box>
+                            {item.open_for_enrollment ? (
+                              <Button
+                                as={PrismicNextLink}
+                                field={item.enroll_link}
+                              >
+                                Enroll Now!
+                              </Button>
+                            ) : (
+                              <Button
+                                as={PrismicNextLink}
+                                field={item.enroll_link}
+                              >
+                                Join Waitlist!
+                              </Button>
+                            )}
+                          </Flex>
+                          <CustomHeading as="h4">
+                            {item.course_name}
+                          </CustomHeading>
+                          <Flex
+                            flexDirection={{ base: "column", md: "row" }}
+                            alignItems={"start"}
+                            gap={"1rem"}
+                          >
+                            <Tag colorScheme="gray">
+                              <TagLeftIcon as={InfoIcon} />
+                              <TagLabel>
+                                Grades{" "}
+                                {item.maximum_grade === item.minimum_grade
+                                  ? item.minimum_grade === 0
+                                    ? "K"
+                                    : item.minimum_grade
+                                  : `${
+                                      item.minimum_grade === 0
+                                        ? "K"
+                                        : item.minimum_grade
+                                    } - ${item.maximum_grade}`}
+                              </TagLabel>
+                            </Tag>
+                            <Tag colorScheme="gray">
+                              <TagLeftIcon as={InfoIcon} />
+                              <TagLabel>
+                                {item.minimum_technology} Required
+                              </TagLabel>
+                            </Tag>
+                          </Flex>
+                          <PrismicRichText field={item.course_description} />
+                        </Stack>
+                        <AccordionIcon />
+                      </AccordionButton>
+                      <AccordionPanel p={4}>
+                        <Box>
+                          <PrismicRichText field={item.course_syllabi} />
+                        </Box>
+                      </AccordionPanel>
+                    </AccordionItem>
+                  ))
+                ) : (
+                  <Center>
+                    <Text>No courses found.</Text>
+                  </Center>
+                )}
               </Stack>
             </Accordion>
             {/* Pagination Controls */}

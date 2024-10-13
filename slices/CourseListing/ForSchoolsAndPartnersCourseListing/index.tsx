@@ -29,6 +29,7 @@ import {
   Hide,
   Flex,
   IconButton,
+  Center,
 } from "@chakra-ui/react";
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -341,67 +342,73 @@ const ForSchoolsAndPartnersCourseListing = ({
             </HStack>
             <Accordion allowMultiple>
               <Stack mb={"1.25rem"}>
-                {currentCourses.map((item) => (
-                  <AccordionItem key={item.course_name} borderWidth={1}>
-                    <AccordionButton p={0}>
-                      <Hide below="md">
-                        <Box py={4}>
-                          <PrismicNextImage
-                            width={"150"}
-                            height={"150"}
-                            field={item.image}
-                            style={{ padding: "12px" }}
-                          />
-                        </Box>
-                      </Hide>
-                      <Stack
-                        gap={"1rem"}
-                        pl={{ base: 3, md: 0, lg: 0 }}
-                        py={3}
-                        flex={1}
-                        textAlign={"start"}
-                      >
-                        <CustomHeading as="h4">
-                          {item.course_name}
-                        </CustomHeading>
-                        <Flex
-                          flexDirection={{ base: "column", md: "row" }}
-                          alignItems={"start"}
+                {currentCourses.length > 0 ? (
+                  currentCourses.map((item) => (
+                    <AccordionItem key={item.course_name} borderWidth={1}>
+                      <AccordionButton p={0}>
+                        <Hide below="md">
+                          <Box py={4}>
+                            <PrismicNextImage
+                              width={"150"}
+                              height={"150"}
+                              field={item.image}
+                              style={{ padding: "12px" }}
+                            />
+                          </Box>
+                        </Hide>
+                        <Stack
                           gap={"1rem"}
+                          pl={{ base: 3, md: 0, lg: 0 }}
+                          py={3}
+                          flex={1}
+                          textAlign={"start"}
                         >
-                          <Tag colorScheme="gray">
-                            <TagLeftIcon as={InfoIcon} />
-                            <TagLabel>
-                              Grades{" "}
-                              {item.maximum_grade === item.minimum_grade
-                                ? item.minimum_grade === 0
-                                  ? "K"
-                                  : item.minimum_grade
-                                : `${
-                                    item.minimum_grade === 0
-                                      ? "K"
-                                      : item.minimum_grade
-                                  } - ${item.maximum_grade}`}
-                            </TagLabel>
-                          </Tag>
-                          <Tag colorScheme="gray">
-                            <TagLeftIcon as={InfoIcon} />
-                            <TagLabel>
-                              {item.minimum_technology} Required
-                            </TagLabel>
-                          </Tag>
-                        </Flex>
-                        <PrismicRichText field={item.course_description} />
-                      </Stack>
-                      <AccordionIcon />
-                    </AccordionButton>
-                    <AccordionPanel p={4}>
-                      <Box>
-                        <PrismicRichText field={item.course_syllabi} />
-                      </Box>
-                    </AccordionPanel>
-                  </AccordionItem>
-                ))}
+                          <CustomHeading as="h4">
+                            {item.course_name}
+                          </CustomHeading>
+                          <Flex
+                            flexDirection={{ base: "column", md: "row" }}
+                            alignItems={"start"}
+                            gap={"1rem"}
+                          >
+                            <Tag colorScheme="gray">
+                              <TagLeftIcon as={InfoIcon} />
+                              <TagLabel>
+                                Grades{" "}
+                                {item.maximum_grade === item.minimum_grade
+                                  ? item.minimum_grade === 0
+                                    ? "K"
+                                    : item.minimum_grade
+                                  : `${
+                                      item.minimum_grade === 0
+                                        ? "K"
+                                        : item.minimum_grade
+                                    } - ${item.maximum_grade}`}
+                              </TagLabel>
+                            </Tag>
+                            <Tag colorScheme="gray">
+                              <TagLeftIcon as={InfoIcon} />
+                              <TagLabel>
+                                {item.minimum_technology} Required
+                              </TagLabel>
+                            </Tag>
+                          </Flex>
+                          <PrismicRichText field={item.course_description} />
+                        </Stack>
+                        <AccordionIcon />
+                      </AccordionButton>
+                      <AccordionPanel p={4}>
+                        <Box>
+                          <PrismicRichText field={item.course_syllabi} />
+                        </Box>
+                      </AccordionPanel>
+                    </AccordionItem>
+                  ))
+                ) : (
+                  <Center>
+                    <Text>No courses found.</Text>
+                  </Center>
+                )}
               </Stack>
             </Accordion>
             {/* Pagination Controls */}
