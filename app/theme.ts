@@ -1,57 +1,56 @@
 /* theme.ts */
 import { components } from "@/slices";
-import {
-  Container,
-  extendTheme,
-  withDefaultColorScheme,
-} from "@chakra-ui/react";
+import {Container} from "@chakra-ui/react";
 import _default from "@emotion/styled";
 import { containerTheme } from "./components/Container";
 import { buttonTheme } from "./theme/ButtonTheme";
+import { createSystem, defaultConfig } from "@chakra-ui/react"
 
-export const theme = extendTheme(
+export const system = createSystem(defaultConfig, 
   {
-    colors: {
-      transparent: "transparent",
-      black: "#000",
-      white: "#fff",
-      primary: {
-        _default: "#d0e7ff",
-        "50": "#eff7ff",
-        "100": "#d0e7ff",
-        "200": "#bddfff",
-        "300": "#90ccff",
-        "400": "#5caffe",
-        "500": "#368dfb",
-        "600": "#1f6ef1",
-        "700": "#1857dd",
-        "800": "#1a47b3",
-        "900": "#1b408d",
-        "950": "#152856",
+    theme: {
+      tokens: {
+        colors: {
+          transparent: { value: "transparent"},
+          black: { value: "#000"},
+          white: { value: "#fff"},
+          primary: {
+            _default: { value: "#d0e7ff"},
+            "50": { value: "#eff7ff"},
+            "100": { value: "#d0e7ff"},
+            "200": { value: "#bddfff"},
+            "300": { value: "#90ccff"},
+            "400": { value: "#5caffe"},
+            "500": { value: "#368dfb"},
+            "600": { value: "#1f6ef1"},
+            "700": { value: "#1857dd"},
+            "800": { value: "#1a47b3"},
+            "900": { value: "#1b408d"},
+            "950": { value: "#152856"},
+          },
+          yellow: {
+            yellow1: { value: "#FFF4CB"},
+            yellow2: { value: "#FFE789"},
+            yellow3: { value: "#FFDF64"},
+            yellow4: { value: "#FFD945"},
+            yellow5: { value: "#FFCC08"},
+          },
+          gray: {
+            gray1: { value: "#F5F5F5"},
+            gray2: { value: "#EBEBEB"},
+            gray3: { value: "#C2C2C2"},
+            gray4: { value: "#5C5C5C"},
+            gray5: { value: "#333333"},
+          },
+        },
+        fonts: {
+          heading: { value: "var(--font-bevietnampro)"},
+          body: { value: "var(--font-bevietnampro)"},
+        },
+        // components: {
+        //   Container: containerTheme,
+        //   Button: buttonTheme,
+        // },
       },
-      yellow: {
-        yellow1: "#FFF4CB",
-        yellow2: "#FFE789",
-        yellow3: "#FFDF64",
-        yellow4: "#FFD945",
-        yellow5: "#FFCC08",
-      },
-      gray: {
-        gray1: "#F5F5F5",
-        gray2: "#EBEBEB",
-        gray3: "#C2C2C2",
-        gray4: "#5C5C5C",
-        gray5: "#333333",
-      },
-    },
-    fonts: {
-      heading: "var(--font-bevietnampro)",
-      body: "var(--font-bevietnampro)",
-    },
-    components: {
-      Container: containerTheme,
-      Button: buttonTheme,
-    },
   },
-  withDefaultColorScheme({ colorScheme: "primary" })
-);
+})
