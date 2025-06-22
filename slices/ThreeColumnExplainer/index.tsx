@@ -2,7 +2,7 @@
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { TextBlock } from "@/app/components/TextBlock";
-import { Box, Flex, Card, CardBody, Grid } from "@chakra-ui/react";
+import { Box, Flex, Grid, Card } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
@@ -41,7 +41,7 @@ const ThreeColumnExplainer = ({
           </Flex>
 
           {/* Second Column */}
-          <Flex gap={6} wrap="wrap" justifyContent={"center"}>
+          <Flex gap="6" flexWrap="wrap" justify="center">
             {slice.primary.multi_column_explainer.map((item, i) => (
               <Box
                 width={{
@@ -49,11 +49,11 @@ const ThreeColumnExplainer = ({
                 }}
                 key={i}
               >
-                <Card bg={"gray.gray2"} height="100%">
-                  <CardBody>
+                <Card.Root backgroundColor="gray.gray2" height="100%">
+                  <Card.Body>
                     <TextBlock textBlock={item.card_text_block} />
-                  </CardBody>
-                </Card>
+                  </Card.Body>
+                </Card.Root>
               </Box>
             ))}
           </Flex>
