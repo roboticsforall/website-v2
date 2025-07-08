@@ -1,3 +1,4 @@
+"use client";
 import { Box, Container, Stack } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
@@ -23,7 +24,7 @@ const IconCarousel = ({ slice }: IconCarouselProps): JSX.Element => {
   return (
     <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
       <ContainerWrapper>
-        <Stack gap={"2.5rem"}>
+        <Stack gap="2.5rem">
           <Container p={0} textAlign={{ md: "center" }}>
             <TextBlock textBlock={slice.primary.heading_text_block} />
           </Container>
