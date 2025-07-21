@@ -9,14 +9,16 @@ import { Box } from "@chakra-ui/react";
 const HeroFullImageLeftAligned = (slice: Content.HeroSlice): JSX.Element => {
   return (
     <Box
-      bgImage={
-        slice.variation == "default"
-          ? `${slice.primary.background_image.url}`
-          : "none"
-      } // Assuming background_image has a .src property
-      bgPosition="center"
-      bgRepeat="no-repeat"
-      bgSize="cover" // Adjust to cover the container
+      // Assuming background_image has a .src property
+      css={{
+        backgroundImage:
+          slice.variation == "default" && slice.primary.background_image?.url
+            ? `url(${slice.primary.background_image.url})`
+            : "none",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover", // Adjust to cover the container
+      }}
     >
       <ContainerWrapper>
         <BlurBox

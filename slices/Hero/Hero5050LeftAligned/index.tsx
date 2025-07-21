@@ -1,6 +1,6 @@
 "use client";
 import { Content } from "@prismicio/client";
-import { Stack, SimpleGrid, Box, Flex } from "@chakra-ui/react";
+import { Stack, SimpleGrid, Flex } from "@chakra-ui/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { BackgroundColor } from "@/app/components/BackgroundColor";
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
@@ -23,7 +23,7 @@ const Hero5050LeftAligned = (slice: Content.HeroSlice): JSX.Element => {
           )}
         </Flex>
 
-        <Stack justifyContent={"center"}>
+        <Stack justify="center">
           <ContainerWrapper>
             <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
               <TextBlockBottomButtonGroup

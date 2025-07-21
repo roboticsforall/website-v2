@@ -14,7 +14,7 @@ const FiftyFiftyRightAligned = (
       <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         templateAreas={{ base: `"image" "content"`, md: `"content image"` }}
-        alignItems={"center"}
+        alignItems="center"
       >
         <GridItem gridArea={"content"} pl={'2rem'}>
           <ContainerWrapper>
