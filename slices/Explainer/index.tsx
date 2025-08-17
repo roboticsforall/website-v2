@@ -26,7 +26,7 @@ const Explainer = ({ slice }: ExplainerProps): JSX.Element => {
         <ContainerWrapper>
           <Flex
             gap="1.5rem"
-            alignItems={"center"}
+            align="center"
             flexDirection={{ base: "column", md: "row" }}
           >
             <Center flex={1}>
