@@ -14,7 +14,7 @@ const FiftyFiftyLeftAligned = (slice: Content.FiftyFiftySlice): JSX.Element => {
           <PrismicNextImage field={slice.primary.image} />
         </Box>
 
-        <Stack justifyContent={"center"}>
+        <Stack justify="center">
           <ContainerWrapper>
             <TextBlockBottomButtonGroup
               textBlock={slice.primary.text_block}

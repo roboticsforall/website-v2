@@ -5,13 +5,8 @@ import { CustomHeading } from "@/app/components/CustomHeading";
 import { TextBlock } from "@/app/components/TextBlock";
 import {
   Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
   Box,
   Container,
-  Flex,
   Stack,
 } from "@chakra-ui/react";
 import { Content } from "@prismicio/client";
@@ -29,24 +24,26 @@ const FaqSlice = ({ slice }: FaqSliceProps): JSX.Element => {
   return (
     <BackgroundColor backgroundColor={slice.primary.backgroundcolor}>
       <ContainerWrapper>
-        <Stack gap={"2.5rem"}>
+        <Stack gap="2.5rem">
           <Container p={0} textAlign={{ md: "center" }}>
             <TextBlock textBlock={slice.primary.heading_text_block} />
           </Container>
           <Container p={0}>
-            <Accordion allowMultiple>
+            <Accordion.Root defaultValue={[]}>
               {slice.primary.accordion.map((item, index) => (
-                <AccordionItem key={index}>
-                  <AccordionButton>
+                <Accordion.Item key={index} value={`item-${index}`}>
+                  <Accordion.ItemTrigger>
                     <Box flex="1" textAlign="left">
                       <CustomHeading as="h4">{item.heading}</CustomHeading>
                     </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                  <AccordionPanel pb={4}>{item.description}</AccordionPanel>
-                </AccordionItem>
+                    <Accordion.ItemIndicator />
+                  </Accordion.ItemTrigger>
+                  <Accordion.ItemContent>
+                    <Box pb={4}>{item.description}</Box>
+                  </Accordion.ItemContent>
+                </Accordion.Item>
               ))}
-            </Accordion>
+            </Accordion.Root>
           </Container>
         </Stack>
       </ContainerWrapper>

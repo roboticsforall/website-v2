@@ -47,12 +47,13 @@ const TestimonialNoImage = (slice: Content.TestimonialsSlice): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <Box className={styles.backgroundImage}>
-        <ContainerWrapper overflow={"hidden"}>
-          <CustomHeading as="h2" mb={"2.5rem"}>
+        <ContainerWrapper overflow="hidden">
+          <CustomHeading as="h2" mb="2.5rem">
             {slice.primary.title}
           </CustomHeading>
+
           <Flex
-            gap={"1.5rem"}
+            gap="1.5rem"
             transition="transform 0.3s ease-in-out"
             transform={`translateX(calc(-1 * (${currentIndex * 100}% + ${currentIndex * 1.5}rem)))`}
           >
@@ -61,20 +62,17 @@ const TestimonialNoImage = (slice: Content.TestimonialsSlice): JSX.Element => {
                 <Center>
                   <Box
                     bg="white"
-                    borderRadius={"md"}
-                    padding="1.25rem"
-                    width={{
-                      base: "100%",
-                      md: "70%",
-                    }}
+                    borderRadius="md"
+                    p="1.25rem"
+                    width={{ base: "100%", md: "70%" }}
                   >
                     <Stack gap="1.25rem">
                       <Divider borderWidth={1} />
-                      <Text fontSize="xl" fontStyle={"italic"}>
-                        &quot;{item.description} &quot;
+                      <Text fontSize="xl" fontStyle="italic">
+                        &quot;{item.description}&quot;
                       </Text>
                       <Divider borderWidth={1} />
-                      <Text fontSize="lg" fontWeight={"bold"}>
+                      <Text fontSize="lg" fontWeight="bold">
                         {item.name}
                       </Text>
                       <Text>{item.user}</Text>
@@ -85,38 +83,27 @@ const TestimonialNoImage = (slice: Content.TestimonialsSlice): JSX.Element => {
             ))}
           </Flex>
 
-          {slice.primary.testimonials.length == 1 ? (
-            <></>
-          ) : (
+          {slice.primary.testimonials.length === 1 ? null : (
             <>
               <Center pt="2.25rem">
-                <Flex
-                  width={{
-                    base: "100%",
-                    md: "70%",
-                  }}
-                  justifyContent={"end"}
-                >
+                <Flex width={{ base: "100%", md: "70%" }} justify="end">
                   <ButtonGroup spacing="1.25rem">
                     <IconButton
                       aria-label="left-arrow"
-                      borderRadius={"50%"}
+                      borderRadius="full"
                       onClick={prevSlide}
-                    >
-                      <ArrowBackIcon />
-                    </IconButton>
-
+                      icon={<ArrowBackIcon />}
+                    />
                     <IconButton
                       aria-label="right-arrow"
+                      borderRadius="full"
                       onClick={nextSlide}
-                      borderRadius={"50%"}
-                    >
-                      <ArrowForwardIcon />
-                    </IconButton>
+                      icon={<ArrowForwardIcon />}
+                    />
                   </ButtonGroup>
                 </Flex>
               </Center>
-              <HStack justify="center" alignItems="center" mt={4} spacing={2}>
+              <HStack justify="center" align="center" mt={4} spacing={2}>
                 {slice.primary.testimonials.map((_, index) => (
                   <Button
                     key={index}

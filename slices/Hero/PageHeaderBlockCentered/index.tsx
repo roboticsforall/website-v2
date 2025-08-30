@@ -22,7 +22,7 @@ export const PageHeaderBlockCentered = (
           <BlurBox hasBlur={slice.primary.has_header_white_highlight}>
             <TextBlockBottomButtonGroup
               textAlign="center"
-              justifyContent="center"
+              justify="center"
               textBlock={slice.primary.hero_text_block}
               button_group={slice.primary.button_group}
             />

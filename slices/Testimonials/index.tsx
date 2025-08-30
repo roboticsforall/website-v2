@@ -14,17 +14,12 @@ export type TestimonialsProps = SliceComponentProps<Content.TestimonialsSlice>;
  * Component for "Testimonials" Slices.
  */
 const Testimonials = ({ slice }: TestimonialsProps): JSX.Element => {
-  return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      {slice.variation === "default" && <TestimonialNoImage {...slice} />}
-      {slice.variation === "testimonialWithImage" && (
-        <TestimonialWithImage {...slice} />
-      )}
-    </section>
-  );
+  switch (slice.variation) {
+    case "testimonialWithImage":
+      return <TestimonialWithImage slice={slice} />;
+    default:
+      return <TestimonialNoImage slice={slice} />;
+  }
 };
 
 export default Testimonials;

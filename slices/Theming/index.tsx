@@ -59,8 +59,8 @@ const Theming = ({ slice }: ThemingProps): JSX.Element => {
       <Button variant="outline">Press Me</Button>
       <Button variant="ghost">Press Me</Button>
       <Button variant="link">Press Me</Button>
-      <Button isDisabled>Press Me</Button>
-      <Button isActive>Press Me</Button>
+      <Button disabled>Press Me</Button>
+      <Button data-active>Press Me</Button>
 
       <Box position="relative" padding="10">
         <Divider />
@@ -123,7 +123,7 @@ const Theming = ({ slice }: ThemingProps): JSX.Element => {
                 key={id}
                 width={{
                   sm: "calc(50% - 1.5rem * 2/3)",
-                  lg: "calc(33.33333% - 1.5rem * 2/3)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
+                  lg: "calc(33.33333% - 1.5rem * 2/3)",
                 }}
               >
                 <Card h="100%">
@@ -161,7 +161,7 @@ const Theming = ({ slice }: ThemingProps): JSX.Element => {
             <Box
               width={{
                 sm: "calc(50% - 1.5rem * 2/3)",
-                lg: "calc(33.33333% - 1.5rem * 2/3)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
+                lg: "calc(33.33333% - 1.5rem * 2/3)",
               }}
             >
               <Card h="100%">
@@ -209,10 +209,10 @@ const Theming = ({ slice }: ThemingProps): JSX.Element => {
                 key={id}
                 width={{
                   md: "calc(50% - 1.5rem * 1/2)",
-                  lg: "calc(25% - 1.5rem * 3/4)", // Used to maintain width when gap is 6 (card width - 2/3 * gap width)
+                  lg: "calc(25% - 1.5rem * 3/4)",
                 }}
               >
-                <Card variant={"outlined"}>
+                <Card variant={"outline"}>
                   <CardHeader>
                     <Image
                       src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"

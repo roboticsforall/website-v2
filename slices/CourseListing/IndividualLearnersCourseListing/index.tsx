@@ -9,10 +9,6 @@ import {
 } from "@chakra-ui/icons";
 import {
   Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
   Box,
   Checkbox,
   HStack,
@@ -33,7 +29,7 @@ import {
   Container,
   Button,
   Flex,
-  Hide,
+  Show,
   IconButton,
   Center,
 } from "@chakra-ui/react";
@@ -205,13 +201,9 @@ const IndividualLearnersCourseListing = ({
     return (
       <ContainerWrapper>
         <Stack>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
+          {[...Array(7)].map((_, i) => (
+            <Skeleton key={i} height="100px"></Skeleton>
+          ))}
         </Stack>
       </ContainerWrapper>
     );
@@ -223,7 +215,6 @@ const IndividualLearnersCourseListing = ({
         <Container p={0} textAlign={{ md: "center" }}>
           <TextBlock textBlock={heading_text_block} />
         </Container>
-
         <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap="1.5rem">
           <GridItem>
             <Stack py={2}>
@@ -294,8 +285,8 @@ const IndividualLearnersCourseListing = ({
                             {sliderValue === -1
                               ? ""
                               : sliderValue === 0
-                                ? "K"
-                                : sliderValue}
+                              ? "K"
+                              : sliderValue}
                           </Text>
                         </Box>
                       </HStack>
@@ -307,7 +298,7 @@ const IndividualLearnersCourseListing = ({
           </GridItem>
           <GridItem>
             {/* Pagination Controls */}
-            <HStack mb={"1.5rem"} justifyContent="end" spacing={4}>
+            <HStack mb={"1.5rem"} spacing={4} justifyContent={"end"}>
               <IconButton
                 icon={<ChevronLeftIcon color="black" boxSize={6} />}
                 isDisabled={currentPage === 1}
@@ -316,13 +307,11 @@ const IndividualLearnersCourseListing = ({
                 sx={{
                   backgroundColor: "transparent",
                   _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
+                    backgroundColor: "gray.200",
+                    transition: "background-color 0.3s ease",
                   },
                 }}
               />
-
-              {/* Page Numbers */}
               {Array.from({ length: totalPages }, (_, index) => (
                 <Text
                   key={index}
@@ -330,8 +319,8 @@ const IndividualLearnersCourseListing = ({
                   borderWidth={currentPage === index + 1 ? 2 : "none"}
                   borderRadius={"md"}
                   padding={3}
-                  width={8} // Set a fixed width for square shape
-                  height={8} // Set a fixed height for square shape
+                  width={8}
+                  height={8}
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
@@ -341,7 +330,6 @@ const IndividualLearnersCourseListing = ({
                   {index + 1}
                 </Text>
               ))}
-
               <IconButton
                 icon={<ChevronRightIcon color="black" boxSize={6} />}
                 isDisabled={currentPage === totalPages}
@@ -350,20 +338,19 @@ const IndividualLearnersCourseListing = ({
                 sx={{
                   backgroundColor: "transparent",
                   _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
+                    backgroundColor: "gray.200",
+                    transition: "background-color 0.3s ease",
                   },
                 }}
               />
             </HStack>
-
             <Accordion allowMultiple>
               <Stack mb={"1.25rem"}>
                 {currentCourses.length > 0 ? (
                   currentCourses.map((item) => (
-                    <AccordionItem key={item.course_name} borderWidth={1}>
-                      <AccordionButton p={0}>
-                        <Hide below="md">
+                    <Box key={item.course_name} borderWidth={1}>
+                      <Flex p={0}>
+                        <Show above="md">
                           <Box py={4}>
                             <PrismicNextImage
                               width={"150"}
@@ -372,7 +359,7 @@ const IndividualLearnersCourseListing = ({
                               style={{ padding: "12px" }}
                             />
                           </Box>
-                        </Hide>
+                        </Show>
                         <Stack
                           gap={"1rem"}
                           pl={{ base: 3, md: 0, lg: 0 }}
@@ -380,41 +367,6 @@ const IndividualLearnersCourseListing = ({
                           flex={1}
                           textAlign={"start"}
                         >
-                          <Flex
-                            gap={"1.5rem"}
-                            alignItems={{ md: "center" }}
-                            flexDirection={{ base: "column", md: "row" }}
-                            justifyContent={"space-between"}
-                          >
-                            <Box>
-                              {item.open_for_enrollment ? (
-                                <Tag colorScheme="green">
-                                  <TagLeftIcon as={StarIcon} />
-                                  <TagLabel>Open for Enrollment!</TagLabel>
-                                </Tag>
-                              ) : (
-                                <Tag colorScheme="yellow">
-                                  <TagLeftIcon as={WarningIcon} />
-                                  <TagLabel>Waitlist Available</TagLabel>
-                                </Tag>
-                              )}
-                            </Box>
-                            {item.open_for_enrollment ? (
-                              <Button
-                                as={PrismicNextLink}
-                                field={item.enroll_link}
-                              >
-                                Enroll Now!
-                              </Button>
-                            ) : (
-                              <Button
-                                as={PrismicNextLink}
-                                field={item.enroll_link}
-                              >
-                                Join Waitlist!
-                              </Button>
-                            )}
-                          </Flex>
                           <CustomHeading as="h4">
                             {item.course_name}
                           </CustomHeading>
@@ -446,15 +398,17 @@ const IndividualLearnersCourseListing = ({
                             </Tag>
                           </Flex>
                           <PrismicRichText field={item.course_description} />
+                          <PrismicNextLink field={item.registration_link}>
+                            <Button
+                              colorScheme="blue"
+                              rightIcon={<ExternalLinkIcon />}
+                            >
+                              Register Now
+                            </Button>
+                          </PrismicNextLink>
                         </Stack>
-                        <AccordionIcon />
-                      </AccordionButton>
-                      <AccordionPanel p={4}>
-                        <Box>
-                          <PrismicRichText field={item.course_syllabi} />
-                        </Box>
-                      </AccordionPanel>
-                    </AccordionItem>
+                      </Flex>
+                    </Box>
                   ))
                 ) : (
                   <Center>
@@ -463,56 +417,6 @@ const IndividualLearnersCourseListing = ({
                 )}
               </Stack>
             </Accordion>
-            {/* Pagination Controls */}
-            <HStack mb={"1.5rem"} justifyContent="end" spacing={4}>
-              <IconButton
-                icon={<ChevronLeftIcon color="black" boxSize={6} />}
-                isDisabled={currentPage === 1}
-                onClick={() => handlePageChange(currentPage - 1)}
-                aria-label="Previous Page"
-                sx={{
-                  backgroundColor: "transparent",
-                  _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
-                  },
-                }}
-              />
-
-              {/* Page Numbers */}
-              {Array.from({ length: totalPages }, (_, index) => (
-                <Text
-                  key={index}
-                  fontWeight={currentPage === index + 1 ? "bold" : "normal"}
-                  borderWidth={currentPage === index + 1 ? 2 : "none"}
-                  borderRadius={"md"}
-                  padding={3}
-                  width={8} // Set a fixed width for square shape
-                  height={8} // Set a fixed height for square shape
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  cursor="pointer"
-                  onClick={() => handlePageChange(index + 1)}
-                >
-                  {index + 1}
-                </Text>
-              ))}
-
-              <IconButton
-                icon={<ChevronRightIcon color="black" boxSize={6} />}
-                isDisabled={currentPage === totalPages}
-                onClick={() => handlePageChange(currentPage + 1)}
-                aria-label="Next Page"
-                sx={{
-                  backgroundColor: "transparent",
-                  _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
-                  },
-                }}
-              />
-            </HStack>
           </GridItem>
         </Grid>
       </Stack>
