@@ -1,13 +1,9 @@
 "use client";
+
 import { ContainerWrapper } from "@/app/components/ContainerWrapper";
 import { CustomHeading } from "@/app/components/CustomHeading";
 import { ChevronLeftIcon, ChevronRightIcon, InfoIcon } from "@chakra-ui/icons";
 import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
   Box,
   Checkbox,
   HStack,
@@ -16,21 +12,31 @@ import {
   Tag,
   TagLabel,
   TagLeftIcon,
-  Slider,
-  SliderTrack,
-  SliderFilledTrack,
-  SliderThumb,
   Grid,
   GridItem,
   CloseButton,
   Skeleton,
-  SliderMark,
   Container,
-  Hide,
+  Show,
   Flex,
   IconButton,
   Center,
 } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
+} from "@chakra-ui/react/accordion";
+import {
+  Slider,
+  SliderTrack,
+  SliderFilledTrack,
+  SliderThumb,
+  SliderMark,
+} from "@chakra-ui/react/slider";
+
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
@@ -190,13 +196,9 @@ const ForSchoolsAndPartnersCourseListing = ({
     return (
       <ContainerWrapper>
         <Stack>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
-          <Skeleton height="100px"></Skeleton>
+          {Array.from({ length: 7 }).map((_, i) => (
+            <Skeleton key={i} height="100px"></Skeleton>
+          ))}
         </Stack>
       </ContainerWrapper>
     );
@@ -216,7 +218,7 @@ const ForSchoolsAndPartnersCourseListing = ({
 
                 return (
                   <Box key={section}>
-                    <HStack spacing={1}>
+                    <HStack gap={1}>
                       <Text fontWeight="bold">{sectionOptions.filterName}</Text>
                       <CloseButton
                         aria-label={`Clear ${section} Filter`}
@@ -240,7 +242,7 @@ const ForSchoolsAndPartnersCourseListing = ({
                         </Box>
                       ))}
                     {sectionOptions.slider && (
-                      <HStack spacing={2} alignItems="center">
+                      <HStack gap={2} alignItems="center">
                         <Slider
                           aria-label={sectionOptions.slider.label}
                           onChange={handleSliderChanged}
@@ -278,8 +280,8 @@ const ForSchoolsAndPartnersCourseListing = ({
                             {sliderValue === -1
                               ? ""
                               : sliderValue === 0
-                                ? "K"
-                                : sliderValue}
+                              ? "K"
+                              : sliderValue}
                           </Text>
                         </Box>
                       </HStack>
@@ -291,7 +293,7 @@ const ForSchoolsAndPartnersCourseListing = ({
           </GridItem>
           <GridItem>
             {/* Pagination Controls */}
-            <HStack mb={"1.5rem"} spacing={4} justifyContent={"end"}>
+            <HStack mb={"1.5rem"} gap={4} justifyContent={"end"}>
               <IconButton
                 icon={<ChevronLeftIcon color="black" boxSize={6} />}
                 isDisabled={currentPage === 1}
@@ -300,13 +302,11 @@ const ForSchoolsAndPartnersCourseListing = ({
                 sx={{
                   backgroundColor: "transparent",
                   _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
+                    backgroundColor: "gray.200",
+                    transition: "background-color 0.3s ease",
                   },
                 }}
               />
-
-              {/* Page Numbers */}
               {Array.from({ length: totalPages }, (_, index) => (
                 <Text
                   key={index}
@@ -314,8 +314,8 @@ const ForSchoolsAndPartnersCourseListing = ({
                   borderWidth={currentPage === index + 1 ? 2 : "none"}
                   borderRadius={"md"}
                   padding={3}
-                  width={8} // Set a fixed width for square shape
-                  height={8} // Set a fixed height for square shape
+                  width={8}
+                  height={8}
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
@@ -325,7 +325,6 @@ const ForSchoolsAndPartnersCourseListing = ({
                   {index + 1}
                 </Text>
               ))}
-
               <IconButton
                 icon={<ChevronRightIcon color="black" boxSize={6} />}
                 isDisabled={currentPage === totalPages}
@@ -334,19 +333,20 @@ const ForSchoolsAndPartnersCourseListing = ({
                 sx={{
                   backgroundColor: "transparent",
                   _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
+                    backgroundColor: "gray.200",
+                    transition: "background-color 0.3s ease",
                   },
                 }}
               />
             </HStack>
+
             <Accordion allowMultiple>
               <Stack mb={"1.25rem"}>
                 {currentCourses.length > 0 ? (
                   currentCourses.map((item) => (
                     <AccordionItem key={item.course_name} borderWidth={1}>
                       <AccordionButton p={0}>
-                        <Hide below="md">
+                        <Show above="md">
                           <Box py={4}>
                             <PrismicNextImage
                               width={"150"}
@@ -355,7 +355,7 @@ const ForSchoolsAndPartnersCourseListing = ({
                               style={{ padding: "12px" }}
                             />
                           </Box>
-                        </Hide>
+                        </Show>
                         <Stack
                           gap={"1rem"}
                           pl={{ base: 3, md: 0, lg: 0 }}
@@ -411,8 +411,9 @@ const ForSchoolsAndPartnersCourseListing = ({
                 )}
               </Stack>
             </Accordion>
+
             {/* Pagination Controls */}
-            <HStack mb={"1.5rem"} justifyContent="end" spacing={4}>
+            <HStack mb={"1.5rem"} gap={4} justifyContent="end">
               <IconButton
                 icon={<ChevronLeftIcon color="black" boxSize={6} />}
                 isDisabled={currentPage === 1}
@@ -421,13 +422,11 @@ const ForSchoolsAndPartnersCourseListing = ({
                 sx={{
                   backgroundColor: "transparent",
                   _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
+                    backgroundColor: "gray.200",
+                    transition: "background-color 0.3s ease",
                   },
                 }}
               />
-
-              {/* Page Numbers */}
               {Array.from({ length: totalPages }, (_, index) => (
                 <Text
                   key={index}
@@ -435,8 +434,8 @@ const ForSchoolsAndPartnersCourseListing = ({
                   borderWidth={currentPage === index + 1 ? 2 : "none"}
                   borderRadius={"md"}
                   padding={3}
-                  width={8} // Set a fixed width for square shape
-                  height={8} // Set a fixed height for square shape
+                  width={8}
+                  height={8}
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
@@ -446,7 +445,6 @@ const ForSchoolsAndPartnersCourseListing = ({
                   {index + 1}
                 </Text>
               ))}
-
               <IconButton
                 icon={<ChevronRightIcon color="black" boxSize={6} />}
                 isDisabled={currentPage === totalPages}
@@ -455,8 +453,8 @@ const ForSchoolsAndPartnersCourseListing = ({
                 sx={{
                   backgroundColor: "transparent",
                   _hover: {
-                    backgroundColor: "gray.200", // Change to your desired gray color
-                    transition: "background-color 0.3s ease", // Smooth transition
+                    backgroundColor: "gray.200",
+                    transition: "background-color 0.3s ease",
                   },
                 }}
               />
